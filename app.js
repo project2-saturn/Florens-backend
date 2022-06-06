@@ -4,6 +4,8 @@ require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require('multer');
 const User = require("./models/User");
+import aws from 'aws-sdk';
+import fs from 'fs';
 
 
 

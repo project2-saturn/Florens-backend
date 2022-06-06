@@ -7,8 +7,8 @@ const UserSchema = new Schema({
   image: { type: String },
   email: {type: String},
   password: {type:String},
-  subscribed : {type:Array, 'default':[]},
-  subscribed : {type:Array, 'default':[]}
+  plantOwner : {type:Array, 'default':[]},
+  library : {type:Array, 'default':[]}
 });
 
 
