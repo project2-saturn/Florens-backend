@@ -64,9 +64,30 @@ app.post("/postPlant", async (req, res, next) => {
   
   console.log(req.body);
 
+  // use below commented code to make each string first letter capitalized in an array.
+  // const photosURLArr =  req.body.photosURL.split(',').map(url => 
+  //   `${url.trim().charAt(0).toUpperCase()}${url.trim().slice(1)}`);
+
+  const photosURLArr =  req.body.photosURL.split(',').map(url => 
+    url.trim());
+  console.log(photosURLArr);
+  const seasonArr =  req.body.season.split(',').map(season => 
+    `${season.trim().charAt(0).toUpperCase()}${season.trim().slice(1)}`);
+  const locationArr = req.body.location.split(',').map(location => 
+    `${location.trim().charAt(0).toUpperCase()}${location.trim().slice(1)}`);
+
   let plant = new Plant({
     name: req.body.name,
-    
+    scientificName: req.body.scientificName,
+  description: req.body.description,
+  photosURL : photosURLArr,
+  season: seasonArr,
+  location: locationArr,
+  type: req.body.type,
+  color: req.body.color,
+  texture: req.body.texture,
+  form: req.body.form,
+  owner:req.body.owner,
   });
   console.log("Inside post plant");
   plant
