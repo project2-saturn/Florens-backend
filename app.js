@@ -4,8 +4,9 @@ require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require('multer');
 const User = require("./models/User");
-import aws from 'aws-sdk';
-import fs from 'fs';
+const Plant = require("./models/Plant");
+const aws = require( 'aws-sdk');
+const fs =require('fs');
 
 
 
@@ -49,6 +50,30 @@ app.post("/postUser", async (req, res, next) => {
     .then((result) => {
       res.status(201).json({
         data: user,
+      });
+    })
+    .catch((error) => {
+      res.status(409).json({ errors: res.locals.errors });
+    });
+});
+
+
+
+app.post("/postPlant", async (req, res, next) => {
+  // const { username, image} = req.body;
+  
+  console.log(req.body);
+
+  let plant = new Plant({
+    name: req.body.name,
+    
+  });
+  console.log("Inside post plant");
+  plant
+    .save()
+    .then((result) => {
+      res.status(201).json({
+        data: plant,
       });
     })
     .catch((error) => {
