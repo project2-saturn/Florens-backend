@@ -1,0 +1,30 @@
+﻿{
+    "Sheet1": [
+        {
+            "Name": "Amabilis fir",
+            "Scientific": "Abies amabilis",
+            "Description": "Branches tiered; needles flat, dark green, 2 white lines underneath, spreading forward and upward, spirally arranged, most 1-2.5(-4.5) cm x 1-3 mm; female cones erect, ovoid-cylindrical, resinous, purple-grey before turning brown, most 8-10 cm x 4-5 cm with deciduous scales about 2x2 cm, finely pubescent, bracts shorty and usually hidden between the scales. Winter ID: buds small, spherical, brown, with violet wax.",
+            "Url": "https://plantdatabase.kpu.ca/images/habit/tababh1.jpg, https://plantdatabase.kpu.ca/images/leaves/tababl1.jpg",
+            "Season": "Summer, winter",
+            "Location": "Vancouver",
+            "Type": "Conifer",
+            "color": "No flowers, Brown, red, maturing to yellow",
+            "texture": "Medium-fine",
+            "form": "Pyramidal - narrowly",
+            "owner": "KPU"
+        },
+        {
+            "Name": "Chinese lantern",
+            "Scientific": "Abutilon x hybridum",
+            "Description": "Leaves usually lobed like a maple; flowers cup-shaped, about 5 cm wide; fruit rounded, capsule-like.",
+            "Url": "https://plantdatabase.kpu.ca/images/habit/tabcvh1.jpg, https://plantdatabase.kpu.ca/images/flowers/tabcvf1.jpg, https://plantdatabase.kpu.ca/images/bark/tabcvk.jpg",
+            "Season": "Winter",
+            "Location": "Burnaby",
+            "Type": "Shrub - deciduous",
+            "color": "Showy, Orange, White, Pink, Red, Yellow",
+            "texture": "Coarse",
+            "form": "Round",
+            "owner": "KPU"
+        }
+    ]
+}
