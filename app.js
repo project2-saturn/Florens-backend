@@ -107,6 +107,8 @@ app.post("/postPlant", async (req, res, next) => {
     });
 });
 
+
+// below endpoint loads plant data from data.json file into mongoose db
 app.post("/loadData", async (req, res, next) => {
   // console.log(data);
   for (const plant of data) {
