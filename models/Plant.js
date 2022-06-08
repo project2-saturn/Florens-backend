@@ -10,7 +10,7 @@ const PlantSchema = new Schema({
   season: {type: Array, 'default':[]},
   location: {type: Array, 'default': []},
   type: {type: String},
-  color: {type: String},
+  color: {type: Array, 'default':[]},
   texture: {type: String},
   form: {type: String},
   owner: {type: String},
