@@ -7,6 +7,7 @@ const User = require("./models/User");
 const Plant = require("./models/Plant");
 const aws = require("aws-sdk");
 const fs = require("fs");
+const seedrandom = require("seedrandom");
 
 const data = require("./data.json").Sheet1;
 const connection = require("./db/connection.js");
@@ -107,7 +108,6 @@ app.post("/postPlant", async (req, res, next) => {
     });
 });
 
-
 // below endpoint loads plant data from data.json file into mongoose db
 app.post("/loadData", async (req, res, next) => {
   // console.log(data);
@@ -156,5 +156,31 @@ app.post("/loadData", async (req, res, next) => {
   }
 
   res.json(data);
-  
+});
+
+
+
+// Below endpoint returns a random plant.
+// The plant generated is based on the current day.
+// So, it always stays same on that particular day.
+app.get("/plantOfTheDay", async (req, res, next) => {
+  let today = new Date();
+  let rng = seedrandom(today.getDate().toString());
+  Plant.count().then(count => {
+    console.log(`Count: ${count}`);
+    let plantIndex = Math.floor(rng() * count);
+    
+    console.log(`Plant Number: ${plantIndex}`);
+    Plant.find()
+      .skip(plantIndex)
+      .limit(1)
+      .then(result => {
+        res.status(201).json({
+          data: result
+        });
+      })
+      .catch(error => {
+        res.status(409).json({ errors: error });
+      });
+  });
 });
