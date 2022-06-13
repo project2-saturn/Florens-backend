@@ -158,8 +158,6 @@ app.post("/loadData", async (req, res, next) => {
   res.json(data);
 });
 
-
-
 // Below endpoint returns a random plant.
 // The plant generated is based on the current day.
 // So, it always stays same on that particular day.
@@ -169,7 +167,7 @@ app.get("/plantOfTheDay", async (req, res, next) => {
   Plant.count().then(count => {
     console.log(`Count: ${count}`);
     let plantIndex = Math.floor(rng() * count);
-    
+
     console.log(`Plant Number: ${plantIndex}`);
     Plant.find()
       .skip(plantIndex)
@@ -183,4 +181,48 @@ app.get("/plantOfTheDay", async (req, res, next) => {
         res.status(409).json({ errors: error });
       });
   });
+});
+
+
+// below endpoint gets random specified number of plants.
+// examples to use: '/randomPlants/10' , '/randomPlants/4'
+app.get("/randomPlants/:numOfPlants", async (req, res, next) => {
+  Plant.find({})
+    .then(results => {
+      const resultArray = [];
+      for (i = 0; i < req.params.numOfPlants; i++) {
+        const rand = Math.floor(Math.random() * results.length);
+        resultArray.push(results[rand]);
+      }
+
+      res.status(200).json(resultArray);
+    })
+    .catch(error => res.status(500).send(error));
+});
+
+
+// below endpoint get all the plants data from the database
+app.get("/plants", async (req, res, next) => {
+  Plant.find({})
+    .then(results => {
+      res.status(200).json(results);
+    })
+    .catch(error => res.status(500).send(error));
+});
+
+
+// below endpoint updates the library array on user database to add plant to its library.
+// it takes plantObjectID and useremail as request body parameters.
+// it returns the updated library array in json format.
+app.patch("/plantLibrary", (req, res) => {
+  const plantObjectID = req.body.subscriptionID;
+  const useremail = req.body.username;
+  console.log(plantObjectID);
+  console.log(useremail);
+  User.findOne({ email: useremail }, { library: 1 })
+    .then(result => {
+      console.log(result.library);
+      res.status(200).json({ data: result.library });
+    })
+    .catch(error => console.log(error));
 });
