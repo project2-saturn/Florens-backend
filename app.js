@@ -24,23 +24,29 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/getUser", async (req, res, next) => {
- 
+
+
+// Api for login
+
+app.post("/login", async (req, res) => {
+
 if(req.body.email =="" || req.body.password=="")
 {
   res.send("Please enter the name and password ")
 }
 else{
-  const user=await User.findOne({email:req.body.email})
+  const user= await User.findOne({email:req.body.email})
+  // console.log(req.body.email);
+  
   if(user)
   {
-    const pass=await bcrypt.compare(user.password,req.body.password)
+   
+    savedPass=await user.password
+    const pass= await bcrypt.compare(req.body.password,user.password)
     if(pass)
     {
-    user.then((results) => {
-      res.status(200).json(results);
-    })
-    .catch((error) => res.status(500).send(error));
+    
+      res.send("Password Validated")
 }
 else{
 
@@ -50,14 +56,12 @@ else{
 else{
 
   res.send("User not found")
+
 }}})
 ;
 
 
-app.post("postUserImage", async (req, res, next) => {
-  axios;
-});
-
+//API for Signup
 app.post("/postUser", async (req, res, next) => {
 let user=await User.findOne({email:req.body.email})
 console.log(user);
