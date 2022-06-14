@@ -1,4 +1,5 @@
 const express = require("express");
+const bcrypt=require('bcrypt');
 const app = express();
 require("express").Router({ mergeParams: true });
 require("dotenv").config();
@@ -11,6 +12,7 @@ const seedrandom = require("seedrandom");
 
 const data = require("./data.json").Sheet1;
 const connection = require("./db/connection.js");
+const { EMRcontainers } = require("aws-sdk");
 
 connection.once("open", () => {
   const server = app.listen(process.env.PORT || 8080, () => {
@@ -22,39 +24,74 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.get("/getUser", async (req, res, next) => {
-//   User.find({})
-//     .then((results) => {
-//       res.status(200).json(results);
-//     })
-//     .catch((error) => res.status(500).send(error));
-// });
+app.get("/getUser", async (req, res, next) => {
+ 
+if(req.body.email =="" || req.body.password=="")
+{
+  res.send("Please enter the name and password ")
+}
+else{
+  const user=await User.findOne({email:req.body.email})
+  if(user)
+  {
+    const pass=await bcrypt.compare(user.password,req.body.password)
+    if(pass)
+    {
+    user.then((results) => {
+      res.status(200).json(results);
+    })
+    .catch((error) => res.status(500).send(error));
+}
+else{
+
+  res.send("Please enter the correct password")
+}
+}
+else{
+
+  res.send("User not found")
+}}})
+;
+
 
 app.post("postUserImage", async (req, res, next) => {
   axios;
 });
 
 app.post("/postUser", async (req, res, next) => {
-  const { username, image } = req.body;
+let user=await User.findOne({email:req.body.email})
+console.log(user);
+if(user)
+{
+  res.status(400).send("User already exists")
+}
 
-  console.log(req.body);
-
-  let user = new User({
-    name: username,
-    image: image
+else{
+  user = new User({
+    name: req.body.name,
+    email:req.body.email,
+    password:req.body.password
   });
-  console.log("Inside post user");
-  user
-    .save()
-    .then(result => {
-      res.status(201).json({
-        data: user
-      });
-    })
-    .catch(error => {
-      res.status(409).json({ errors: res.locals.errors });
-    });
+
+   const salt= await bcrypt.genSalt(10);
+user.password= await bcrypt.hash(user.password,salt)
+user.save()
+.then(result => {
+  res.status(201).json({
+    data: user
+  });
+})
+.catch(error => {
+  res.status(409).json({ error });
 });
+
+
+}
+
+})
+
+  
+  
 
 app.post("/postPlant", async (req, res, next) => {
   // const { username, image} = req.body;
