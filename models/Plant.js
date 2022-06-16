@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PlantSchema = new Schema({
-  name: { type: String, required: true, maxLength: 30 },
+  name: { type: String, required: true },
   scientificName: { type: String },
   description: {type: String},
   photosURL : {type:Array, 'default':[]},

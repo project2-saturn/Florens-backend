@@ -96,7 +96,7 @@ user.save()
 
   
   
-
+// below endpoint adds plant to the database
 app.post("/postPlant", async (req, res, next) => {
   // const { username, image} = req.body;
 
@@ -152,26 +152,40 @@ app.post("/postPlant", async (req, res, next) => {
 // below endpoint loads plant data from data.json file into mongoose db
 app.post("/loadData", async (req, res, next) => {
   // console.log(data);
+  await Plant.deleteMany({}).catch((error) => console.log(error));
+  
   for (const plant of data) {
     // console.log(plant);
-    const photosURLArr = plant.Url.split(",").map(url => url.trim());
-    // console.log(photosURLArr);
-    const seasonArr = plant.Season.split(",").map(
-      season =>
-        `${season
-          .trim()
-          .charAt(0)
-          .toUpperCase()}${season.trim().slice(1)}`
-    );
-    const locationArr = plant.Location.split(",").map(
-      location =>
-        `${location
-          .trim()
-          .charAt(0)
-          .toUpperCase()}${location.trim().slice(1)}`
-    );
-    const colorArr = plant.color.split(",").map(color => color.trim());
+    let photosURLArr, seasonArr, locationArr, colorArr;
+    if (plant.Url != undefined){
+      photosURLArr = plant.Url.split(",").map(url => url.trim());
+    }
+    
+    if (plant.season != undefined) {
+      seasonArr = plant.Season.split(",").map(
+        season =>
+          `${season
+            .trim()
+            .charAt(0)
+            .toUpperCase()}${season.trim().slice(1)}`
+      );
+    }
+    
+    if (plant.locationArr != undefined) {
+      locationArr = plant.Location.split(",").map(
+        location =>
+          `${location
+            .trim()
+            .charAt(0)
+            .toUpperCase()}${location.trim().slice(1)}`
+      );
+    }
 
+    if (plant.color != undefined) {
+      colorArr = plant.color.split(",").map(color => color.trim());
+
+    }
+ 
     let pla = new Plant({
       name: plant.Name,
       scientificName: plant.Scientific,
@@ -192,7 +206,8 @@ app.post("/loadData", async (req, res, next) => {
         console.log(`Saved: ${pla.name}`);
       })
       .catch(error => {
-        res.status(409).json({ errors: res.locals.errors });
+        console.log(error);
+        // res.status(409).json({ errors: res.locals.errors });
       });
   }
 
