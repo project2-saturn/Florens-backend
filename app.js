@@ -246,7 +246,7 @@ app.get("/plants", async (req, res, next) => {
 // it returns the updated library array in json format.
 app.patch("/addPlantToLibrary", (req, res) => {
   const plantObjectID = req.body.plantObjectID;
-  const useremail = req.body.username;
+  const useremail = req.body.useremail;
   console.log(plantObjectID);
   console.log(useremail);
   User.findOne({ email: useremail }, { library: 1 })
@@ -262,4 +262,42 @@ app.patch("/addPlantToLibrary", (req, res) => {
         .catch(error => console.log(error));
     })
     .catch(error => console.log(error));
+});
+
+// below endpoint updates the library array on user database to delete plant from its library.
+// it takes plantObjectID and useremail as request body parameters.
+// it returns the updated library array in json format.
+app.patch("/deletePlantFromLibrary", (req, res) => {
+  const plantObjectID = req.body.plantObjectID;
+  const useremail = req.body.useremail;
+  console.log(plantObjectID);
+  console.log(useremail);
+  User.findOne({ email: useremail }, { library: 1 })
+    .then(result => {
+      console.log(result.library);
+      User.updateOne(
+        { email: useremail },
+        {
+          library: result.library.filter(element => {
+            if (element != plantObjectID) {
+              return element;
+            }
+          })
+        }
+      )
+        .then(result2 => {
+          console.log(result2);
+          // res.send()
+          const updatedLibrary = result.library.filter(element => {
+            if (element != plantObjectID) {
+              return element;
+            }
+          });
+          res.send(updatedLibrary);
+        })
+        .catch(error => console.log(error));
+    })
+    .catch(error => console.log(error));
+
+  // res.send("success");
 });
