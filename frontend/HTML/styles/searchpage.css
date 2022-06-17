@@ -1,0 +1,322 @@
+body{
+    margin: 0;
+}
+.navBar{
+    position: relative;
+    background-color: #F1ECEB;
+}
+.headerLogo{
+    margin-left: 40px;
+    width: 92px;
+    height: 87px;
+}
+.aboutNav{
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+}
+.loginNav{
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+}
+/*/////////////////////////////Search bar//////////////////////////////////////////  */
+.searchBar .inputSearch{
+    border: solid #EA5A4E 1px;
+    outline: none;
+    border-radius: 10px;
+
+}
+.searchBar{
+    margin: auto;
+    position: relative;
+    width: 1034px;
+    height: 70px;
+    margin-top: 60px;
+    
+}
+
+.inputSearch::placeholder{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+}
+.inputSearch{
+
+    font-size: larger;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.btn{
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 80px;
+    height: 74px;
+    background-color: #164C4C;
+    z-index: 1;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.btn.btn_common .fas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+/* /////////////////////////////Advanced search  /////////////////////////////////// */
+.accordion_button {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 1034px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background: #F1ECEB;
+    color: #164C4C;
+    text-align: left;
+    transition: background 0.2s;
+    opacity: 0.5;
+    }
+
+    .accordion_button::after{
+        content: '\25be';
+        float: right;
+        transform: scale(1.5);
+        }
+        .accordion_button--active{
+            background:  #F1ECEB;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .accordion_button--active::after{content: '\25b4'}
+
+        .accordion_content{
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height 0.2s ;
+        width: 1034px;
+        margin: auto;
+        background: #F1ECEB;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        opacity: 0.5;
+        }
+        .header_background{
+            height: 900px;
+        }
+/* ///////////////////////////////////////////////////////////////////////////////// */
+.filterAdv{
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+}
+.dropDownButton{
+    text-align: center;
+    position: absolute;
+    left:16%;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    height: 48px;
+    width:  1034px;
+    font-size: 18px;
+    border-radius: 6px;
+    opacity: 0.5;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+
+.searchListNumber h2{
+    margin-top: 150px;
+    text-align: center;
+    color: #164C4C;
+    font-family: 'Alegreya';
+    font-size: 40px;
+
+}
+
+/* /////////////////////////////third section///////////////////////////////// */
+
+.thirdSection{
+    margin-top: 100px;
+}
+.thirdSectionContent{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.thirdSectionContent p{
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+
+
+}
+.thirdSectionHeading{
+    font-size: 40px;
+    color: #164C4C;
+    font-family: 'Alegreya';
+}
+.thirdSectionCardList{
+    display: flex;
+    flex-direction: column;
+    width: 308px;
+    height: 479px;
+    align-items: center;
+    border: solid #7D9990 1px;
+    border-radius: 3%;
+    margin: 5px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+.thirdSectionCards{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.thirdSectionCardsInner{
+    width: 245px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    position: relative;
+}
+.thirdSectionCardsInner img{
+
+    width: 276px;
+    height: 229px;
+    position: absolute;
+    top:10px;
+    left: -16px;
+
+}
+.thirdSectionCardsInner h3{
+   color: #164C4C;
+   font-family: 'Alegreya';
+   position: absolute;
+   top:250px;
+   left: 25px;
+   font-size: 28px;
+   margin: 0;
+}
+.thirdSectionCardsInner p{
+    font-family: 'Alegreya';
+    text-align: center;
+    position: absolute;
+    top:300px;
+    left: 25px;
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.thirdSectionCardsInner button{
+    text-align: center;
+    position: absolute;
+    top:405px;
+    color: #EA5A4E;
+    appearance: none;
+    background: none;
+    border: solid #EA5A4E 2px;
+    outline: none;
+    width: 223px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Rubik';
+
+}
+.searchItemList{
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns:  25% 25% 25% 25% ;
+}
+/* /////////////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////footer////////////////////////////////////////// */
+footer{
+    background-color: #164C4C;
+    height: 267.11px;
+    position: relative;
+}
+
+.footerFirstDiv{
+    height: 267.11px;
+}
+.footerLogo{
+    width: 114.39px;
+    height: 108.33px;
+    position: absolute;
+    right:87%;
+    top: 45px;
+}
+.footerUni{
+    color: white;
+    justify-content: center;
+    width: 241px;
+    height: 124px;
+    position: absolute;
+    right:3%;
+    top: 39px;
+}
+
+.footerUni p{
+text-align: center;
+}
+
+.footerUniLogo{
+    position: relative;
+    right: -20px;
+}
+/* .footerSecondDiv{
+    position: relative;
+} */
+.footerSecondPone{
+    position: absolute;
+    right:85%;
+    top: 215px;
+    color: white;
+
+}
+.footerSecondPtwo{
+    position: absolute;
+   
+    right:4%;
+    top: 215px;
+    color: white;
+}
+.line{
+    position: absolute;
+    height: 0.5px;
+    width: 100%;
+    background-color: #7D9990;
+    top: 215px;
+}
+.logoCap{
+    position: absolute;
+    width: fit-content;
+    right:56%;
+    top: 170px;
+    color: white;
+}
+/* /////////////////////////////////////////////////////////////////////////// */

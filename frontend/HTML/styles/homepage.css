@@ -1,0 +1,490 @@
+body{
+    margin: 0px;
+}
+main{
+    height: 2050px;
+}
+header{
+    background-color: #F1ECEB;
+    height: 800px;
+    background-image: url(../images/top-banner-BG-Desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* ////////////////////////////Navigation Bar/////////////////////////////////////// */
+.navBar{
+    position: relative;
+}
+.headerLogo{
+    margin-left: 40px;
+    width: 92px;
+    height: 87px;
+}
+.aboutNav{
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+}
+.loginNav{
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+}
+.headerText{
+    text-align: center;
+    width: 100%;
+    height:400px
+}
+.headerTextHeading{
+font-size: 67px;
+color: #164C4C;
+font-family: 'Alegreya';
+margin-bottom: 0;
+font-weight: lighter;
+}
+.headerTextPara{
+  font-size: 16px;
+  font-family: 'Rubik';
+  font-weight: lighter;
+  color: #6B6B6B;
+}
+/*/////////////////////////////Search bar//////////////////////////////////////////  */
+.searchBar .inputSearch{
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+
+}
+.searchBar{
+    margin: auto;
+    position: relative;
+    width: 1034px;
+    height: 70px;
+    
+}
+
+.inputSearch::placeholder{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+}
+.inputSearch{
+
+    font-size: larger;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.btn{
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 90px;
+    height: 73px;
+    background-color: #164C4C;
+    z-index: 1;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.btn.btn_common .fas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+.accordion_button {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 1034px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #164C4C;
+    text-align: left;
+    transition: background 0.2s;
+    opacity: 0.5;
+    }
+
+    .accordion_button::after{
+        content: '\25be';
+        float: right;
+        transform: scale(1.5);
+        }
+        .accordion_button--active{
+            background:  #FFFFFF;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .accordion_button--active::after{content: '\25b4'}
+
+        .accordion_content{
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height 0.2s ;
+        width: 1034px;
+        margin: auto;
+        background: #FFFFFF;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        opacity: 0.5;
+        }
+        .header_background{
+            height: 900px;
+        }
+/* ///////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////firstSection///////////////////////////////////////// */
+
+.firstSection{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.firstSection img{
+    width: 300px;
+    height: 200px;
+}
+.firstSectionFirstCard{
+    width: 300px; 
+    margin-right: 70px; 
+    font-family: 'Alegreya';
+}
+.firstSectionSecondCard{
+    width: 300px;  
+    margin-right: 70px; 
+    font-family: 'Alegreya';
+}
+.firstSectionThirdCard{
+    width: 300px; 
+    margin-right: 70px;  
+    font-family: 'Alegreya';
+}
+
+.firstSectionParagraph{
+    font-size: 16px;
+    margin: 10px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.firstSectionHeadings{
+    font-size: 40px;
+    margin:3px;
+    font-family: 'Alegreya';
+    color: #164C4C;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////Second Section////////////////////////////////////// */
+.secondSection{
+    margin-top: 100px;
+}
+.secondSectionCard{
+    display: flex;
+    justify-content: center;
+}
+.secondSection{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.secondSecImg img{
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    width: 524px;
+    height: 434px;
+    border-radius: 10px;
+}
+
+.secondSectionCard{
+    margin: auto;
+    height: 390px;
+    background-color: #F1ECEB;
+    width: 1280px;
+    height: 575px;
+    position: relative;
+    border-radius: 15px;
+}
+.secondSectionHeadings{
+    font-size: 40px;
+    margin:3px;
+    font-family: 'Alegreya';
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    color: #164C4C;
+}
+
+.plantInfo h3{
+    position: absolute;
+    top: 70px;
+    left: 650px;
+    color: #164C4C;
+    font-family: 'Alegreya';
+}
+.plantInfo p{
+    position: absolute;
+    top: 140px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+
+.plantDescItems1{
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems2{
+    position: absolute;
+    top: 200px;
+    left: 900px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems3{
+    position: absolute;
+    top: 275px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems4{
+    position: absolute;
+    top: 275px;
+    left: 900px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems5{
+    position: absolute;
+    top: 350px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems6{
+    position: absolute;
+    top: 350px;
+    left: 900px;
+}
+.plantInfo button{
+    position: absolute;
+    top: 460px;
+    left: 650px;
+    color: #EA5A4E;
+    appearance: none;
+    background: none;
+    border: solid #EA5A4E 2px;
+    outline: none;
+    width: 223px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Rubik';
+}
+.plantDescItemsHeading{
+    margin-bottom: 10px;  
+    font-size: 16px;
+    color: #164C4C;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 28px;
+    margin-top: 0px;
+}
+/* /////////////////////////////////////////////////////////////////////////// */
+
+
+/* /////////////////////////////third section///////////////////////////////// */
+
+.thirdSection{
+    margin-top: 100px;
+}
+.thirdSectionContent{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.thirdSectionContent p{
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+
+
+}
+.thirdSectionHeading{
+    font-size: 40px;
+    color: #164C4C;
+    font-family: 'Alegreya';
+}
+.thirdSectionCardList{
+    display: flex;
+    flex-direction: column;
+    width: 308px;
+    height: 479px;
+    align-items: center;
+    border: solid #7D9990 1px;
+    border-radius: 3%;
+    margin: 5px;
+    background-color: white;
+}
+.thirdSectionCards{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.thirdSectionCardsInner{
+    width: 245px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    position: relative;
+}
+.thirdSectionCardsInner img{
+
+    width: 276px;
+    height: 229px;
+    position: absolute;
+    top:10px;
+    left: -16px;
+
+}
+.thirdSectionCardsInner h3{
+   color: #164C4C;
+   font-family: 'Alegreya';
+   position: absolute;
+   top:250px;
+   left: 25px;
+}
+.thirdSectionCardsInner p{
+    font-family: 'Alegreya';
+    text-align: center;
+    position: absolute;
+    top:300px;
+    left: 25px;
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.thirdSectionCardsInner button{
+    text-align: center;
+    position: absolute;
+    top:405px;
+    color: #EA5A4E;
+    appearance: none;
+    background: none;
+    border: solid #EA5A4E 2px;
+    outline: none;
+    width: 223px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Rubik';
+
+}
+/* /////////////////////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////footer////////////////////////////////////////// */
+footer{
+    background-color: #164C4C;
+    height: 267.11px;
+    position: relative;
+}
+
+.footerFirstDiv{
+    height: 267.11px;
+}
+.footerLogo{
+    width: 114.39px;
+    height: 108.33px;
+    position: absolute;
+    right:87%;
+    top: 45px;
+}
+.footerUni{
+    color: white;
+    justify-content: center;
+    width: 241px;
+    height: 124px;
+    position: absolute;
+    right:3%;
+    top: 39px;
+}
+
+.footerUni p{
+text-align: center;
+}
+
+.footerUniLogo{
+    position: relative;
+    right: -20px;
+}
+/* .footerSecondDiv{
+    position: relative;
+} */
+.footerSecondPone{
+    position: absolute;
+    right:85%;
+    top: 215px;
+    color: white;
+
+}
+.footerSecondPtwo{
+    position: absolute;
+   
+    right:4%;
+    top: 215px;
+    color: white;
+}
+.line{
+    position: absolute;
+    height: 0.5px;
+    width: 100%;
+    background-color: #7D9990;
+    top: 215px;
+}
+.logoCap{
+    position: absolute;
+    width: fit-content;
+    right:56%;
+    top: 170px;
+    color: white;
+}
+/* /////////////////////////////////////////////////////////////////////////// */
