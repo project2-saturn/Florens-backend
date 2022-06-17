@@ -21304,10 +21304,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./src/Home.js":
-/*!*********************!*\
-  !*** ./src/Home.js ***!
-  \*********************/
+/***/ "./src/HomePage.js":
+/*!*************************!*\
+  !*** ./src/HomePage.js ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21316,9 +21316,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+
+var data = {
+  firstname: "parth",
+  lastname: "soni"
+};
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     action: "/postUser",
     method: "POST",
     enctype: "multipart/form-data"
@@ -21332,9 +21338,43 @@ __webpack_require__.r(__webpack_exports__);
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "submit",
     className: ""
-  }, "Create Account")) //  <p> Hello</p>
-  ;
+  }, "Create Account")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/search",
+    state: data
+  }, "Click here to go to searchpage"));
 }
+
+/***/ }),
+
+/***/ "./src/SearchPage.js":
+/*!***************************!*\
+  !*** ./src/SearchPage.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+
+
+
+
+var SearchPage = function SearchPage(props) {
+  var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useLocation)();
+  var data = location.state;
+  console.log(data); // console.log(state);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "HEloo.. this is the search page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, data.firstname, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/"
+  }, "Click here to go to homepage"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchPage);
 
 /***/ }),
 
@@ -21470,18 +21510,23 @@ _global["default"]._babelPolyfill = true;
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home */ "./src/Home.js");
+/* harmony import */ var _HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HomePage */ "./src/HomePage.js");
+/* harmony import */ var _SearchPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SearchPage */ "./src/SearchPage.js");
  // installed using npm
 
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_0__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
+
+react_dom__WEBPACK_IMPORTED_MODULE_0__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
   path: "/",
-  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Home__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_HomePage__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+  path: "search",
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_SearchPage__WEBPACK_IMPORTED_MODULE_3__["default"], null)
 }))), document.getElementById("react-container"));
 })();
 

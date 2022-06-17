@@ -4,16 +4,20 @@ import {
     BrowserRouter,
     Routes,
     Route,
+    Link
   } from "react-router-dom";
 
 import React from 'react';
 
-import Home from './Home';
+import HomePage from './HomePage';
+import SearchPage from './SearchPage';
 
 ReactDOM.render(
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home />}/>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="search" element={<SearchPage />}/>
+
         </Routes>
     </BrowserRouter>
 
