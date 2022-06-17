@@ -9,6 +9,10 @@ const Plant = require("./models/Plant");
 const aws = require("aws-sdk");
 const fs = require("fs");
 const seedrandom = require("seedrandom");
+const cors = require("cors");
+
+app.use(cors());
+app.options("*", cors());
 
 const data = require("./data.json").Sheet1;
 const connection = require("./db/connection.js");
@@ -140,7 +144,7 @@ app.post("/loadData", async (req, res, next) => {
       photosURLArr = plant.Url.split(",").map(url => url.trim());
     }
 
-    if (plant.season != undefined) {
+    if (plant.Season != undefined) {
       seasonArr = plant.Season.split(",").map(
         season =>
           `${season
@@ -150,7 +154,7 @@ app.post("/loadData", async (req, res, next) => {
       );
     }
 
-    if (plant.locationArr != undefined) {
+    if (plant.Location != undefined) {
       locationArr = plant.Location.split(",").map(
         location =>
           `${location
@@ -308,16 +312,70 @@ app.patch("/deletePlantFromLibrary", (req, res) => {
 app.post("/getLibrary", (req, res) => {
   const useremail = req.body.useremail;
   console.log(useremail);
-  User
-    .findOne({ email: useremail }, { library: 1 })
-    .then((result) => {
-      console.log(`Current Subscriptions of ${useremail} are ${result.library.toString()}`);
+  User.findOne({ email: useremail }, { library: 1 })
+    .then(result => {
+      console.log(
+        `Current Subscriptions of ${useremail} are ${result.library.toString()}`
+      );
       if (result != null) {
-        res.status(200).json({data:result.library});
+        res.status(200).json({ data: result.library });
       } else {
         res.send([]);
       }
     })
-    .catch((error) => console.log(error));
+    .catch(error => console.log(error));
   // res.send("failure");
+});
+
+// API to get filtered search results
+app.post("/searchResults", (req, res) => {
+  console.log("req.body");
+  console.log(req.body);
+  let sendResults = [];
+  const re = new RegExp(`.*${req.body.searchText}.*`, "i");
+  console.log(re);
+  // console.log(req.body.searchOptions.searchText);
+  Plant.find({})
+    .then(result => {
+      console.log(result);
+
+      // Search Text Filter
+      result.forEach(element => {
+        if (
+          req.body.searchText == "" ||
+          re.test(element.name) ||
+          re.test(element.scientificName)
+        ) {
+          sendResults.push(element);
+        }
+      });
+
+      // Plant Type Filter
+      if (req.body.plantType != null) {
+        // console.log("here");
+        sendResults = sendResults.filter(element => {
+          if (element.type == req.body.plantType) {
+            return element;
+          }
+        });
+      }
+
+      // Plant Season Filter
+      if (req.body.searchSeason != null) {
+        sendResults = sendResults.filter(element => {
+          // console.log("***************************************************************");
+          // console.log(element.season);
+          for (const plantSeasonItem of element.season) {
+            // console.log(plantSeasonItem);
+            if (req.body.searchSeason.includes(plantSeasonItem)) {
+
+              return element;
+            }
+          }
+        });
+      }
+      console.log(sendResults);
+      res.send(sendResults);
+    })
+    .catch(error => console.log(error));
 });
