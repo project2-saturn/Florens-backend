@@ -337,7 +337,7 @@ app.post("/searchResults", (req, res) => {
   // console.log(req.body.searchOptions.searchText);
   Plant.find({})
     .then(result => {
-      console.log(result);
+      // console.log(result);
 
       // Search Text Filter
       result.forEach(element => {
@@ -351,10 +351,13 @@ app.post("/searchResults", (req, res) => {
       });
 
       // Plant Type Filter
-      if (req.body.plantType != null) {
+      if (req.body.searchType != null) {
         // console.log("here");
         sendResults = sendResults.filter(element => {
-          if (element.type == req.body.plantType) {
+          // console.log(req.body.plantType);
+          // console.log(element.type);
+
+          if (req.body.searchType.includes(element.type)) {
             return element;
           }
         });
@@ -368,13 +371,53 @@ app.post("/searchResults", (req, res) => {
           for (const plantSeasonItem of element.season) {
             // console.log(plantSeasonItem);
             if (req.body.searchSeason.includes(plantSeasonItem)) {
-
               return element;
             }
           }
         });
       }
-      console.log(sendResults);
+
+      //Plant Location Filter
+      if (req.body.searchLocation != null) {
+        sendResults = sendResults.filter(element => {
+          for (const plantLocationItem of element.location) {
+            if (req.body.searchLocation.includes(plantLocationItem)) {
+              return element;
+            }
+          }
+        });
+      }
+
+      //Plant Color Filter
+      if (req.body.searchColor != null) {
+        sendResults = sendResults.filter(element => {
+          for (const plantColorItem of element.color) {
+            if (req.body.searchColor.includes(plantColorItem)) {
+              return element;
+            }
+          }
+        });
+      }
+
+      //Plant Texture Filter
+      if (req.body.searchTexture != null) {
+        sendResults = sendResults.filter(element => {
+          if (req.body.searchTexture.includes(element.texture)) {
+            return element;
+          }
+        });
+      }
+
+      //Plant Form Filter
+      if (req.body.searchForm != null) {
+        sendResults = sendResults.filter(element => {
+          if (req.body.searchForm.includes(element.form)) {
+            return element;
+          }
+        });
+      }
+
+      // console.log(sendResults);
       res.send(sendResults);
     })
     .catch(error => console.log(error));
