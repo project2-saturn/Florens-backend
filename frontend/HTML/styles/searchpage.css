@@ -120,11 +120,115 @@ body{
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         opacity: 0.5;
+        
         }
         .header_background{
             height: 900px;
         }
-/* ///////////////////////////////////////////////////////////////////////////////// */
+/*////////////////////////////////////Filter Content////////////////////////////////*/
+.filterSectionOne{
+    position: relative;
+    height: 200px;
+}
+.filterSectionTwo{
+    position: relative;
+    height: 120px;
+}
+.filterSectionThree{
+    position: relative;
+    height: 120px;
+}
+.filterSectionFour{
+    position: relative;
+    height: 120px;
+}
+.filterSectionFive{
+    position: relative;
+    height: 120px;
+}
+.filterSectionSix{
+    position: relative;
+    height: 200px;
+}
+.filterP{
+    margin-left: 40px;
+    font-family: 'Rubik';
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    color: #0d3f3f;
+
+}
+
+.filterUl{
+    position: relative;
+    font-family: 'Rubik';
+    top: 20px;
+    display: flex;
+    list-style-type: none;
+}
+.filterLi{
+    margin-right: 10px;
+}
+
+.filterDiv{
+    width: 780px;
+    position: relative;
+    font-family: 'Rubik';
+    top: -75px;
+    left: 200px;
+}
+
+.filterBtns{
+    text-align: center;
+    appearance: none;
+    background: none;
+    height: 38px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 2px;
+    border: solid #EA5A4E 2px;
+    outline: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: 'Rubik';
+}
+.filterClear{
+    text-align: center;
+    color: #0d3f3f;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Rubik';
+    font-weight: bolder;
+
+}
+.filterApply{
+    text-align: center;
+    color: #0d3f3f;
+    appearance: none;
+    background: none;
+    border: solid #0d3f3f 2px;
+    outline: none;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Rubik';
+    font-weight: bolder;
+}
+.clearApply{
+    position: relative;
+    align-items: center;
+    top: -50px;
+    left: 35%;
+}
+/*///////////////////////////////////////////////////////////////////////////////// */
 .filterAdv{
     margin: auto;
     position: relative;
