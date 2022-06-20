@@ -12,7 +12,7 @@ console.log(data);
     return (
       <>
       <h1>HEloo.. this is the search page</h1>
-      <h2>{data.firstname} </h2>
+      <h2>{data.firstname[0]} </h2>
       <Link to="/">Click here to go to homepage</Link>
     </>
     )};

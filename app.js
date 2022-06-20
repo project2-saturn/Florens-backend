@@ -11,6 +11,8 @@ const fs = require("fs");
 const seedrandom = require("seedrandom");
 const cors = require("cors");
 
+// const cookies  = require("js-cookie");
+
 app.use(cors());
 app.options("*", cors());
 
@@ -28,6 +30,27 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+// cookies.set("email", "vi@gmail.com");
+
+
+app.get("/login/user", async (req, res) => {
+  console.log(req.query.email);
+  try {
+    const getU = await User
+      .findOne({ email: req.query.email })
+      .exec();
+
+    console.log(getU);
+    res.send(getU);
+    // console.log(getUserFromMongoDB)
+    // res.json(getUserFromMongoDB)
+    // loggedInUser = getUserFromMongoDB
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 // Api for login
 
 app.post("/login", async (req, res) => {
@@ -41,12 +64,13 @@ app.post("/login", async (req, res) => {
       savedPass = await user.password;
       const pass = await bcrypt.compare(req.body.password, user.password);
       if (pass) {
-        res.send("Password Validated");
+        // cookies.set("email", user.email);
+        res.status(200).send("Password Validated");
       } else {
-        res.send("Please enter the correct password");
+        res.status(400).send("Please enter the correct password");
       }
     } else {
-      res.send("User not found");
+      res.status(400).send("User not found");
     }
   }
 });
@@ -327,7 +351,24 @@ app.post("/getLibrary", (req, res) => {
   // res.send("failure");
 });
 
-// API to get filtered search results
+/* 
+ API to get filtered search results
+
+ Request Body example:
+{
+    "searchText" : "",
+    "searchType": ["Herbaceous perennial", "Ground Cover", "Fern-Weed"],
+    "searchForm" : ["Mounded","Compound, Fern-like"],
+    "searchColor" : ["White", "Yellow"],
+    "searchSeason" : [],
+    "searchLocation" : ["Burnaby", "Vancouver"],
+    "searchTexture" : []
+
+}
+
+Returns plant data in json format
+
+*/
 app.post("/searchResults", (req, res) => {
   console.log("req.body");
   console.log(req.body);
@@ -351,7 +392,7 @@ app.post("/searchResults", (req, res) => {
       });
 
       // Plant Type Filter
-      if (req.body.searchType != null) {
+      if (req.body.searchType != null && req.body.searchType.length >= 1) {
         // console.log("here");
         sendResults = sendResults.filter(element => {
           // console.log(req.body.plantType);
@@ -364,7 +405,7 @@ app.post("/searchResults", (req, res) => {
       }
 
       // Plant Season Filter
-      if (req.body.searchSeason != null) {
+      if (req.body.searchSeason != null && req.body.searchSeason.length >= 1) {
         sendResults = sendResults.filter(element => {
           // console.log("***************************************************************");
           // console.log(element.season);
@@ -378,7 +419,7 @@ app.post("/searchResults", (req, res) => {
       }
 
       //Plant Location Filter
-      if (req.body.searchLocation != null) {
+      if (req.body.searchLocation != null && req.body.searchLocation.length >= 1)  {
         sendResults = sendResults.filter(element => {
           for (const plantLocationItem of element.location) {
             if (req.body.searchLocation.includes(plantLocationItem)) {
@@ -389,7 +430,7 @@ app.post("/searchResults", (req, res) => {
       }
 
       //Plant Color Filter
-      if (req.body.searchColor != null) {
+      if (req.body.searchColor != null && req.body.searchColor.length >= 1) {
         sendResults = sendResults.filter(element => {
           for (const plantColorItem of element.color) {
             if (req.body.searchColor.includes(plantColorItem)) {
@@ -400,7 +441,7 @@ app.post("/searchResults", (req, res) => {
       }
 
       //Plant Texture Filter
-      if (req.body.searchTexture != null) {
+      if (req.body.searchTexture != null && req.body.searchTexture.length >= 1) {
         sendResults = sendResults.filter(element => {
           if (req.body.searchTexture.includes(element.texture)) {
             return element;
@@ -409,7 +450,7 @@ app.post("/searchResults", (req, res) => {
       }
 
       //Plant Form Filter
-      if (req.body.searchForm != null) {
+      if (req.body.searchForm != null && req.body.searchForm.length >= 1) {
         sendResults = sendResults.filter(element => {
           if (req.body.searchForm.includes(element.form)) {
             return element;
