@@ -10,11 +10,12 @@ const aws = require("aws-sdk");
 const fs = require("fs");
 const seedrandom = require("seedrandom");
 const cors = require("cors");
-
-// const cookies  = require("js-cookie");
+const {generateToken,verifyToken}=require("./JWT.js")
+ const cookies  = require("cookie-parser");
 
 app.use(cors());
 app.options("*", cors());
+app.use(cookies());
 
 const data = require("./data.json").Sheet1;
 const connection = require("./db/connection.js");
@@ -34,22 +35,20 @@ app.use(express.json());
 // cookies.set("email", "vi@gmail.com");
 
 
-app.get("/login/user", async (req, res) => {
-  console.log(req.query.email);
-  try {
-    const getU = await User
-      .findOne({ email: req.query.email })
-      .exec();
+// app.get("/login/user", async (req, res) => {
+//   console.log(req.query.email);
+//   try {
+//     const getU = await User
+//       .findOne({ email: req.query.email })
+//       .exec();
 
-    console.log(getU);
-    res.send(getU);
-    // console.log(getUserFromMongoDB)
-    // res.json(getUserFromMongoDB)
-    // loggedInUser = getUserFromMongoDB
-  } catch (error) {
-    console.log(error);
-  }
-});
+//     console.log(getU);
+//     res.send(getU);
+  
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 // Api for login
 
@@ -65,6 +64,9 @@ app.post("/login", async (req, res) => {
       const pass = await bcrypt.compare(req.body.password, user.password);
       if (pass) {
         // cookies.set("email", user.email);
+       
+        const token=generateToken(user)
+        res.cookie("token",token);
         res.status(200).send("Password Validated");
       } else {
         res.status(400).send("Please enter the correct password");
@@ -224,6 +226,7 @@ app.post("/loadData", async (req, res, next) => {
 // So, it always stays same on that particular day.
 app.get("/plantOfTheDay", async (req, res, next) => {
   let today = new Date();
+  console.log(req)
   let rng = seedrandom(today.getDate().toString());
   Plant.count().then(count => {
     console.log(`Count: ${count}`);
@@ -272,7 +275,7 @@ app.get("/plants", async (req, res, next) => {
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/addPlantToLibrary", (req, res) => {
+app.patch("/addPlantToLibrary",verifyToken, (req, res) => {
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);
@@ -295,7 +298,7 @@ app.patch("/addPlantToLibrary", (req, res) => {
 // below endpoint updates the library array on user database to delete plant from its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/deletePlantFromLibrary", (req, res) => {
+app.patch("/deletePlantFromLibrary",verifyToken ,(req, res) => {
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);
@@ -333,7 +336,7 @@ app.patch("/deletePlantFromLibrary", (req, res) => {
 // below endpoint fetches the library array of user.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the library array in json format.
-app.post("/getLibrary", (req, res) => {
+app.post("/getLibrary",verifyToken ,(req, res) => {
   const useremail = req.body.useremail;
   console.log(useremail);
   User.findOne({ email: useremail }, { library: 1 })
