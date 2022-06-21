@@ -354,6 +354,30 @@ app.post("/getLibrary",verifyToken ,(req, res) => {
   // res.send("failure");
 });
 
+
+//Edit Details API 
+
+
+app.patch("/edit",verifyToken, (req, res) => {
+  // const ObjectID = req.body.ObjectID;
+  const name=req.body.name;
+  const email = req.body.email;
+  User.findOne({ email: email })
+    .then(result => {
+      User.updateOne(
+        { email: email },
+        { name: name }
+      )
+        .then(
+          res.status(201).json({ data: [name,email] })
+        )
+
+        .catch(error => console.log(error));
+    })
+    .catch(error => console.log(error));
+});
+
+
 /* 
  API to get filtered search results
 
