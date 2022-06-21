@@ -23617,7 +23617,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/dist/js.cookie.mjs");
 /* harmony import */ var _lib_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/Header */ "./src/lib/Header.js");
 /* harmony import */ var _lib_Features__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/Features */ "./src/lib/Features.js");
-/* harmony import */ var _styles_homepage_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/homepage.css */ "./src/styles/homepage.css");
+/* harmony import */ var _lib_PlantOfTheDay__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lib/PlantOfTheDay */ "./src/lib/PlantOfTheDay.js");
+/* harmony import */ var _lib_SeasonalPlants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./lib/SeasonalPlants */ "./src/lib/SeasonalPlants.js");
+/* harmony import */ var _lib_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lib/Footer */ "./src/lib/Footer.js");
+/* harmony import */ var _styles_homepage_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/homepage.css */ "./src/styles/homepage.css");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -23635,6 +23638,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
+
+ // import "./js/advanceSearch";
 
 var data = {
   firstname: ["parth", "soni"]
@@ -23659,7 +23666,7 @@ var data = {
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
     user: user
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_Features__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_Features__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_PlantOfTheDay__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_SeasonalPlants__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], null));
 }
 {
   /* <form action="/postUser" method="POST" enctype="multipart/form-data">
@@ -23690,20 +23697,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var _styles_searchpage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/searchpage.css */ "./src/styles/searchpage.css");
+/* harmony import */ var _lib_NavigationBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/NavigationBar */ "./src/lib/NavigationBar.js");
+/* harmony import */ var _lib_Search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/Search */ "./src/lib/Search.js");
+/* harmony import */ var _lib_SearchResults__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/SearchResults */ "./src/lib/SearchResults.js");
+/* harmony import */ var _lib_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lib/Footer */ "./src/lib/Footer.js");
+/* harmony import */ var _lib_SearchSearchPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./lib/SearchSearchPage */ "./src/lib/SearchSearchPage.js");
+
+
+
+
+
+
 
 
 
 
 var SearchPage = function SearchPage(props) {
-  var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useLocation)();
-  var data = location.state;
-  console.log(data); // console.log(state);
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "HEloo.. this is the search page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, data.firstname[0], " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "/"
-  }, "Click here to go to homepage"));
+  //     const location = useLocation();
+  // const data = location.state;
+  // console.log(data);
+  // console.log(state);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_NavigationBar__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_SearchSearchPage__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchPage);
@@ -23758,6 +23773,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/lib/Footer.js":
+/*!***************************!*\
+  !*** ./src/lib/Footer.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "footerFirstDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    "class": "footerLogo",
+    src: "../images/Group_641.png",
+    alt: "logo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "footerUni"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    "class": "footerUniLogo",
+    src: "../images/KPU-Logo.png",
+    alt: "KPU"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Plant Database from KPU:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "https://plantdatabase.kpu.ca")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "logoCap"
+  }, "Foliage background and Leaf illustration vector created by rawpixel.com - www.freepik.com"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "line"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "footerSecondPone"
+  }, "Copyright Florens 2022"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "footerSecondPtwo"
+  }, "Developed by Team Saturn - Langara"))));
+}
+
+/***/ }),
+
 /***/ "./src/lib/Header.js":
 /*!***************************!*\
   !*** ./src/lib/Header.js ***!
@@ -23770,9 +23824,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var _NavigationBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationBar */ "./src/lib/NavigationBar.js");
+
+
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
+    "class": "homeHeader"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_NavigationBar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "headerText"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    "class": "headerTextHeading"
+  }, "A Pocket Expert ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "for B.C. Plants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "headerTextPara"
+  }, "Explore British Columbia native flora. Florens is an ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "application to learn about our flowers, trees and plants", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "and get connected with the nature around you.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "searchBarHome"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "text",
+    "class": "inputSearch",
+    placeholder: " \uF002      Start typing..."
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/search"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "btn btn_common"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    "class": "fas fa-search fa-2x"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "accordion"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button",
+    "class": "accordion_button "
+  }, "Advanced Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "accordion_content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam ."))));
+}
+
+/***/ }),
+
+/***/ "./src/lib/NavigationBar.js":
+/*!**********************************!*\
+  !*** ./src/lib/NavigationBar.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "navBar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     "class": "headerLogo",
@@ -23784,14 +23888,97 @@ __webpack_require__.r(__webpack_exports__);
   }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     "class": "loginNav",
     href: ""
-  }, "Login")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    "class": "headerText"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
-    "class": "headerTextHeading"
-  }, "A Pocket Expert ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "for B.C. Plants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    "class": "headerTextPara"
-  }, "Explore British Columbia native flora. Florens is an ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "application to learn about our flowers, trees and plants", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "and get connected with the nature around you.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    "class": "searchBar"
+  }, "Login")));
+}
+
+/***/ }),
+
+/***/ "./src/lib/PlantOfTheDay.js":
+/*!**********************************!*\
+  !*** ./src/lib/PlantOfTheDay.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    "class": "secondSection"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    "class": "secondSectionHeadings"
+  }, "Plant of the Day"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "secondSectionCard"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "secondSecImg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "plantInfo"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Rockey mountain juniper, Wichita Blue ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "juniper, Tolleson's Blue Weeping juniper"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Junipers scopulorum cvs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "plantDescItems1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    "class": "plantDescItemsHeading"
+  }, "Plant Type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "plantDescItemsPara"
+  }, "Conifer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "plantDescItems2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    "class": "plantDescItemsHeading"
+  }, "Season"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "plantDescItemsPara"
+  }, "April, May")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "plantDescItems3"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    "class": "plantDescItemsHeading"
+  }, "Color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "plantDescItemsPara"
+  }, "Bluish, Green")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "plantDescItems4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    "class": "plantDescItemsHeading"
+  }, "Flower color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "plantDescItemsPara"
+  }, "No Flowers")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "plantDescItems5"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    "class": "plantDescItemsHeading"
+  }, "Form"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "plantDescItemsPara"
+  }, "Scale-like, Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "plantDescItems6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    "class": "plantDescItemsHeading"
+  }, "texture"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "plantDescItemsPara"
+  }, "Prickly")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details")))));
+}
+
+/***/ }),
+
+/***/ "./src/lib/Search.js":
+/*!***************************!*\
+  !*** ./src/lib/Search.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "searchBarSearch"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "text",
     "class": "inputSearch",
@@ -23808,6 +23995,348 @@ __webpack_require__.r(__webpack_exports__);
   }, "Advanced Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "accordion_content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam ."))));
+}
+
+/***/ }),
+
+/***/ "./src/lib/SearchResults.js":
+/*!**********************************!*\
+  !*** ./src/lib/SearchResults.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "searchListNumber"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "111 Results for: Conifer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    "class": "searchItemList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details")))));
+}
+
+/***/ }),
+
+/***/ "./src/lib/SearchSearchPage.js":
+/*!*************************************!*\
+  !*** ./src/lib/SearchSearchPage.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "searchBarSearch"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "text",
+    "class": "inputSearch",
+    placeholder: " \uF002      Start typing..."
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "btn btn_common"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    "class": "fas fa-search fa-2x"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "accordion"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button",
+    "class": "accordion_button "
+  }, "Advanced Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "accordion_content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam .")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "searchListNumber"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "111 Results for: Conifer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    "class": "searchItemList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), " you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))))));
+}
+
+/***/ }),
+
+/***/ "./src/lib/SeasonalPlants.js":
+/*!***********************************!*\
+  !*** ./src/lib/SeasonalPlants.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    "class": "thirdSection"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionContent"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    "class": "thirdSectionHeading"
+  }, "It's Summer in British Columbia!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Check it out the most common flora you can", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "see around you")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCards"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "thirdSectionCardsInner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "../images/Rectangle_3_et.png",
+    alt: "plant"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Name of the plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Are you an expert, or", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "have some sort of knowledge?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "you can contribute with our"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button"
+  }, "Details"))))));
 }
 
 /***/ }),
@@ -23837,7 +24366,34 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    margin: 0px;\n}\nmain{\n    height: 2050px;\n}\nheader{\n    background-color: #F1ECEB;\n    height: 800px;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: 100% 100%;\n}\n/* ////////////////////////////Navigation Bar/////////////////////////////////////// */\n.navBar{\n    position: relative;\n}\n.headerLogo{\n    margin-left: 40px;\n    width: 92px;\n    height: 87px;\n}\n.aboutNav{\n    position: absolute;\n    top: 40%;\n    right: 8%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.loginNav{\n    position: absolute;\n    top: 40%;\n    right: 3%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.headerText{\n    text-align: center;\n    width: 100%;\n    height:400px\n}\n.headerTextHeading{\nfont-size: 67px;\ncolor: #164C4C;\nfont-family: 'Alegreya';\nmargin-bottom: 0;\nfont-weight: lighter;\n}\n.headerTextPara{\n  font-size: 16px;\n  font-family: 'Rubik';\n  font-weight: lighter;\n  color: #6B6B6B;\n}\n/*/////////////////////////////Search bar//////////////////////////////////////////  */\n.searchBar .inputSearch{\n    border: 0;\n    outline: none;\n    border-radius: 10px;\n\n}\n.searchBar{\n    margin: auto;\n    position: relative;\n    width: 1034px;\n    height: 70px;\n    \n}\n\n.inputSearch::placeholder{\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n}\n.inputSearch{\n\n    font-size: larger;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n.btn{\n    position: absolute;\n    top: 0;\n    right: -4px;\n    width: 90px;\n    height: 73px;\n    background-color: #164C4C;\n    z-index: 1;\n    cursor: pointer;\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n}\n.btn.btn_common .fas{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    color: white;\n}\n\n/* ///////////////////////////////////////////////////////////////////////////////// */\n.accordion_button {\n    text-align: center;\n    display: block;\n    margin: auto;\n    margin-top: 20px;\n    width: 1034px;\n    padding: 15px;\n    border: none;\n    border-radius: 10px;\n    outline: none;\n    cursor: pointer;\n    background: #FFFFFF;\n    color: #164C4C;\n    text-align: left;\n    transition: background 0.2s;\n    opacity: 0.5;\n    }\n\n    .accordion_button::after{\n        content: '\\25be';\n        float: right;\n        transform: scale(1.5);\n        }\n        .accordion_button--active{\n            background:  #FFFFFF;\n            border-bottom-left-radius: 0px;\n            border-bottom-right-radius: 0px;\n        }\n\n        .accordion_button--active::after{content: '\\25b4'}\n\n        .accordion_content{\n        overflow: hidden;\n        max-height: 0px;\n        transition: max-height 0.2s ;\n        width: 1034px;\n        margin: auto;\n        background: #FFFFFF;\n        border-bottom-left-radius: 10px;\n        border-bottom-right-radius: 10px;\n        opacity: 0.5;\n        }\n        .header_background{\n            height: 900px;\n        }\n/* ///////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////firstSection///////////////////////////////////////// */\n\n.firstSection{\n    margin-top: 120px;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.firstSection img{\n    width: 300px;\n    height: 200px;\n}\n.firstSectionFirstCard{\n    width: 300px; \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionSecondCard{\n    width: 300px;  \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionThirdCard{\n    width: 300px; \n    margin-right: 70px;  \n    font-family: 'Alegreya';\n}\n\n.firstSectionParagraph{\n    font-size: 16px;\n    margin: 10px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.firstSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    color: #164C4C;\n}\n/* //////////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////////Second Section////////////////////////////////////// */\n.secondSection{\n    margin-top: 100px;\n}\n.secondSectionCard{\n    display: flex;\n    justify-content: center;\n}\n.secondSection{\n    margin-top: 100px;\n    margin-bottom: 100px;\n}\n\n.secondSecImg img{\n    position: absolute;\n    top: 70px;\n    left: 60px;\n    width: 524px;\n    height: 434px;\n    border-radius: 10px;\n}\n\n.secondSectionCard{\n    margin: auto;\n    height: 390px;\n    background-color: #F1ECEB;\n    width: 1280px;\n    height: 575px;\n    position: relative;\n    border-radius: 15px;\n}\n.secondSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    text-align: center;\n    margin-bottom: 40px;\n    border-radius: 10px;\n    color: #164C4C;\n}\n\n.plantInfo h3{\n    position: absolute;\n    top: 70px;\n    left: 650px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.plantInfo p{\n    position: absolute;\n    top: 140px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n\n.plantDescItems1{\n    position: absolute;\n    top: 200px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems2{\n    position: absolute;\n    top: 200px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems3{\n    position: absolute;\n    top: 275px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems4{\n    position: absolute;\n    top: 275px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems5{\n    position: absolute;\n    top: 350px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems6{\n    position: absolute;\n    top: 350px;\n    left: 900px;\n}\n.plantInfo button{\n    position: absolute;\n    top: 460px;\n    left: 650px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n}\n.plantDescItemsHeading{\n    margin-bottom: 10px;  \n    font-size: 16px;\n    color: #164C4C;\n    font-weight: bold;\n}\n\nh3{\n    font-size: 28px;\n    margin-top: 0px;\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* /////////////////////////////third section///////////////////////////////// */\n\n.thirdSection{\n    margin-top: 100px;\n}\n.thirdSectionContent{\n    text-align: center;\n    margin-bottom: 50px;\n}\n.thirdSectionContent p{\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n\n\n}\n.thirdSectionHeading{\n    font-size: 40px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.thirdSectionCardList{\n    display: flex;\n    flex-direction: column;\n    width: 308px;\n    height: 479px;\n    align-items: center;\n    border: solid #7D9990 1px;\n    border-radius: 3%;\n    margin: 5px;\n    background-color: white;\n}\n.thirdSectionCards{\n\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.thirdSectionCardsInner{\n    width: 245px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    align-items: center;\n    position: relative;\n}\n.thirdSectionCardsInner img{\n\n    width: 276px;\n    height: 229px;\n    position: absolute;\n    top:10px;\n    left: -16px;\n\n}\n.thirdSectionCardsInner h3{\n   color: #164C4C;\n   font-family: 'Alegreya';\n   position: absolute;\n   top:250px;\n   left: 25px;\n}\n.thirdSectionCardsInner p{\n    font-family: 'Alegreya';\n    text-align: center;\n    position: absolute;\n    top:300px;\n    left: 25px;\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.thirdSectionCardsInner button{\n    text-align: center;\n    position: absolute;\n    top:405px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* ///////////////////////////footer////////////////////////////////////////// */\nfooter{\n    background-color: #164C4C;\n    height: 267.11px;\n    position: relative;\n}\n\n.footerFirstDiv{\n    height: 267.11px;\n}\n.footerLogo{\n    width: 114.39px;\n    height: 108.33px;\n    position: absolute;\n    right:87%;\n    top: 45px;\n}\n.footerUni{\n    color: white;\n    justify-content: center;\n    width: 241px;\n    height: 124px;\n    position: absolute;\n    right:3%;\n    top: 39px;\n}\n\n.footerUni p{\ntext-align: center;\n}\n\n.footerUniLogo{\n    position: relative;\n    right: -20px;\n}\n/* .footerSecondDiv{\n    position: relative;\n} */\n.footerSecondPone{\n    position: absolute;\n    right:85%;\n    top: 215px;\n    color: white;\n\n}\n.footerSecondPtwo{\n    position: absolute;\n   \n    right:4%;\n    top: 215px;\n    color: white;\n}\n.line{\n    position: absolute;\n    height: 0.5px;\n    width: 100%;\n    background-color: #7D9990;\n    top: 215px;\n}\n.logoCap{\n    position: absolute;\n    width: fit-content;\n    right:56%;\n    top: 170px;\n    color: white;\n}\n/* /////////////////////////////////////////////////////////////////////////// */", "",{"version":3,"sources":["webpack://./src/styles/homepage.css"],"names":[],"mappings":"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","sourcesContent":["body{\n    margin: 0px;\n}\nmain{\n    height: 2050px;\n}\nheader{\n    background-color: #F1ECEB;\n    height: 800px;\n    background-image: url(../images/top-banner-BG-Desktop.png);\n    background-repeat: no-repeat;\n    background-size: 100% 100%;\n}\n/* ////////////////////////////Navigation Bar/////////////////////////////////////// */\n.navBar{\n    position: relative;\n}\n.headerLogo{\n    margin-left: 40px;\n    width: 92px;\n    height: 87px;\n}\n.aboutNav{\n    position: absolute;\n    top: 40%;\n    right: 8%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.loginNav{\n    position: absolute;\n    top: 40%;\n    right: 3%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.headerText{\n    text-align: center;\n    width: 100%;\n    height:400px\n}\n.headerTextHeading{\nfont-size: 67px;\ncolor: #164C4C;\nfont-family: 'Alegreya';\nmargin-bottom: 0;\nfont-weight: lighter;\n}\n.headerTextPara{\n  font-size: 16px;\n  font-family: 'Rubik';\n  font-weight: lighter;\n  color: #6B6B6B;\n}\n/*/////////////////////////////Search bar//////////////////////////////////////////  */\n.searchBar .inputSearch{\n    border: 0;\n    outline: none;\n    border-radius: 10px;\n\n}\n.searchBar{\n    margin: auto;\n    position: relative;\n    width: 1034px;\n    height: 70px;\n    \n}\n\n.inputSearch::placeholder{\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n}\n.inputSearch{\n\n    font-size: larger;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n.btn{\n    position: absolute;\n    top: 0;\n    right: -4px;\n    width: 90px;\n    height: 73px;\n    background-color: #164C4C;\n    z-index: 1;\n    cursor: pointer;\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n}\n.btn.btn_common .fas{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    color: white;\n}\n\n/* ///////////////////////////////////////////////////////////////////////////////// */\n.accordion_button {\n    text-align: center;\n    display: block;\n    margin: auto;\n    margin-top: 20px;\n    width: 1034px;\n    padding: 15px;\n    border: none;\n    border-radius: 10px;\n    outline: none;\n    cursor: pointer;\n    background: #FFFFFF;\n    color: #164C4C;\n    text-align: left;\n    transition: background 0.2s;\n    opacity: 0.5;\n    }\n\n    .accordion_button::after{\n        content: '\\25be';\n        float: right;\n        transform: scale(1.5);\n        }\n        .accordion_button--active{\n            background:  #FFFFFF;\n            border-bottom-left-radius: 0px;\n            border-bottom-right-radius: 0px;\n        }\n\n        .accordion_button--active::after{content: '\\25b4'}\n\n        .accordion_content{\n        overflow: hidden;\n        max-height: 0px;\n        transition: max-height 0.2s ;\n        width: 1034px;\n        margin: auto;\n        background: #FFFFFF;\n        border-bottom-left-radius: 10px;\n        border-bottom-right-radius: 10px;\n        opacity: 0.5;\n        }\n        .header_background{\n            height: 900px;\n        }\n/* ///////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////firstSection///////////////////////////////////////// */\n\n.firstSection{\n    margin-top: 120px;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.firstSection img{\n    width: 300px;\n    height: 200px;\n}\n.firstSectionFirstCard{\n    width: 300px; \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionSecondCard{\n    width: 300px;  \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionThirdCard{\n    width: 300px; \n    margin-right: 70px;  \n    font-family: 'Alegreya';\n}\n\n.firstSectionParagraph{\n    font-size: 16px;\n    margin: 10px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.firstSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    color: #164C4C;\n}\n/* //////////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////////Second Section////////////////////////////////////// */\n.secondSection{\n    margin-top: 100px;\n}\n.secondSectionCard{\n    display: flex;\n    justify-content: center;\n}\n.secondSection{\n    margin-top: 100px;\n    margin-bottom: 100px;\n}\n\n.secondSecImg img{\n    position: absolute;\n    top: 70px;\n    left: 60px;\n    width: 524px;\n    height: 434px;\n    border-radius: 10px;\n}\n\n.secondSectionCard{\n    margin: auto;\n    height: 390px;\n    background-color: #F1ECEB;\n    width: 1280px;\n    height: 575px;\n    position: relative;\n    border-radius: 15px;\n}\n.secondSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    text-align: center;\n    margin-bottom: 40px;\n    border-radius: 10px;\n    color: #164C4C;\n}\n\n.plantInfo h3{\n    position: absolute;\n    top: 70px;\n    left: 650px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.plantInfo p{\n    position: absolute;\n    top: 140px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n\n.plantDescItems1{\n    position: absolute;\n    top: 200px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems2{\n    position: absolute;\n    top: 200px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems3{\n    position: absolute;\n    top: 275px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems4{\n    position: absolute;\n    top: 275px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems5{\n    position: absolute;\n    top: 350px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems6{\n    position: absolute;\n    top: 350px;\n    left: 900px;\n}\n.plantInfo button{\n    position: absolute;\n    top: 460px;\n    left: 650px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n}\n.plantDescItemsHeading{\n    margin-bottom: 10px;  \n    font-size: 16px;\n    color: #164C4C;\n    font-weight: bold;\n}\n\nh3{\n    font-size: 28px;\n    margin-top: 0px;\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* /////////////////////////////third section///////////////////////////////// */\n\n.thirdSection{\n    margin-top: 100px;\n}\n.thirdSectionContent{\n    text-align: center;\n    margin-bottom: 50px;\n}\n.thirdSectionContent p{\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n\n\n}\n.thirdSectionHeading{\n    font-size: 40px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.thirdSectionCardList{\n    display: flex;\n    flex-direction: column;\n    width: 308px;\n    height: 479px;\n    align-items: center;\n    border: solid #7D9990 1px;\n    border-radius: 3%;\n    margin: 5px;\n    background-color: white;\n}\n.thirdSectionCards{\n\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.thirdSectionCardsInner{\n    width: 245px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    align-items: center;\n    position: relative;\n}\n.thirdSectionCardsInner img{\n\n    width: 276px;\n    height: 229px;\n    position: absolute;\n    top:10px;\n    left: -16px;\n\n}\n.thirdSectionCardsInner h3{\n   color: #164C4C;\n   font-family: 'Alegreya';\n   position: absolute;\n   top:250px;\n   left: 25px;\n}\n.thirdSectionCardsInner p{\n    font-family: 'Alegreya';\n    text-align: center;\n    position: absolute;\n    top:300px;\n    left: 25px;\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.thirdSectionCardsInner button{\n    text-align: center;\n    position: absolute;\n    top:405px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* ///////////////////////////footer////////////////////////////////////////// */\nfooter{\n    background-color: #164C4C;\n    height: 267.11px;\n    position: relative;\n}\n\n.footerFirstDiv{\n    height: 267.11px;\n}\n.footerLogo{\n    width: 114.39px;\n    height: 108.33px;\n    position: absolute;\n    right:87%;\n    top: 45px;\n}\n.footerUni{\n    color: white;\n    justify-content: center;\n    width: 241px;\n    height: 124px;\n    position: absolute;\n    right:3%;\n    top: 39px;\n}\n\n.footerUni p{\ntext-align: center;\n}\n\n.footerUniLogo{\n    position: relative;\n    right: -20px;\n}\n/* .footerSecondDiv{\n    position: relative;\n} */\n.footerSecondPone{\n    position: absolute;\n    right:85%;\n    top: 215px;\n    color: white;\n\n}\n.footerSecondPtwo{\n    position: absolute;\n   \n    right:4%;\n    top: 215px;\n    color: white;\n}\n.line{\n    position: absolute;\n    height: 0.5px;\n    width: 100%;\n    background-color: #7D9990;\n    top: 215px;\n}\n.logoCap{\n    position: absolute;\n    width: fit-content;\n    right:56%;\n    top: 170px;\n    color: white;\n}\n/* /////////////////////////////////////////////////////////////////////////// */"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    margin: 0px;\n}\nmain{\n    height: 2050px;\n}\n.homeHeader{\n    background-color: #F1ECEB;\n    height: 800px;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: 100% 100%;\n}\n/* ////////////////////////////Navigation Bar/////////////////////////////////////// */\n.navBar{\n    position: relative;\n}\n.headerLogo{\n    margin-left: 40px;\n    width: 92px;\n    height: 87px;\n}\n.aboutNav{\n    position: absolute;\n    top: 40%;\n    right: 8%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.loginNav{\n    position: absolute;\n    top: 40%;\n    right: 3%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.headerText{\n    text-align: center;\n    width: 100%;\n    height:400px\n}\n.headerTextHeading{\nfont-size: 67px;\ncolor: #164C4C;\nfont-family: 'Alegreya';\nmargin-bottom: 0;\nfont-weight: lighter;\n}\n.headerTextPara{\n  font-size: 16px;\n  font-family: 'Rubik';\n  font-weight: lighter;\n  color: #6B6B6B;\n}\n/*/////////////////////////////Search bar//////////////////////////////////////////  */\n.searchBarHome .inputSearch{\n    border: 0;\n    outline: none;\n    border-radius: 10px;\n\n}\n.searchBarHome{\n    margin: auto;\n    position: relative;\n    width: 1034px;\n    height: 70px;\n    \n}\n\n.inputSearch::placeholder{\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n}\n.inputSearch{\n\n    font-size: larger;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n.btn{\n    position: absolute;\n    top: 0;\n    right: -4px;\n    width: 90px;\n    height: 73px;\n    background-color: #164C4C;\n    z-index: 1;\n    cursor: pointer;\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n}\n.btn.btn_common .fas{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    color: white;\n}\n\n/* ///////////////////////////////////////////////////////////////////////////////// */\n.accordion_button {\n    text-align: center;\n    display: block;\n    margin: auto;\n    margin-top: 20px;\n    width: 1034px;\n    padding: 15px;\n    border: none;\n    border-radius: 10px;\n    outline: none;\n    cursor: pointer;\n    background: #FFFFFF;\n    color: #164C4C;\n    text-align: left;\n    transition: background 0.2s;\n    opacity: 0.5;\n    }\n\n    .accordion_button::after{\n        content: '\\25be';\n        float: right;\n        transform: scale(1.5);\n        }\n        .accordion_button--active{\n            background:  #FFFFFF;\n            border-bottom-left-radius: 0px;\n            border-bottom-right-radius: 0px;\n        }\n\n        .accordion_button--active::after{content: '\\25b4'}\n\n        .accordion_content{\n        overflow: hidden;\n        max-height: 0px;\n        transition: max-height 0.2s ;\n        width: 1034px;\n        margin: auto;\n        background: #FFFFFF;\n        border-bottom-left-radius: 10px;\n        border-bottom-right-radius: 10px;\n        opacity: 0.5;\n        }\n        .header_background{\n            height: 900px;\n        }\n/* ///////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////firstSection///////////////////////////////////////// */\n\n.firstSection{\n    margin-top: 120px;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.firstSection img{\n    width: 300px;\n    height: 200px;\n}\n.firstSectionFirstCard{\n    width: 300px; \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionSecondCard{\n    width: 300px;  \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionThirdCard{\n    width: 300px; \n    margin-right: 70px;  \n    font-family: 'Alegreya';\n}\n\n.firstSectionParagraph{\n    font-size: 16px;\n    margin: 10px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.firstSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    color: #164C4C;\n}\n/* //////////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////////Second Section////////////////////////////////////// */\n.secondSection{\n    margin-top: 100px;\n}\n.secondSectionCard{\n    display: flex;\n    justify-content: center;\n}\n.secondSection{\n    margin-top: 100px;\n    margin-bottom: 100px;\n}\n\n.secondSecImg img{\n    position: absolute;\n    top: 70px;\n    left: 60px;\n    width: 524px;\n    height: 434px;\n    border-radius: 10px;\n}\n\n.secondSectionCard{\n    margin: auto;\n    height: 390px;\n    background-color: #F1ECEB;\n    width: 1280px;\n    height: 575px;\n    position: relative;\n    border-radius: 15px;\n}\n.secondSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    text-align: center;\n    margin-bottom: 40px;\n    border-radius: 10px;\n    color: #164C4C;\n}\n\n.plantInfo h3{\n    position: absolute;\n    top: 70px;\n    left: 650px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.plantInfo p{\n    position: absolute;\n    top: 140px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n\n.plantDescItems1{\n    position: absolute;\n    top: 200px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems2{\n    position: absolute;\n    top: 200px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems3{\n    position: absolute;\n    top: 275px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems4{\n    position: absolute;\n    top: 275px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems5{\n    position: absolute;\n    top: 350px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems6{\n    position: absolute;\n    top: 350px;\n    left: 900px;\n}\n.plantInfo button{\n    position: absolute;\n    top: 460px;\n    left: 650px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n}\n.plantDescItemsHeading{\n    margin-bottom: 10px;  \n    font-size: 16px;\n    color: #164C4C;\n    font-weight: bold;\n}\n\nh3{\n    font-size: 28px;\n    margin-top: 0px;\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* /////////////////////////////third section///////////////////////////////// */\n\n.thirdSection{\n    margin-top: 100px;\n}\n.thirdSectionContent{\n    text-align: center;\n    margin-bottom: 50px;\n}\n.thirdSectionContent p{\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n\n\n}\n.thirdSectionHeading{\n    font-size: 40px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.thirdSectionCardList{\n    display: flex;\n    flex-direction: column;\n    width: 308px;\n    height: 479px;\n    align-items: center;\n    border: solid #7D9990 1px;\n    border-radius: 3%;\n    margin: 5px;\n    background-color: white;\n}\n.thirdSectionCards{\n\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.thirdSectionCardsInner{\n    width: 245px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    align-items: center;\n    position: relative;\n}\n.thirdSectionCardsInner img{\n\n    width: 276px;\n    height: 229px;\n    position: absolute;\n    top:10px;\n    left: -16px;\n\n}\n.thirdSectionCardsInner h3{\n   color: #164C4C;\n   font-family: 'Alegreya';\n   position: absolute;\n   top:250px;\n   left: 25px;\n}\n.thirdSectionCardsInner p{\n    font-family: 'Alegreya';\n    text-align: center;\n    position: absolute;\n    top:300px;\n    left: 25px;\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.thirdSectionCardsInner button{\n    text-align: center;\n    position: absolute;\n    top:405px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* ///////////////////////////footer////////////////////////////////////////// */\nfooter{\n    background-color: #164C4C;\n    height: 267.11px;\n    position: relative;\n}\n\n.footerFirstDiv{\n    height: 267.11px;\n}\n.footerLogo{\n    width: 114.39px;\n    height: 108.33px;\n    position: absolute;\n    right:87%;\n    top: 45px;\n}\n.footerUni{\n    color: white;\n    justify-content: center;\n    width: 241px;\n    height: 124px;\n    position: absolute;\n    right:3%;\n    top: 39px;\n}\n\n.footerUni p{\ntext-align: center;\n}\n\n.footerUniLogo{\n    position: relative;\n    right: -20px;\n}\n/* .footerSecondDiv{\n    position: relative;\n} */\n.footerSecondPone{\n    position: absolute;\n    right:85%;\n    top: 215px;\n    color: white;\n\n}\n.footerSecondPtwo{\n    position: absolute;\n   \n    right:4%;\n    top: 215px;\n    color: white;\n}\n.line{\n    position: absolute;\n    height: 0.5px;\n    width: 100%;\n    background-color: #7D9990;\n    top: 215px;\n}\n.logoCap{\n    position: absolute;\n    width: fit-content;\n    right:56%;\n    top: 170px;\n    color: white;\n}\n/* /////////////////////////////////////////////////////////////////////////// */", "",{"version":3,"sources":["webpack://./src/styles/homepage.css"],"names":[],"mappings":"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","sourcesContent":["body{\n    margin: 0px;\n}\nmain{\n    height: 2050px;\n}\n.homeHeader{\n    background-color: #F1ECEB;\n    height: 800px;\n    background-image: url(../images/top-banner-BG-Desktop.png);\n    background-repeat: no-repeat;\n    background-size: 100% 100%;\n}\n/* ////////////////////////////Navigation Bar/////////////////////////////////////// */\n.navBar{\n    position: relative;\n}\n.headerLogo{\n    margin-left: 40px;\n    width: 92px;\n    height: 87px;\n}\n.aboutNav{\n    position: absolute;\n    top: 40%;\n    right: 8%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.loginNav{\n    position: absolute;\n    top: 40%;\n    right: 3%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.headerText{\n    text-align: center;\n    width: 100%;\n    height:400px\n}\n.headerTextHeading{\nfont-size: 67px;\ncolor: #164C4C;\nfont-family: 'Alegreya';\nmargin-bottom: 0;\nfont-weight: lighter;\n}\n.headerTextPara{\n  font-size: 16px;\n  font-family: 'Rubik';\n  font-weight: lighter;\n  color: #6B6B6B;\n}\n/*/////////////////////////////Search bar//////////////////////////////////////////  */\n.searchBarHome .inputSearch{\n    border: 0;\n    outline: none;\n    border-radius: 10px;\n\n}\n.searchBarHome{\n    margin: auto;\n    position: relative;\n    width: 1034px;\n    height: 70px;\n    \n}\n\n.inputSearch::placeholder{\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n}\n.inputSearch{\n\n    font-size: larger;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n.btn{\n    position: absolute;\n    top: 0;\n    right: -4px;\n    width: 90px;\n    height: 73px;\n    background-color: #164C4C;\n    z-index: 1;\n    cursor: pointer;\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n}\n.btn.btn_common .fas{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    color: white;\n}\n\n/* ///////////////////////////////////////////////////////////////////////////////// */\n.accordion_button {\n    text-align: center;\n    display: block;\n    margin: auto;\n    margin-top: 20px;\n    width: 1034px;\n    padding: 15px;\n    border: none;\n    border-radius: 10px;\n    outline: none;\n    cursor: pointer;\n    background: #FFFFFF;\n    color: #164C4C;\n    text-align: left;\n    transition: background 0.2s;\n    opacity: 0.5;\n    }\n\n    .accordion_button::after{\n        content: '\\25be';\n        float: right;\n        transform: scale(1.5);\n        }\n        .accordion_button--active{\n            background:  #FFFFFF;\n            border-bottom-left-radius: 0px;\n            border-bottom-right-radius: 0px;\n        }\n\n        .accordion_button--active::after{content: '\\25b4'}\n\n        .accordion_content{\n        overflow: hidden;\n        max-height: 0px;\n        transition: max-height 0.2s ;\n        width: 1034px;\n        margin: auto;\n        background: #FFFFFF;\n        border-bottom-left-radius: 10px;\n        border-bottom-right-radius: 10px;\n        opacity: 0.5;\n        }\n        .header_background{\n            height: 900px;\n        }\n/* ///////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////firstSection///////////////////////////////////////// */\n\n.firstSection{\n    margin-top: 120px;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.firstSection img{\n    width: 300px;\n    height: 200px;\n}\n.firstSectionFirstCard{\n    width: 300px; \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionSecondCard{\n    width: 300px;  \n    margin-right: 70px; \n    font-family: 'Alegreya';\n}\n.firstSectionThirdCard{\n    width: 300px; \n    margin-right: 70px;  \n    font-family: 'Alegreya';\n}\n\n.firstSectionParagraph{\n    font-size: 16px;\n    margin: 10px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.firstSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    color: #164C4C;\n}\n/* //////////////////////////////////////////////////////////////////////////////////// */\n\n\n/* ////////////////////////////////Second Section////////////////////////////////////// */\n.secondSection{\n    margin-top: 100px;\n}\n.secondSectionCard{\n    display: flex;\n    justify-content: center;\n}\n.secondSection{\n    margin-top: 100px;\n    margin-bottom: 100px;\n}\n\n.secondSecImg img{\n    position: absolute;\n    top: 70px;\n    left: 60px;\n    width: 524px;\n    height: 434px;\n    border-radius: 10px;\n}\n\n.secondSectionCard{\n    margin: auto;\n    height: 390px;\n    background-color: #F1ECEB;\n    width: 1280px;\n    height: 575px;\n    position: relative;\n    border-radius: 15px;\n}\n.secondSectionHeadings{\n    font-size: 40px;\n    margin:3px;\n    font-family: 'Alegreya';\n    text-align: center;\n    margin-bottom: 40px;\n    border-radius: 10px;\n    color: #164C4C;\n}\n\n.plantInfo h3{\n    position: absolute;\n    top: 70px;\n    left: 650px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.plantInfo p{\n    position: absolute;\n    top: 140px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n\n.plantDescItems1{\n    position: absolute;\n    top: 200px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems2{\n    position: absolute;\n    top: 200px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems3{\n    position: absolute;\n    top: 275px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems4{\n    position: absolute;\n    top: 275px;\n    left: 900px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems5{\n    position: absolute;\n    top: 350px;\n    left: 650px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.plantDescItems6{\n    position: absolute;\n    top: 350px;\n    left: 900px;\n}\n.plantInfo button{\n    position: absolute;\n    top: 460px;\n    left: 650px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n}\n.plantDescItemsHeading{\n    margin-bottom: 10px;  \n    font-size: 16px;\n    color: #164C4C;\n    font-weight: bold;\n}\n\nh3{\n    font-size: 28px;\n    margin-top: 0px;\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* /////////////////////////////third section///////////////////////////////// */\n\n.thirdSection{\n    margin-top: 100px;\n}\n.thirdSectionContent{\n    text-align: center;\n    margin-bottom: 50px;\n}\n.thirdSectionContent p{\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n\n\n}\n.thirdSectionHeading{\n    font-size: 40px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.thirdSectionCardList{\n    display: flex;\n    flex-direction: column;\n    width: 308px;\n    height: 479px;\n    align-items: center;\n    border: solid #7D9990 1px;\n    border-radius: 3%;\n    margin: 5px;\n    background-color: white;\n}\n.thirdSectionCards{\n\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.thirdSectionCardsInner{\n    width: 245px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    align-items: center;\n    position: relative;\n}\n.thirdSectionCardsInner img{\n\n    width: 276px;\n    height: 229px;\n    position: absolute;\n    top:10px;\n    left: -16px;\n\n}\n.thirdSectionCardsInner h3{\n   color: #164C4C;\n   font-family: 'Alegreya';\n   position: absolute;\n   top:250px;\n   left: 25px;\n}\n.thirdSectionCardsInner p{\n    font-family: 'Alegreya';\n    text-align: center;\n    position: absolute;\n    top:300px;\n    left: 25px;\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.thirdSectionCardsInner button{\n    text-align: center;\n    position: absolute;\n    top:405px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n\n/* ///////////////////////////footer////////////////////////////////////////// */\nfooter{\n    background-color: #164C4C;\n    height: 267.11px;\n    position: relative;\n}\n\n.footerFirstDiv{\n    height: 267.11px;\n}\n.footerLogo{\n    width: 114.39px;\n    height: 108.33px;\n    position: absolute;\n    right:87%;\n    top: 45px;\n}\n.footerUni{\n    color: white;\n    justify-content: center;\n    width: 241px;\n    height: 124px;\n    position: absolute;\n    right:3%;\n    top: 39px;\n}\n\n.footerUni p{\ntext-align: center;\n}\n\n.footerUniLogo{\n    position: relative;\n    right: -20px;\n}\n/* .footerSecondDiv{\n    position: relative;\n} */\n.footerSecondPone{\n    position: absolute;\n    right:85%;\n    top: 215px;\n    color: white;\n\n}\n.footerSecondPtwo{\n    position: absolute;\n   \n    right:4%;\n    top: 215px;\n    color: white;\n}\n.line{\n    position: absolute;\n    height: 0.5px;\n    width: 100%;\n    background-color: #7D9990;\n    top: 215px;\n}\n.logoCap{\n    position: absolute;\n    width: fit-content;\n    right:56%;\n    top: 170px;\n    color: white;\n}\n/* /////////////////////////////////////////////////////////////////////////// */"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/searchpage.css":
+/*!*************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/searchpage.css ***!
+  \*************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    margin: 0;\n}\n.navBar{\n    position: relative;\n    background-color: #F1ECEB;\n}\n.headerLogo{\n    margin-left: 40px;\n    width: 92px;\n    height: 87px;\n}\n.aboutNav{\n    position: absolute;\n    top: 40%;\n    right: 8%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.loginNav{\n    position: absolute;\n    top: 40%;\n    right: 3%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n/*/////////////////////////////Search bar//////////////////////////////////////////  */\n.searchBarSearch .inputSearch{\n    border: solid #EA5A4E 1px;\n    outline: none;\n    border-radius: 10px;\n\n}\n.searchBarSearch{\n    margin: auto;\n    position: relative;\n    width: 1034px;\n    height: 70px;\n    margin-top: 60px;\n    \n}\n\n.inputSearch::placeholder{\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n}\n.inputSearch{\n\n    font-size: larger;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n.btn{\n    position: absolute;\n    top: 0;\n    right: -6px;\n    width: 80px;\n    height: 74px;\n    background-color: #164C4C;\n    z-index: 1;\n    cursor: pointer;\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n}\n.btn.btn_common .fas{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    color: white;\n}\n/* /////////////////////////////Advanced search  /////////////////////////////////// */\n.accordion_button {\n    text-align: center;\n    display: block;\n    margin: auto;\n    margin-top: 20px;\n    width: 1034px;\n    padding: 15px;\n    border: none;\n    border-radius: 10px;\n    outline: none;\n    cursor: pointer;\n    background: #F1ECEB;\n    color: #164C4C;\n    text-align: left;\n    transition: background 0.2s;\n    opacity: 0.5;\n    }\n\n    .accordion_button::after{\n        content: '\\25be';\n        float: right;\n        transform: scale(1.5);\n        }\n        .accordion_button--active{\n            background:  #F1ECEB;\n            border-bottom-left-radius: 0px;\n            border-bottom-right-radius: 0px;\n        }\n\n        .accordion_button--active::after{content: '\\25b4'}\n\n        .accordion_content{\n        overflow: hidden;\n        max-height: 0px;\n        transition: max-height 0.2s ;\n        width: 1034px;\n        margin: auto;\n        background: #F1ECEB;\n        border-bottom-left-radius: 10px;\n        border-bottom-right-radius: 10px;\n        opacity: 0.5;\n        }\n        .header_background{\n            height: 900px;\n        }\n/* ///////////////////////////////////////////////////////////////////////////////// */\n.filterAdv{\n    margin: auto;\n    position: relative;\n    margin-top: 30px;\n}\n.dropDownButton{\n    text-align: center;\n    position: absolute;\n    left:16%;\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n    height: 48px;\n    width:  1034px;\n    font-size: 18px;\n    border-radius: 6px;\n    opacity: 0.5;\n}\n\n/* ///////////////////////////////////////////////////////////////////////////////// */\n\n.searchListNumber h2{\n    margin-top: 150px;\n    text-align: center;\n    color: #164C4C;\n    font-family: 'Alegreya';\n    font-size: 40px;\n\n}\n\n/* /////////////////////////////third section///////////////////////////////// */\n\n.thirdSection{\n    margin-top: 100px;\n}\n.thirdSectionContent{\n    text-align: center;\n    margin-bottom: 50px;\n}\n.thirdSectionContent p{\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n\n\n}\n.thirdSectionHeading{\n    font-size: 40px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.thirdSectionCardList{\n    display: flex;\n    flex-direction: column;\n    width: 308px;\n    height: 479px;\n    align-items: center;\n    border: solid #7D9990 1px;\n    border-radius: 3%;\n    margin: 5px;\n    margin-bottom: 30px;\n    background-color: white;\n}\n.thirdSectionCards{\n\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.thirdSectionCardsInner{\n    width: 245px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    align-items: center;\n    position: relative;\n}\n.thirdSectionCardsInner img{\n\n    width: 276px;\n    height: 229px;\n    position: absolute;\n    top:10px;\n    left: -16px;\n\n}\n.thirdSectionCardsInner h3{\n   color: #164C4C;\n   font-family: 'Alegreya';\n   position: absolute;\n   top:250px;\n   left: 25px;\n   font-size: 28px;\n   margin: 0;\n}\n.thirdSectionCardsInner p{\n    font-family: 'Alegreya';\n    text-align: center;\n    position: absolute;\n    top:300px;\n    left: 25px;\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.thirdSectionCardsInner button{\n    text-align: center;\n    position: absolute;\n    top:405px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n\n}\n.searchItemList{\n    margin-bottom: 100px;\n    margin-right: 100px;\n    margin-left: 100px;\n    display: grid;\n    grid-template-columns:  25% 25% 25% 25% ;\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n/* ///////////////////////////footer////////////////////////////////////////// */\nfooter{\n    background-color: #164C4C;\n    height: 267.11px;\n    position: relative;\n}\n\n.footerFirstDiv{\n    height: 267.11px;\n}\n.footerLogo{\n    width: 114.39px;\n    height: 108.33px;\n    position: absolute;\n    right:87%;\n    top: 45px;\n}\n.footerUni{\n    color: white;\n    justify-content: center;\n    width: 241px;\n    height: 124px;\n    position: absolute;\n    right:3%;\n    top: 39px;\n}\n\n.footerUni p{\ntext-align: center;\n}\n\n.footerUniLogo{\n    position: relative;\n    right: -20px;\n}\n/* .footerSecondDiv{\n    position: relative;\n} */\n.footerSecondPone{\n    position: absolute;\n    right:85%;\n    top: 215px;\n    color: white;\n\n}\n.footerSecondPtwo{\n    position: absolute;\n   \n    right:4%;\n    top: 215px;\n    color: white;\n}\n.line{\n    position: absolute;\n    height: 0.5px;\n    width: 100%;\n    background-color: #7D9990;\n    top: 215px;\n}\n.logoCap{\n    position: absolute;\n    width: fit-content;\n    right:56%;\n    top: 170px;\n    color: white;\n}\n/* /////////////////////////////////////////////////////////////////////////// */", "",{"version":3,"sources":["webpack://./src/styles/searchpage.css"],"names":[],"mappings":"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","sourcesContent":["body{\n    margin: 0;\n}\n.navBar{\n    position: relative;\n    background-color: #F1ECEB;\n}\n.headerLogo{\n    margin-left: 40px;\n    width: 92px;\n    height: 87px;\n}\n.aboutNav{\n    position: absolute;\n    top: 40%;\n    right: 8%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n.loginNav{\n    position: absolute;\n    top: 40%;\n    right: 3%;\n    font-size: 16px;\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n    text-decoration: none;\n}\n/*/////////////////////////////Search bar//////////////////////////////////////////  */\n.searchBarSearch .inputSearch{\n    border: solid #EA5A4E 1px;\n    outline: none;\n    border-radius: 10px;\n\n}\n.searchBarSearch{\n    margin: auto;\n    position: relative;\n    width: 1034px;\n    height: 70px;\n    margin-top: 60px;\n    \n}\n\n.inputSearch::placeholder{\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n}\n.inputSearch{\n\n    font-size: larger;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}\n.btn{\n    position: absolute;\n    top: 0;\n    right: -6px;\n    width: 80px;\n    height: 74px;\n    background-color: #164C4C;\n    z-index: 1;\n    cursor: pointer;\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n}\n.btn.btn_common .fas{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    color: white;\n}\n/* /////////////////////////////Advanced search  /////////////////////////////////// */\n.accordion_button {\n    text-align: center;\n    display: block;\n    margin: auto;\n    margin-top: 20px;\n    width: 1034px;\n    padding: 15px;\n    border: none;\n    border-radius: 10px;\n    outline: none;\n    cursor: pointer;\n    background: #F1ECEB;\n    color: #164C4C;\n    text-align: left;\n    transition: background 0.2s;\n    opacity: 0.5;\n    }\n\n    .accordion_button::after{\n        content: '\\25be';\n        float: right;\n        transform: scale(1.5);\n        }\n        .accordion_button--active{\n            background:  #F1ECEB;\n            border-bottom-left-radius: 0px;\n            border-bottom-right-radius: 0px;\n        }\n\n        .accordion_button--active::after{content: '\\25b4'}\n\n        .accordion_content{\n        overflow: hidden;\n        max-height: 0px;\n        transition: max-height 0.2s ;\n        width: 1034px;\n        margin: auto;\n        background: #F1ECEB;\n        border-bottom-left-radius: 10px;\n        border-bottom-right-radius: 10px;\n        opacity: 0.5;\n        }\n        .header_background{\n            height: 900px;\n        }\n/* ///////////////////////////////////////////////////////////////////////////////// */\n.filterAdv{\n    margin: auto;\n    position: relative;\n    margin-top: 30px;\n}\n.dropDownButton{\n    text-align: center;\n    position: absolute;\n    left:16%;\n    font-family: 'Font Awesome 5 Free';\n    font-weight: bold;\n    height: 48px;\n    width:  1034px;\n    font-size: 18px;\n    border-radius: 6px;\n    opacity: 0.5;\n}\n\n/* ///////////////////////////////////////////////////////////////////////////////// */\n\n.searchListNumber h2{\n    margin-top: 150px;\n    text-align: center;\n    color: #164C4C;\n    font-family: 'Alegreya';\n    font-size: 40px;\n\n}\n\n/* /////////////////////////////third section///////////////////////////////// */\n\n.thirdSection{\n    margin-top: 100px;\n}\n.thirdSectionContent{\n    text-align: center;\n    margin-bottom: 50px;\n}\n.thirdSectionContent p{\n    font-family: 'Rubik';\n    font-weight: lighter;\n    color: #6B6B6B;\n\n\n}\n.thirdSectionHeading{\n    font-size: 40px;\n    color: #164C4C;\n    font-family: 'Alegreya';\n}\n.thirdSectionCardList{\n    display: flex;\n    flex-direction: column;\n    width: 308px;\n    height: 479px;\n    align-items: center;\n    border: solid #7D9990 1px;\n    border-radius: 3%;\n    margin: 5px;\n    margin-bottom: 30px;\n    background-color: white;\n}\n.thirdSectionCards{\n\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n\n}\n.thirdSectionCardsInner{\n    width: 245px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    align-items: center;\n    position: relative;\n}\n.thirdSectionCardsInner img{\n\n    width: 276px;\n    height: 229px;\n    position: absolute;\n    top:10px;\n    left: -16px;\n\n}\n.thirdSectionCardsInner h3{\n   color: #164C4C;\n   font-family: 'Alegreya';\n   position: absolute;\n   top:250px;\n   left: 25px;\n   font-size: 28px;\n   margin: 0;\n}\n.thirdSectionCardsInner p{\n    font-family: 'Alegreya';\n    text-align: center;\n    position: absolute;\n    top:300px;\n    left: 25px;\n    font-weight: lighter;\n    color: #6B6B6B;\n}\n.thirdSectionCardsInner button{\n    text-align: center;\n    position: absolute;\n    top:405px;\n    color: #EA5A4E;\n    appearance: none;\n    background: none;\n    border: solid #EA5A4E 2px;\n    outline: none;\n    width: 223px;\n    height: 45px;\n    border-radius: 10px;\n    font-size: 13px;\n    font-family: 'Rubik';\n\n}\n.searchItemList{\n    margin-bottom: 100px;\n    margin-right: 100px;\n    margin-left: 100px;\n    display: grid;\n    grid-template-columns:  25% 25% 25% 25% ;\n}\n/* /////////////////////////////////////////////////////////////////////////// */\n\n/* ///////////////////////////footer////////////////////////////////////////// */\nfooter{\n    background-color: #164C4C;\n    height: 267.11px;\n    position: relative;\n}\n\n.footerFirstDiv{\n    height: 267.11px;\n}\n.footerLogo{\n    width: 114.39px;\n    height: 108.33px;\n    position: absolute;\n    right:87%;\n    top: 45px;\n}\n.footerUni{\n    color: white;\n    justify-content: center;\n    width: 241px;\n    height: 124px;\n    position: absolute;\n    right:3%;\n    top: 39px;\n}\n\n.footerUni p{\ntext-align: center;\n}\n\n.footerUniLogo{\n    position: relative;\n    right: -20px;\n}\n/* .footerSecondDiv{\n    position: relative;\n} */\n.footerSecondPone{\n    position: absolute;\n    right:85%;\n    top: 215px;\n    color: white;\n\n}\n.footerSecondPtwo{\n    position: absolute;\n   \n    right:4%;\n    top: 215px;\n    color: white;\n}\n.line{\n    position: absolute;\n    height: 0.5px;\n    width: 100%;\n    background-color: #7D9990;\n    top: 215px;\n}\n.logoCap{\n    position: absolute;\n    width: fit-content;\n    right:56%;\n    top: 170px;\n    color: white;\n}\n/* /////////////////////////////////////////////////////////////////////////// */"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23895,6 +24451,61 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_homepage_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_homepage_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_homepage_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/styles/searchpage.css":
+/*!***********************************!*\
+  !*** ./src/styles/searchpage.css ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_searchpage_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./searchpage.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/searchpage.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_searchpage_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_searchpage_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_searchpage_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_searchpage_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),

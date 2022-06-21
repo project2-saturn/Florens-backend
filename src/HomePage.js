@@ -3,7 +3,12 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import Header from "./lib/Header";
 import Features from "./lib/Features";
+import PlantOfTheDay from "./lib/PlantOfTheDay";
+import SeasonalPlants from "./lib/SeasonalPlants";
+import Footer from "./lib/Footer";
 import "./styles/homepage.css";
+
+// import "./js/advanceSearch";
 
 let data = { firstname: ["parth", "soni"] };
 
@@ -26,12 +31,16 @@ export default function() {
   }, []);
 
   return (
-  <>
-    <Header user={user}/>
-    <main>
-      <Features />
-    </main>
-  </>);
+    <>
+      <Header user={user} />
+      <main>
+        <Features />
+        <PlantOfTheDay />
+        <SeasonalPlants />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 {
