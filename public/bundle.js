@@ -23830,6 +23830,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var handleAccordionButtonToggle = function handleAccordionButtonToggle() {
+    document.querySelectorAll(".accordion_buttonHome").forEach(function (button) {
+      var accordionContent = button.nextElementSibling; // button.classList.toggle('header_background');
+
+      button.classList.toggle("accordion_button--active");
+
+      if (button.classList.contains("accordion_button--active")) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      } else {
+        accordionContent.style.maxHeight = 0;
+      }
+    });
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
     "class": "homeHeader"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_NavigationBar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -23854,10 +23868,249 @@ __webpack_require__.r(__webpack_exports__);
     "class": "accordion"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "button",
-    "class": "accordion_buttonHome"
+    "class": "accordion_buttonHome",
+    onClick: handleAccordionButtonToggle
   }, "Advanced Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "accordion_content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam ."))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionOne"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Plant Type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Annual"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Aquatic Plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Bamboo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Biennial"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Broadleef evergreen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Conifer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Fern"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Flowering cut plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Flowering pot plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Greenhouse produce plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Ground cover"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Herbaceous perennial"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Indoor foilage plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Invasive plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Poales(grass-like)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Semi-evergreen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Shrub-deciduous"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Succulent-Cacti"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Tree-deciduous"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Vine or climber"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Weed(horticultural)"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionTwo"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Season"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "January"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "February"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "March"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "April"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "May"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "June"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "July"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "August"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "September"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "October"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "November"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "December"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionThree"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "White"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Orange"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Yellow"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Green-yellow"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Green"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Blue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Violet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Purple"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Pink"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Magenta"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Red"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Dark-red"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Brown"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Bronze"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Silver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Black"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionFour"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Form"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Climbing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Columnar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Creeping/Mat-like"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Irregular"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Mounded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Oval-horizontal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Oval-vertical"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Pyramidal-narrowly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Pyramidal-widely"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Round"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Vase"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Weeping"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionFive"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Texture"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Fine"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Medium-fine"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Medium"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Medium-coarse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Coarse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Very coarse"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionSix"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Locations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Vancouver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Burnaby"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Coquitlam"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Surrey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "North Vancouver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "White rock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Kelowna"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "clearApply"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterClear"
+  }, "Clear"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterApply"
+  }, "Apply")))));
 }
 
 /***/ }),
@@ -24144,6 +24397,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var handleAccordionButtonToggle = function handleAccordionButtonToggle() {
+    document.querySelectorAll(".accordion_button").forEach(function (button) {
+      var accordionContent = button.nextElementSibling; // button.classList.toggle('header_background');
+
+      button.classList.toggle("accordion_button--active");
+
+      if (button.classList.contains("accordion_button--active")) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      } else {
+        accordionContent.style.maxHeight = 0;
+      }
+    });
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "searchBarSearch"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
@@ -24158,10 +24425,249 @@ __webpack_require__.r(__webpack_exports__);
     "class": "accordion"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "button",
-    "class": "accordion_button "
+    "class": "accordion_button",
+    onClick: handleAccordionButtonToggle
   }, "Advanced Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "accordion_content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni quaerat eius maiores odio rerum dicta officia inventore tenetur doloremque molestiae similique ratione Quaerat voluptates veniam quisquam .")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionOne"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Plant Type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Annual"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Aquatic Plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Bamboo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Biennial"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Broadleef evergreen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Conifer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Fern"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Flowering cut plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Flowering pot plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Greenhouse produce plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Ground cover"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Herbaceous perennial"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Indoor foilage plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Invasive plant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Poales(grass-like)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Semi-evergreen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Shrub-deciduous"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Succulent-Cacti"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Tree-deciduous"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Vine or climber"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Weed(horticultural)"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionTwo"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Season"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "January"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "February"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "March"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "April"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "May"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "June"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "July"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "August"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "September"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "October"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "November"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "December"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionThree"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "White"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Orange"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Yellow"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Green-yellow"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Green"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Blue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Violet"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Purple"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Pink"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Magenta"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Red"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Dark-red"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Brown"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Bronze"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Silver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Black"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionFour"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Form"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Climbing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Columnar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Creeping/Mat-like"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Irregular"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Mounded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Oval-horizontal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Oval-vertical"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Pyramidal-narrowly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Pyramidal-widely"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Round"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Vase"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Weeping"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionFive"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Texture"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Fine"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Medium-fine"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Medium"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Medium-coarse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Coarse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Very coarse"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterSectionSix"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    "class": "filterP"
+  }, "Locations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    "class": "filterUl"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    "class": "filterLi"
+  }, "Clear")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "filterDiv"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Vancouver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Burnaby"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Coquitlam"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Surrey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "North Vancouver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "White rock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterBtns"
+  }, "Kelowna"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "class": "clearApply"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterClear"
+  }, "Clear"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    "class": "filterApply"
+  }, "Apply"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "class": "searchListNumber"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "111 Results for: Conifer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     "class": "searchItemList"

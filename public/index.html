@@ -11,34 +11,6 @@
       
     <div id="react-container"></div>
     <script src="bundle.js"></script>
-    <script>
-      document.querySelectorAll(".accordion_button").forEach(button => {
-        button.addEventListener("click", () => {
-          const accordionContent = button.nextElementSibling;
-          // button.classList.toggle('header_background');
-          button.classList.toggle("accordion_button--active");
-          if (button.classList.contains("accordion_button--active")) {
-            accordionContent.style.maxHeight =
-              accordionContent.scrollHeight + "px";
-          } else {
-            accordionContent.style.maxHeight = 0;
-          }
-        });
-      });
-
-      document.querySelectorAll(".accordion_buttonHome").forEach(button => {
-        button.addEventListener("click", () => {
-          const accordionContent = button.nextElementSibling;
-          // button.classList.toggle('header_background');
-          button.classList.toggle("accordion_button--active");
-          if (button.classList.contains("accordion_button--active")) {
-            accordionContent.style.maxHeight =
-              accordionContent.scrollHeight + "px";
-          } else {
-            accordionContent.style.maxHeight = 0;
-          }
-        });
-      });
-    </script>
+    
   </body>
 </html>

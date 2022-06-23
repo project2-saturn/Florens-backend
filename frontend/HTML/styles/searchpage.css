@@ -31,13 +31,13 @@ body{
     text-decoration: none;
 }
 /*/////////////////////////////Search bar//////////////////////////////////////////  */
-.searchBar .inputSearch{
+.searchBarSearch .inputSearch{
     border: solid #EA5A4E 1px;
     outline: none;
     border-radius: 10px;
 
 }
-.searchBar{
+.searchBarSearch{
     margin: auto;
     position: relative;
     width: 1034px;
