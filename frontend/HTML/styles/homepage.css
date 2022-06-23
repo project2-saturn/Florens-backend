@@ -4,7 +4,7 @@ body{
 main{
     height: 2050px;
 }
-header{
+.homeHeader{
     background-color: #F1ECEB;
     height: 800px;
     background-image: url(../images/top-banner-BG-Desktop.png);
@@ -59,13 +59,13 @@ font-weight: lighter;
   color: #6B6B6B;
 }
 /*/////////////////////////////Search bar//////////////////////////////////////////  */
-.searchBar .inputSearch{
+.searchBarHome .inputSearch{
     border: 0;
     outline: none;
     border-radius: 10px;
 
 }
-.searchBar{
+.searchBarHome{
     margin: auto;
     position: relative;
     width: 1034px;
@@ -86,7 +86,7 @@ font-weight: lighter;
     width: 100%;
     height: 100%;
 }
-.btn{
+.btnHome{
     position: absolute;
     top: 0;
     right: -4px;
@@ -98,7 +98,7 @@ font-weight: lighter;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.btn.btn_common .fas{
+.btnHome.btn_common .fas{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -107,7 +107,7 @@ font-weight: lighter;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////// */
-.accordion_button {
+.accordion_buttonHome {
     text-align: center;
     display: block;
     margin: auto;
@@ -125,18 +125,18 @@ font-weight: lighter;
     opacity: 0.5;
     }
 
-    .accordion_button::after{
+    .accordion_buttonHome::after{
         content: '\25be';
         float: right;
         transform: scale(1.5);
         }
-        .accordion_button--active{
+        .accordion_buttonHome--active{
             background:  #FFFFFF;
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
         }
 
-        .accordion_button--active::after{content: '\25b4'}
+        .accordion_buttonHome--active::after{content: '\25b4'}
 
         .accordion_content{
         overflow: hidden;

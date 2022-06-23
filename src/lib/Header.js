@@ -25,13 +25,13 @@ export default function() {
           placeholder=" &#xf002;      Start typing..."
         />
         <Link to="/search">
-          <div class="btn btn_common">
+          <div class="btnHome btn_common">
             <i class="fas fa-search fa-2x"></i>
           </div>
         </Link>
       </div>
       <div class="accordion">
-        <button type="button" class="accordion_button ">
+        <button type="button" class="accordion_buttonHome">
           Advanced Search
         </button>
         <div class="accordion_content">

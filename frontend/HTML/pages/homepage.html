@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="homeHeader">
       <div class="navBar">
         <img
           class="headerLogo"
@@ -28,13 +28,13 @@
           and get connected with the nature around you.
         </p>
       </div>
-      <div class="searchBar">
+      <div class="searchBarHome">
         <input
           type="text"
           class="inputSearch"
           placeholder=" &#xf002;      Start typing..."
         />
-        <div class="btn btn_common">
+        <div class="btnHome btn_common">
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
@@ -76,7 +76,7 @@
       
 
         <div class="accordion">
-            <button type="button" class="accordion_button ">Advanced Search</button>
+            <button type="button" class="accordion_buttonHome">Advanced Search</button>
             <div class="accordion_content">
                 <div class="filterSectionOne">
                   <p class="filterP">Plant Type</p>
@@ -376,7 +376,7 @@
     </footer>
 
     <script>
-      document.querySelectorAll(".accordion_button").forEach(button => {
+      document.querySelectorAll(".accordion_buttonHome").forEach(button => {
         button.addEventListener("click", () => {
           const accordionContent = button.nextElementSibling;
           // button.classList.toggle('header_background');
