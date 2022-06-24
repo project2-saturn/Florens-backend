@@ -10,8 +10,8 @@ const aws = require("aws-sdk");
 const fs = require("fs");
 const seedrandom = require("seedrandom");
 const cors = require("cors");
-const {generateToken,verifyToken}=require("./JWT.js")
- const cookies  = require("cookie-parser");
+const { generateToken, verifyToken } = require("./JWT.js");
+const cookies = require("cookie-parser");
 
 app.use(cors());
 app.options("*", cors());
@@ -31,9 +31,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
 // cookies.set("email", "vi@gmail.com");
-
 
 // app.get("/login/user", async (req, res) => {
 //   console.log(req.query.email);
@@ -44,7 +42,7 @@ app.use(express.json());
 
 //     console.log(getU);
 //     res.send(getU);
-  
+
 //   } catch (error) {
 //     console.log(error);
 //   }
@@ -64,9 +62,9 @@ app.post("/login", async (req, res) => {
       const pass = await bcrypt.compare(req.body.password, user.password);
       if (pass) {
         // cookies.set("email", user.email);
-       
-        const token=generateToken(user)
-        res.cookie("token",token);
+
+        const token = generateToken(user);
+        res.cookie("token", token);
         res.status(200).send("Password Validated");
       } else {
         res.status(400).send("Please enter the correct password");
@@ -226,7 +224,7 @@ app.post("/loadData", async (req, res, next) => {
 // So, it always stays same on that particular day.
 app.get("/plantOfTheDay", async (req, res, next) => {
   let today = new Date();
-  console.log(req)
+  console.log(req);
   let rng = seedrandom(today.getDate().toString());
   Plant.count().then(count => {
     console.log(`Count: ${count}`);
@@ -275,7 +273,7 @@ app.get("/plants", async (req, res, next) => {
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/addPlantToLibrary",verifyToken, (req, res) => {
+app.patch("/addPlantToLibrary", verifyToken, (req, res) => {
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);
@@ -298,7 +296,7 @@ app.patch("/addPlantToLibrary",verifyToken, (req, res) => {
 // below endpoint updates the library array on user database to delete plant from its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/deletePlantFromLibrary",verifyToken ,(req, res) => {
+app.patch("/deletePlantFromLibrary", verifyToken, (req, res) => {
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);
@@ -336,7 +334,7 @@ app.patch("/deletePlantFromLibrary",verifyToken ,(req, res) => {
 // below endpoint fetches the library array of user.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the library array in json format.
-app.post("/getLibrary",verifyToken ,(req, res) => {
+app.post("/getLibrary", verifyToken, (req, res) => {
   const useremail = req.body.useremail;
   console.log(useremail);
   User.findOne({ email: useremail }, { library: 1 })
@@ -354,29 +352,21 @@ app.post("/getLibrary",verifyToken ,(req, res) => {
   // res.send("failure");
 });
 
+//Edit Details API
 
-//Edit Details API 
-
-
-app.patch("/edit",verifyToken, (req, res) => {
+app.patch("/edit", verifyToken, (req, res) => {
   // const ObjectID = req.body.ObjectID;
-  const name=req.body.name;
+  const name = req.body.name;
   const email = req.body.email;
   User.findOne({ email: email })
     .then(result => {
-      User.updateOne(
-        { email: email },
-        { name: name }
-      )
-        .then(
-          res.status(201).json({ data: [name,email] })
-        )
+      User.updateOne({ email: email }, { name: name })
+        .then(res.status(201).json({ data: [name, email] }))
 
         .catch(error => console.log(error));
     })
     .catch(error => console.log(error));
 });
-
 
 /* 
  API to get filtered search results
@@ -446,7 +436,10 @@ app.post("/searchResults", (req, res) => {
       }
 
       //Plant Location Filter
-      if (req.body.searchLocation != null && req.body.searchLocation.length >= 1)  {
+      if (
+        req.body.searchLocation != null &&
+        req.body.searchLocation.length >= 1
+      ) {
         sendResults = sendResults.filter(element => {
           for (const plantLocationItem of element.location) {
             if (req.body.searchLocation.includes(plantLocationItem)) {
@@ -468,7 +461,10 @@ app.post("/searchResults", (req, res) => {
       }
 
       //Plant Texture Filter
-      if (req.body.searchTexture != null && req.body.searchTexture.length >= 1) {
+      if (
+        req.body.searchTexture != null &&
+        req.body.searchTexture.length >= 1
+      ) {
         sendResults = sendResults.filter(element => {
           if (req.body.searchTexture.includes(element.texture)) {
             return element;
@@ -487,6 +483,96 @@ app.post("/searchResults", (req, res) => {
 
       // console.log(sendResults);
       res.send(sendResults);
+    })
+    .catch(error => console.log(error));
+});
+
+app.get("/searchOption", (req, res, next) => {
+  // const optionText  = req.params.option;
+  // console.log(optionText);
+  let colorSet = new Set();
+  let color = [];
+
+  let locationSet = new Set();
+  let location = [];
+
+  let typeSet = new Set();
+  let type = [];
+
+  let textureSet = new Set();
+  let texture = [];
+
+  let formSet = new Set();
+  let form = [];
+
+  // console.log("here");
+  Plant.find({})
+    .then(result => {
+      // console.log(result);
+      result.forEach(element => {
+        // console.log(element.season);
+        // console.log(element.fields.local_areas);
+        // console.log(element[season]);
+        // optionSet.add(element[optionText]);
+        if (element.color) {
+          element.color.forEach(x => {
+            colorSet.add(x);
+          });
+        }
+
+        if (element.location) {
+          element.location.forEach(x => {
+            locationSet.add(x);
+          });
+        }
+
+        if (element.type) {
+          typeSet.add(element.type);
+           }
+
+        if (element.texture) {
+            textureSet.add(element.texture);
+          
+        }
+
+        if (element.form) {
+            formSet.add(element.form);
+          }
+        // console.log(location);
+      });
+      // console.log(location);
+      // option = [...optionSet];
+      colorSet.forEach(x => {
+        if (x) {
+          color.push(x);
+        }
+      });
+
+      locationSet.forEach(x => {
+        if (x) {
+          location.push(x);
+        }
+      });
+
+
+      typeSet.forEach(x => {
+        if (x) {
+          type.push(x);
+        }
+      });
+
+      textureSet.forEach(x => {
+        if (x) {
+          texture.push(x);
+        }
+      });
+
+      formSet.forEach(x => {
+        if (x) {
+          form.push(x);
+        }
+      });
+      res.send({ searchColor: color , searchLocation: location, searchTexture:texture, searchForm:form, searchType:type});
     })
     .catch(error => console.log(error));
 });
