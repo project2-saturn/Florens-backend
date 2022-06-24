@@ -1,8 +1,16 @@
-import React from "react";
+import React, {useState , useEffect} from "react";
 import { Link } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
 
 export default function() {
+ 
+  const [searchText, setSearchText] = useState();
+
+
+
+  const handleSearchTextChange = function(event) {
+    setSearchText(event.target.value);
+  };
 
   const handleAccordionButtonToggle = function() {
     document.querySelectorAll(".accordion_buttonHome").forEach(button => {
@@ -36,8 +44,9 @@ export default function() {
           type="text"
           class="inputSearch"
           placeholder=" &#xf002;      Start typing..."
+          onChange={handleSearchTextChange}
         />
-        <Link to="/search">
+        <Link to="/search" state={searchText}>
           <div class="btnHome btn_common">
             <i class="fas fa-search fa-2x"></i>
           </div>
