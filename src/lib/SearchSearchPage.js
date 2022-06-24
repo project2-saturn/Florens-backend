@@ -4,7 +4,6 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import SearchResults from "./SearchResults";
 import SearchFilter from "./SearchFilter";
-import EventEmitter from "events";
 
 let allSearchOptions = {};
 
