@@ -1,18 +1,40 @@
-import React, {useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
+import axios from "axios";
+import SearchFilter from "./SearchFilter";
 
-export default function() {
- 
-  const [searchText, setSearchText] = useState();
+export default function(props) {
+  const navigateTo = useNavigate();
+  const [allSearchOptions, setAllSearchOptions] = useState({});
 
+  useEffect(function loadAllOptionsObject() {
+    axios.get("/searchOption").then(results => {
+      let temp = { ...results.data };
+      temp.searchSeason = [
+        "January",
+        "Febuary",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "Novemeber",
+        "December"
+      ];
 
-
-  const handleSearchTextChange = function(event) {
-    setSearchText(event.target.value);
-  };
+      setAllSearchOptions({ ...temp });
+      console.log(allSearchOptions);
+    });
+  }, []);
 
   const handleAccordionButtonToggle = function() {
+    console.log(allSearchOptions);
     document.querySelectorAll(".accordion_buttonHome").forEach(button => {
       const accordionContent = button.nextElementSibling;
       // button.classList.toggle('header_background');
@@ -24,178 +46,208 @@ export default function() {
       }
     });
   };
+
+  const [searchOptions, setSearchOptions] = useState({
+    searchText: "",
+    searchType: [],
+    searchColor: [],
+    searchForm: [],
+    searchLocation: [],
+    searchSeason: [],
+    searchTexture: []
+  });
+
+  const handleSearchOptionsTextChange = function(event) {
+    let updatedOptions = { ...searchOptions };
+    updatedOptions[event.target.name] = event.target.value;
+    setSearchOptions(updatedOptions);
+  };
+
+  const handleSearchOptionsChange = function(event, name) {
+    let updatedOptions = { ...searchOptions };
+    // updatedOptions[event.target.name] = event.target.value;
+    // setSearchOptions(updatedOptions);
+    // if (updatedOptions[name].includes(event.target.value)) {
+
+    // }
+    // console.log(updatedOptions[name]);
+    if (!updatedOptions[name].includes(event.target.value)) {
+      console.log("1");
+      updatedOptions[name].push(event.target.value);
+
+      console.log(updatedOptions[name]);
+    } else {
+      console.log("2");
+      console.log(event.target.value);
+      updatedOptions[name] = updatedOptions[name].filter(
+        e => e != event.target.value
+      );
+
+      console.log(updatedOptions[name]);
+    }
+
+    setSearchOptions(updatedOptions);
+    console.log(searchOptions);
+  };
+  // if (data != null)
+
+  const handleSelectAllOption = function(event, name) {
+    console.log("here");
+    console.log(name);
+    console.log(allSearchOptions);
+    let updatedOptions = { ...searchOptions };
+    updatedOptions[name] = [];
+    updatedOptions[name] = [...allSearchOptions[name]];
+    console.log(updatedOptions[name]);
+    setSearchOptions(updatedOptions);
+  };
+
+  const handleClearAllOption = function(event, name) {
+    // console.log("here");
+    console.log(name);
+    console.log(allSearchOptions);
+    let updatedOptions = { ...searchOptions };
+    updatedOptions[name] = [];
+    // updatedOptions[name] = [...allSearchOptions[name]];
+    console.log(updatedOptions[name]);
+    setSearchOptions(updatedOptions);
+  };
+
   return (
-    <header class="homeHeader">
-      <NavigationBar />
-      <div class="headerText">
-        <h1 class="headerTextHeading">
-          A Pocket Expert <br />
-          for B.C. Plants
-        </h1>
-        <p class="headerTextPara">
-          Explore British Columbia native flora. Florens is an <br />
-          application to learn about our flowers, trees and plants
-          <br />
-          and get connected with the nature around you.
-        </p>
-      </div>
-      <div class="searchBarHome">
-        <input
-          type="text"
-          class="inputSearch"
-          placeholder=" &#xf002;      Start typing..."
-          onChange={handleSearchTextChange}
-        />
-        <Link to="/search" state={searchText}>
-          <div class="btnHome btn_common">
-            <i class="fas fa-search fa-2x"></i>
-          </div>
-        </Link>
-      </div>
-      <div class="accordion">
-        <button type="button" class="accordion_buttonHome" onClick={handleAccordionButtonToggle}>
-          Advanced Search
-        </button>
-        <div class="accordion_content">
-          <div class="filterSectionOne">
-            <p class="filterP">Plant Type</p>
-            <ul class="filterUl">
-              <li class="filterLi">All</li>
-              <li class="filterLi">|</li>
-              <li class="filterLi">Clear</li>
-            </ul>
-            <div class="filterDiv">
-              <button class="filterBtns">Annual</button>
-              <button class="filterBtns">Aquatic Plant</button>
-              <button class="filterBtns">Bamboo</button>
-              <button class="filterBtns">Biennial</button>
-              <button class="filterBtns">Broadleef evergreen</button>
-              <button class="filterBtns">Conifer</button>
-              <button class="filterBtns">Fern</button>
-              <button class="filterBtns">Flowering cut plant</button>
-              <button class="filterBtns">Flowering pot plant</button>
-              <button class="filterBtns">Greenhouse produce plant</button>
-              <button class="filterBtns">Ground cover</button>
-              <button class="filterBtns">Herbaceous perennial</button>
-              <button class="filterBtns">Indoor foilage plant</button>
-              <button class="filterBtns">Invasive plant</button>
-              <button class="filterBtns">Poales(grass-like)</button>
-              <button class="filterBtns">Semi-evergreen</button>
-              <button class="filterBtns">Shrub-deciduous</button>
-              <button class="filterBtns">Succulent-Cacti</button>
-              <button class="filterBtns">Tree-deciduous</button>
-              <button class="filterBtns">Vine or climber</button>
-              <button class="filterBtns">Weed(horticultural)</button>
+    <>
+      <div>SearchText: {searchOptions.searchText.toString()}</div>
+
+      <div>SearchType:{searchOptions.searchType.toString()}</div>
+      <div>SearchColor:{searchOptions.searchColor.toString()}</div>
+      <div>SearchForm:{searchOptions.searchForm.toString()}</div>
+      <div>SearchLocation:{searchOptions.searchLocation.toString()}</div>
+      <div>SearchSeason:{searchOptions.searchSeason.toString()}</div>
+      <div>SearchTexture:{searchOptions.searchTexture.toString()}</div>
+      <header class="homeHeader">
+        <NavigationBar />
+        <div class="headerText">
+          <h1 class="headerTextHeading">
+            A Pocket Expert <br />
+            for B.C. Plants
+          </h1>
+          <p class="headerTextPara">
+            Explore British Columbia native flora. Florens is an <br />
+            application to learn about our flowers, trees and plants
+            <br />
+            and get connected with the nature around you.
+          </p>
+        </div>
+        <div class="searchBarHome">
+          <input
+            name="searchText"
+            type="text"
+            class="inputSearch"
+            placeholder=" &#xf002;      Start typing..."
+            onChange={handleSearchOptionsTextChange}
+          />
+          <Link to="/search" state={searchOptions}>
+            <div class="btnHome btn_common">
+              <i class="fas fa-search fa-2x"></i>
+            </div>
+          </Link>
+        </div>
+        <div class="accordion">
+          <button
+            type="button"
+            class="accordion_buttonHome"
+            onClick={handleAccordionButtonToggle}
+          >
+            Advanced Search
+          </button>
+          <div class="accordion_content">
+            <div class="filterSectionOne">
+              <SearchFilter
+                title={"Plant Type"}
+                options={allSearchOptions.searchType}
+                name={"searchType"}
+                handleSearchOptionsChange={handleSearchOptionsChange}
+                handleSelectAllOption={handleSelectAllOption}
+                handleClearAllOption={handleClearAllOption}
+              />
+            </div>
+
+            <div class="filterSectionTwo">
+              <SearchFilter
+                title={"Season"}
+                options={allSearchOptions.searchSeason}
+                name={"searchSeason"}
+                handleSearchOptionsChange={handleSearchOptionsChange}
+                handleSelectAllOption={handleSelectAllOption}
+                handleClearAllOption={handleClearAllOption}
+              />
+            </div>
+            <div class="filterSectionThree">
+              <SearchFilter
+                title={"Color"}
+                options={allSearchOptions.searchColor}
+                name={"searchColor"}
+                handleSearchOptionsChange={handleSearchOptionsChange}
+                handleSelectAllOption={handleSelectAllOption}
+                handleClearAllOption={handleClearAllOption}
+              />
+            </div>
+            <div class="filterSectionFour">
+              <SearchFilter
+                title={"Form"}
+                options={allSearchOptions.searchForm}
+                name={"searchForm"}
+                handleSearchOptionsChange={handleSearchOptionsChange}
+                handleSelectAllOption={handleSelectAllOption}
+                handleClearAllOption={handleClearAllOption}
+              />
+            </div>
+            <div class="filterSectionFive">
+              <SearchFilter
+                title={"Texture"}
+                options={allSearchOptions.searchTexture}
+                name={"searchTexture"}
+                handleSearchOptionsChange={handleSearchOptionsChange}
+                handleSelectAllOption={handleSelectAllOption}
+                handleClearAllOption={handleClearAllOption}
+              />
+            </div>
+            <div class="filterSectionSix">
+              <SearchFilter
+                title={"Locations"}
+                options={allSearchOptions.searchLocation}
+                name={"searchLocation"}
+                handleSearchOptionsChange={handleSearchOptionsChange}
+                handleSelectAllOption={handleSelectAllOption}
+                handleClearAllOption={handleClearAllOption}
+              />
+            </div>
+            <div class="clearApply">
+              <button
+                class="filterClear"
+                onClick={() =>
+                  setSearchOptions({
+                    searchText: searchOptions.searchText,
+                    searchType: [],
+                    searchColor: [],
+                    searchForm: [],
+                    searchLocation: [],
+                    searchSeason: [],
+                    searchTexture: []
+                  })
+                }
+              >
+                Clear
+              </button>
+              <button
+                class="filterApply"
+                onClick={() => navigateTo("/search")}
+              >
+                Apply
+              </button>
             </div>
           </div>
-          <div class="filterSectionTwo">
-            <p class="filterP">Season</p>
-            <ul class="filterUl">
-              <li class="filterLi">All</li>
-              <li class="filterLi">|</li>
-              <li class="filterLi">Clear</li>
-            </ul>
-            <div class="filterDiv">
-              <button class="filterBtns">January</button>
-              <button class="filterBtns">February</button>
-              <button class="filterBtns">March</button>
-              <button class="filterBtns">April</button>
-              <button class="filterBtns">May</button>
-              <button class="filterBtns">June</button>
-              <button class="filterBtns">July</button>
-              <button class="filterBtns">August</button>
-              <button class="filterBtns">September</button>
-              <button class="filterBtns">October</button>
-              <button class="filterBtns">November</button>
-              <button class="filterBtns">December</button>
-            </div>
-          </div>
-          <div class="filterSectionThree">
-            <p class="filterP">Color</p>
-            <ul class="filterUl">
-              <li class="filterLi">All</li>
-              <li class="filterLi">|</li>
-              <li class="filterLi">Clear</li>
-            </ul>
-            <div class="filterDiv">
-              <button class="filterBtns">White</button>
-              <button class="filterBtns">Orange</button>
-              <button class="filterBtns">Yellow</button>
-              <button class="filterBtns">Green-yellow</button>
-              <button class="filterBtns">Green</button>
-              <button class="filterBtns">Blue</button>
-              <button class="filterBtns">Violet</button>
-              <button class="filterBtns">Purple</button>
-              <button class="filterBtns">Pink</button>
-              <button class="filterBtns">Magenta</button>
-              <button class="filterBtns">Red</button>
-              <button class="filterBtns">Dark-red</button>
-              <button class="filterBtns">Brown</button>
-              <button class="filterBtns">Bronze</button>
-              <button class="filterBtns">Silver</button>
-              <button class="filterBtns">Black</button>
-            </div>
-          </div>
-          <div class="filterSectionFour">
-            <p class="filterP">Form</p>
-            <ul class="filterUl">
-              <li class="filterLi">All</li>
-              <li class="filterLi">|</li>
-              <li class="filterLi">Clear</li>
-            </ul>
-            <div class="filterDiv">
-              <button class="filterBtns">Climbing</button>
-              <button class="filterBtns">Columnar</button>
-              <button class="filterBtns">Creeping/Mat-like</button>
-              <button class="filterBtns">Irregular</button>
-              <button class="filterBtns">Mounded</button>
-              <button class="filterBtns">Oval-horizontal</button>
-              <button class="filterBtns">Oval-vertical</button>
-              <button class="filterBtns">Pyramidal-narrowly</button>
-              <button class="filterBtns">Pyramidal-widely</button>
-              <button class="filterBtns">Round</button>
-              <button class="filterBtns">Vase</button>
-              <button class="filterBtns">Weeping</button>
-            </div>
-          </div>
-          <div class="filterSectionFive">
-            <p class="filterP">Texture</p>
-            <ul class="filterUl">
-              <li class="filterLi">All</li>
-              <li class="filterLi">|</li>
-              <li class="filterLi">Clear</li>
-            </ul>
-            <div class="filterDiv">
-              <button class="filterBtns">Fine</button>
-              <button class="filterBtns">Medium-fine</button>
-              <button class="filterBtns">Medium</button>
-              <button class="filterBtns">Medium-coarse</button>
-              <button class="filterBtns">Coarse</button>
-              <button class="filterBtns">Very coarse</button>
-            </div>
-          </div>
-          <div class="filterSectionSix">
-            <p class="filterP">Locations</p>
-            <ul class="filterUl">
-              <li class="filterLi">All</li>
-              <li class="filterLi">|</li>
-              <li class="filterLi">Clear</li>
-            </ul>
-            <div class="filterDiv">
-              <button class="filterBtns">Vancouver</button>
-              <button class="filterBtns">Burnaby</button>
-              <button class="filterBtns">Coquitlam</button>
-              <button class="filterBtns">Surrey</button>
-              <button class="filterBtns">North Vancouver</button>
-              <button class="filterBtns">White rock</button>
-              <button class="filterBtns">Kelowna</button>
-            </div>
-          </div>
-          <div class="clearApply">
-            <button class="filterClear">Clear</button>
-            <button class="filterApply">Apply</button>
-          </div>
-        </div></div>
-    </header>
+        </div>
+      </header>
+    </>
   );
 }

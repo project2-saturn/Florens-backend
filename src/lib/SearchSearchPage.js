@@ -72,7 +72,15 @@ export default function(props) {
 
   const location = useLocation();
   const data = location.state;
-  // console.log(data);
+  console.log(data);
+
+  useEffect(function loadSearchOptions() {
+    if (data) {
+      setSearchOptions({ ...data });
+      setSearchOptionsApplied({ ...data });
+    }
+  }, []);
+  // setSearchOptions({...data});
 
   const handleSearchOptionsTextChange = function(event) {
     let updatedOptions = { ...searchOptions };
@@ -146,7 +154,7 @@ export default function(props) {
           type="text"
           class="inputSearch"
           placeholder=" &#xf002;      Start typing..."
-          defaultValue={data != null ? data : ""}
+          defaultValue={data != null ? data.searchText : ""}
           onChange={handleSearchOptionsTextChange}
         />
         <div
