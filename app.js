@@ -236,7 +236,7 @@ app.get("/plantOfTheDay", async (req, res, next) => {
       .limit(1)
       .then(result => {
         res.status(201).json({
-          data: result
+          data: result[0]
         });
       })
       .catch(error => {
