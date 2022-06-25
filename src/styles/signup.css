@@ -43,11 +43,10 @@ body{
   .container h1{
     text-align: center;
     margin-bottom: 24px;
-  }
-    body{
+      }
+body{
     margin: 0px;
 }
-
   
   .form h1{
     color:#1C4C4D
