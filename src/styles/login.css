@@ -1,10 +1,17 @@
-
 body{
+    margin: 0px;
     padding:0px;
-    margin:0px;
 }
 .container{
     border: 1px solid #C6D3CF;
+    background-color:white;
+/*   
+display:flex;
+align-items: center;
+justify-content: center;
+align-content: center; */
+ 
+    padding: 16px;
 }
   
   .uploadFile{
@@ -36,29 +43,28 @@ body{
     border:2px solid crimson;
     border-radius:12px;
     padding: 14px 20px;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-bottom:20px
   
   }
   .container h1{
     text-align: center;
     margin-bottom: 24px;
+    margin-top:0.3rem;
+    
   }
-    body{
-    margin: 0px;
-}
-
-  
   .form h1{
     color:#1C4C4D
   }
-  .form p{
-      text-align:center;
+.newFlorens{      text-align:center;
+  }
+  .forgotPassword{
+    text-align:left;
   }
   input[type=email],input[type=password],input[type=text]{
-    width: 100%;
+   max-width:99%;
     padding: 10px 17rem;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     margin-top: 5px;
     display: inline-block;
     border: 1px solid #F7C9BB;
@@ -71,7 +77,7 @@ body{
     
   }
   .space{
-    margin: 3rem;
+    margin: 2.2rem;
   }
   .form{
     font-family: 'Rubik';
@@ -84,84 +90,14 @@ body{
   }
   form{
     display: flex;
-    margin-left: 26%;
+    margin-left: 3%;
     align-items: center;
     justify-content: center;
-    max-width: 50%;
-    height: 50%;
-    padding:15px;
-
+    margin-left: 23%;
+    border: 1px solid rgb(198, 211, 207);
+   max-width: 50%;
   }
   .navBar{
-    background-color: #F1ECEB;
-  }
-  footer{
-    background-color: #164C4C;
-    height: 260px;
-    position: relative;
-   
-    
-}
-.footerFirstDiv{
-    height: 267.11px;
-}
-.footerLogo{
-    width: 114.39px;
-    height: 108.33px;
-    position: absolute;
-    right:87%;
-    top: 45px;
-}
-.footerUni{
-    color: white;
-    justify-content: center;
-    width: 241px;
-    height: 124px;
-    position: absolute;
-    right:3%;
-    top: 39px;
-}
-
-.footerUni p{
-text-align: center;
-}
-
-.footerUniLogo{
-    position: relative;
-    right: -20px;
-}
-/* .footerSecondDiv{
-    position: relative;
-} */
-.footerSecondPone{
-    position: absolute;
-    right:85%;
-    top: 215px;
-    color: white;
-
-}
-.footerSecondPtwo{
-    position: absolute;
-   
-    right:4%;
-    top: 215px;
-    color: white;
-}
-.line{
-    position: absolute;
-    height: 0.5px;
-    width: 100%;
-    background-color: #7D9990;
-    top: 215px;
-}
-.logoCap{
-    position: absolute;
-    width: fit-content;
-    right:56%;
-    top: 170px;
-    color: white;
-}
-.navBar{
     position: relative;
     background-color: #F1ECEB;
   }
@@ -190,3 +126,73 @@ text-align: center;
     color: #6B6B6B;
     text-decoration: none;
   }
+    
+    
+    
+    footer{
+        background-color: #164C4C;
+        height: 260px;
+        position: relative;
+       
+        
+    }
+    
+    .footerFirstDiv{
+        height: 267.11px;
+    }
+    .footerLogo{
+        width: 114.39px;
+        height: 108.33px;
+        position: absolute;
+        right:87%;
+        top: 45px;
+    }
+    .footerUni{
+        color: white;
+        justify-content: center;
+        width: 241px;
+        height: 124px;
+        position: absolute;
+        right:3%;
+        top: 39px;
+    }
+    
+    .footerUni p{
+    text-align: center;
+    }
+    
+    .footerUniLogo{
+        position: relative;
+        right: -20px;
+    }
+    /* .footerSecondDiv{
+        position: relative;
+    } */
+    .footerSecondPone{
+        position: absolute;
+        right:85%;
+        top: 215px;
+        color: white;
+    
+    }
+    .footerSecondPtwo{
+        position: absolute;
+       
+        right:4%;
+        top: 215px;
+        color: white;
+    }
+    .line{
+        position: absolute;
+        height: 0.5px;
+        width: 100%;
+        background-color: #7D9990;
+        top: 215px;
+    }
+    .logoCap{
+        position: absolute;
+        width: fit-content;
+        right:56%;
+        top: 170px;
+        color: white;
+    }

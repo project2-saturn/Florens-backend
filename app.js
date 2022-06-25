@@ -50,7 +50,7 @@ app.use(express.json());
 
 // Api for login
 
-app.post("/login", async (req, res) => {
+app.post("/login/", async (req, res) => {
   if (req.body.email == "" || req.body.password == "") {
     res.send("Please enter the name and password ");
   } else {

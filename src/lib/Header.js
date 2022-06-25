@@ -150,6 +150,7 @@ export default function(props) {
               <i class="fas fa-search fa-2x"></i>
             </div>
           </Link>
+          
         </div>
         <div class="accordion">
           <button
