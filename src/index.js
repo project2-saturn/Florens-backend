@@ -9,8 +9,8 @@ import {
 
 import React from 'react';
 
-import HomePage from './HomePage';
-import SearchPage from './SearchPage';
+import HomePage from './HomePage.js';
+import SearchPage from './SearchPage.js';
 
 ReactDOM.render(
     <BrowserRouter>

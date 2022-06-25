@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import Header from "./lib/Header";
-import Features from "./lib/Features";
-import PlantOfTheDay from "./lib/PlantOfTheDay";
-import SeasonalPlants from "./lib/SeasonalPlants";
-import Footer from "./lib/Footer";
+import Header from "../src/lib/Header";
+import Features from "../src/lib/Features";
+import PlantOfTheDay from "../src/lib/PlantOfTheDay";
+import SeasonalPlants from "../src/lib/SeasonalPlants";
+import Footer from "../src/lib/Footer";
 import "./styles/homepage.css";
 
 // import "./js/advanceSearch";
