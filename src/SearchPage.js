@@ -15,18 +15,18 @@ const SearchPage = props => {
   // console.log(data);
   // console.log(state);
   return (
-    <>
+    <div className="searchPageDiv">
       {/* <h1>HEloo.. this is the search page</h1> */}
       {/* <h2>{data.firstname[0]} </h2> */}
       {/* <Link to="/">Click here to go to homepage</Link> */}
       <header><NavigationBar />
       </header>
-      <main><SearchSearchPage />
+      <main className="searchPageMain"><SearchSearchPage />
       {/* <SearchResults /> */}
       </main>
       <Footer />
-    </>
-  );
+    </div>
+  ); 
 };
 
 export default SearchPage;
