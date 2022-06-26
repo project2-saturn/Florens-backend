@@ -5,7 +5,7 @@ export default function() {
     <>
       <section class="firstSection">
         <div class="firstSectionFirstCard">
-          <img src="../images/Group_618.png" alt="plant" />
+          <img class="firstSectionFirstCardimg" src="../images/Group_618.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Be an <br />
             expert
@@ -17,7 +17,7 @@ export default function() {
           </p>
         </div>
         <div class="firstSectionSecondCard">
-          <img src="../images/Group_614.png" alt="plant" />
+          <img class="firstSectionSecondCardimg" src="../images/Group_614.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Save your <br />
             findings
@@ -28,7 +28,7 @@ export default function() {
           </p>
         </div>
         <div class="firstSectionThirdCard">
-          <img src="../images/Group_609.png" alt="plant" />
+          <img  class="firstSectionThirdCardimg" src="../images/Group_609.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Add your own
             <br />

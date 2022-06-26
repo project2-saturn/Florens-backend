@@ -8,7 +8,7 @@ export default function() {
     description: "",
     form: "",
     id: "",
-    location: [],
+    location: [], 
     name: "",
     owner: "",
     photosURL: [],
@@ -37,7 +37,7 @@ export default function() {
             <h3>
               {plant.name}
             </h3>
-            <p>{plant.scientificName}</p>
+            <p className="plantDescription">{plant.scientificName}</p>
 
             <div class="plantDescItems1">
               <h5 class="plantDescItemsHeading">Plant Type</h5>

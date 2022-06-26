@@ -1,6 +1,13 @@
 body{
     margin: 0px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
 main{
     height: 2050px;
 }
@@ -48,7 +55,8 @@ main{
 .headerTextHeading{
 font-size: 67px;
 color: #164C4C;
-font-family: 'Alegreya';
+font-family: 'Merriweather';
+font-weight: 300;
 margin-bottom: 0;
 font-weight: lighter;
 }
@@ -221,6 +229,20 @@ font-weight: lighter;
     font-size: 15px;
     font-family: 'Rubik';
 }
+.finterColorchange{
+    text-align: center;
+    appearance: none;
+    background: #EA5A4E ;
+    height: 38px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 2px;
+    border: solid #EA5A4E 2px;
+    outline: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: 'Rubik';
+}
 .filterClear{
     text-align: center;
     color: #0d3f3f;
@@ -261,31 +283,47 @@ font-weight: lighter;
 
 /* ////////////////////////////firstSection///////////////////////////////////////// */
 
+
 .firstSection{
     margin-top: 120px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-}
-.firstSection img{
-    width: 300px;
-    height: 200px;
 }
 .firstSectionFirstCard{
     width: 300px; 
     margin-right: 70px; 
-    font-family: 'Alegreya';
+    font-family: 'Merriweather';
+    font-weight: 300;
+}
+.firstSectionFirstCardimg{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 80px;
 }
 .firstSectionSecondCard{
     width: 300px;  
     margin-right: 70px; 
-    font-family: 'Alegreya';
+    font-family: 'Merriweather';
+font-weight: 300;
+}
+.firstSectionSecondCardimg{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 80px;
+
 }
 .firstSectionThirdCard{
     width: 300px; 
     margin-right: 70px;  
-    font-family: 'Alegreya';
+    font-family: 'Merriweather';
+font-weight: 300;
+}
+.firstSectionThirdCardimg{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 80px;
+
 }
 
 .firstSectionParagraph{
@@ -298,7 +336,8 @@ font-weight: lighter;
 .firstSectionHeadings{
     font-size: 40px;
     margin:3px;
-    font-family: 'Alegreya';
+    font-family: 'Merriweather';
+font-weight: 300;
     color: #164C4C;
 }
 /* //////////////////////////////////////////////////////////////////////////////////// */
@@ -338,7 +377,8 @@ font-weight: lighter;
 .secondSectionHeadings{
     font-size: 40px;
     margin:3px;
-    font-family: 'Alegreya';
+    font-family: 'Merriweather';
+font-weight: 300;
     text-align: center;
     margin-bottom: 40px;
     border-radius: 10px;
@@ -350,7 +390,8 @@ font-weight: lighter;
     top: 70px;
     left: 650px;
     color: #164C4C;
-    font-family: 'Alegreya';
+    font-family: 'Merriweather';
+    font-weight: 300;
 }
 .plantInfo p{
     position: absolute;
@@ -454,7 +495,8 @@ h3{
 .thirdSectionHeading{
     font-size: 40px;
     color: #164C4C;
-    font-family: 'Alegreya';
+    font-family: 'Merriweather';
+font-weight: 300;
 }
 .thirdSectionCardList{
     display: flex;
@@ -492,13 +534,16 @@ h3{
 }
 .thirdSectionCardsInner h3{
    color: #164C4C;
-   font-family: 'Alegreya';
+   font-family: 'Merriweather';
+   font-weight: 300;
+font-size: 22px;
    position: absolute;
    top:250px;
    left: 25px;
 }
 .thirdSectionCardsInner p{
-    font-family: 'Alegreya';
+    font-family: 'Rubik';
+    font-weight: lighter;
     text-align: center;
     position: absolute;
     top:300px;

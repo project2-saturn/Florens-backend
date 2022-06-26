@@ -7,6 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/homepage.css" />
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -38,40 +44,7 @@
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
-      <!-- <div class="accordion">
-        <button type="button" class="accordion_button ">Advanced Search</button>
-        <div class="accordion_content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni
-            quaerat eius maiores odio rerum dicta officia inventore tenetur
-            doloremque molestiae similique ratione Quaerat voluptates veniam
-            quisquam . Lorem Lorem ipsum dolor sit amet consectetur adipisicing
-            elit . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing
-            elit . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing
-            elit . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing
-            elit . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam . ipsum dolor sit amet consectetur adipisicing elit
-            . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing
-            elit . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing
-            elit . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam . Lorem ipsum dolor sit amet consectetur adipisicing
-            elit . Magni quaerat eius maiores odio rerum dicta officia inventore
-            tenetur doloremque molestiae similique ratione Quaerat voluptates
-            veniam quisquam .
-          </p>
-        </div> -->
+      
 
       <div class="accordion">
         <button type="button" class="accordion_buttonHome">
@@ -86,8 +59,9 @@
               <li class="filterLi">Clear</li>
             </ul>
             <div class="filterDiv">
-              <button class="filterBtns">Annual</button>
+              <button id="annual" class="filterBtns">Annual</button>
               <button class="filterBtns">Aquatic Plant</button>
+              <button class="finterColorchange">Aquatic Plant</button>
               <button class="filterBtns">Bamboo</button>
               <button class="filterBtns">Biennial</button>
               <button class="filterBtns">Broadleef evergreen</button>
@@ -222,7 +196,7 @@
     <main>
       <section class="firstSection">
         <div class="firstSectionFirstCard">
-          <img src="../images/Group_618.png" alt="plant" />
+          <img class="firstSectionFirstCardimg" src="../images/Group_618.png" alt="plant" />
           <h2 class="firstSectionHeadings">Be an <br />expert</h2>
           <p class="firstSectionParagraph">
             By exploring or range with more than 100,000 plants, trees and
@@ -231,7 +205,7 @@
           </p>
         </div>
         <div class="firstSectionSecondCard">
-          <img src="../images/Group_614.png" alt="plant" />
+          <img class="firstSectionSecondCardimg" src="../images/Group_614.png" alt="plant" />
           <h2 class="firstSectionHeadings">Save your <br />findings</h2>
           <p class="firstSectionParagraph">
             Keep an eye on all your findings from our collectionby creating a
@@ -239,7 +213,7 @@
           </p>
         </div>
         <div class="firstSectionThirdCard">
-          <img src="../images/Group_609.png" alt="plant" />
+          <img class="firstSectionThirdCardimg" src="../images/Group_609.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Add your own<br />
             plants
@@ -386,6 +360,9 @@
           }
         });
       });
+
+      let btnAnnual = document.querySelector('#annual');
+      btnAnnual.addEventListener ('click',() =>btnAnnual.style.backgroundColor='#EA5A4E')
     </script>
   </body>
 </html>

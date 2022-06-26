@@ -8,6 +8,8 @@ import SeasonalPlants from "../src/lib/SeasonalPlants";
 import Footer from "../src/lib/Footer";
 import "./styles/homepage.css";
 
+
+
 // import "./js/advanceSearch";
 
 let data = { firstname: ["parth", "soni"] };
@@ -33,7 +35,7 @@ export default function() {
   return (
     <>
       <Header user={user} />
-      <main>
+      <main className="homePageMain">
         <Features />
         <PlantOfTheDay />
         <SeasonalPlants />
@@ -42,7 +44,7 @@ export default function() {
     </>
   );
 }
-
+ 
 {
   /* <form action="/postUser" method="POST" enctype="multipart/form-data">
         <label>Name : </label>
