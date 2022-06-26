@@ -1,0 +1,315 @@
+body{
+    margin: 0;
+}
+.navBar{
+    position: relative;
+    background-color: #F1ECEB;
+}
+.headerLogo{
+    margin-left: 40px;
+    width: 92px;
+    height: 87px;
+}
+.aboutNav{
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+}
+.loginNav{
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+}
+
+/* ////////////////////////////////Plant detail section//////////////////////// */
+
+.secondSection{
+    margin-top: 100px;
+}
+.secondSectionCard{
+    display: flex;
+    justify-content: center;
+}
+.secondSection{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.secondSecImg img{
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    width: 524px;
+    height: 434px;
+    border-radius: 10px;
+}
+
+.secondSecImge img{
+    position: absolute;
+    top: 515px;
+    left: 40px;
+    width: 101px;
+    height: 99px;
+    border-radius: 10px;
+
+}
+.secondSecImges img{
+    position: absolute;
+    top: 515px;
+    left: 195px;
+    width: 101px;
+    height: 99px;
+    border-radius: 10px;
+    
+}
+.secondSecImga img{
+    position: absolute;
+    top: 515px;
+    left: 350px;
+    width: 101px;
+    height: 99px;
+    border-radius: 10px;
+    
+}
+.secondSecImgas img{
+    position: absolute;
+    top: 515px;
+    left: 505px;
+    width: 101px;
+    height: 99px;
+    border-radius: 10px;
+    
+}
+
+.secondSectionCard{
+    margin: auto;
+    height: 390px;
+    width: 1280px;
+    height: 638px;
+    position: relative;
+    border-radius: 15px;
+    border: solid 1.5px #7E9990;
+}
+
+
+.plantInfo h3{
+    position: absolute;
+    top: 50px;
+    left: 650px;
+    color: #164C4C;
+    font-family: 'Alegreya';
+    font-size: 28px;
+    font-weight: 200;
+}
+.subTag{
+    position: absolute;
+    top: 130px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescp{
+    position: absolute;
+    top: 180px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+
+}
+
+.plantDescItems1{
+    position: absolute;
+    top: 275px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems2{
+    position: absolute;
+    top: 275px;
+    left: 900px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems3{
+    position: absolute;
+    top: 345px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems4{
+    position: absolute;
+    top: 345px;
+    left: 900px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems5{
+    position: absolute;
+    top: 420px;
+    left: 650px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+.plantDescItems6{
+    position: absolute;
+    top: 420px;
+    left: 900px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+
+.plantDescItemsHeading{
+    margin-bottom: 10px;  
+    font-size: 16px;
+    color: #164C4C;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 28px;
+    margin-top: 0px;
+}
+.lineSec{
+    position: absolute;
+    height: 1px;
+    width: 600px;
+    background-color: #6B6B6B;
+    top: 540px;
+    left: 650px;
+}
+
+.contributer{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 560px;
+    left: 660px;
+    border-radius: 45px;
+
+}
+.contribution{
+    position: absolute;
+    top: 545px;
+    left: 690px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+
+}
+.editBtn{
+    position: absolute;
+    top: 545px;
+    left: 990px;
+    color: #164C4C;
+    appearance: none;
+    background: none;
+    border: none;
+    width: 223px;
+    height: 45px;
+    font-size: 13px;
+    font-family: 'Rubik';
+}
+.deletBtn{
+    position: absolute;
+    top: 545px;
+    left: 1150px;
+    color: #164C4C;
+    appearance: none;
+    background: none;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-size: 13px;
+    font-family: 'Rubik';
+}
+/* /////////////////////////////////////////////////////////////////////////// */
+
+
+
+/* ///////////////////////////footer////////////////////////////////////////// */
+footer{
+    background-color: #164C4C;
+    height: 267.11px;
+    position: relative;
+}
+
+.footerFirstDiv{
+    height: 267.11px;
+}
+.footerLogo{
+    width: 114.39px;
+    height: 108.33px;
+    position: absolute;
+    right:87%;
+    top: 45px;
+}
+.footerUni{
+    color: white;
+    justify-content: center;
+    width: 241px;
+    height: 124px;
+    position: absolute;
+    right:3%;
+    top: 39px;
+}
+
+.footerUni p{
+text-align: center;
+}
+
+.footerUniLogo{
+    position: relative;
+    right: -20px;
+}
+/* .footerSecondDiv{
+    position: relative;
+} */
+.footerSecondPone{
+    position: absolute;
+    right:85%;
+    top: 215px;
+    color: white;
+
+}
+.footerSecondPtwo{
+    position: absolute;
+   
+    right:4%;
+    top: 215px;
+    color: white;
+}
+.line{
+    position: absolute;
+    height: 0.5px;
+    width: 100%;
+    background-color: #7D9990;
+    top: 215px;
+}
+.logoCap{
+    position: absolute;
+    width: fit-content;
+    right:56%;
+    top: 170px;
+    color: white;
+}
+/* /////////////////////////////////////////////////////////////////////////// */
