@@ -1,0 +1,242 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.navBar{
+    position: relative;
+    background-color: #F1ECEB;
+    z-index:1;
+    height:10vh;
+  }
+  .headerLogo{
+    margin-left: 40px;
+    width: 92px;
+    height: 87px;
+}
+.card-image img{
+    width: 256px;
+height: 190px;
+border-radius:10px;
+}
+.card-image{
+    text-align:center;
+}
+.container-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+.card-title{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-32)/var(--unnamed-line-spacing-28) var(--unnamed-font-family-merriweather);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-164c4c);
+text-align: center;
+font: normal normal 300 32px/28px Merriweather;
+letter-spacing: 0px;
+color: #164C4C;
+margin-top:4%;
+opacity: 1;
+}
+.card-intro{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-22) var(--unnamed-font-family-rubik);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-6b6b6b);
+text-align:center;
+font: normal normal 300 16px/22px Rubik;
+letter-spacing: 0px;
+color: #6B6B6B;
+opacity: 1;
+margin-top:4%;
+}
+.buttons{
+    display: flex;
+    gap: 2rem;
+    margin-top: 4%;
+}
+.discovery-button{
+    border: 2px solid #EA5A4E;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+
+    height: 45px;
+    background-color:white;
+    color:#EA5A4E;
+ width: 194px;
+}
+.discovery-cards{
+    display:flex;
+    gap:4%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+.profile-card{
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+border: 1px solid var(--unnamed-color-7d9990);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #7D9990;
+border-radius: 10px;
+opacity: 1;
+width: 21%;
+    height: 530px;
+}
+.discovery-card{
+    border: 1px solid var(--unnamed-color-7d9990);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #7D9990;
+border-radius: 10px;
+width:21%;
+margin-bottom:4rem;
+height: 430px;
+}
+.btn{
+    background-color: white;
+  border: none;
+  color: white;
+  padding: 9px 16px;
+  color: #164C4C;
+  font-size: 16px;
+  cursor: pointer;
+}
+.long-line{
+    width:100%;
+    margin-top:1rem;
+}
+.discovery-image img{
+  
+    max-width: 83%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+   
+    
+}
+.main-title{
+    text-align: center;
+    padding: 3rem;
+    color: #164C4C;
+}
+.navigation-button{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-around;
+    margin-top:0.3rem;
+}
+.discovery-image{
+    padding-left: 3%;
+    padding-top:9%;
+    padding-right: 3%;
+    text-align: center;
+}
+.discovery-title{
+    margin-top:5%;
+    margin-bottom:5%;
+    
+    
+    color: #164C4C;
+    text-align: center;
+
+}
+.short-line{
+  
+        width: 23%;
+        margin: 0 auto;
+}
+.edit-profile{
+    margin-top: 5%;
+    color: #164C4C;
+}
+.discovery-item{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutNav{
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+}
+.loginNav {
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-decoration: none;
+  }
+  footer{
+    background-color: #164C4C;
+    height: 260px;
+    position: relative;
+   
+    
+}
+.footerFirstDiv{
+    height: 267.11px;
+}
+.footerLogo{
+    width: 114.39px;
+    height: 108.33px;
+    position: absolute;
+    right:87%;
+    top: 45px;
+}
+.footerUni{
+    color: white;
+    justify-content: center;
+    width: 241px;
+    height: 124px;
+    position: absolute;
+    right:3%;
+    top: 39px;
+}
+.footerUni p{
+    text-align: center;
+    }
+    
+    .footerUniLogo{
+        position: relative;
+        right: -20px;
+    }
+    .footerSecondPone{
+        position: absolute;
+        right:85%;
+        top: 215px;
+        color: white;
+    
+    }
+    .footerSecondPtwo{
+        position: absolute;
+       
+        right:4%;
+        top: 215px;
+        color: white;
+    }
+    .line{
+        position: absolute;
+        height: 0.5px;
+        width: 100%;
+        background-color: #7D9990;
+        top: 215px;
+    }
+    .logoCap{
+        position: absolute;
+        width: fit-content;
+        right:56%;
+        top: 170px;
+        color: white;
+    }
