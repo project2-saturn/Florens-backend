@@ -2,10 +2,11 @@
 // import Footer from "./Footer.js"
 import React, { useState } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 
 
 const LoginCard=(props)=>{
+    const navigator=useNavigate();
     const[email,setEmail]=useState();
     const[password,setPassword]=useState();
 
@@ -21,18 +22,18 @@ const LoginCard=(props)=>{
 
     }
 
-    function handleSubmit(){
-
-
-
-        axios.post("/login",{email:email,password:password}).then((result) => {
-            console.log(result);
+    function handleSubmit(event){
+        event.preventDefault();
+        axios.post("http://localhost:8080/login",{email:email,password:password}).then((result) => {
             
+            console.log(result);
+            navigator("/");
         }).catch((err) => {
             console.log(err);
         });
     }
 
+ 
 
 
 
@@ -46,14 +47,14 @@ const LoginCard=(props)=>{
             <h1>Login</h1>
            
             <label for="name">Email</label>
-            <input type="email"  name="email" onChange={handleChangeEmail} required />
+            <input type="email"  name="email" onChange={event=>handleChangeEmail(event)} required />
             <div class="space"></div>
             <label for="password">Password</label>
-            <input type="password"  name="password" onChange={handleChangePassword} required />
+            <input type="password"  name="password" onChange={event=>handleChangePassword(event)} required />
             <p class="forgotPassword"><a>Forgot Password ?</a></p>
-            <Link to="/Signup">
-            <input type="submit" value="Signup" />
-            </Link>
+          
+            <input type="submit" value="Login" />
+         
             
             <p class="newFlorens" >New on Florens?<a> <b><Link to="/Signup">Create Account</Link></b></a></p>
         </div>

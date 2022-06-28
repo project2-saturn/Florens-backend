@@ -47,15 +47,25 @@ app.use(express.json());
 //     console.log(error);
 //   }
 // });
+// Api for getting username from cookies
+
+app.get("/getUsername",async(req,res)=>{
+
+  var username = req.cookies['name'];
+res.send(username);
+})
+
+
+
 
 // Api for login
 
-app.post("/login/", async (req, res) => {
+app.post("/login", async (req, res, next) => {
   if (req.body.email == "" || req.body.password == "") {
     res.send("Please enter the name and password ");
   } else {
     const user = await User.findOne({ email: req.body.email });
-    // console.log(req.body.email);
+     console.log(req.body.email);
 
     if (user) {
       savedPass = await user.password;
@@ -65,6 +75,7 @@ app.post("/login/", async (req, res) => {
 
         const token = generateToken(user);
         res.cookie("token", token);
+        res.cookie("name", user.name);
         res.status(200).send("Password Validated");
       } else {
         res.status(400).send("Please enter the correct password");
