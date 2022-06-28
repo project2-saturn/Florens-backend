@@ -64,15 +64,7 @@ margin-top:4%;
     color:#EA5A4E;
  width: 194px;
 }
-.discovery-cards{
-    display:flex;
-    gap:4%;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin-left: 8rem;
-    margin-right: 8rem;
-}
+
 .profile-card{
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
 border: 1px solid var(--unnamed-color-7d9990);
@@ -97,15 +89,7 @@ width: 21%;
     width:100%;
     margin-top:1rem;
 }
-.discovery-image img{
-  
-    max-width: 83%;
-    height: 100%;
-    text-align: center;
-    border-radius: 10px;
-   
-    
-}
+
 .main-title{
     text-align: center;
     padding: 3rem;
@@ -117,6 +101,26 @@ width: 21%;
     align-content: center;
     justify-content: space-around;
     margin-top:0.3rem;
+}
+
+.short-line{
+  
+        width: 23%;
+        margin: 0 auto;
+}
+.edit-profile{
+    margin-top: 5%;
+    color: #164C4C;
+}
+/*******discovery section *******/
+.discovery-item{
+display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding:3px;
+    align-items: center;
+    height: 100%;
 }
 .discovery-image{
     padding-left: 3%;
@@ -133,22 +137,35 @@ width: 21%;
     text-align: center;
 
 }
-.short-line{
+.discovery-image img{
   
-        width: 23%;
-        margin: 0 auto;
+    max-width: 83%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+   
+    
 }
-.edit-profile{
-    margin-top: 5%;
-    color: #164C4C;
-}
-.discovery-item{
-display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+.discovery-cards{
+    display:grid;
+    gap:4%;
+    grid-template-columns:repeat(2,0.2fr);
     align-items: center;
-    height: 96%;
+    justify-content: center;
+    align-content: center;
+   
+    
+}
+.discovery-card{
+    border: 1px solid var(--unnamed-color-7d9990);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #7D9990;
+border-radius: 10px;
+align-items: center;
+width:100%;
+margin-bottom:4rem;
+height: 430px;
+border: 1px solid #7D9990;
 }
 .aboutNav{
     position: absolute;
@@ -170,6 +187,7 @@ display: flex;
     color: #6B6B6B;
     text-decoration: none;
   }
+  /****footer***********/
   footer{
     background-color: #164C4C;
     height: 260px;
@@ -232,21 +250,44 @@ display: flex;
         top: 170px;
         color: white;
     }
+   
     
     /*****media query */////
-    @media screen and (min-width: 600px) {
+    /* @media screen and (max-width: 600px) {
+        /* .discovery-cards{
+            display:grid;
+            gap:4%;
+            grid-template-columns:repeat(2,0.2fr);
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            margin-left: 8rem;
+            margin-right: 8rem;
+        } */
+    } */
+  
+    /* @media screen and (max-width: 600px)  {
+        .discovery-cards{
+            display:grid;
+            gap:4%;
+            grid-template-columns:repeat(4,0.2fr);
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+    } */
+    @media screen and (min-width: 601px)  {
         
-    }
-    @media screen and (min-width: 601px) {
-        .discovery-card{
-            border: 1px solid var(--unnamed-color-7d9990);
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #7D9990;
-        border-radius: 10px;
-        width:27%;
-        margin-bottom:4rem;
-        height: 430px;
+        .discovery-cards{
+            display:grid;
+            gap:4%;
+            grid-template-columns:repeat(4,0.2fr);
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+           
+            
         }
+        
         .discovery-button {
             border: 2px solid #EA5A4E;
             border-radius: 10px;
@@ -256,8 +297,9 @@ display: flex;
             color: #EA5A4E;
             width: 168px;
     }
-    @media screen and (min-width: 1584px)  {
-
+    }
+    /* @media screen and (min-width: 1584px)  {
+        
         .discovery-card{
             border: 1px solid var(--unnamed-color-7d9990);
         background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -267,6 +309,14 @@ display: flex;
         margin-bottom:4rem;
             height: 460px;
     }
+    .discovery-cards{
+        display:grid;
+        gap:4%;
+        grid-template-columns:repeat(4,12rem);
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+}
     @media screen and (min-width: 1860px)  {
 
         .discovery-card{
@@ -278,6 +328,14 @@ display: flex;
         margin-bottom:4rem;
             height: 480px;
     }
+    .discovery-cards{
+        display:grid;
+        gap:4%;
+        grid-template-columns:repeat(4,0.2fr);
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+}
     @media screen and (min-width: 1861px)  {
 
         .discovery-card{
@@ -289,3 +347,12 @@ display: flex;
         margin-bottom:4rem;
             height: 510px;
     }
+    .discovery-cards{
+        display:flex;
+        gap:4%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin-left: 8rem;
+        margin-right: 8rem;
+    } */

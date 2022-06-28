@@ -12,6 +12,15 @@ opacity: 1;
     margin:0px;
     padding:0px;
 }
+img{
+    width: 50%;
+height: 190px;
+object-fit:contain;
+border-radius: 10px;
+margin-left: 24%;
+margin-top:2%;
+margin-bottom:4%;
+}
 .navBar{
     position: relative;
     background-color: #F1ECEB;
@@ -105,10 +114,9 @@ opacity: 1;
         color: white;
     }
 form{
-    top: 236px;
-    left: 610px;
-    width: 650px;
-    height: 400px;
+   
+    width: 500px;
+    height: 505px;
     border: 1px solid var(--unnamed-color-7d9990);
     border: 1px solid #7D9990;
     border-radius: 10px;
@@ -133,17 +141,16 @@ margin-bottom:20px;
 height: 50px;
     border: 2px solid #EA5A4E;
     border-radius: 10px;
-    top: 658px;
-left: 656px;
+   
 
 height: 45px;
 /* UI Properties */
-border: 2px solid var(--unnamed-color-ea5a4e);
+
 border: 2px solid #EA5A4E;
 border-radius: 10px;
 opacity: 1;
 background-color:white;
-margin-top:9%;
+
 }
 .newFlorens{
     text-align:center;
@@ -152,7 +159,7 @@ margin-top:9%;
     
     display: flex;
    
-    padding: 6%;
+    padding: 2%;
     justify-content: center;
 }
 h1{

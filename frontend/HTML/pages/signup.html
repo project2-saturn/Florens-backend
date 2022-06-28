@@ -20,10 +20,11 @@
           <a class="loginNav" href="">Login</a>
         </div>
         </header>
-    <form action="">
+   
         <div class="container">
-         
+          
             <div class="form">
+              <form action="">
             <h1>Create Account</h1>
             <label for="picture">Drop your profile Picture</label>
             <input type="file" id="picUpload" name="picture"><br>
@@ -61,3 +62,69 @@
     </div>
   </footer>
 </html>
+
+<!-- React Code
+import React,{useState} from 'react';
+import Type from './Type.js';
+import Activity from './Activity.js'
+const signup = props => {
+
+
+
+    return (<>
+    <header>
+      <div className="navBar">
+        <img
+          className="headerLogo"
+          src="../images/florens-logo_green.png"
+          alt="logo"
+        />
+        <a className="aboutNav" href="">About</a>
+        <a className="loginNav" href="">Login</a>
+      </div>
+      </header>
+ 
+      <div className="container">
+        
+          <div className="form">
+            <form action="">
+          <h1>Create Account</h1>
+          <label for="picture">Drop your profile Picture</label>
+          <input type="file" id="picUpload" name="picture"><br>
+          <div class="uploadFileSection">
+          <label for="file" class="uploadFile" >Upload Profile Picture</label><br></div>
+          <label for="name">Name</label>
+          <input type="text"  name="name" required><br>
+          <label for="name">Email</label>
+          <input type="email"  name="email" required><br>
+          <label for="password">Password</label>
+          <input type="password"  name="password" required><br>
+          <input type="submit" value="Login" />
+          <p>Already have an account?<a><b> Login</b></a></p>
+      </div>
+  </div>
+  </form>
+</body>
+<footer>
+  <div className="footerFirstDiv">
+    <img className="footerLogo" src="../images/Group_641.png" alt="logo" />
+    <div className="footerUni">
+      <img className="footerUniLogo" src="../images/KPU-Logo.png" alt="KPU" />
+      <p>
+        Plant Database from KPU:<br />
+        https://plantdatabase.kpu.ca
+      </p>
+    </div>
+    <p className="logoCap">
+      Foliage background and Leaf illustration vector created by
+      rawpixel.com - www.freepik.com
+    </p>
+    <div className="line"></div>
+    <p className="footerSecondPone">Copyright Florens 2022</p>
+    <p className="footerSecondPtwo">Developed by Team Saturn - Langara</p>
+  </div>
+</footer>
+</>)}
+
+
+export default signup; -->
