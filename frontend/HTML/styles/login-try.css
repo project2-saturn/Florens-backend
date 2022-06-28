@@ -15,7 +15,6 @@ opacity: 1;
 .navBar{
     position: relative;
     background-color: #F1ECEB;
-    height:10vh;
   }
   .headerLogo{
     margin-left: 40px;
@@ -149,11 +148,8 @@ margin-top:9%;
     text-align:center;
 }
 .form-container{
-    
-    display: flex;
-   
-    padding: 6%;
-    justify-content: center;
+    margin-left: 22%;
+    padding: 4%;
 }
 h1{
     text-align: center;
@@ -162,4 +158,3 @@ h1{
     color: #164C4C;
     opacity: 1;
 }
-////////////footer////////////////////

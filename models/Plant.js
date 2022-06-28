@@ -3,14 +3,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PlantSchema = new Schema({
-  name: { type: String, required: true, maxLength: 30 },
+  name: { type: String, required: true },
   scientificName: { type: String },
   description: {type: String},
   photosURL : {type:Array, 'default':[]},
   season: {type: Array, 'default':[]},
   location: {type: Array, 'default': []},
   type: {type: String},
-  color: {type: String},
+  color: {type: Array, 'default':[]},
   texture: {type: String},
   form: {type: String},
   owner: {type: String},
