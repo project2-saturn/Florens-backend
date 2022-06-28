@@ -4,7 +4,10 @@ body{
     margin:0px;
 }
 .container{
-    border: 1px solid #C6D3CF;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
   .uploadFile{
@@ -57,13 +60,12 @@ body{
   }
   input[type=email],input[type=password],input[type=text]{
     width: 100%;
-    padding: 10px 17rem;
-    margin-bottom: 25px;
-    margin-top: 5px;
-    display: inline-block;
-    border: 1px solid #F7C9BB;
-    border-radius: 4px;
-    box-sizing: border-box;
+    margin-bottom: 20px;
+    height: 50px;
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
   }
   input[type=file]{
    
@@ -77,19 +79,23 @@ body{
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
-    width: 80%;
+ 
+    display: flex;
+    width:70%;
     
-    /* height: 50vh; */
-    padding: 5%;
+    padding: 2%;
+    justify-content: center;
   }
   form{
-    display: flex;
-    margin-left: 26%;
+  
+   
     align-items: center;
     justify-content: center;
-    max-width: 50%;
+    /* max-width: 50%; */
+   
     height: 50%;
-    padding:15px;
+    border: 1px solid #7D9990;
+    padding: 15px;
 
   }
   .navBar{
