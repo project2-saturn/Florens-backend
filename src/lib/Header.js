@@ -160,7 +160,7 @@ export default function(props) {
           >
             Advanced Search
           </button>
-          <div class="accordion_content">
+          <div class="accordion_contentHome">
             <div class="filterSectionOne">
               <SearchFilter
                 title={"Plant Type"}

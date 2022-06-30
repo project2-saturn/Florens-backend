@@ -115,19 +115,26 @@ body{
             background:  #FFFFFF;
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
+            border-left: solid #0d3f3f 0.5px ;
+            border-right: solid #0d3f3f 0.5px ;
+            border-top: solid #0d3f3f 0.5px ;
         }
 
         .accordion_button--active::after{content: '\25b4'}
 
         .accordion_content{
-        overflow: hidden;
-        max-height: 0px;
-        transition: max-height 0.2s ;
-        width: 1034px;
-        margin: auto;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        opacity: 0.5;
+            overflow: hidden;
+            max-height: 0px;
+            transition: max-height 0.2s ;
+            width: 1033px;
+            margin: auto;
+            background: #FFFFFF; 
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            opacity: 0.7;
+            border-left: solid #0d3f3f 0.5px ;
+            border-right: solid #0d3f3f 0.5px ;
+            border-bottom: solid #0d3f3f 0.5px ;
         }
         .header_background{
             height: 900px;
