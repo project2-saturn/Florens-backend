@@ -41,19 +41,19 @@ const LoginCard=(props)=>{
     
 
 
-<div class="container">
-            <form onSubmit={event=>handleSubmit(event)}>
-            <div class="form">
+<div class="container-login">
+            <form className="form-login-border" onSubmit={event=>handleSubmit(event)}>
+            <div class="form-login">
             <h1>Login</h1>
            
             <label for="name">Email</label>
-            <input type="email"  name="email" onChange={event=>handleChangeEmail(event)} required />
+            <input type="email" className="email-login" name="email" onChange={event=>handleChangeEmail(event)} required />
             <div class="space"></div>
             <label for="password">Password</label>
-            <input type="password"  name="password" onChange={event=>handleChangePassword(event)} required />
+            <input type="password"  name="password" className="password-login"  onChange={event=>handleChangePassword(event)} required />
             <p class="forgotPassword"><a>Forgot Password ?</a></p>
           
-            <input type="submit" value="Login" />
+            <input type="submit" className="submit-login" value="Login" />
          
             
             <p class="newFlorens" >New on Florens?<a> <b><Link to="/Signup">Create Account</Link></b></a></p>

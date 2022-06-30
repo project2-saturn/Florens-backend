@@ -3,7 +3,7 @@ body{
     padding:0px;
     margin:0px;
 }
-.container{
+.container-signup{
     border: 1px solid #C6D3CF;
 }
   
@@ -29,7 +29,7 @@ body{
     margin-bottom:9px;
   }
   
-  input[type="submit"] {
+  .submit-signup {
     width: 100%;
     color: crimson;
     background-color: white;
@@ -40,7 +40,7 @@ body{
     margin-bottom:20px
   
   }
-  .container h1{
+  .container-signup h1{
     text-align: center;
     margin-bottom: 24px;
       }
@@ -48,15 +48,16 @@ body{
     margin: 0px;
 }
   
-  .form h1{
+  .form-signup h1{
     color:#1C4C4D
   }
-  .form p{
+  .form-signup p{
       text-align:center;
   }
-  input[type=email],input[type=password],input[type=text]{
+  .email-signup,.password-signup,.text-signup{
     width: 100%;
-    padding: 10px 17rem;
+  height:45px;
+  width:100%;
     margin-bottom: 25px;
     margin-top: 5px;
     display: inline-block;
@@ -64,15 +65,19 @@ body{
     border-radius: 4px;
     box-sizing: border-box;
   }
-  input[type=file]{
+  .file-signup{
    
     display:none;
     
   }
+  .form-div-signup{
+    border: 1px solid #F7C9BB;
+    padding: 3%;
+  }
   .space{
     margin: 3rem;
   }
-  .form{
+  .form-signup{
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
@@ -81,8 +86,8 @@ body{
     /* height: 50vh; */
     padding: 5%;
   }
-  form{
-    display: flex;
+  .form-signup{
+    
     margin-left: 26%;
     align-items: center;
     justify-content: center;
