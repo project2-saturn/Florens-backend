@@ -1,6 +1,6 @@
 
 import Footer from "./Footer.js";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {Link,useNavigate} from 'react-router-dom';
 
@@ -11,7 +11,7 @@ const SignupCard=(props)=>{
     const[email,setEmail]=useState();
     const[password,setPassword]=useState();
     const[name,setName]=useState();
-
+    const[image,setImage]=useState();
     const handleChangeName=(event)=>{
 
         setName(event.target.value);
@@ -29,6 +29,19 @@ const SignupCard=(props)=>{
 
     }
 
+
+
+
+// useEffect(()=>{
+//     axios.get("http://localhost:8080/getimage").then((result) => {
+//         console.log(result);
+//         setImage(result.data.image)
+
+//     }).catch((err) => {
+//         console.log(err);
+//     });
+// }
+// )
 
 const handleSubmit=(event)=>{
     event.preventDefault();
@@ -55,6 +68,11 @@ return(
          <input type="file" className="file-signup" id="picUpload" name="picture"/>
          <div className="uploadFileSection">
          <label for="file" className="uploadFile" >Upload Profile Picture</label></div>
+         {/* {image.map((imageData)=>{
+            const base64String=btoa(String.fromCharCode(...new Uint8Array((imageData.img.data))));
+            return <img src={`data:image/png;base64,${base64String}`}></img>
+         })} */}
+         
          <label for="name">Name</label>
          <input type="text" className="text-signup" name="name" required onChange={event=>handleChangeName(event)}/>
          <label for="name">Email</label>

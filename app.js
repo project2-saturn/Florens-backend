@@ -4,6 +4,7 @@ const app = express();
 require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require("multer");
+const path= require("path");
 const User = require("./models/User");
 const Plant = require("./models/Plant");
 const aws = require("aws-sdk");
@@ -26,6 +27,19 @@ connection.once("open", () => {
     console.log(`Connected and listening on port ${process.env.PORT || 8080}`);
   });
 });
+
+
+const storage=multer.diskStorage({
+destination:(req,file,cb)=>{
+cb(null,__dirname);
+},
+filename:(req,file,cb)=>{
+
+cb(null,file.originalname)
+}
+})
+
+const uploadImage= multer({storage:storage});
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -86,8 +100,13 @@ app.post("/login", async (req, res, next) => {
   }
 });
 
+
+app.get("/getimage",async (req,res)=>{
+  let user = await User.findOne({ email: req.body.email });
+})
+
 //API for Signup
-app.post("/postUser", async (req, res, next) => {
+app.post("/postUser", uploadImage.single('image'), async (req, res, next) => {
   let user = await User.findOne({ email: req.body.email });
   console.log(user);
   if (user) {
@@ -95,6 +114,10 @@ app.post("/postUser", async (req, res, next) => {
   } else {
     user = new User({
       name: req.body.name,
+      image:{
+        data:fs.readFileSync(req.file.path),
+        contentType:req.file.mimetype
+      },
       email: req.body.email,
       password: req.body.password
     });
