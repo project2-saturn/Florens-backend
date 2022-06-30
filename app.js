@@ -235,13 +235,13 @@ app.post("/loadData", async (req, res, next) => {
 // So, it always stays same on that particular day.
 app.get("/plantOfTheDay", async (req, res, next) => {
   let today = new Date();
-  console.log(req);
+  // console.log(req);
   let rng = seedrandom(today.getDate().toString());
   Plant.count().then(count => {
-    console.log(`Count: ${count}`);
+    // console.log(`Count: ${count}`);
     let plantIndex = Math.floor(rng() * count);
 
-    console.log(`Plant Number: ${plantIndex}`);
+    // console.log(`Plant Number: ${plantIndex}`);
     Plant.find()
       .skip(plantIndex)
       .limit(1)
@@ -497,6 +497,8 @@ app.post("/searchResults", (req, res) => {
     })
     .catch(error => console.log(error));
 });
+
+
 
 app.get("/searchOption", (req, res, next) => {
   // const optionText  = req.params.option;
