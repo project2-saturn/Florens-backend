@@ -1,6 +1,70 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import SearchResultCard from "./SearchResultCard";
+
+let month = new Date().getMonth();
+console.log(month);
+// month = month[0].toUpperCase() +
+switch (month) {
+  case 0:
+    month = "Jan";
+    break;
+  case 1:
+    month = "Feb";
+    break;
+  case 2:
+    month = "Mar";
+    break;
+  case 3:
+    month = "Apr";
+    break;
+  case 4:
+    month = "May";
+    break;
+  case 5:
+    month = "Jun";
+    break;
+  case 6:
+    month = "Jul";
+    break;
+  case 7:
+    month = "Aug";
+    break;
+  case 8:
+    month = "Sep";
+    break;
+  case 9:
+    month = "Oct";
+    break;
+  case 10:
+    month = "Nov";
+    break;
+  case 11:
+    month = "Dec";
+    break;
+}
 
 export default function() {
+  const [plants, setPlants] = useState([]);
+
+  const requestOptions = {
+    searchText: "",
+    searchSeason: [month]
+  };
+
+  console.log(requestOptions);
+
+  useEffect(() => {
+    axios
+      .post("/searchResults", { ...requestOptions })
+      .then(result => {
+        console.log(result);
+        setPlants([...result.data]);
+        // console.log(plants);
+      })
+      .catch(error => console.log(error));
+  }, []);
+
   return (
     <>
       <section class="thirdSection">
@@ -13,62 +77,16 @@ export default function() {
           </p>
         </div>
         <div class="thirdSectionCards">
-          <div class="thirdSectionCardList">
-            <div class="thirdSectionCardsInner">
-              <img src="../images/Rectangle_3_et.png" alt="plant" />
-              <h3>Name of the plant</h3>
-              <p>
-                Are you an expert, or
-                <br />
-                have some sort of knowledge?
-                <br />
-                you can contribute with our
-              </p>
-              <button type="button">Details</button>
-            </div>
-          </div>
-          <div class="thirdSectionCardList">
-            <div class="thirdSectionCardsInner">
-              <img src="../images/Rectangle_3_et.png" alt="plant" />
-              <h3>Name of the plant</h3>
-              <p>
-                Are you an expert, or
-                <br />
-                have some sort of knowledge?
-                <br />
-                you can contribute with our
-              </p>
-              <button type="button">Details</button>
-            </div>
-          </div>
-          <div class="thirdSectionCardList">
-            <div class="thirdSectionCardsInner">
-              <img src="../images/Rectangle_3_et.png" alt="plant" />
-              <h3>Name of the plant</h3>
-              <p>
-                Are you an expert, or
-                <br />
-                have some sort of knowledge?
-                <br />
-                you can contribute with our
-              </p>
-              <button type="button">Details</button>
-            </div>
-          </div>
-          <div class="thirdSectionCardList">
-            <div class="thirdSectionCardsInner">
-              <img src="../images/Rectangle_3_et.png" alt="plant" />
-              <h3>Name of the plant</h3>
-              <p>
-                Are you an expert, or
-                <br />
-                have some sort of knowledge?
-                <br />
-                you can contribute with our
-              </p>
-              <button type="button">Details</button>
-            </div>
-          </div>
+          {plants[0] ? (
+            <>
+              <SearchResultCard plant={plants[0]} />
+              <SearchResultCard plant={plants[1]} />
+              <SearchResultCard plant={plants[2]} />
+              <SearchResultCard plant={plants[3]} />
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       </section>
     </>
