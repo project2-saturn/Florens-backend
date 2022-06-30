@@ -16,6 +16,12 @@ opacity: 1;
     position: relative;
     background-color: #F1ECEB;
   }
+  .form-login-border{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 3%;
+  }
   .headerLogo{
     margin-left: 40px;
     width: 92px;
@@ -103,7 +109,7 @@ opacity: 1;
         top: 170px;
         color: white;
     }
-form{
+.form-login{
     top: 236px;
     left: 610px;
     width: 650px;
@@ -114,7 +120,7 @@ form{
     opacity: 1;
     padding:2%;
 }
-input[type="email"],input[type="password"]
+.email-login,.password-login
 {
   
 width: 100%;
@@ -126,7 +132,7 @@ border: 1px solid #F8C9BB;
 border-radius: 10px;
 opacity: 1;
 }
-input[type="submit"]{
+.submit-login{
     width: 100%;
 margin-bottom:20px;
 height: 50px;
@@ -151,7 +157,7 @@ margin-top:9%;
     margin-left: 22%;
     padding: 4%;
 }
-h1{
+.form-login h1{
     text-align: center;
     font: normal normal 300 22px/30px Merriweather;
     letter-spacing: 0px;

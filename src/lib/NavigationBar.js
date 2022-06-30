@@ -27,16 +27,16 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
 
   return (
     <>
-      <div class="navBar">
+      <div className="navBar">
         <img
-          class="headerLogo"
+          className="headerLogo"
           src="../images/florens-logo_green.png"
           alt="logo"
         />
-        <a class="aboutNav" href="">
+        <a className="aboutNav" href="">
           About
         </a>
-        <a class="loginNav" href="">
+        <a className="loginNav" href="">
         {console.log({name})}
       
        {<Link to="/login">{name}</Link>}
