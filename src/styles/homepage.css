@@ -244,6 +244,13 @@ font-weight: lighter;
     font-size: 15px;
     font-family: 'Rubik';
 }
+
+
+.filterBtnsSelected {
+    background-color: #EA5A4E;
+    color: white;
+}
+
 .filterClear{
     text-align: center;
     color: #0d3f3f;

@@ -370,7 +370,8 @@
             "Type": "Fern",
             "color": "Dark-green",
             "texture": "Medium",
-            "form": "Mounded, Vase"
+            "form": "Mounded, Vase",
+            "Url": "https://plantdatabase.kpu.ca/images/habit/tblsph1.jpg"
         },
         {
             "Name": "Royal fern",
@@ -381,7 +382,8 @@
             "Type": "Fern",
             "color": "Green",
             "texture": "Medium",
-            "form": "Vase"
+            "form": "Vase",
+            "Url": "https://plantdatabase.kpu.ca/images/habit/tosreh1.jpg"
         },
         {
             "Name": "spicy hot pepper",
