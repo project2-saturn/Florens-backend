@@ -5,7 +5,7 @@ import React from "react";
 
 import HomePage from "./HomePage.js";
 import SearchPage from "./SearchPage.js";
-import SignUp from "./signup";
+import SignUp from "./Signup";
 import Login from "./Login";
 import PlantProfile from "./PlantProfile";
 
