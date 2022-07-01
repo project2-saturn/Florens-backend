@@ -115,14 +115,14 @@ export default function(props) {
 
   return (
     <>
-      <div>SearchText: {searchOptions.searchText.toString()}</div>
+      {/* <div>SearchText: {searchOptions.searchText.toString()}</div>
 
       <div>SearchType:{searchOptions.searchType.toString()}</div>
       <div>SearchColor:{searchOptions.searchColor.toString()}</div>
       <div>SearchForm:{searchOptions.searchForm.toString()}</div>
       <div>SearchLocation:{searchOptions.searchLocation.toString()}</div>
       <div>SearchSeason:{searchOptions.searchSeason.toString()}</div>
-      <div>SearchTexture:{searchOptions.searchTexture.toString()}</div>
+      <div>SearchTexture:{searchOptions.searchTexture.toString()}</div> */}
       <header class="homeHeader">
         <NavigationBar />
         <div class="headerText">
