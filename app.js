@@ -16,8 +16,8 @@ const cookies = require("cookie-parser");
 const fetch  = require("node-fetch");
 
 const s3 = new AWS.S3({
-  accessKeyId: "AKIA37VNZNEMKFUZCKDA",
-  secretAccessKey: "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"
+  accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY
 });
 
 const corsOptions ={

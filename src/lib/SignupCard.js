@@ -7,8 +7,8 @@ import AWS from "aws-sdk";
 const SignupCard = props => {
 //   useEffect(async () => {
 //     const s3 = new AWS.S3({
-//       accessKeyId: "AKIA37VNZNEMKFUZCKDA",
-//       secretAccessKey: "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"
+//       accessKeyId: "",
+//       secretAccessKey: ""
 //     });
 //     const imageURL = "../images/florens-logo_green.png";
 
