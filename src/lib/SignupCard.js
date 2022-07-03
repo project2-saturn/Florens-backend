@@ -12,6 +12,9 @@ const SignupCard=(props)=>{
     const[password,setPassword]=useState();
     const[name,setName]=useState();
     const[image,setImage]=useState();
+    const[picture,setPicture]=useState(null);
+   
+    // Base64  base64String="";
     const handleChangeName=(event)=>{
 
         setName(event.target.value);
@@ -28,25 +31,35 @@ const SignupCard=(props)=>{
         setPassword(event.target.value);
 
     }
+   
+
+    const handleImageChange=(event)=>{
+console.log(event.target.files[0]);
+setImage(URL.createObjectURL(event.target.files[0])  )  ;
+       
+
+    }
 
 
 
 
 // useEffect(()=>{
-//     axios.get("http://localhost:8080/getimage").then((result) => {
-//         console.log(result);
-//         setImage(result.data.image)
-
-//     }).catch((err) => {
-//         console.log(err);
-//     });
 // }
-// )
+//     },[image])
+
 
 const handleSubmit=(event)=>{
     event.preventDefault();
-    axios.post("http://localhost:8080/postUser",{name:name,email:email,password:password}).then((result) => {
+    const formData=new FormData();
+    formData.append('name',name);
+    formData.append('email',email);
+    formData.append('password',password);
+    formData.append('image',picture);
+    
+  console.log(picture);
+    axios.post("http://localhost:8080/postUser",formData).then((result) => {
         console.log(result);
+        setImage(result.data.image);
         navigator("/login");
 
     }).catch((err) => {
@@ -61,18 +74,23 @@ return(
 
 
 <div className="container-signup">
-<form className="form-signup"onSubmit={handleSubmit}>     
+{/* {image?.map((imageData)=>{
+       const base64String=btoa(String.fromCharCode(...new Uint8Array((imageData.data))));
+       console.log(base64String);
+    })
+    
+
+} */}
+
+<form className="form-signup"onSubmit={handleSubmit} enctype="multipart/form-data">     
          <div className="form-div-signup">
          <h1>Create Account</h1>
          <label for="picture">Drop your profile Picture</label>
-         <input type="file" className="file-signup" id="picUpload" name="picture"/>
          <div className="uploadFileSection">
-         <label for="file" className="uploadFile" >Upload Profile Picture</label></div>
-         {/* {image.map((imageData)=>{
-            const base64String=btoa(String.fromCharCode(...new Uint8Array((imageData.img.data))));
-            return <img src={`data:image/png;base64,${base64String}`}></img>
-         })} */}
-         
+         <label for="file" className="uploadFile" >Upload Profile Picture</label>
+         <input type="file" className="file-signup" id="picUpload" name="picture" onChange={event=>handleImageChange(event)}/>
+         </div>
+         <img src={image}></img>
          <label for="name">Name</label>
          <input type="text" className="text-signup" name="name" required onChange={event=>handleChangeName(event)}/>
          <label for="name">Email</label>

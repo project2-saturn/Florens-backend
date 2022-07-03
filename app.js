@@ -101,9 +101,9 @@ app.post("/login", async (req, res, next) => {
 });
 
 
-app.get("/getimage",async (req,res)=>{
-  let user = await User.findOne({ email: req.body.email });
-})
+// app.get("/getimage",async (req,res)=>{
+//   let user = await User.findOne({ email: req.body.email });
+// })
 
 //API for Signup
 app.post("/postUser", uploadImage.single('image'), async (req, res, next) => {
