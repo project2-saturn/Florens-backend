@@ -65,6 +65,8 @@ const handleChangePassword=(event)=>{
 
 const handleImageChange=(event)=>{
 console.log(event.target.files[0]);
+setPicture(event.target.files[0]);
+
 setImage(URL.createObjectURL(event.target.files[0])  )  ;
    
 
@@ -89,7 +91,8 @@ formData.append('image',picture);
 console.log(picture);
 axios.post("http://localhost:8080/postUser",formData).then((result) => {
     console.log(result);
-    setImage(result.data.image);
+    // setPicture(result.data.image);
+    console.log(image);
     navigator("/login");
 
 }).catch((err) => {
@@ -107,7 +110,7 @@ return(
          <div className="form-div-signup">
          <h1>Create Account</h1>
          <label>Drop your Profile Picture</label><br></br>
-            <input type="file" id="upload" hidden />
+            <input type="file" id="upload" hidden onChange={event=>handleImageChange(event)}/>
             <div className="fileBorder">
 <label for="upload" className="uploadFile">Choose file</label><br></br></div>
 <img src={image}></img>
