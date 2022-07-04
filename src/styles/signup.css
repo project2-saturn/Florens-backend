@@ -1,129 +1,129 @@
 
 body{
-    padding:0px;
-    margin:0px;
+  padding:0px;
+  margin:0px;
 }
 .container-signup{
-    border: 1px solid #C6D3CF;
+  border: 1px solid #C6D3CF;
 }
-  
-  .uploadFile{
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 8px  ;
-  border:1.7px solid #7D9990;
-    color: #7D9990;
-    font-size: 14px;
-    padding: 10px 12px;
-    background-color: white;
-   
-  }
-  .uploadFileSection{
-    display: flex;
-    justify-content: center;
-    border: 2px dashed #FBE5DE;
-    padding: 22px;
-    margin-top: 8px;
-    border-radius: 9px;
-    margin-bottom:9px;
-  }
-  
-  .submit-signup {
-    width: 100%;
-    color: crimson;
-    background-color: white;
-    border:2px solid crimson;
-    border-radius:12px;
-    padding: 14px 20px;
-    margin-top: 25px;
-    margin-bottom:20px
-  
-  }
-  .container-signup h1{
-    text-align: center;
-    margin-bottom: 24px;
-      }
-body{
-    margin: 0px;
-}
-  
-  .form-signup h1{
-    color:#1C4C4D
-  }
-  .form-signup p{
-      text-align:center;
-  }
-  .email-signup,.password-signup,.text-signup{
-    width: 100%;
-  height:45px;
-  width:100%;
-    margin-bottom: 25px;
-    margin-top: 5px;
-    display: inline-block;
-    border: 1px solid #F7C9BB;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  .file-signup{
-   
-    display:none;
-    
-  }
-  .form-div-signup{
-    border: 1px solid #F7C9BB;
-    padding: 3%;
-  }
-  .space{
-    margin: 3rem;
-  }
-  .form-signup{
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
-    width: 80%;
-    
-    /* height: 50vh; */
-    padding: 5%;
-  }
-  .form-signup{
-    
-    margin-left: 26%;
-    align-items: center;
-    justify-content: center;
-    max-width: 50%;
-    height: 50%;
-    padding:15px;
 
-  }
-  .navBar{
-    background-color: #F1ECEB;
-  }
-  footer{
-    background-color: #164C4C;
-    height: 260px;
-    position: relative;
-   
-    
+.uploadFile{
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px  ;
+border:1.7px solid #7D9990;
+  color: #7D9990;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: white;
+ 
+}
+.uploadFileSection{
+  display: flex;
+  justify-content: center;
+  border: 2px dashed #FBE5DE;
+  padding: 22px;
+  margin-top: 8px;
+  border-radius: 9px;
+  margin-bottom:9px;
+}
+
+.submit-signup {
+  width: 100%;
+  color: crimson;
+  background-color: white;
+  border:2px solid crimson;
+  border-radius:12px;
+  padding: 14px 20px;
+  margin-top: 25px;
+  margin-bottom:20px
+
+}
+.container-signup h1{
+  text-align: center;
+  margin-bottom: 24px;
+    }
+body{
+  margin: 0px;
+}
+
+.form-signup h1{
+  color:#1C4C4D
+}
+.form-signup p{
+    text-align:center;
+}
+.email-signup,.password-signup,.text-signup{
+  width: 100%;
+height:45px;
+width:100%;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  display: inline-block;
+  border: 1px solid #F7C9BB;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.file-signup{
+ 
+  /* display:none; */
+  
+}
+.form-div-signup{
+  border: 1px solid #F7C9BB;
+  padding: 3%;
+}
+.space{
+  margin: 3rem;
+}
+.form-signup{
+  font-family: 'Rubik';
+  font-weight: lighter;
+  color: #6B6B6B;
+  width: 80%;
+  
+  /* height: 50vh; */
+  padding: 5%;
+}
+.form-signup{
+  
+  margin-left: 26%;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+  height: 50%;
+  padding:15px;
+
+}
+.navBar{
+  background-color: #F1ECEB;
+}
+footer{
+  background-color: #164C4C;
+  height: 260px;
+  position: relative;
+ 
+  
 }
 .footerFirstDiv{
-    height: 267.11px;
+  height: 267.11px;
 }
 .footerLogo{
-    width: 114.39px;
-    height: 108.33px;
-    position: absolute;
-    right:87%;
-    top: 45px;
+  width: 114.39px;
+  height: 108.33px;
+  position: absolute;
+  right:87%;
+  top: 45px;
 }
 .footerUni{
-    color: white;
-    justify-content: center;
-    width: 241px;
-    height: 124px;
-    position: absolute;
-    right:3%;
-    top: 39px;
+  color: white;
+  justify-content: center;
+  width: 241px;
+  height: 124px;
+  position: absolute;
+  right:3%;
+  top: 39px;
 }
 
 .footerUni p{
@@ -131,66 +131,66 @@ text-align: center;
 }
 
 .footerUniLogo{
-    position: relative;
-    right: -20px;
+  position: relative;
+  right: -20px;
 }
 /* .footerSecondDiv{
-    position: relative;
+  position: relative;
 } */
 .footerSecondPone{
-    position: absolute;
-    right:85%;
-    top: 215px;
-    color: white;
+  position: absolute;
+  right:85%;
+  top: 215px;
+  color: white;
 
 }
 .footerSecondPtwo{
-    position: absolute;
-   
-    right:4%;
-    top: 215px;
-    color: white;
+  position: absolute;
+ 
+  right:4%;
+  top: 215px;
+  color: white;
 }
 .line{
-    position: absolute;
-    height: 0.5px;
-    width: 100%;
-    background-color: #7D9990;
-    top: 215px;
+  position: absolute;
+  height: 0.5px;
+  width: 100%;
+  background-color: #7D9990;
+  top: 215px;
 }
 .logoCap{
-    position: absolute;
-    width: fit-content;
-    right:56%;
-    top: 170px;
-    color: white;
+  position: absolute;
+  width: fit-content;
+  right:56%;
+  top: 170px;
+  color: white;
 }
 .navBar{
-    position: relative;
-    background-color: #F1ECEB;
-  }
-  .headerLogo{
-    margin-left: 40px;
-    width: 92px;
-    height: 87px;
+  position: relative;
+  background-color: #F1ECEB;
+}
+.headerLogo{
+  margin-left: 40px;
+  width: 92px;
+  height: 87px;
 }
 .aboutNav{
-    position: absolute;
-    top: 40%;
-    right: 8%;
-    font-size: 16px;
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
-    text-decoration: none;
+  position: absolute;
+  top: 40%;
+  right: 8%;
+  font-size: 16px;
+  font-family: 'Rubik';
+  font-weight: lighter;
+  color: #6B6B6B;
+  text-decoration: none;
 }
 .loginNav {
-    position: absolute;
-    top: 40%;
-    right: 3%;
-    font-size: 16px;
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
-    text-decoration: none;
-  }
+  position: absolute;
+  top: 40%;
+  right: 3%;
+  font-size: 16px;
+  font-family: 'Rubik';
+  font-weight: lighter;
+  color: #6B6B6B;
+  text-decoration: none;
+}
