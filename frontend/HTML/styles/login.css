@@ -15,7 +15,15 @@ align-content: center; */
 }
   
   .uploadFile{
-    cursor: pointer;
+    background-color: indigo;
+    color: #7D9990;
+    padding: 10px 12px;
+    border-radius: 8px  ;
+  border:1.7px solid #7D9990;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  
+    /* cursor: pointer;
     display: inline-flex;
     align-items: center;
     border-radius: 8px  ;
@@ -23,7 +31,7 @@ align-content: center; */
     color: #7D9990;
     font-size: 14px;
     padding: 10px 12px;
-    background-color: white;
+    background-color: white; */
    
   }
   .uploadFileSection{

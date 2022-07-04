@@ -587,3 +587,30 @@ app.get("/searchOption", (req, res, next) => {
     })
     .catch(error => console.log(error));
 });
+//api endpoint for editprofile
+app.post("/editProfile", async (req, res, next) => {
+  let user = await User.findOne({ email: req.body.email });
+  console.log(user);
+  if (user) {
+    res.status(400).send("User already exists");
+  } else {
+    user = new User({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password
+    });
+
+    // const salt = await bcrypt.genSalt(10);
+    // user.password = await bcrypt.hash(user.password, salt);
+    // user
+    //   .save()
+    //   .then(result => {
+    //     res.status(201).json({
+    //       data: user
+    //     });
+    //   })
+    //   .catch(error => {
+    //     res.status(409).json({ error });
+    //   });
+  }
+});

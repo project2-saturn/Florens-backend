@@ -126,6 +126,7 @@ opacity: 1;
 width: 100%;
 margin-bottom:20px;
 height: 50px;
+padding-left:2px;
 /* UI Properties */
 border: 1px solid var(--unnamed-color-f8c9bb);
 border: 1px solid #F8C9BB;

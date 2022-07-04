@@ -11,12 +11,28 @@ body{
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    border-radius: 8px  ;
-  border:1.7px solid #7D9990;
+    border-radius: 8px;
+    border: 2px solid #7D9990;
     color: #7D9990;
     font-size: 14px;
-    padding: 10px 12px;
+    padding: 10px 70px;
+    margin-top: 2%;
+    margin-left: 31%;
     background-color: white;
+    height: 45px;
+    width: 213px;
+    margin-bottom: 15px;
+    /* margin-top: 5px; */
+    display: inline-block;
+    /* border: 1px solid #F7C9BB; */
+    border-radius: 4px;
+    box-sizing: border-box;
+   
+  }
+  .fileBorder{
+    border: 1px dashed #F8C9BB;
+    height: 76px;
+    margin-bottom: 10px;
    
   }
   .uploadFileSection{
@@ -58,12 +74,14 @@ body{
     width: 100%;
   height:45px;
   width:100%;
-    margin-bottom: 25px;
+  padding-left:2px ;
+    margin-bottom: 15px;
     margin-top: 5px;
     display: inline-block;
     border: 1px solid #F7C9BB;
     border-radius: 4px;
     box-sizing: border-box;
+    cursor: pointer;
   }
   .file-signup{
    

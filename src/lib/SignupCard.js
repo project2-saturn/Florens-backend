@@ -51,10 +51,10 @@ return(
 <form className="form-signup"onSubmit={handleSubmit}>     
          <div className="form-div-signup">
          <h1>Create Account</h1>
-         <label for="picture">Drop your profile Picture</label>
-         <input type="file" className="file-signup" id="picUpload" name="picture"/>
-         <div className="uploadFileSection">
-         <label for="file" className="uploadFile" >Upload Profile Picture</label></div>
+         <label>Drop your Profile Picture</label><br></br>
+            <input type="file" id="upload" hidden />
+            <div className="fileBorder">
+<label for="upload" className="uploadFile">Choose file</label><br></br></div>
          <label for="name">Name</label>
          <input type="text" className="text-signup" name="name" required onChange={event=>handleChangeName(event)}/>
          <label for="name">Email</label>
