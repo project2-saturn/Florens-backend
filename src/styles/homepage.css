@@ -94,7 +94,7 @@ font-weight: lighter;
     top: 0;
     right: -4px;
     width: 90px;
-    height: 73px;
+    height: 68px;
     background-color: #164C4C;
     z-index: 1;
     cursor: pointer;
@@ -371,7 +371,7 @@ font-weight: lighter;
     border-radius: 10px;
 }
 
-.secondSectionCard{
+.secondHomeSectionCard{
     margin: auto;
     height: 390px;
     background-color: #F1ECEB;
@@ -399,7 +399,7 @@ font-weight: lighter;
     font-family: 'Merriweather';
     font-weight: 300;
 }
-.plantInfo .plantDescription{
+.plantHomeDescriptionMain{
     position: absolute;
     top: 140px;
     left: 650px;
@@ -408,7 +408,7 @@ font-weight: lighter;
     color: #6B6B6B;
 }
 
-.plantDescItems1{
+.plantHomeDescItems1{
     position: absolute;
     top: 200px;
     left: 650px;
@@ -416,7 +416,7 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantDescItems2{
+.plantHomeDescItems2{
     position: absolute;
     top: 200px;
     left: 900px;
@@ -424,7 +424,7 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantDescItems3{
+.plantHomeDescItems3{
     position: absolute;
     top: 260px;
     left: 650px;
@@ -432,7 +432,7 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantDescItems4{
+.plantHomeDescItems4{
     position: absolute;
     top: 260px;
     left: 900px;
@@ -440,7 +440,7 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantDescItems5{
+.plantHomeDescItems5{
     position: absolute;
     top: 320px;
     left: 650px;
@@ -448,7 +448,7 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantDescItems6{
+.plantHomeDescItems6{
     position: absolute;
     top: 320px;
     left: 900px;
@@ -456,9 +456,9 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantInfo button{
+.secondHomeSectionBtn{
     position: absolute;
-    top: 460px;
+    top: 445px;
     left: 650px;
     color: #EA5A4E;
     appearance: none;
