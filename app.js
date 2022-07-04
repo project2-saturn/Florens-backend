@@ -431,7 +431,7 @@ app.post("/getLibrary", verifyToken, (req, res) => {
 
 //Edit Details API
 
-app.patch("/edit", verifyToken, (req, res) => {
+app.patch("/edit"  , (req, res) => {
   // const ObjectID = req.body.ObjectID;
   const name = req.body.name;
   const email = req.body.email;
