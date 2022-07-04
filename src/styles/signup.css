@@ -223,7 +223,7 @@ text-align: center;
   color: #6B6B6B;
   text-decoration: none;
 }
-.loginNav {
+.loginNav a  {
   position: absolute;
   top: 40%;
   right: 3%;
