@@ -4,13 +4,12 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import React from "react";
 
 
-import React from 'react';
-
 import HomePage from './HomePage.js';
 import SearchPage from './SearchPage.js';
 import SignUp from './SignUp';
 import Login from './Login';
 import EditProfile from './lib/EditProfile.js';
+import PlantProfile from './PlantProfile';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -22,7 +21,7 @@ ReactDOM.render(
             <Route path='/editprofile' element={<EditProfile />} />
             <Route path="/plant" element={<PlantProfile />} />
             </Routes>
-    </BrowserRouter>
+    </BrowserRouter>,
 
 
   document.getElementById("react-container")

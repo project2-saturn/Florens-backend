@@ -40,9 +40,10 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
 
         <a className="loginNav" href="">
         {console.log({name})}
-      
-        {<Link to="/editprofile">{name}</Link>}
-       
+       { "Login"? <Link to="/login">{name}</Link>:<Link to="/editprofile">{name}</Link>}
+
+        
+         
         
         </a>
 
