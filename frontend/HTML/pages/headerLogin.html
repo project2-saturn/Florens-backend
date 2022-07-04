@@ -7,6 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/headerLogin.css" />
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -321,7 +327,8 @@
                 have some sort of knowledge?<br />
                 you can contribute with our
               </p>
-              <button type="button">Details</button>
+              <button class="detailsBtn" type="button">Details</button>
+              <button id="libButton" class="libButton" type="button">Lib</button>
             </div>
           </div>
           <div class="thirdSectionCardList">
@@ -333,7 +340,8 @@
                 have some sort of knowledge?<br />
                 you can contribute with our
               </p>
-              <button type="button">Details</button>
+              <button class="detailsBtn" type="button">Details</button>
+              <button id="libButton" class="libButton" type="button">Lib</button>
             </div>
           </div>
           <div class="thirdSectionCardList">
@@ -345,7 +353,8 @@
                 have some sort of knowledge?<br />
                 you can contribute with our
               </p>
-              <button type="button">Details</button>
+              <button class="detailsBtn" type="button">Details</button>
+              <button id="libButton" class="libButton" type="button">Lib</button>
             </div>
           </div>
           <div class="thirdSectionCardList">
@@ -357,12 +366,15 @@
                 have some sort of knowledge?<br />
                 you can contribute with our
               </p>
-              <button type="button">Details</button>
+              <button class="detailsBtn" type="button">Details</button>
+              <button id="libButton" class="libButton" type="button">Lib</button>
             </div>
           </div>
         </div>
       </section>
+
     </main>
+
     <footer>
       <div class="footerFirstDiv">
         <img class="footerLogo" src="../images/Group_641.png" alt="logo" />
@@ -383,6 +395,31 @@
       </div>
     </footer>
 
+    <div class="bg-modal">
+         <div class="modalContent">
+
+          <form class="modalFourm">
+            <button id="formCloseBtn" class="formCloseBtn" type="button">+</button>
+            <h1 class="formheading">Have an account at Florens?</h1>
+            <p class="formParagraph">Sign in to create your library collection!</p>
+           
+            <label class="formLabelEmail" for="email">Email</label>
+            <input class="formInputEmail" type="email"  name="email" required><br>
+           
+            <label class="formLabelPassword" for="password">Password</label>
+            <input class="formInputPassword" type="password"  name="password" required><br>
+            <p class="forgotPassword"><a>Forgot Password ?</a></p>
+            <input class="formSubmit" type="submit" value="LOGIN" />
+            
+            <p class="newFlorens" >New on Florens?<a> <b>Create Account</b></a></p>
+        
+   
+          </form>
+         </div>
+    </div>
+
+
+
     <script>
       document.querySelectorAll(".accordion_buttonHome").forEach(button => {
         button.addEventListener("click", () => {
@@ -396,6 +433,17 @@
             accordionContent.style.maxHeight = 0;
           }
         });
+      });
+
+
+      document.getElementById('libButton').addEventListener('click',
+      function(){
+        document.querySelector('.bg-modal').style.display = 'flex';
+      });
+
+      document.getElementById('formCloseBtn').addEventListener('click',
+      function(){
+        document.querySelector('.bg-modal').style.display = 'none';
       });
     </script>
   </body>
