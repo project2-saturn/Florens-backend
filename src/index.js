@@ -13,6 +13,7 @@ import HomePage from './HomePage.js';
 import SearchPage from './SearchPage.js';
 import SignUp from './SignUp';
 import Login from './Login';
+import EditProfile from './lib/EditProfile.js';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -21,6 +22,7 @@ ReactDOM.render(
             <Route path="/search" element={<SearchPage />}/>
             <Route path='/signup' element={<SignUp />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/editprofile' element={<EditProfile />} />
             </Routes>
     </BrowserRouter>
 

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React , {useState, useEffect}from "react";
+
 import {Link} from 'react-router-dom';
 
 export default function() {
@@ -15,6 +16,7 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
   }
   else{
   setName(result.data)
+  
   }
 }).catch((err) => {
   
@@ -39,7 +41,7 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
         <a className="loginNav" href="">
         {console.log({name})}
       
-       {<Link to="/login">{name}</Link>}
+        {<Link to="/editprofile">{name}</Link>}
        
         
         </a>

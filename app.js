@@ -365,7 +365,7 @@ app.post("/getLibrary", verifyToken, (req, res) => {
 
 //Edit Details API
 
-app.patch("/edit", verifyToken, (req, res) => {
+app.patch("/edit"  , (req, res) => {
   // const ObjectID = req.body.ObjectID;
   const name = req.body.name;
   const email = req.body.email;
@@ -586,31 +586,4 @@ app.get("/searchOption", (req, res, next) => {
       res.send({ searchColor: color , searchLocation: location, searchTexture:texture, searchForm:form, searchType:type});
     })
     .catch(error => console.log(error));
-});
-//api endpoint for editprofile
-app.post("/editProfile", async (req, res, next) => {
-  let user = await User.findOne({ email: req.body.email });
-  console.log(user);
-  if (user) {
-    res.status(400).send("User already exists");
-  } else {
-    user = new User({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password
-    });
-
-    // const salt = await bcrypt.genSalt(10);
-    // user.password = await bcrypt.hash(user.password, salt);
-    // user
-    //   .save()
-    //   .then(result => {
-    //     res.status(201).json({
-    //       data: user
-    //     });
-    //   })
-    //   .catch(error => {
-    //     res.status(409).json({ error });
-    //   });
-  }
 });
