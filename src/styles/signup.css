@@ -22,6 +22,28 @@ body{
     margin-bottom:9px;
   }
 
+  .uploadFile{
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #7D9990;
+    color: #7D9990;
+    font-size: 14px;
+    padding: 10px 70px;
+    margin-top: 2%;
+    margin-left: 31%;
+    background-color: white;
+    height: 45px;
+    width: 213px;
+    margin-bottom: 15px;
+    /* margin-top: 5px; */
+    display: inline-block;
+    /* border: 1px solid #F7C9BB; */
+    border-radius: 4px;
+    box-sizing: border-box;
+   
+  }
  .submit-signup {
     width: 100%;
     color: crimson;
