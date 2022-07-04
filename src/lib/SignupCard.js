@@ -100,7 +100,7 @@ axios.post("http://localhost:8080/postUser",formData).then((result) => {
 
 return(
 
-
+<div className="container-signup">
 
 
 <form className="form-signup"onSubmit={handleSubmit} enctype="multipart/form-data">     
