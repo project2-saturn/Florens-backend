@@ -24,7 +24,7 @@ margin-bottom:4%;
 .navBar{
     position: relative;
     background-color: #F1ECEB;
-    height:10vh;
+   
   }
   .headerLogo{
     margin-left: 40px;
@@ -41,7 +41,7 @@ margin-bottom:4%;
     color: #6B6B6B;
     text-decoration: none;
 }
-.loginNav {
+.loginNav a{
     position: absolute;
     top: 40%;
     right: 3%;
