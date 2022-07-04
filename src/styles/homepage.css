@@ -139,20 +139,30 @@ font-weight: lighter;
             background:  #FFFFFF;
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
+            border-left: solid #0d3f3f 0.5px ;
+            border-right: solid #0d3f3f 0.5px ;
+            border-top: solid #0d3f3f 0.5px ;
         }
 
         .accordion_buttonHome--active::after{content: '\25b4'}
 
-        .accordion_content{
+        .accordion_contentHome{
         overflow: hidden;
         max-height: 0px;
         transition: max-height 0.2s ;
-        width: 1034px;
+        width: 1033px;
         margin: auto;
-        background: #FFFFFF;
+        background: #FFFFFF; 
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        opacity: 0.5;
+        opacity: 0.7;
+        border-left: solid #0d3f3f 0.5px ;
+        border-right: solid #0d3f3f 0.5px ;
+        border-bottom: solid #0d3f3f 0.5px ;
+        position: relative;
+        z-index: 100;
+        display: block;
+
         
         }
         .header_background{
@@ -162,27 +172,33 @@ font-weight: lighter;
 /*////////////////////////////////////Filter Content////////////////////////////////*/
 .filterSectionOne{
     position: relative;
-    height: 200px;
+    padding-top: 60px;
+    
 }
 .filterSectionTwo{
     position: relative;
-    height: 120px;
+   
+   
 }
 .filterSectionThree{
     position: relative;
-    height: 120px;
+   
+   
 }
 .filterSectionFour{
     position: relative;
-    height: 120px;
+    
+   
 }
 .filterSectionFive{
     position: relative;
-    height: 120px;
+
+   
 }
 .filterSectionSix{
     position: relative;
-    height: 200px;
+  
+   
 }
 .filterP{
     margin-left: 40px;
@@ -198,6 +214,7 @@ font-weight: lighter;
     position: relative;
     font-family: 'Rubik';
     top: 20px;
+    left: 40px;
     display: flex;
     list-style-type: none;
 }
@@ -227,6 +244,13 @@ font-weight: lighter;
     font-size: 15px;
     font-family: 'Rubik';
 }
+
+
+.filterBtnsSelected {
+    background-color: #EA5A4E;
+    color: white;
+}
+
 .filterClear{
     text-align: center;
     color: #0d3f3f;
@@ -274,8 +298,8 @@ font-weight: lighter;
     justify-content: center;
 }
 .firstSectionFirstCard{
-    width: 300px; 
-    margin-right: 70px; 
+    width: 370px; 
+    margin-right: 90px; 
     font-family: 'Merriweather';
     font-weight: 300;
 }
@@ -285,8 +309,8 @@ font-weight: lighter;
     margin-bottom: 80px;
 }
 .firstSectionSecondCard{
-    width: 300px;  
-    margin-right: 70px; 
+    width: 370px;  
+    margin-right: 90px; 
     font-family: 'Merriweather';
     font-weight: 300;
 }
@@ -297,8 +321,7 @@ font-weight: lighter;
 
 }
 .firstSectionThirdCard{
-    width: 300px; 
-    margin-right: 70px;  
+    width: 410px;   
     font-family: 'Merriweather';
     font-weight: 300;
 }

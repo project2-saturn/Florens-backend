@@ -160,11 +160,12 @@ export default function(props) {
           >
             Advanced Search
           </button>
-          <div class="accordion_content">
+          <div class="accordion_contentHome">
             <div class="filterSectionOne">
               <SearchFilter
                 title={"Plant Type"}
                 options={allSearchOptions.searchType}
+                selectedOptions={searchOptions.searchType}
                 name={"searchType"}
                 handleSearchOptionsChange={handleSearchOptionsChange}
                 handleSelectAllOption={handleSelectAllOption}
@@ -176,6 +177,8 @@ export default function(props) {
               <SearchFilter
                 title={"Season"}
                 options={allSearchOptions.searchSeason}
+
+                selectedOptions={searchOptions.searchSeason}
                 name={"searchSeason"}
                 handleSearchOptionsChange={handleSearchOptionsChange}
                 handleSelectAllOption={handleSelectAllOption}
@@ -186,6 +189,8 @@ export default function(props) {
               <SearchFilter
                 title={"Color"}
                 options={allSearchOptions.searchColor}
+
+                selectedOptions={searchOptions.searchColor}
                 name={"searchColor"}
                 handleSearchOptionsChange={handleSearchOptionsChange}
                 handleSelectAllOption={handleSelectAllOption}
@@ -196,6 +201,8 @@ export default function(props) {
               <SearchFilter
                 title={"Form"}
                 options={allSearchOptions.searchForm}
+
+                selectedOptions={searchOptions.searchForm}
                 name={"searchForm"}
                 handleSearchOptionsChange={handleSearchOptionsChange}
                 handleSelectAllOption={handleSelectAllOption}
@@ -206,6 +213,8 @@ export default function(props) {
               <SearchFilter
                 title={"Texture"}
                 options={allSearchOptions.searchTexture}
+
+                selectedOptions={searchOptions.searchTexture}
                 name={"searchTexture"}
                 handleSearchOptionsChange={handleSearchOptionsChange}
                 handleSelectAllOption={handleSelectAllOption}
@@ -216,6 +225,8 @@ export default function(props) {
               <SearchFilter
                 title={"Locations"}
                 options={allSearchOptions.searchLocation}
+
+                selectedOptions={searchOptions.searchLocation}
                 name={"searchLocation"}
                 handleSearchOptionsChange={handleSearchOptionsChange}
                 handleSelectAllOption={handleSelectAllOption}
@@ -239,12 +250,14 @@ export default function(props) {
               >
                 Clear
               </button>
+              <Link to="/search" state={searchOptions}>
               <button
                 class="filterApply"
-                onClick={() => navigateTo("/search")}
+                
               >
                 Apply
               </button>
+              </Link>
             </div>
           </div>
         </div>

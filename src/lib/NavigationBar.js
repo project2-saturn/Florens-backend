@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import React , {useState, useEffect}from "react";
 
 import {Link} from 'react-router-dom';
@@ -25,8 +26,6 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
 },[])
 
 
-
-
   return (
     <>
       <div className="navBar">
@@ -38,6 +37,7 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
         <a className="aboutNav" href="">
           About
         </a>
+
         <a className="loginNav" href="">
         {console.log({name})}
       
@@ -45,6 +45,8 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
        
         
         </a>
+
+
       </div>
     </>
   );

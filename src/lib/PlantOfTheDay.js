@@ -1,5 +1,7 @@
 import React , {useState, useEffect}from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function() {
 
@@ -63,9 +65,9 @@ export default function() {
               <h5 class="plantDescItemsHeading">Texture</h5>
               <p class="plantDescItemsPara">{plant.texture}</p>
             </div>
-
+<Link to="/plant"  state={plant}>
             <button type="button">Details</button>
-          </div>
+            </Link> </div>
         </div>
       </section>
     </>

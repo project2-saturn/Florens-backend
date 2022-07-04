@@ -7,7 +7,7 @@ export default function() {
         <div class="firstSectionFirstCard">
           <img src="../images/Group_618.png" alt="plant" />
           <h2 class="firstSectionHeadings">
-            Be an <br />
+            Be an
             expert
           </h2>
           <p class="firstSectionParagraph">
@@ -19,7 +19,7 @@ export default function() {
         <div class="firstSectionSecondCard">
           <img src="../images/Group_614.png" alt="plant" />
           <h2 class="firstSectionHeadings">
-            Save your <br />
+            Save your
             findings
           </h2>
           <p class="firstSectionParagraph">
@@ -31,7 +31,6 @@ export default function() {
           <img src="../images/Group_609.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Add your own
-            <br />
             plants
           </h2>
           <p class="firstSectionParagraph">

@@ -1,11 +1,8 @@
+import ReactDOM from "react-dom"; // installed using npm
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-import ReactDOM from 'react-dom'; // installed using npm
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Link
-  } from "react-router-dom";
+import React from "react";
+
 
 import React from 'react';
 
@@ -23,7 +20,10 @@ ReactDOM.render(
             <Route path='/signup' element={<SignUp />} />
             <Route path='/login' element={<Login />} />
             <Route path='/editprofile' element={<EditProfile />} />
+            <Route path="/plant" element={<PlantProfile />} />
             </Routes>
     </BrowserRouter>
 
-, document.getElementById("react-container"));
+
+  document.getElementById("react-container")
+);

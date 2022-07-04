@@ -4,7 +4,9 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
   name: { type: String, required: true, maxLength: 30 },
-  image: { type: String },
+  image: { data: Buffer ,
+  contentType:String },
+  imageURL : {type: String, 'default': ""}, 
   email: {type: String ,required:true},
   password: {type:String},
   plantOwner : {type:Array, 'default':[]},

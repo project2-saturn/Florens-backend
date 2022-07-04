@@ -4,17 +4,29 @@ const app = express();
 require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require("multer");
+const path= require("path");
 const User = require("./models/User");
 const Plant = require("./models/Plant");
-const aws = require("aws-sdk");
+const AWS = require("aws-sdk");
 const fs = require("fs");
 const seedrandom = require("seedrandom");
 const cors = require("cors");
 const { generateToken, verifyToken } = require("./JWT.js");
 const cookies = require("cookie-parser");
+const fetch  = require("node-fetch");
 
-app.use(cors());
-app.options("*", cors());
+const s3 = new AWS.S3({
+  accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY
+});
+
+const corsOptions ={
+  origin:'http://localhost:3000', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
+
 app.use(cookies());
 
 const data = require("./data.json").Sheet1;
@@ -27,9 +39,54 @@ connection.once("open", () => {
   });
 });
 
+
+const storage=multer.diskStorage({
+destination:(req,file,cb)=>{
+cb(null,__dirname);
+},
+filename:(req,file,cb)=>{
+
+cb(null,file.originalname)
+}
+})
+
+const uploadImage= multer({storage:storage});
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+
+// API to post image to amazon s3 service
+// replace imageURL with the file path of the desired image to be uploaded
+// the api returns data object with key "Location". It is the url to image.
+
+app.post("/postImage", (req,res)=> {
+  
+
+  
+  const imageURL = "http://localhost:3000/images/florens-logo_green.png";
+
+  let imageUrlArr = imageURL.split("/");
+  let imageUr = imageUrlArr[imageUrlArr.length-1];
+  // console.log(imageUr);
+  fetch(imageURL)
+    .then(result => result.buffer())
+    .then(async (blob) => {
+     const uploadedImage = await s3.upload({
+        Bucket: "florens",
+        Key: imageUr,
+        Body: blob
+      }).promise();
+      console.log(uploadedImage);
+      res.json({data: uploadedImage});
+    })
+    .catch(error => console.log(error))
+    .catch(error => console.log(error));
+  
+  
+});
+
 
 // cookies.set("email", "vi@gmail.com");
 
@@ -86,8 +143,13 @@ app.post("/login", async (req, res, next) => {
   }
 });
 
+
+app.get("/getimage",async (req,res)=>{
+  let user = await User.findOne({ email: req.body.email });
+})
+
 //API for Signup
-app.post("/postUser", async (req, res, next) => {
+app.post("/postUser", uploadImage.single('image'), async (req, res, next) => {
   let user = await User.findOne({ email: req.body.email });
   console.log(user);
   if (user) {
@@ -95,6 +157,10 @@ app.post("/postUser", async (req, res, next) => {
   } else {
     user = new User({
       name: req.body.name,
+      image:{
+        data:fs.readFileSync(req.file.path),
+        contentType:req.file.mimetype
+      },
       email: req.body.email,
       password: req.body.password
     });
@@ -235,13 +301,13 @@ app.post("/loadData", async (req, res, next) => {
 // So, it always stays same on that particular day.
 app.get("/plantOfTheDay", async (req, res, next) => {
   let today = new Date();
-  console.log(req);
+  // console.log(req);
   let rng = seedrandom(today.getDate().toString());
   Plant.count().then(count => {
-    console.log(`Count: ${count}`);
+    // console.log(`Count: ${count}`);
     let plantIndex = Math.floor(rng() * count);
 
-    console.log(`Plant Number: ${plantIndex}`);
+    // console.log(`Plant Number: ${plantIndex}`);
     Plant.find()
       .skip(plantIndex)
       .limit(1)
@@ -497,6 +563,8 @@ app.post("/searchResults", (req, res) => {
     })
     .catch(error => console.log(error));
 });
+
+
 
 app.get("/searchOption", (req, res, next) => {
   // const optionText  = req.params.option;
