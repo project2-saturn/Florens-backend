@@ -1,7 +1,7 @@
 body{
     margin: 0px;
 }
-.homePageMain{
+main{
     height: 2050px;
 }
 .homeHeader{
@@ -20,25 +20,62 @@ body{
     width: 92px;
     height: 87px;
 }
-.aboutNav{
-    position: absolute;
-    top: 40%;
-    right: 8%;
+.headerUl{
+    float: right;
     font-size: 16px;
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
     text-decoration: none;
+    list-style-type: none;
 }
-.loginNav a{
-    position: absolute;
-    top: 40%;
-    right: 3%;
-    font-size: 16px;
+
+.headerUl li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    
+}
+
+.headerUl li a{
     font-family: 'Rubik';
     font-weight: lighter;
-    color: #6B6B6B;
+    display: block;
     text-decoration: none;
+    Line-height: 40px;
+    font-size: 16px;
+    
+}
+.profileNav{
+    margin-right: 60px;
+}
+.headerUl ul{
+position: absolute;
+left: -15px;
+display: none;
+width: 110px;
+background-color: white;
+border: solid 0.1px #164C4C ;
+}
+
+.headerUl li:hover> ul{
+    display: block;
+}
+.headerUlLine{
+    left: -25px;
+    border-bottom: solid 0.5px #6B6B6B;
+    opacity: 0.2;
+}
+.headerUl ul li{
+        width: 120px;
+        left: -25px;
+        float: none;
+        display: List-item;
+        position: relative;
+}
+.fa-caret-down:hover{
+    transform: rotate(180deg);
 }
 .headerText{
     text-align: center;
@@ -48,8 +85,8 @@ body{
 .headerTextHeading{
 font-size: 67px;
 color: #164C4C;
-font-family: 'Merriweather';
-font-weight: 300;
+font-family: 'Alegreya';
+margin-bottom: 0;
 font-weight: lighter;
 }
 .headerTextPara{
@@ -75,10 +112,7 @@ font-weight: lighter;
 
 .inputSearch::placeholder{
     font-family: 'Font Awesome 5 Free';
-    font-weight: lighter;
-    font-family: 'Rubik';
-    font-size: 16px;
-
+    font-weight: bold;
 }
 .inputSearch{
 
@@ -94,7 +128,7 @@ font-weight: lighter;
     top: 0;
     right: -4px;
     width: 90px;
-    height: 68px;
+    height: 73px;
     background-color: #164C4C;
     z-index: 1;
     cursor: pointer;
@@ -123,11 +157,9 @@ font-weight: lighter;
     cursor: pointer;
     background: #FFFFFF;
     color: #164C4C;
-    text-align: center;
+    text-align: left;
     transition: background 0.2s;
     opacity: 0.5;
-    font-family: 'Rubik';
-    font-weight: 500;
     }
 
     .accordion_buttonHome::after{
@@ -139,31 +171,20 @@ font-weight: lighter;
             background:  #FFFFFF;
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
-            border-left: solid #0d3f3f 0.5px ;
-            border-right: solid #0d3f3f 0.5px ;
-            border-top: solid #0d3f3f 0.5px ;
         }
 
         .accordion_buttonHome--active::after{content: '\25b4'}
 
-        .accordion_contentHome{
+        .accordion_content{
         overflow: hidden;
         max-height: 0px;
         transition: max-height 0.2s ;
-        width: 1033px;
+        width: 1034px;
         margin: auto;
-        background: #FFFFFF; 
+        background: #FFFFFF;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        opacity: 1;
-        border-left: solid #0d3f3f 0.5px ;
-        border-right: solid #0d3f3f 0.5px ;
-        border-bottom: solid #0d3f3f 0.5px ;
-        position: relative;
-        z-index: 100;
-        display: block;
-
-        
+        opacity: 0.5;
         }
         .header_background{
             height: 900px;
@@ -172,33 +193,27 @@ font-weight: lighter;
 /*////////////////////////////////////Filter Content////////////////////////////////*/
 .filterSectionOne{
     position: relative;
-    padding-top: 60px;
-    
+    height: 200px;
 }
 .filterSectionTwo{
     position: relative;
-   
-   
+    height: 120px;
 }
 .filterSectionThree{
     position: relative;
-   
-   
+    height: 120px;
 }
 .filterSectionFour{
     position: relative;
-    
-   
+    height: 120px;
 }
 .filterSectionFive{
     position: relative;
-
-   
+    height: 120px;
 }
 .filterSectionSix{
     position: relative;
-  
-   
+    height: 200px;
 }
 .filterP{
     margin-left: 40px;
@@ -214,7 +229,6 @@ font-weight: lighter;
     position: relative;
     font-family: 'Rubik';
     top: 20px;
-    left: 40px;
     display: flex;
     list-style-type: none;
 }
@@ -244,13 +258,6 @@ font-weight: lighter;
     font-size: 15px;
     font-family: 'Rubik';
 }
-
-
-.filterBtnsSelected {
-    background-color: #EA5A4E;
-    color: white;
-}
-
 .filterClear{
     text-align: center;
     color: #0d3f3f;
@@ -296,40 +303,26 @@ font-weight: lighter;
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+}
+.firstSection img{
+    width: 300px;
+    height: 200px;
 }
 .firstSectionFirstCard{
-    width: 370px; 
-    margin-right: 90px; 
-    font-family: 'Merriweather';
-    font-weight: 300;
-}
-.firstSectionFirstCardimg{
-    width: 300px;
-    height: 200px;
-    margin-bottom: 80px;
+    width: 300px; 
+    margin-right: 70px; 
+    font-family: 'Alegreya';
 }
 .firstSectionSecondCard{
-    width: 370px;  
-    margin-right: 90px; 
-    font-family: 'Merriweather';
-    font-weight: 300;
-}
-.firstSectionSecondCardimg{ 
-    width: 300px;
-    height: 200px;
-    margin-bottom: 80px;
-
+    width: 300px;  
+    margin-right: 70px; 
+    font-family: 'Alegreya';
 }
 .firstSectionThirdCard{
-    width: 410px;   
-    font-family: 'Merriweather';
-    font-weight: 300;
-}
-.firstSectionThirdCardimg{
-    width: 300px;
-    height: 200px;
-    margin-bottom: 80px;
-
+    width: 300px; 
+    margin-right: 70px;  
+    font-family: 'Alegreya';
 }
 
 .firstSectionParagraph{
@@ -342,8 +335,7 @@ font-weight: lighter;
 .firstSectionHeadings{
     font-size: 40px;
     margin:3px;
-    font-family: 'Merriweather';
-    font-weight: 300;
+    font-family: 'Alegreya';
     color: #164C4C;
 }
 /* //////////////////////////////////////////////////////////////////////////////////// */
@@ -371,7 +363,7 @@ font-weight: lighter;
     border-radius: 10px;
 }
 
-.secondHomeSectionCard{
+.secondSectionCard{
     margin: auto;
     height: 390px;
     background-color: #F1ECEB;
@@ -383,8 +375,7 @@ font-weight: lighter;
 .secondSectionHeadings{
     font-size: 40px;
     margin:3px;
-    font-family: 'Merriweather';
-    font-weight: 300;
+    font-family: 'Alegreya';
     text-align: center;
     margin-bottom: 40px;
     border-radius: 10px;
@@ -396,10 +387,9 @@ font-weight: lighter;
     top: 70px;
     left: 650px;
     color: #164C4C;
-    font-family: 'Merriweather';
-    font-weight: 300;
+    font-family: 'Alegreya';
 }
-.plantHomeDescriptionMain{
+.plantInfo p{
     position: absolute;
     top: 140px;
     left: 650px;
@@ -408,7 +398,7 @@ font-weight: lighter;
     color: #6B6B6B;
 }
 
-.plantHomeDescItems1{
+.plantDescItems1{
     position: absolute;
     top: 200px;
     left: 650px;
@@ -416,7 +406,7 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantHomeDescItems2{
+.plantDescItems2{
     position: absolute;
     top: 200px;
     left: 900px;
@@ -424,41 +414,38 @@ font-weight: lighter;
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantHomeDescItems3{
+.plantDescItems3{
     position: absolute;
-    top: 260px;
+    top: 275px;
     left: 650px;
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantHomeDescItems4{
+.plantDescItems4{
     position: absolute;
-    top: 260px;
+    top: 275px;
     left: 900px;
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantHomeDescItems5{
+.plantDescItems5{
     position: absolute;
-    top: 320px;
+    top: 350px;
     left: 650px;
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
 }
-.plantHomeDescItems6{
+.plantDescItems6{
     position: absolute;
-    top: 320px;
+    top: 350px;
     left: 900px;
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
 }
-.secondHomeSectionBtn{
+.plantInfo button{
     position: absolute;
-    top: 445px;
+    top: 460px;
     left: 650px;
     color: #EA5A4E;
     appearance: none;
@@ -472,7 +459,7 @@ font-weight: lighter;
     font-family: 'Rubik';
 }
 .plantDescItemsHeading{
-    margin-bottom: 5px;  
+    margin-bottom: 10px;  
     font-size: 16px;
     color: #164C4C;
     font-weight: bold;
@@ -481,10 +468,6 @@ font-weight: lighter;
 h3{
     font-size: 28px;
     margin-top: 0px;
-}
-
-.plantDescItemsPara{
-    margin-top: 5px;
 }
 /* /////////////////////////////////////////////////////////////////////////// */
 
@@ -508,8 +491,7 @@ h3{
 .thirdSectionHeading{
     font-size: 40px;
     color: #164C4C;
-    font-family: 'Merriweather';
-    font-weight: 300;
+    font-family: 'Alegreya';
 }
 .thirdSectionCardList{
     display: flex;
@@ -547,15 +529,13 @@ h3{
 }
 .thirdSectionCardsInner h3{
    color: #164C4C;
-   font-family: 'Merriweather';
-   font-weight: 300;
+   font-family: 'Alegreya';
    position: absolute;
    top:250px;
    left: 25px;
 }
 .thirdSectionCardsInner p{
-    font-family: 'Merriweather';
-    font-weight: 300;
+    font-family: 'Alegreya';
     text-align: center;
     position: absolute;
     top:300px;
@@ -563,7 +543,7 @@ h3{
     font-weight: lighter;
     color: #6B6B6B;
 }
-.thirdSectionCardsInner button{
+.detailsBtn{
     text-align: center;
     position: absolute;
     top:405px;
@@ -572,11 +552,26 @@ h3{
     background: none;
     border: solid #EA5A4E 2px;
     outline: none;
-    width: 223px;
+    width: 200px;
     height: 45px;
     border-radius: 10px;
     font-size: 13px;
     font-family: 'Rubik';
+
+}
+
+.libButton{
+    text-align: center;
+    position: absolute;
+    top:418px;
+    left: 220px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Rubik';
+    border: solid #EA5A4E 0px;
 
 }
 /* /////////////////////////////////////////////////////////////////////////// */
@@ -649,3 +644,139 @@ text-align: center;
     color: white;
 }
 /* /////////////////////////////////////////////////////////////////////////// */
+.bg-modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.modalContent{
+    width: 700px;
+    height: 600px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+
+/* ///////////////////////////////////////////////////modal inside///////////////////////////////////////////// */
+.modalFourm{
+    position: relative;
+    
+}
+.formCloseBtn{
+    position: absolute;
+    top: -10px;
+    left:620px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    color: #164C4C;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    font-size: 60px;
+    font-family: 'Rubik';
+    border: none;
+}
+.formheading{
+    position: absolute;
+    top: 70px;
+    left:140px;
+    font-size: 32px;
+    color: #164C4C;
+    font-family: 'Merriweather', serif;
+}
+
+.formParagraph{
+    position: absolute;
+    top: 120px;
+    left:210px;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+
+.formLabelEmail{
+    position: absolute;
+    top: 180px;
+    left:40px;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+
+.formInputEmail{
+    position: absolute;
+    top: 220px;
+    left:40px;
+    height: 50px;
+    width: 600px;
+    border-radius:  10px;
+    border:solid #EA5A4E 0.5px;
+}
+
+.formLabelPassword{
+    position: absolute;
+    top: 300px;
+    left:40px;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+
+.formInputPassword{
+    position: absolute;
+    top: 340px;
+    left:40px;
+    height: 50px;
+    width: 600px;
+    border-radius: 10px;
+    border:solid #EA5A4E 0.5px;
+}
+
+.forgotPassword{
+    position: absolute;
+    top: 390px;
+    left:40px;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}
+
+.formSubmit{
+    position: absolute;
+    top: 480px;
+    left:40px;
+    text-align: center;
+    color: #EA5A4E;
+    appearance: none;
+    background: none;
+    border: solid #EA5A4E 2px;
+    outline: none;
+    width: 600px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Rubik';
+}
+
+.newFlorens{
+    position: absolute;
+    top: 520px;
+    left:190px;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+}

@@ -9,7 +9,7 @@ export default function() {
 const [name,setName]=useState();
   useEffect(function loadUsername(){
 
-axios.get("http://localhost:8080/getUsername").then((result) => {
+axios.get("/getUsername").then((result) => {
   console.log(result);
   if(result.data=="")
   {
@@ -40,9 +40,10 @@ axios.get("http://localhost:8080/getUsername").then((result) => {
 
         <a className="loginNav" href="">
         {console.log({name})}
-      
-        {<Link to="/editprofile">{name}</Link>}
-       
+       { name == "Login" ? <Link to="/login">Login</Link>:<Link to="/editprofile">{name}</Link>}
+
+        
+         
         
         </a>
 
