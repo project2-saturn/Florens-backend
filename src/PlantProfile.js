@@ -92,7 +92,7 @@ const PlantProfile = props => {
               <img src="../images/Rectangle_3_et.png" alt="plant" />
             </div> */}
             <div class="plantInfoPlant">
-              <h3>
+              <h3 className="plantInfoPlantHeading" >
                 {plant.name}</h3>
               <p class="subTag">{plant.scientificName}</p>
 
