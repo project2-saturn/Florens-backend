@@ -119,7 +119,7 @@ res.send(username);
 
 app.post("/login", async (req, res, next) => {
   if (req.body.email == "" || req.body.password == "") {
-    res.send("Please enter the name and password ");
+    res.json({message:"Please enter the name and password "});
   } else {
     const user = await User.findOne({ email: req.body.email });
      console.log(req.body.email);
@@ -133,12 +133,12 @@ app.post("/login", async (req, res, next) => {
         const token = generateToken(user);
         res.cookie("token", token);
         res.cookie("name", user.name);
-        res.status(200).send("Password Validated");
+        res.status(200).json({message:"Password Validated"});
       } else {
-        res.status(400).send("Please enter the correct password");
+        res.status(400).json({message:"Please enter the correct password"});
       }
     } else {
-      res.status(400).send("User not found");
+      res.status(400).json({message:"User not found"});
     }
   }
 });
@@ -153,7 +153,7 @@ app.post("/postUser", uploadImage.single('image'), async (req, res, next) => {
   let user = await User.findOne({ email: req.body.email });
   console.log(user);
   if (user) {
-    res.status(400).send("User already exists");
+    res.status(400).json({message:"User already exists"});
   } else {
     user = new User({
       name: req.body.name,

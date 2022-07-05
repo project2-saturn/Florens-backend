@@ -8,6 +8,7 @@ const LoginCard = props => {
   const navigator = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [error, setError] = useState();
 
   const handleChangeEmail = event => {
     setEmail(event.target.value);
@@ -26,7 +27,7 @@ const LoginCard = props => {
         navigator("/");
       })
       .catch(err => {
-        console.log(err);
+        setError(err.response.data.message);
       });
   }
 
@@ -61,7 +62,7 @@ const LoginCard = props => {
           </p>
 
           <input type="submit" className="submit-login" value="Login" />
-
+          <div><p>{error}</p></div>
           <p class="newFlorens">
             New on Florens?
             <Link to="/signup">
