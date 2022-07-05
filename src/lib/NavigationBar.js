@@ -3,11 +3,14 @@ import axios from "axios";
 import React , {useState, useEffect}from "react";
 
 import {Link} from 'react-router-dom';
+import cookies from 'react-cookies' 
+import { useNavigate } from "react-router-dom";
 
 export default function() {
   const Login="Login";
 const [name,setName]=useState();
 const [islogged,setIsLogged]=useState(true);
+const navigator = useNavigate();
   useEffect(function loadUsername(){
 
 axios.get("/getUsername").then((result) => {
@@ -53,7 +56,13 @@ axios.get("/getUsername").then((result) => {
   
 // else
 
+function logout(){
 
+  cookies.remove("token");
+  cookies.remove("name");
+  navigator("/");
+  
+}
 
 
 
@@ -79,7 +88,7 @@ axios.get("/getUsername").then((result) => {
                     
                     <li><Link to="/mylibrary">My Library</Link></li>
                     <li class="headerUlLine"></li>
-                    <li><a href="">Logout</a></li>
+                    <li><a href="" onClick={logout}>Logout</a></li>
                 </ul>
                 
             </li>

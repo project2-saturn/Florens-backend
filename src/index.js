@@ -21,7 +21,7 @@ ReactDOM.render(
             <Route path='/login' element={<Login />} />
             <Route path='/editprofile' element={<EditProfile />} />
             <Route path="/plant" element={<PlantProfile />} />
-            <Route path="/myLibrary" element={<MyLibrary />} />
+            <Route path="/mylibrary" element={<MyLibrary />} />
             {/* <Route path="/logout" element={<HomePage />} /> */}
             </Routes>
     </BrowserRouter>,
