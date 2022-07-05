@@ -43,6 +43,7 @@ const[password,setPassword]=useState();
 const[name,setName]=useState();
 const[image,setImage]=useState();
 const[picture,setPicture]=useState(null);
+const [error, setError] = useState();
 
 // Base64  base64String="";
 const handleChangeName=(event)=>{
@@ -89,14 +90,14 @@ formData.append('password',password);
 formData.append('image',picture);
 
 console.log(picture);
-axios.post("http://localhost:8080/postUser",formData).then((result) => {
+axios.post("/postUser",formData).then((result) => {
     console.log(result);
     // setPicture(result.data.image);
     console.log(image);
     navigator("/login");
 
 }).catch((err) => {
-    console.log(err);
+    setError(err.response.data.message);
 });
 }
 
@@ -120,6 +121,7 @@ return(
          <input type="email" className="email-signup"  name="email" required onChange={event=>handleChangeEmail(event)}/>
          <label for="password">Password</label>
          <input type="password" className="password-signup"  name="password" required onChange={event=>handleChangePassword(event)}/>
+         <div><p>{error}</p></div>
          <input type="submit"  className="submit-signup" value="Signup" />
          <p>Already have an account?<a><b> <Link to="/Login">Login</Link></b></a></p>
 

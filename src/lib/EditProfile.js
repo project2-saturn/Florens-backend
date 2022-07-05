@@ -9,7 +9,7 @@ const EditProfile=(props)=>{
     const[password,setPassword]=useState()
     function handleSubmit(event){
         event.preventDefault();
-        axios.patch("http://localhost:8080/edit",{email:email,password:password}).then((result) => {
+        axios.patch("/edit",{email:email,password:password}).then((result) => {
             
             console.log(result);
            
