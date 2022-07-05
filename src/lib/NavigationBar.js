@@ -73,9 +73,11 @@ axios.get("/getUsername").then((result) => {
              <li><a class="aboutLogNav" href="">About</a></li>
              <li><a class="profileNav" href="">{name}<i class="fas fa-caret-down"></i></a>
                 <ul class="profileNavItems">
-                    <li> <a href="">Profile</a></li>
+                    {/* <li> <a href="">Profile</a></li> */}
+                    <li><Link to="/editProfile">Profile</Link></li>
                     <li class="headerUlLine"></li>
-                    <li><a href="">My Library</a></li>
+                    
+                    <li><Link to="/mylibrary">My Library</Link></li>
                     <li class="headerUlLine"></li>
                     <li><a href="">Logout</a></li>
                 </ul>
