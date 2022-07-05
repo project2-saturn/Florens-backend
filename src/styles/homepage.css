@@ -21,6 +21,7 @@ body{
     height: 87px;
 }
 .headerUl{
+    margin-top: 20px;
     float: right;
     font-size: 16px;
     font-family: 'Rubik';
@@ -35,6 +36,7 @@ body{
     list-style: none;
     display: inline-block;
     margin-right: 30px;
+    color: #6B6B6B;
     
 }
 
@@ -49,15 +51,26 @@ body{
 }
 .profileNav{
     margin-right: 60px;
+    color: #6B6B6B;
+}
+
+
+.aboutLogNav{
+    color: #6B6B6B;
 }
 .headerUl ul{
 position: absolute;
 left: -15px;
 display: none;
-width: 110px;
+width: 150px;
 background-color: white;
 border: solid 0.1px #164C4C ;
+color: #6B6B6B;
 }
+
+.headerUl ul a{
+    color: #6B6B6B;
+    }
 
 .headerUl li:hover> ul{
     display: block;
@@ -68,11 +81,15 @@ border: solid 0.1px #164C4C ;
     opacity: 0.2;
 }
 .headerUl ul li{
-        width: 120px;
-        left: -25px;
+        width: 110px;
+        left: 16px;
         float: none;
         display: List-item;
         position: relative;
+        color: #6B6B6B;
+}
+.headerUl ul li a{
+    color: #6B6B6B;
 }
 .fa-caret-down:hover{
     transform: rotate(180deg);
