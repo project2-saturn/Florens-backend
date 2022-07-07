@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 export default function() {
   return (
@@ -37,6 +38,9 @@ export default function() {
             Are you an expert, or have some sort of knowledge? you can
             contribute with our libraryby adding your your research
           </p>
+        </div>
+        <div><Link to = "/addplant">addNew</Link>
+          
         </div>
       </section>
     </>
