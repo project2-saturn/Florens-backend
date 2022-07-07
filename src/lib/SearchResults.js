@@ -23,7 +23,7 @@ export default function(props) {
 
   return (
     <>
-      <div>SearchText: {props.searchOptionsApplied.searchText.toString()}</div>
+      {/* <div>SearchText: {props.searchOptionsApplied.searchText.toString()}</div>
       <div>SearchType:{props.searchOptionsApplied.searchType.toString()}</div>
       <div>SearchColor:{props.searchOptionsApplied.searchColor.toString()}</div>
       <div>SearchForm:{props.searchOptionsApplied.searchForm.toString()}</div>
@@ -35,7 +35,7 @@ export default function(props) {
       </div>
       <div>
         SearchTexture:{props.searchOptionsApplied.searchTexture.toString()}
-      </div>
+      </div> */}
 
       <div class="searchListNumber">
         <h2>

@@ -13,8 +13,9 @@ export default function(props) {
           {/* <p>{props.plant.description}</p> */}
           <p>{props.plant.description.toString().substring(0, 60) + `...`}</p>
           <Link to="/plant" state={props.plant}>
-            <button type="button">Details</button>
+            <button class="homeThirdSecDetailsButton" type="button">Details</button>
           </Link>
+          <button id="libButton" class="libButton" type="button">Lib</button>
         </div>
       </div>
     </>
