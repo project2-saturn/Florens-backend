@@ -61,8 +61,9 @@ app.use(express.json());
 // the api returns data object with key "Location". It is the url to image.
 
 app.post("/postImage", (req, res) => {
-  let fil = req.body.file;
-  console.log(fil);
+  // let fil = req.body.file;
+  // console.log(fil);
+  console.log(req.body.file);
   // let read = new FileReader();
 
   // read.readAsBinaryString(file);
