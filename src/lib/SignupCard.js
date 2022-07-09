@@ -57,7 +57,9 @@ const SignupCard = props => {
   const handleChangeImage = event => {
     console.log(event.target.files[0]);
     // console.log(event.target.result);
-    setImage(event.target.value);
+
+    setImage(URL.createObjectURL(event.target.files[0]) )  ;
+    // setImage(event.target.value);
   };
   // useEffect(()=>{
   //     axios.get("http://localhost:8080/getimage").then((result) => {
@@ -76,20 +78,20 @@ const SignupCard = props => {
     // const image = document.getElementById('picUpload');
     // console.log(image.files[0]);
 
-    console.log(event.target.form[0].files[0]);
-    let fil = { ...event.target.form[0].files[0] };
-    let readedFile;
+    // console.log(event.target.form[0].files[0]);
+    // let fil = { ...event.target.form[0].files[0] };
+    // let readedFile;
     // let read = new FileReader();
     // read.onload = function() {
     //   readedFile = read.result;
     // };
 
-    read.readAsBinaryString(event.target.form[0].files[0]);
+    // read.readAsBinaryString(event.target.form[0].files[0]);
     // let fi =
     // console.log(readedFile);
 
     axios
-      .post("/postImage", { file: { ...event.target.form[0].files[0] } })
+      .post("/postImage", { file: image })
       .then(result => {
         axios
           .post("/postUser", {
