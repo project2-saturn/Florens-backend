@@ -1,4 +1,4 @@
-
+ 
 import React, { useState } from "react";
 import AWS from "aws-sdk";
 
@@ -100,30 +100,70 @@ const AddDiscoverForm = props => {
         setTexturetags(texturetags.filter((el, i) => i !== index5))
     }
     ////////////////////////////////////////images/////////////////////////////////////////////
+    const navigator=useNavigate();
+    const[plantname,setPlantname]=useState();
+    const[scientificname,setScientificname]=useState();
+     
     const[image,setImage]=useState();
     const[isEmpty,setIsEmpty]=useState(true);
     const[picture,setPicture]=useState(null);
     const [error, setError] = useState();
 
     
+    const handleChangePlantName=(event)=>{
+
+        setPlantname(event.target.value);
+    
+    }
+    const handleChangeScientificName=(event)=>{
+    
+        setScientificname(event.target.value);
+    
+    }
+
+
     const handleImageChange=(event)=>{
     console.log(event.target.files[0]);
     setPicture(event.target.files[0]);
     
     setImage(URL.createObjectURL(event.target.files[0]) )  ;
     setIsEmpty(false);
-   
+   }
 
-}
+   const handleSubmit=(event)=>{
+    event.preventDefault();
+    const formData=new FormData();
+    formData.append('plantname',plantname);
+    formData.append('scientificname',scientificname);
+    formData.append('tags',tags);
+    formData.append('planttags',planttags);
+    formData.append('colortags',colortags);
+    formData.append('seasontags',seasontags);
+    formData.append('formtags',formtags);
+    formData.append('texturetags',texturetags);
+    formData.append('image',picture);
+    
+    console.log(picture);
+    axios.post("/",formData).then((result) => {
+        console.log(result);
+        // setPicture(result.data.image);
+        console.log(image);
+        navigator("/");
+    
+    }).catch((err) => {
+        setError(err.response.data.message);
+    });
+        
+   }
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     return (
         <div>
-            <form>
+            <form className="form-signup"onSubmit={handleSubmit} enctype="multipart/form-data">
                 <label for="name">Name</label>
-                <input type="text" className="plantNameInput" name="plantName" required onChange={event => handleChangeName(event)} />
+                <input type="text" className="plantNameInput" name="plantName" required onChange={event => handleChangePlantName(event)} />
                 <label for="sname">Scientific Name</label>
-                <input type="text" className="scientificNameInput" name="scientificName" required onChange={event => handleChangeEmail(event)} />
+                <input type="text" className="scientificNameInput" name="scientificName" required onChange={event => handleChangeScientificName(event)} />
 
                 {/*//////////////////////////////////// Location container/////////////////////////////////////// */}
                 <label for="location">Location</label>
@@ -209,7 +249,6 @@ const AddDiscoverForm = props => {
                 {isEmpty ? <img className=" defaultImage" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img> : <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
 
                 <div className="fileBorder">
-
                     <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
                 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
                 <input type="submit" className="submitPlant" value="Submit" />
