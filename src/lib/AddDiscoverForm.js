@@ -159,7 +159,7 @@ const AddDiscoverForm = props => {
 
     return (
         <div>
-            <form className="form-signup"onSubmit={handleSubmit} enctype="multipart/form-data">
+            <form className="form-signup" onSubmit={handleSubmit} enctype="multipart/form-data">
                 <label for="name">Name</label>
                 <input type="text" className="plantNameInput" name="plantName" required onChange={event => handleChangePlantName(event)} />
                 <label for="sname">Scientific Name</label>
@@ -251,7 +251,8 @@ const AddDiscoverForm = props => {
                 <div className="fileBorder">
                     <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
                 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-                <input type="submit" className="submitPlant" value="Submit" />
+                {/* <input type="submit" className="submitPlant" value="Submit" /> */}
+                <button type="button" className="submitPlant" onClick={(event) => handleSubmit(event)}>Submit</button>
             </form>
         </div>
     );
