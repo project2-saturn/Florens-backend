@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./styles/searchpage.css";
+import "./styles/AddDiscover.css";
 
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -24,3 +24,4 @@ const AddDiscover = props => {
 };
 
 export default AddDiscover;
+ 

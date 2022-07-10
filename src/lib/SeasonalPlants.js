@@ -76,7 +76,7 @@ export default function() {
             see around you
           </p>
         </div>
-        <div class="thirdSectionCards">
+        <div class="thirdSectionCards"> 
           {plants[0] ? (
             <>
               <SearchResultCard plant={plants[0]} />
