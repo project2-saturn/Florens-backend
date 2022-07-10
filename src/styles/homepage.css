@@ -637,45 +637,40 @@ h3{
 
 }
 .thirdSectionCardsInner{
+
     width: 245px;
     margin-top: 10px;
     margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
+    position: relative;
 
 }
 .thirdSectionCardMainImage{
 
+
     width: 276px;
     height: 229px;
-    margin-bottom: 20px;
+    position: absolute;
+    top:-220px;
+    left: -16px;
 
 }
 .thirdSectionCardsInner h3{
-   color: #164C4C;
-   font-family: 'Merriweather';
-   font-weight: 300;
-   text-align: center;
-   font-size: 22px;
-   margin-bottom: 30px;
-   /* position: absolute;
-   top:250px;
-   left: 25px; */
+    color: #164C4C;
+    font-family: 'Merriweather';
+    font-weight: 300;
+    position: absolute;
+    top:20px;
+    left: 40px;
 }
 .thirdSectionCardsInner p{
     font-family: 'Merriweather';
     font-weight: 300;
     text-align: center;
-    font-size: 16px;
-    /* position: absolute;
-    top:300px;
-    left: 25px; */
+    position: absolute;
+    top:100px;
     font-weight: lighter;
     color: #6B6B6B;
-    margin-bottom: 20px;
 }
 .searchResultCardButtons{
 
@@ -683,6 +678,8 @@ h3{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 180px;
 }
 .homeThirdSecDetailsButton{
     text-align: center;
@@ -713,6 +710,7 @@ h3{
     font-size: 13px;
     font-family: 'Rubik';
     border: solid #EA5A4E 0px;
+    margin-left: 20px;
 
 }
 /* /////////////////////////////////////////////////////////////////////////// */
