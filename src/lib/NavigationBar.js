@@ -80,7 +80,7 @@ function logout(){
         />
         <ul class="headerUl">
              <li><a class="aboutLogNav" href="">About</a></li>
-             <li><a class="profileNav" href="">{name}<i class="fas fa-caret-down"></i></a>
+             <li><a class="profileNav" href=""><i class="fa-light fa-user"/>{name}<i class="fas fa-caret-down"></i></a>
                 <ul class="profileNavItems">
                     {/* <li> <a href="">Profile</a></li> */}
                     <li><Link to="/editProfile">Profile</Link></li>
