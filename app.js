@@ -411,7 +411,7 @@ app.patch("/deletePlantFromLibrary", verifyToken, (req, res) => {
 // below endpoint fetches the library array of user.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the library array in json format.
-app.post("/getLibrary", verifyToken, (req, res) => {
+app.post("/getLibrary",(req, res) => {
   const useremail = req.body.useremail;
   console.log(useremail);
   User.findOne({ email: useremail }, { library: 1 })

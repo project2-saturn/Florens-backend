@@ -2,147 +2,40 @@ import Footer from "./Footer.js";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import AWS from "aws-sdk";
+import "../styles/myLibrary.css";
+import SearchResultCard from "./SearchResultCard.js";
 
-const SignupCard = props => {
-//   useEffect(async () => {
-//     const s3 = new AWS.S3({
-//       accessKeyId: "",
-//       secretAccessKey: ""
-//     });
-//     const imageURL = "../images/florens-logo_green.png";
-
-//     fetch(imageURL)
-//       .then(result => result.blob())
-//       .then(async (blob) => {
-//        const uploadedImage = await s3.upload({
-//           Bucket: "florens",
-//           Key: "florens-logo_green.png",
-//           Body: blob
-//         }).promise();
-//         console.log(uploadedImage);
-//       })
-//       .catch(error => console.log(error))
-//       .catch(error => console.log(error));
-//     // const res = await fetch(imageURL);
-//     // const blob = await res.buffer();
-
-//     // const uploadedImage =
-//     // await s3
-//     //   .upload({
-//     //     Bucket: "florens",
-//     //     Key: req.files[0].originalFilename,
-//     //     Body: blob
-//     //   }).promise();
-
-//     // console.log(uploadedImage.Location);
-//   }, []);
-const navigator=useNavigate();
-const[email,setEmail]=useState();
-const[password,setPassword]=useState();
-const[name,setName]=useState();
-const[image,setImage]=useState();
-const[picture,setPicture]=useState(null);
-const [error, setError] = useState();
-
-// Base64  base64String="";
-const handleChangeName=(event)=>{
-
-    setName(event.target.value);
-
-}
-const handleChangeEmail=(event)=>{
-
-    setEmail(event.target.value);
-
-}
-
-const handleChangePassword=(event)=>{
-
-    setPassword(event.target.value);
-
-}
-
-
-const handleImageChange=(event)=>{
-console.log(event.target.files[0]);
-setPicture(event.target.files[0]);
-
-setImage(URL.createObjectURL(event.target.files[0])  )  ;
+const MyLibrary=()=>{
+  const [plant,setPlant] = useState({
+    description: "",
+    name: "",
+    id: "",
+    photosURL: [],
+    scientificName: "",
    
+  });
+    // const navigator=useNavigate();
+    useEffect(function loadLibray()
+    {
+      axios.post("/getLibrary", (req, res) => {
+        let temp = result.data.data;
+        console.log(temp);
+        setPlant({...temp});
+    }).catch(error => console.log(error));
 
-}
+    },[]);
 
-
-
-
-// useEffect(()=>{
-// }
-//     },[image])
-
-
-const handleSubmit=(event)=>{
-event.preventDefault();
-const formData=new FormData();
-formData.append('name',name);
-formData.append('email',email);
-formData.append('password',password);
-formData.append('image',picture);
-
-console.log(picture);
-axios.post("/postUser",formData).then((result) => {
-    console.log(result);
-    // setPicture(result.data.image);
-    console.log(image);
-    navigator("/login");
-
-}).catch((err) => {
-    setError(err.response.data.message);
-});
-}
-
-
-return(
- 
-<div className="container-signup">
-
-
-<form className="form-signup"onSubmit={handleSubmit} enctype="multipart/form-data">     
-         <div className="form-div-signup">
-         <h1>Create Account</h1>
-         <label>Drop your Profile Picture</label><br></br>
-            <input type="file" id="upload" hidden onChange={event=>handleImageChange(event)}/>
-            <div className="fileBorder">
-<label for="upload" className="uploadFile">Choose file</label><br></br></div>
-<img src={image}></img>
-         <label for="name">Name</label>
-         <input type="text" className="text-signup" name="name" required onChange={event=>handleChangeName(event)}/>
-         <label for="name">Email</label>
-         <input type="email" className="email-signup"  name="email" required onChange={event=>handleChangeEmail(event)}/>
-         <label for="password">Password</label>
-         <input type="password" className="password-signup"  name="password" required onChange={event=>handleChangePassword(event)}/>
-         <div><p>{error}</p></div>
-         <input type="submit"  className="submit-signup" value="Signup" />
-         <p>Already have an account?<a><b> <Link to="/Login">Login</Link></b></a></p>
-
-{/* {image?.map((imageData)=>{
-   const base64String=btoa(String.fromCharCode(...new Uint8Array((imageData.data))));
-   console.log(base64String);
-})
-
-
-} */}
-
-
- </div>
- </form>
+return(<>
+  <div class="library-wrapper">
+  <div class="searchBar">
+    <input id="search" type="text" name="search"  value="" />
+    <button id="searchSubmit" type="submit" name="searchSubmit">
+      {/* <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /> */}
+      {/* </svg> */}
+    </button>
+  </div>
 </div>
- 
-
-
-
-)
-}
-
-export default SignupCard;
-
+            <SearchResultCard/>
+              </>
+)}
+export default MyLibrary

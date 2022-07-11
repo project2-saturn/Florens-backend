@@ -48,7 +48,7 @@ const LoginCard = props => {
             onChange={event => handleChangeEmail(event)}
             required
           />
-          <div class="space"></div>
+          {/* <div class="space"></div> */}
           <label for="password">Password</label>
           <input
             type="password"
@@ -62,7 +62,8 @@ const LoginCard = props => {
           </p>
 
           <input type="submit" className="submit-login" value="Login" />
-          <div><p>{error}</p></div>
+          {error ?
+          <div className="error"><p>{error}</p></div>:<></>}
           <p class="newFlorens">
             New on Florens?
             <Link to="/signup">

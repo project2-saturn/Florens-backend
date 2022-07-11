@@ -129,7 +129,8 @@ return(
          <input type="email" className="email-signup"  name="email" required onChange={event=>handleChangeEmail(event)}/>
          <label for="password">Password</label>
          <input type="password" className="password-signup"  name="password" required onChange={event=>handleChangePassword(event)}/>
-         <div><p>{error}</p></div>
+         {error ?
+          <div className="signup-error"><p>{error}</p></div>:<></>}
          <input type="submit"  className="submit-signup" value="Signup" />
          <p>Already have an account?<a><b> <Link to="/Login">Login</Link></b></a></p>
 

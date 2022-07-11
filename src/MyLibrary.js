@@ -7,6 +7,7 @@ import NavigationBar from "./lib/NavigationBar";
 
 import SignUpCard from "./lib/SignupCard";
 import Footer from "./lib/Footer";
+import MyLibrary from "./lib/MyLibrary";
 
 
 const SignUp = props => {
@@ -21,7 +22,7 @@ const SignUp = props => {
       {/* <Link to="/">Click here to go to homepage</Link> */}
       <header><NavigationBar />
       </header>
-      <main><SignUpCard/>
+      <main><MyLibrary/>
       {/* <SearchResults /> */}
       </main>
       <Footer />
