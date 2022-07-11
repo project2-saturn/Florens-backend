@@ -23,7 +23,9 @@ let cookies= Cookies.get('token');
         <div class="thirdSectionCardsInner">
           <img class="thirdSectionCardMainImage" src={props.plant.photosURL[0]} alt="plant" />
           
-          <h3>{props.plant.name}</h3>
+          <h3 className="nameToolTip">{props.plant.name.toString().substring(0, 12) + `...`}
+          <span class="nameToolTipText">{props.plant.name}</span>
+          </h3>
           <p>{props.plant.description.toString().substring(0, 60) + `...`}</p>
           <div className="searchResultCardButtons">
           <Link to="/plant" state={props.plant}>
