@@ -1,9 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Modal from "../lib/Modal.js"
+import Cookies from 'js-cookie';
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function(props) {
+  const navigator=useNavigate();
+  const[show,setShow]=useState(false);
+ 
+  const handlemodal=()=>{
+    setShow(!show);
+
+  }
+let cookies= Cookies.get('token');
+ 
+
+  
   return (
     <>
       <div class="thirdSectionCardList">
@@ -16,7 +29,11 @@ export default function(props) {
           <Link to="/plant" state={props.plant}>
             <button class="homeThirdSecDetailsButton" type="button">Details</button>
           </Link>
-          <button id="libButton" class="libButton" type="button">Lib</button>
+          <button id="libButton" class="libButton" onClick={handlemodal} >Lib</button>
+          {console.log("entered")}
+          {console.log(cookies)}
+          {cookies ?  navigator("/mylibrary") :<Modal show={show} setShow={setShow}/>}
+         
           </div>
         </div>
       </div>

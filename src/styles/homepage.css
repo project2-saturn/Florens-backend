@@ -808,6 +808,7 @@ text-align: center;
 /* ///////////////////////////////////////////////////modal inside///////////////////////////////////////////// */
 .modalFourm{
     position: relative;
+    border: 1px solid dark;
     
 }
 .formCloseBtn{
