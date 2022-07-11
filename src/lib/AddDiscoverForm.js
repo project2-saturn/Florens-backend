@@ -336,7 +336,7 @@ const AddDiscoverForm = props => {
         <input
           type="file"
           id="upload"
-          onChange={event => handleImageChange(event)}
+          onChange={(event) => handleImageChange(event,0)}
           hidden
         />
         {isEmpty ? (
@@ -366,7 +366,7 @@ const AddDiscoverForm = props => {
 
 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
         
-        {/* image section one */}
+        {/* image section two */}
 
         <label>Drop your Profile Picture</label>
         <br></br>
@@ -374,46 +374,7 @@ const AddDiscoverForm = props => {
         <input
           type="file"
           id="upload"
-          onChange={event => handleImageChange(event)}
-          hidden
-        />
-        {isEmpty ? (
-          <img
-            className=" defaultImage"
-            src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
-            width="150px"
-            height="150px"
-            margin-left="36%"
-          ></img>
-        ) : (
-          <img
-            src={image}
-            width="150px"
-            height="150px"
-            className="uploadedImage"
-          ></img>
-        )}
-
-        <div className="fileBorder">
-          <label for="upload" className="uploadFile">
-            Choose file
-          </label>
-          <br></br>
-        </div>
-
-
-
-{/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-        
-        {/* image section one */}
-
-        <label>Drop your Profile Picture</label>
-        <br></br>
-        <img src=""></img>
-        <input
-          type="file"
-          id="upload"
-          onChange={event => handleImageChange(event)}
+          onChange={(event) => handleImageChange(event,1)}
           hidden
         />
         {isEmpty ? (
@@ -444,7 +405,7 @@ const AddDiscoverForm = props => {
 
 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
         
-        {/* image section one */}
+        {/* image section three */}
 
         <label>Drop your Profile Picture</label>
         <br></br>
@@ -452,7 +413,7 @@ const AddDiscoverForm = props => {
         <input
           type="file"
           id="upload"
-          onChange={event => handleImageChange(event)}
+          onChange={(event) => handleImageChange(event,2)}
           hidden
         />
         {isEmpty ? (
@@ -483,7 +444,7 @@ const AddDiscoverForm = props => {
 
 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
         
-        {/* image section one */}
+        {/* image section four */}
 
         <label>Drop your Profile Picture</label>
         <br></br>
@@ -491,7 +452,46 @@ const AddDiscoverForm = props => {
         <input
           type="file"
           id="upload"
-          onChange={event => handleImageChange(event)}
+          onChange={(event) => handleImageChange(event,3)}
+          hidden
+        />
+        {isEmpty ? (
+          <img
+            className=" defaultImage"
+            src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
+            width="150px"
+            height="150px"
+            margin-left="36%"
+          ></img>
+        ) : (
+          <img
+            src={image}
+            width="150px"
+            height="150px"
+            className="uploadedImage"
+          ></img>
+        )}
+
+        <div className="fileBorder">
+          <label for="upload" className="uploadFile">
+            Choose file
+          </label>
+          <br></br>
+        </div>
+
+
+
+{/* /////////////////////////////////////////////////////////////////////////////////////////// */}
+        
+        {/* image section five */}
+
+        <label>Drop your Profile Picture</label>
+        <br></br>
+        <img src=""></img>
+        <input
+          type="file"
+          id="upload"
+          onChange={(event) => handleImageChange(event,4)}
           hidden
         />
         {isEmpty ? (
