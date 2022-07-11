@@ -144,8 +144,21 @@ app.post("/login", async (req, res, next) => {
 });
 
 
-app.get("/getimage",async (req,res)=>{
-  let user = await User.findOne({ email: req.body.email });
+app.post("/getimage",async (req,res)=>{
+  let user = await User.findOne({ name: req.body.name });
+try{
+  let imageData= await user.image;
+console.log(user);
+const imageDa=`data:${user.data.contentType};base64, ${Buffer.from(user.image.data).toString}('base64')}`
+res.json(imageDa);
+
+}
+
+catch(err)
+{
+  console.log(err);
+}
+
 })
 
 //API for Signup

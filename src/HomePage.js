@@ -6,7 +6,9 @@ import Features from "../src/lib/Features";
 import PlantOfTheDay from "../src/lib/PlantOfTheDay";
 import SeasonalPlants from "../src/lib/SeasonalPlants";
 import Footer from "../src/lib/Footer";
-import "./styles/homepage.css";
+// import Modal from "../src/lib/Modal"
+ import "./styles/homepage.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -16,7 +18,7 @@ import "./styles/homepage.css";
 
 let data = { firstname: ["parth", "soni"] };
 
-import { Link } from "react-router-dom";
+
 export default function() {
   const [user, setUser] = useState();
 
@@ -41,6 +43,7 @@ export default function() {
         <Features />
         <PlantOfTheDay />
         <SeasonalPlants />
+        {/* <Modal/> */}
       </main>
       <Footer />
     </>
