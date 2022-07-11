@@ -180,6 +180,33 @@ app.post("/postUser", uploadImage.single('image'), async (req, res, next) => {
   }
 });
 
+
+//API for Signup
+app.post("/postUserPlant",  async (req, res, next) => {
+  
+    user = new User({
+      name: req.body.name,
+      image:{
+        data:fs.readFileSync(req.file.path),
+        contentType:req.file.mimetype
+      },
+      email: req.body.email,
+      password: req.body.password
+    });
+
+    user
+      .save()
+      .then(result => {
+        res.status(201).json({
+          data: user
+        });
+      })
+      .catch(error => {
+        res.status(409).json({ error });
+      });
+  }
+);
+
 // below endpoint adds plant to the database
 app.post("/postPlant", async (req, res, next) => {
   // const { username, image} = req.body;

@@ -104,9 +104,9 @@ const AddDiscoverForm = props => {
     const[plantname,setPlantname]=useState();
     const[scientificname,setScientificname]=useState();
      
-    const[image,setImage]=useState();
-    const[isEmpty,setIsEmpty]=useState(true);
-    const[picture,setPicture]=useState(null);
+    const[image,setImage]=useState([]);
+    const[isEmpty,setIsEmpty]=useState([true, true, true, true, true]);
+    const[picture,setPicture]=useState([]);
     const [error, setError] = useState();
 
     
@@ -122,12 +122,21 @@ const AddDiscoverForm = props => {
     }
 
 
-    const handleImageChange=(event)=>{
+    const handleImageChange=(event, index)=>{
     console.log(event.target.files[0]);
-    setPicture(event.target.files[0]);
+
+    tempPictureArr = [...picture];
+    tempPictureArr[index] = event.target.files[0];
+    setPicture([...tempEmptyArr]);
     
-    setImage(URL.createObjectURL(event.target.files[0]) )  ;
-    setIsEmpty(false);
+    tempImageArr = [...image];
+    tempImageArr[index] = URL.createObjectURL(event.target.files[0]);
+    setImage([...tempImageArr]);
+
+        tempEmptyArr = [...isEmpty];
+        tempEmptyArr[index] = false;
+
+    setIsEmpty( [...tempEmptyArr]);
    }
 
    const handleSubmit=(event)=>{
@@ -144,14 +153,15 @@ const AddDiscoverForm = props => {
     formData.append('image',picture);
     
     console.log(picture);
-    axios.post("/",formData).then((result) => {
+    axios.post("/postUserPlant",formData).then((result) => {
         console.log(result);
         // setPicture(result.data.image);
-        console.log(image);
+        // console.log(image);
         navigator("/");
     
     }).catch((err) => {
         setError(err.response.data.message);
+        console.log(err);
     });
         
    }
@@ -245,11 +255,55 @@ const AddDiscoverForm = props => {
                 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
                 <label>Drop your Profile Picture</label><br></br>
                 <img src=""></img>
-                <input type="file" id="upload" onChange={event => handleImageChange(event)} hidden />
+                <input type="file" id="upload" onChange={(event) => handleImageChange(event, 0)} hidden />
                 {isEmpty ? <img className=" defaultImage" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img> : <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
 
                 <div className="fileBorder">
                     <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
+               
+                {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
+                <label>Drop your Profile Picture</label><br></br>
+                <img src=""></img>
+                <input type="file" id="upload" onChange={event => handleImageChange(event,1)} hidden />
+                {isEmpty ? <img className=" defaultImage" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img> : <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
+
+                <div className="fileBorder">
+                    <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
+               
+
+
+                {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
+                <label>Drop your Profile Picture</label><br></br>
+                <img src=""></img>
+                <input type="file" id="upload" onChange={event => handleImageChange(event,2)} hidden />
+                {isEmpty ? <img className=" defaultImage" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img> : <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
+
+                <div className="fileBorder">
+                    <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
+               
+
+
+                {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
+                <label>Drop your Profile Picture</label><br></br>
+                <img src=""></img>
+                <input type="file" id="upload" onChange={event => handleImageChange(event,3)} hidden />
+                {isEmpty ? <img className=" defaultImage" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img> : <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
+
+                <div className="fileBorder">
+                    <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
+               
+
+
+                {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
+                <label>Drop your Profile Picture</label><br></br>
+                <img src=""></img>
+                <input type="file" id="upload" onChange={event => handleImageChange(event,4)} hidden />
+                {isEmpty ? <img className=" defaultImage" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img> : <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
+
+                <div className="fileBorder">
+                    <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
+               
+               
                 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
                 {/* <input type="submit" className="submitPlant" value="Submit" /> */}
                 <button type="button" className="submitPlant" onClick={(event) => handleSubmit(event)}>Submit</button>
