@@ -339,7 +339,7 @@ const AddDiscoverForm = props => {
           onChange={(event) => handleImageChange(event,0)}
           hidden
         />
-        {isEmpty ? (
+        {isEmpty[0] ? (
           <img
             className=" defaultImage"
             src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
@@ -349,7 +349,7 @@ const AddDiscoverForm = props => {
           ></img>
         ) : (
           <img
-            src={image}
+            src={image[0]}
             width="150px"
             height="150px"
             className="uploadedImage"
@@ -377,7 +377,7 @@ const AddDiscoverForm = props => {
           onChange={(event) => handleImageChange(event,1)}
           hidden
         />
-        {isEmpty ? (
+        {isEmpty[1] ? (
           <img
             className=" defaultImage"
             src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
@@ -387,7 +387,7 @@ const AddDiscoverForm = props => {
           ></img>
         ) : (
           <img
-            src={image}
+            src={image[1]}
             width="150px"
             height="150px"
             className="uploadedImage"
@@ -416,7 +416,7 @@ const AddDiscoverForm = props => {
           onChange={(event) => handleImageChange(event,2)}
           hidden
         />
-        {isEmpty ? (
+        {isEmpty[2] ? (
           <img
             className=" defaultImage"
             src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
@@ -426,7 +426,7 @@ const AddDiscoverForm = props => {
           ></img>
         ) : (
           <img
-            src={image}
+            src={image[2]}
             width="150px"
             height="150px"
             className="uploadedImage"
@@ -455,7 +455,7 @@ const AddDiscoverForm = props => {
           onChange={(event) => handleImageChange(event,3)}
           hidden
         />
-        {isEmpty ? (
+        {isEmpty[3] ? (
           <img
             className=" defaultImage"
             src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
@@ -465,7 +465,7 @@ const AddDiscoverForm = props => {
           ></img>
         ) : (
           <img
-            src={image}
+            src={image[3]}
             width="150px"
             height="150px"
             className="uploadedImage"
@@ -494,7 +494,7 @@ const AddDiscoverForm = props => {
           onChange={(event) => handleImageChange(event,4)}
           hidden
         />
-        {isEmpty ? (
+        {isEmpty[4] ? (
           <img
             className=" defaultImage"
             src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
@@ -504,7 +504,7 @@ const AddDiscoverForm = props => {
           ></img>
         ) : (
           <img
-            src={image}
+            src={image[4]}
             width="150px"
             height="150px"
             className="uploadedImage"
