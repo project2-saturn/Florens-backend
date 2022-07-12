@@ -97,9 +97,10 @@ const AddDiscoverForm = props => {
   const [plantname, setPlantname] = useState();
   const [scientificname, setScientificname] = useState();
 
-  const [image, setImage] = useState();
-  const [isEmpty, setIsEmpty] = useState(true);
-  const [picture, setPicture] = useState(null);
+  const [image, setImage] = useState([]);
+  const [isEmpty, setIsEmpty] = useState([true, true, true, true, true]);
+  const [picture, setPicture] = useState([]);
+  const [imageURL, setImageURL] = useState([]);
   const [error, setError] = useState();
 
   const handleChangePlantName = event => {
@@ -109,17 +110,50 @@ const AddDiscoverForm = props => {
     setScientificname(event.target.value);
   };
 
-  const handleImageChange = event => {
+  const handleImageChange = (event, index) => {
     console.log(event.target.files[0]);
-    setPicture(event.target.files[0]);
 
-    setImage(URL.createObjectURL(event.target.files[0]));
-    setIsEmpty(false);
+    let tempPictureArr = [...picture];
+    tempPictureArr[index] = event.target.files[0];
+    setPicture([...tempPictureArr]);
+
+   let  tempImageArr = [...image];
+    tempImageArr[index] = URL.createObjectURL(event.target.files[0]);
+    setImage([...tempImageArr]);
+
+   let  tempEmptyArr = [...isEmpty];
+    tempEmptyArr[index] = false;
+
+    setIsEmpty([...tempEmptyArr]);
   };
 
-  const handleSubmit = event => {
+  const imageUploader = async() => {
+    for (const [iterator, isAbsent] of isEmpty.entries()) {
+      console.log(`atIndex: ${iterator}`);
+      console.log(`isAbsent : ${isAbsent}`);
+      if (!isAbsent) {
+        handlePicture(iterator);
+
+      }
+    }
+
+  }
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
+
+    // for (const [iterator, isAbsent] of isEmpty.entries()) {
+    //   console.log(`atIndex: ${iterator}`);
+    //   console.log(`isAbsent : ${isAbsent}`);
+    //   if (!isAbsent) {
+    //     handlePicture(iterator);
+
+    //   }
+    // }
+
+    await imageUploader();
+
     formData.append("plantname", plantname);
     formData.append("scientificname", scientificname);
     formData.append("tags", tags);
@@ -128,9 +162,9 @@ const AddDiscoverForm = props => {
     formData.append("seasontags", seasontags);
     formData.append("formtags", formtags);
     formData.append("texturetags", texturetags);
-    formData.append("image", picture);
+    formData.append("image", imageURL);
 
-    console.log(picture);
+    console.log(imageURL);
     axios
       .post("/", formData)
       .then(result => {
@@ -144,11 +178,12 @@ const AddDiscoverForm = props => {
       });
   };
 
-  const handlePicture = event => {
-    event.persist();
-    event.preventDefault();
+  const handlePicture = index => {
+    // event.persist();
+    // event.preventDefault();
     const reader = new FileReader();
-    const imageFile = document.getElementById("upload").files[0];
+    console.log(`index: ${index}` );
+    const imageFile = document.getElementById(`upload${index}`).files[0];
     console.log(imageFile.name);
     2;
     reader.onloadend = onLoadEndEvent => {
@@ -167,6 +202,11 @@ const AddDiscoverForm = props => {
         .then(response => response.json())
         .then(result => {
           console.log(result);
+          // res.json()
+
+          let tempImageURL = [...imageURL];
+          tempImageURL.push(result.data.Location);
+          setImageURL([...tempImageURL]);
         })
         .catch(error => {
           // setUploading(false);
@@ -327,7 +367,7 @@ const AddDiscoverForm = props => {
           Add Plant Description...
         </textarea>
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-        
+
         {/* image section one */}
 
         <label>Drop your Profile Picture</label>
@@ -335,8 +375,8 @@ const AddDiscoverForm = props => {
         <img src=""></img>
         <input
           type="file"
-          id="upload"
-          onChange={(event) => handleImageChange(event,0)}
+          id="upload0"
+          onChange={event => handleImageChange(event, 0)}
           hidden
         />
         {isEmpty[0] ? (
@@ -357,15 +397,14 @@ const AddDiscoverForm = props => {
         )}
 
         <div className="fileBorder">
-          <label for="upload" className="uploadFile">
+          <label for="upload0" className="uploadFile">
             Choose file
           </label>
           <br></br>
         </div>
 
+        {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
-{/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-        
         {/* image section two */}
 
         <label>Drop your Profile Picture</label>
@@ -373,8 +412,8 @@ const AddDiscoverForm = props => {
         <img src=""></img>
         <input
           type="file"
-          id="upload"
-          onChange={(event) => handleImageChange(event,1)}
+          id="upload1"
+          onChange={event => handleImageChange(event, 1)}
           hidden
         />
         {isEmpty[1] ? (
@@ -395,16 +434,14 @@ const AddDiscoverForm = props => {
         )}
 
         <div className="fileBorder">
-          <label for="upload" className="uploadFile">
+          <label for="upload1" className="uploadFile">
             Choose file
           </label>
           <br></br>
         </div>
 
+        {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
-
-{/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-        
         {/* image section three */}
 
         <label>Drop your Profile Picture</label>
@@ -412,8 +449,8 @@ const AddDiscoverForm = props => {
         <img src=""></img>
         <input
           type="file"
-          id="upload"
-          onChange={(event) => handleImageChange(event,2)}
+          id="upload2"
+          onChange={event => handleImageChange(event, 2)}
           hidden
         />
         {isEmpty[2] ? (
@@ -434,16 +471,14 @@ const AddDiscoverForm = props => {
         )}
 
         <div className="fileBorder">
-          <label for="upload" className="uploadFile">
+          <label for="upload2" className="uploadFile">
             Choose file
           </label>
           <br></br>
         </div>
 
+        {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
-
-{/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-        
         {/* image section four */}
 
         <label>Drop your Profile Picture</label>
@@ -451,8 +486,8 @@ const AddDiscoverForm = props => {
         <img src=""></img>
         <input
           type="file"
-          id="upload"
-          onChange={(event) => handleImageChange(event,3)}
+          id="upload3"
+          onChange={event => handleImageChange(event, 3)}
           hidden
         />
         {isEmpty[3] ? (
@@ -473,16 +508,14 @@ const AddDiscoverForm = props => {
         )}
 
         <div className="fileBorder">
-          <label for="upload" className="uploadFile">
+          <label for="upload3" className="uploadFile">
             Choose file
           </label>
           <br></br>
         </div>
 
+        {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
-
-{/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-        
         {/* image section five */}
 
         <label>Drop your Profile Picture</label>
@@ -490,8 +523,8 @@ const AddDiscoverForm = props => {
         <img src=""></img>
         <input
           type="file"
-          id="upload"
-          onChange={(event) => handleImageChange(event,4)}
+          id="upload4"
+          onChange={event => handleImageChange(event, 4)}
           hidden
         />
         {isEmpty[4] ? (
@@ -512,15 +545,12 @@ const AddDiscoverForm = props => {
         )}
 
         <div className="fileBorder">
-          <label for="upload" className="uploadFile">
+          <label for="upload4" className="uploadFile">
             Choose file
           </label>
           <br></br>
         </div>
 
-
-
-        
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
         {/* <input type="submit" className="submitPlant" value="Submit" /> */}
         <button
