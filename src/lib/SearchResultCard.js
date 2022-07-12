@@ -31,7 +31,7 @@ let cookies= Cookies.get('token');
           <div className="searchResultCardButtons">
 
           <Link to="/plant" state={props.plant}>
-            <button class="homeThirdSecDetailsButton" type="button">Details</button>
+            <button class="homeThirdSecDetailsButton" type="button">DETAILS</button>
           </Link>
           <button id="libButton" class="libButton" onClick={handlemodal} >Lib</button>
           {console.log("entered")}
