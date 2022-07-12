@@ -640,16 +640,16 @@ h3{
 
     width: 276px;
     height: 229px;
-    position: absolute;
-    top:-220px;
+    position: relative;
+    top: -30px;
     left: -16px;
     border-radius: 10px;
 
 }
 
 .searchResultNameDesc{
-    position: absolute;
-    top:20px;
+    position: relative;
+    top: -30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -676,8 +676,8 @@ h3{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 180px;
+    position: relative;
+    top: 20px;
 }
 .homeThirdSecDetailsButton{
     text-align: center;
@@ -816,6 +816,7 @@ margin-top: 15px;
     justify-content: center;
     align-items: center;
     display: none;
+    z-index: 1;
 }
 .modalContent{
     width: 700px;
