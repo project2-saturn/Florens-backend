@@ -33,7 +33,7 @@ let cookies= Cookies.get('token');
           <Link to="/plant" state={props.plant}>
             <button class="homeThirdSecDetailsButton" type="button">DETAILS</button>
           </Link>
-          <button id="libButton" class="libButton" onClick={handlemodal} >Lib</button>
+          <button id="libButton" class="libButton" onClick={handlemodal} ><img src="../images/addBtn.png" alt="plant" />Lib</button>
           {console.log("entered")}
           {console.log(cookies)}
           {cookies ?  navigator("/mylibrary") :<Modal show={show} setShow={setShow}/>}
