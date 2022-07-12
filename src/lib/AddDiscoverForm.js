@@ -158,14 +158,22 @@ const AddDiscoverForm = props => {
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     return (
-        <div>
-            <form className="form-signup" onSubmit={handleSubmit} enctype="multipart/form-data">
+        <div className="addDiscoveryPageDiv">
+            <h1 className="addDiscoveryPageHeading">Add a Discovery</h1>
+            <p className="addDiscoveryPageParagraph">We encourage you to add any plant discovery you had, however,<br/>keep in mind 
+                that we require accurate information in order to keep <br/>our community a reliable place.</p>
+            <form className="formAddDiscovery" onSubmit={handleSubmit} enctype="multipart/form-data">
+                <div className="addDiscoveryFormItems">
                 <label for="name">Name</label>
                 <input type="text" className="plantNameInput" name="plantName" required onChange={event => handleChangePlantName(event)} />
+                </div>
+                <div className="addDiscoveryFormItems">
                 <label for="sname">Scientific Name</label>
                 <input type="text" className="scientificNameInput" name="scientificName" required onChange={event => handleChangeScientificName(event)} />
+                </div>
 
                 {/*//////////////////////////////////// Location container/////////////////////////////////////// */}
+                <div className="addDiscoveryFormItems">
                 <label for="location">Location</label>
                 <div className="tags-input-container">
                     {tags.map((tag, index) => (
@@ -177,8 +185,9 @@ const AddDiscoverForm = props => {
 
                     <input onKeyDown={handleKeyDown} type="text" className="tags-input" placeholder="All" />
                 </div>
+                </div>
                 {/*////////////////////////////////////////// Plant Type/////////////////////////////////////// */}
-
+                <div className="addDiscoveryFormItems1">
                 <label for="planttype">Plant Type</label>
                 <div className="plantType">
                     {planttags.map((planttag, index1) => (
@@ -190,7 +199,9 @@ const AddDiscoverForm = props => {
 
                     <input onKeyDown={handleKeyPlant} type="text" className="planttype-input" placeholder="All" />
                 </div>
+                </div>
                 {/* ////////////////////////////////////Color/////////////////////////////////////////////////// */}
+                <div className="addDiscoveryFormItems">
                 <label for="colortype">Color</label>
                 <div className="colorType">
                     {colortags.map((colortag, index2) => (
@@ -202,7 +213,9 @@ const AddDiscoverForm = props => {
 
                     <input onKeyDown={handleKeyColor} type="text" className="colortype-input" placeholder="All" />
                 </div>
+                </div>
                 {/* ///////////////////////////////////Season/////////////////////////////////////////////////// */}
+                <div className="addDiscoveryFormItems1">
                 <label for="seasontype">Season</label>
                 <div className="seasonType">
                     {seasontags.map((seasontag, index3) => (
@@ -214,7 +227,9 @@ const AddDiscoverForm = props => {
 
                     <input onKeyDown={handleKeySeason} type="text" className="seasontype-input" placeholder="All" />
                 </div>
+                </div>
                 {/* //////////////////////////////////form////////////////////////////////////////////////////// */}
+                <div className="addDiscoveryFormItems">
                 <label for="formtype">Form</label>
                 <div className="formType">
                     {formtags.map((formtag, index4) => (
@@ -226,7 +241,9 @@ const AddDiscoverForm = props => {
 
                     <input onKeyDown={handleKeyForm} type="text" className="formtype-input" placeholder="All" />
                 </div>
+                </div>
                 {/* ///////////////////////////////////texture////////////////////////////////////////////////// */}
+                <div className="addDiscoveryFormItems1">
                 <label for="texturetype">Form</label>
                 <div className="textureType">
                     {texturetags.map((texturetag, index5) => (
@@ -238,21 +255,27 @@ const AddDiscoverForm = props => {
 
                     <input onKeyDown={handleKeyTexture} type="text" className="texturetype-input" placeholder="All" />
                 </div>
+                </div>
                 {/* //////////////////////////////////Description/////////////////////////////////////////////// */}
-
+                <div className="addDiscoveryFormItems">
                 <label for="description">Description</label>
-                <textarea name="descriptionPlant" rows="6" cols="20">Add Plant Description...</textarea>
+                <textarea class="descriptionPlant" >Add Plant Description...</textarea>
+                </div>
                 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
-                <label>Drop your Profile Picture</label><br></br>
+                <div className="addDiscoveryFormItems">
+                <label>Add Photos*</label><br></br>
                 <img src=""></img>
                 <input type="file" id="upload" onChange={event => handleImageChange(event)} hidden />
                 {isEmpty ? <img className=" defaultImage" src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img> : <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
 
                 <div className="fileBorder">
                     <label for="upload" className="uploadFile" >Choose file</label><br></br></div>
+                </div>
                 {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
                 {/* <input type="submit" className="submitPlant" value="Submit" /> */}
+                <div className="addDiscoveryFormItems">
                 <button type="button" className="submitPlant" onClick={(event) => handleSubmit(event)}>Submit</button>
+                </div>
             </form>
         </div>
     );
