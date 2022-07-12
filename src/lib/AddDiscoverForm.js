@@ -154,7 +154,7 @@ const AddDiscoverForm = props => {
         setError(err.response.data.message);
     });
         
-   }
+   }  
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     return (

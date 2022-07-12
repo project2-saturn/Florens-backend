@@ -198,6 +198,9 @@ position: relative;
     color: white;
 }
 
+.searchIconImg{
+    color: #FFFFFF;
+}
 /* ///////////////////////////////////////////////////////////////////////////////// */
 .accordion_buttonHome {
     text-align: center;
@@ -566,6 +569,15 @@ position: relative;
     font-size: 13px;
     font-family: 'Rubik';
 }
+.userIconImg{
+    margin-right: 3px;
+}
+
+.plantDayLeafBtn{
+    position: absolute;
+    top: 450px;
+    left: 900px;
+}
 .plantDescItemsHeading{
     margin-bottom: 5px;  
     font-size: 16px;
@@ -688,7 +700,7 @@ h3{
     background: none;
     border: solid #EA5A4E 2px;
     outline: none;
-    width: 180px;
+    width: 230px;
     height: 45px;
     border-radius: 10px;
     font-size: 13px;
@@ -705,7 +717,7 @@ h3{
     background-color: #EA5A4E;
     border: solid #EA5A4E 2px;
     outline: none;
-    width: 180px;
+    width: 230px;
     height: 45px;
     border-radius: 10px;
     font-size: 13px;
@@ -728,6 +740,10 @@ h3{
     border: solid #EA5A4E 0px;
     margin-left: 20px;
 
+}
+
+.cardWavyLine{
+    margin-top: 15px;
 }
 /* /////////////////////////////////////////////////////////////////////////// */
 

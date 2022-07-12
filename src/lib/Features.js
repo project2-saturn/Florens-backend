@@ -6,7 +6,7 @@ export default function() {
     <>
       <section class="firstSection">
         <div class="firstSectionFirstCard">
-          <img src="../images/Group_618.png" alt="plant" />
+          <img src="../images/be-an-expert.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Be an
             expert
@@ -18,7 +18,7 @@ export default function() {
           </p>
         </div>
         <div class="firstSectionSecondCard">
-          <img src="../images/Group_614.png" alt="plant" />
+          <img src="../images/add-your-plants.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Save your
             findings
@@ -29,7 +29,7 @@ export default function() {
           </p>
         </div>
         <div class="firstSectionThirdCard">
-          <img src="../images/Group_609.png" alt="plant" />
+          <img src="../images/save-your-findings.png" alt="plant" />
           <h2 class="firstSectionHeadings">
             Add your own
             plants
