@@ -352,6 +352,15 @@ app.get("/randomPlants/:numOfPlants", async (req, res, next) => {
     .catch(error => res.status(500).send(error));
 });
 
+app.post("/getPlants", async (req, res, next) => {
+  Plant.find({_id:req.body.objectID})
+    .then(results => {
+      res.status(200).json(results);
+    })
+    .catch(error => res.status(500).send(error));
+});
+
+
 // below endpoint get all the plants data from the database
 app.get("/plants", async (req, res, next) => {
   Plant.find({})
