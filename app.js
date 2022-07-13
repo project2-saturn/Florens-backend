@@ -360,6 +360,14 @@ app.get("/plants", async (req, res, next) => {
     .catch(error => res.status(500).send(error));
 });
 
+app.post("/plantsID", async (req, res, next) => {
+  Plant.find({_id: req.body.objectID})
+    .then(results => {
+      res.status(200).json(results);
+    })
+    .catch(error => res.status(500).send(error));
+});
+
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
