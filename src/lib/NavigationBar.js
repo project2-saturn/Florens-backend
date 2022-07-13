@@ -60,6 +60,7 @@ function logout(){
 
   cookies.remove("token");
   cookies.remove("name");
+  cookies.remove("useremail");
   navigator("/");
   
 }

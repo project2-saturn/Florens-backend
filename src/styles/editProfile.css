@@ -12,15 +12,18 @@ opacity: 1;
     margin:0px;
     padding:0px;
 }
+/*************** Image Edit profile************************************/
 .EditProfileImg{
-    width: 50%;
-height: 190px;
-object-fit:contain;
-border-radius: 10px;
-margin-left: 24%;
-margin-top:2%;
-margin-bottom:4%;
+    width: 43%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 24%;
+    /* margin-top: 2%; */
+    margin-bottom: 4%;
 }
+/*************** Header ************************************/
 .navBar{
     position: relative;
     background-color: #F1ECEB;
@@ -51,6 +54,8 @@ margin-bottom:4%;
     color: #6B6B6B;
     text-decoration: none;
   }
+  /*************** Header Ends ************************************/
+  /*************** Footer ************************************/
   footer{
     background-color: #164C4C;
     height: 260px;
@@ -113,16 +118,19 @@ margin-bottom:4%;
         top: 170px;
         color: white;
     }
+    /*************** Footer Ends ************************************/
+    /*************** Edit Profile Form starts************************************/
 .EditProfileForm{
    
     width: 500px;
-    height: 505px;
+   
     border: 1px solid var(--unnamed-color-7d9990);
-    border: 1px solid #7D9990;
+    /* border: 1px solid #7D9990; */
     border-radius: 10px;
     opacity: 1;
-    padding:2%;
+    
 }
+/*************** form fields************************************/
 .EditProfileEmail,.EditProfilePassword
 {
   
@@ -135,6 +143,7 @@ border: 1px solid #F8C9BB;
 border-radius: 10px;
 opacity: 1;
 }
+/*************** submit button************************************/
 .EditProfileSubmit{
     width: 100%;
 margin-bottom:20px;
@@ -152,16 +161,24 @@ opacity: 1;
 background-color:white;
 
 }
+/*************** text for new florens************************************/
 .newFlorens{
     text-align:center;
 }
+/*************** form container************************************/
 .EditProfileform-container{
-    
-    display: flex;
+    border: 1px solid #7D9990;
+    width: 520px;
+    height: 70vh;
+    transform: translate(70%, 0%);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    grid-template-columns:repeat(2,1fr);
    
     padding: 2%;
     justify-content: center;
 }
+/*************** Edit Profile form title************************************/
 .EditProfileTitle{
     text-align: center;
     font: normal normal 300 22px/30px Merriweather;

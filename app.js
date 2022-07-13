@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const app = express();
+var ObjectID=require('mongodb').ObjectID;
 require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require("multer");
@@ -111,8 +112,12 @@ app.get("/getUsername",async(req,res)=>{
   var username = req.cookies['name'];
 res.send(username);
 })
+ 
+// module.exports.getPlantsDetails=(id,callback)=>{
+// Plant.find({ _id:new ObjectID(id)},callback)
+// .populate('_id')
 
-
+// }
 
 
 // Api for login
@@ -133,6 +138,7 @@ app.post("/login", async (req, res, next) => {
         const token = generateToken(user);
         res.cookie("token", token);
         res.cookie("name", user.name);
+        res.cookie("useremail",user.email)
         res.status(200).json({message:"Password Validated"});
       } else {
         res.status(400).json({message:"Please enter the correct password"});
@@ -363,7 +369,7 @@ app.get("/plants", async (req, res, next) => {
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/addPlantToLibrary", verifyToken, (req, res) => {
+app.patch("/addPlantToLibrary", (req, res) => {
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);
