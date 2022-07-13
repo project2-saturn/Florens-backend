@@ -8,6 +8,7 @@ import Cookies from "js-cookie";
 
 const MyLibrary=()=>{
   const[noOfDiscovery,setNoOfDiscovery]=useState();
+  const[plantList,setPlantList]=useState([]);
   const [plant,setPlant] = useState({
     description: "",
     name: "",
@@ -23,17 +24,13 @@ let temp ;
 
 
 
-    module.exports.getPantById=(id,callback)=>{
-
-
-    }
     useEffect(function loadLibray()
     {
       axios.post("/getLibrary", {useremail :useremail}).then(result => {
-        temp = result.data;
-        console.log(result.data);
+        temp = result.data.data;
+        console.log(result.data.data);
        setNoOfDiscovery(temp.length);
-       console.log(temp);
+       console.log(temp.length);
        setPlant({...temp});
    }).catch(error => console.log(error));
 
