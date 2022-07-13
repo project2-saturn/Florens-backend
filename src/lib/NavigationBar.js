@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import cookies from 'react-cookies' 
 import { useNavigate } from "react-router-dom";
 
+
 export default function() {
   const Login="Login";
 const [name,setName]=useState();
@@ -83,7 +84,7 @@ function logout(){
              <li><a class="profileNav" href=""><i class="fa-light fa-user"/>{name}<i class="fas fa-caret-down"></i></a>
                 <ul class="profileNavItems">
                     {/* <li> <a href="">Profile</a></li> */}
-                    <li><Link to="/editProfile">Profile</Link></li>
+                    <li><Link to="/profile">Profile</Link></li>
                     <li class="headerUlLine"></li>
                     
                     <li><Link to="/mylibrary">My Library</Link></li>

@@ -1,6 +1,7 @@
 import React from "react";
 import {useEffect,useState} from 'react';
 import axios from 'axios';
+import {Buffer} from 'buffer';
 import "../styles/editProfile.css";
 // import Footer from "../src/lib/Footer";
 // import NavigationBar from "../src/lib/NavigationBar";
@@ -9,6 +10,7 @@ const EditProfile=(props)=>{
     const[password,setPassword]=useState()
     const[image,setImage]=useState()
     const[name,setName]=useState()
+    const[data1,setData]=useState()
     useEffect(function loadUsername(){
 
         axios.get("/getUsername").then((result) => {
@@ -30,20 +32,23 @@ const EditProfile=(props)=>{
    
 
 
-   useEffect(function loadImage(){
+  function loadImage(){
 
 
     axios.post("/getimage",{name:name}).then((result) => {
             
-     console.log(result);
-     console.log(result);
+     console.log(result.data.contentType);
+     console.log(result.data.data);
+     setData(result);
     //  console.log(result.data.contentType);
-        // setImage(`data:${result.data.contentType};base64, ${result.data.toString('base64')}`);
+
+       
         // const blob = new Blob([Int8Array.from(result.data.data)], {type: result.data.contentType });
 
         // console.log(blob);
         // console.log(blob.toString());
         // setImage( window.URL.createObjectURL(blob));
+        setImage(`data:${result.data.contentType};base64, Buffer.from ${result.data.data}.toString('base64')}`);
 
     }).catch((err) => {
         
@@ -52,11 +57,11 @@ const EditProfile=(props)=>{
 
 
 
-   },[name])
+   }
    
    
-   
-   
+   loadImage()
+ 
    
     function handleSubmit(event){
         event.preventDefault();

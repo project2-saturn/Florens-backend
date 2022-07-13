@@ -10,6 +10,7 @@ import SignUp from './SignUp';
 import Login from './Login';
 import EditProfile from './lib/EditProfile.js';
 import PlantProfile from './PlantProfile';
+import Profile from './Profile';
 import MyLibrary from './MyLibrary';
 import AddDiscover from "./AddDiscover.js";
 
@@ -25,6 +26,7 @@ ReactDOM.render(
             <Route path="/plant" element={<PlantProfile />} />
             <Route path="/mylibrary" element={<MyLibrary />} />
             <Route path="/addplant" element={<AddDiscover/>}/>
+            <Route path="/profile" element={<Profile/>}/>
             {/* <Route path="/logout" element={<HomePage />} /> */}
             </Routes>
     </BrowserRouter>,

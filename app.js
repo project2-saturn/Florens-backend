@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const app = express();
+const mongoose = require("mongoose");
 require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require("multer");
@@ -148,9 +149,9 @@ app.post("/getimage",async (req,res)=>{
   let user = await User.findOne({ name: req.body.name });
 try{
   let imageData= await user.image;
-console.log(user);
-const imageDa=`data:${user.data.contentType};base64, ${Buffer.from(user.image.data).toString}('base64')}`
-res.json(imageDa);
+// console.log(user);
+console.log(imageData);
+res.json(imageData);
 
 }
 
@@ -363,13 +364,14 @@ app.get("/plants", async (req, res, next) => {
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/addPlantToLibrary", verifyToken, (req, res) => {
+app.patch("/addPlantToLibrary",(req, res) => {
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);
   console.log(useremail);
   User.findOne({ email: useremail }, { library: 1 })
     .then(result => {
+      console.log(result);
       User.updateOne(
         { email: useremail },
         { library: [...result.library, plantObjectID] }
@@ -424,7 +426,7 @@ app.patch("/deletePlantFromLibrary", verifyToken, (req, res) => {
 // below endpoint fetches the library array of user.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the library array in json format.
-app.post("/getLibrary", verifyToken, (req, res) => {
+app.post("/getLibrary", (req, res) => {
   const useremail = req.body.useremail;
   console.log(useremail);
   User.findOne({ email: useremail }, { library: 1 })
@@ -432,8 +434,11 @@ app.post("/getLibrary", verifyToken, (req, res) => {
       console.log(
         `Current Subscriptions of ${useremail} are ${result.library.toString()}`
       );
+      console.log(result.library);
       if (result != null) {
-        res.status(200).json({ data: result.library });
+        let objectIds=(result.library).map(mongoose.Types.ObjectId)
+        console.log(objectIds);
+        res.status(200).json({ data: objectIds });
       } else {
         res.send([]);
       }
