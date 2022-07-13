@@ -15,7 +15,7 @@ const AddDiscoverForm = props => {
 
         setUserName(result.data);
         if (result.data == "") {
-          setUserName("Parth");
+          setUserName("KPU");
         }
       })
       .catch(err => {
@@ -203,7 +203,19 @@ const AddDiscoverForm = props => {
       }
 
       axios
-        .post("/postPlant", formData)
+        .post("/postPlant", {
+          photosURL : imageURL.substring(1),
+          name: plantname,
+          scientificName : scientificname,
+          season: seasontags.toString(),
+          description: description,
+          location: tags.toString(),
+          type: planttags.toString(),
+          color: colortags.toString(),
+          texture: texturetags.toString(),
+          form: formtags.toString(),
+          owner: username
+        })
         .then(result => {
           console.log(result);
           // setPicture(result.data.image);
