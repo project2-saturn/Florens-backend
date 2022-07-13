@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AWS from "aws-sdk";
 
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const AddDiscoverForm = props => {
+  const [username, setUserName] = useState();
+
+  useEffect(function loadUsername() {
+    axios
+      .get("/getUsername")
+      .then(result => {
+        console.log(result);
+
+        setUserName(result.data);
+        if (result.data == "") {
+          setUserName("Parth");
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   /////////////////////////////Location/////////////////////////////////////////////////
   const [tags, setTags] = useState([]);
 
@@ -96,11 +114,13 @@ const AddDiscoverForm = props => {
   const navigator = useNavigate();
   const [plantname, setPlantname] = useState();
   const [scientificname, setScientificname] = useState();
+  const [description, setDescription] = useState();
 
   const [image, setImage] = useState([]);
   const [isEmpty, setIsEmpty] = useState([true, true, true, true, true]);
   const [picture, setPicture] = useState([]);
-  const [imageURL, setImageURL] = useState([]);
+  // const [imageURL, setImageURL] = useState("");
+  let imageURL = "";
   const [error, setError] = useState();
 
   const handleChangePlantName = event => {
@@ -110,6 +130,10 @@ const AddDiscoverForm = props => {
     setScientificname(event.target.value);
   };
 
+  const handleChangeDescription = event => {
+    setDescription(event.target.value);
+  };
+
   const handleImageChange = (event, index) => {
     console.log(event.target.files[0]);
 
@@ -117,72 +141,87 @@ const AddDiscoverForm = props => {
     tempPictureArr[index] = event.target.files[0];
     setPicture([...tempPictureArr]);
 
-   let  tempImageArr = [...image];
+    let tempImageArr = [...image];
     tempImageArr[index] = URL.createObjectURL(event.target.files[0]);
     setImage([...tempImageArr]);
 
-   let  tempEmptyArr = [...isEmpty];
+    let tempEmptyArr = [...isEmpty];
     tempEmptyArr[index] = false;
 
     setIsEmpty([...tempEmptyArr]);
   };
 
-  const imageUploader = async() => {
+  const imageUploader = async () => {
+    // console.log("image Uploader called");
     for (const [iterator, isAbsent] of isEmpty.entries()) {
-      console.log(`atIndex: ${iterator}`);
-      console.log(`isAbsent : ${isAbsent}`);
+      // console.log(`atIndex: ${iterator}`);
+      // console.log(`isAbsent : ${isAbsent}`);
+      // console.log("for loop executed one time");
       if (!isAbsent) {
-        handlePicture(iterator);
-
+        const l = await handlePicture(iterator);
       }
     }
-
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData();
-
-    // for (const [iterator, isAbsent] of isEmpty.entries()) {
-    //   console.log(`atIndex: ${iterator}`);
-    //   console.log(`isAbsent : ${isAbsent}`);
-    //   if (!isAbsent) {
-    //     handlePicture(iterator);
-
-    //   }
-    // }
-
-    await imageUploader();
-
-    formData.append("plantname", plantname);
-    formData.append("scientificname", scientificname);
-    formData.append("tags", tags);
-    formData.append("planttags", planttags);
-    formData.append("colortags", colortags);
-    formData.append("seasontags", seasontags);
-    formData.append("formtags", formtags);
-    formData.append("texturetags", texturetags);
-    formData.append("image", imageURL);
-
-    console.log(imageURL);
-    axios
-      .post("/", formData)
-      .then(result => {
-        console.log(result);
-        // setPicture(result.data.image);
-        console.log(image);
-        navigator("/");
-      })
-      .catch(err => {
-        setError(err.response.data.message);
-      });
+    return;
   };
 
-  const handlePicture = index => {
+  const handleSubmit = async event => {
+    event.preventDefault();
+
+    const r = await imageUploader();
+    setTimeout(function() {
+      const formData = new FormData();
+      // console.log("after imageUploader");
+      // console.log(imageURL);
+      // console.log(`plantname: ${plantname}`);
+      // console.log(`plantname: ${scientificname}`);
+      // console.log(`plantname: ${tags}`);
+      // console.log(`plantname: ${planttags}`);
+      // console.log(`plantname: ${colortags}`);
+      // console.log(`plantname: ${seasontags}`);
+      // console.log(`plantname: ${formtags}`);
+      // console.log(`plantname: ${texturetags}`);
+      formData.append("name", "weferf");
+      formData.append("scientificName", scientificname);
+      formData.append("description", description);
+
+      formData.append("photosURL", imageURL);
+      formData.append("season", seasontags);
+      formData.append("location", tags);
+
+      formData.append("type", planttags);
+      formData.append("color", colortags);
+
+      formData.append("texture", texturetags);
+      formData.append("form", formtags);
+
+      formData.append("owner", username);
+      // console.log(imageURL);
+      // console.log(formData);
+
+      for (var key of formData.entries()) {
+        console.log(key[0] + ", " + key[1]);
+      }
+
+      axios
+        .post("/postPlant", formData)
+        .then(result => {
+          console.log(result);
+          // setPicture(result.data.image);
+          // console.log(image);
+          // navigator("/");
+        })
+        .catch(err => {
+          setError(err.response.data.message);
+        });
+    }, 3000);
+  };
+
+  const handlePicture = async index => {
     // event.persist();
     // event.preventDefault();
+    // console.log("handlePicture Called.");
     const reader = new FileReader();
-    console.log(`index: ${index}` );
+    // console.log(`index: ${index}`);
     const imageFile = document.getElementById(`upload${index}`).files[0];
     console.log(imageFile.name);
     2;
@@ -204,9 +243,18 @@ const AddDiscoverForm = props => {
           console.log(result);
           // res.json()
 
-          let tempImageURL = [...imageURL];
-          tempImageURL.push(result.data.Location);
-          setImageURL([...tempImageURL]);
+          // let tempImageURL = imageURL;
+          // tempImageURL += `, ${result.data.Location}`;
+          // console.log(`temp URL before: ${tempImageURL}`);
+          // tempImageURL.push(result.data.Location);
+          // console.log(`temp URL after: ${tempImageURL}`);
+          // setImageURL(`${imageURL}, ${result.data.Location}`);
+          // console.log("existing hanlepicture");
+          // console.log(imageURL);
+
+          imageURL += `, ${result.data.Location}`;
+
+          return;
         })
         .catch(error => {
           // setUploading(false);
@@ -223,6 +271,21 @@ const AddDiscoverForm = props => {
 
   return (
     <div>
+      <div>
+        <p>PlantName: {plantname}</p>
+
+        <p>ScientificName: {scientificname}</p>
+        <p>Location: {tags}</p>
+        <p>ImagesURL: {imageURL}</p>
+        <p>Description: {description}</p>
+        <p>Season: {seasontags}</p>
+        <p>Type: {planttags}</p>
+        <p>Color: {colortags}</p>
+        <p>Texture: {texturetags}</p>
+        <p>Form: {formtags}</p>
+        <p>Owner: {username}</p>
+        {/* <p>PlantName: {plantname}</p> */}
+      </div>
       <form
         className="form-signup"
         onSubmit={handleSubmit}
@@ -342,7 +405,7 @@ const AddDiscoverForm = props => {
           />
         </div>
         {/* ///////////////////////////////////texture////////////////////////////////////////////////// */}
-        <label for="texturetype">Form</label>
+        <label for="texturetype">Texture</label>
         <div className="textureType">
           {texturetags.map((texturetag, index5) => (
             <div className="texturetype-item" key={index5}>
@@ -363,9 +426,13 @@ const AddDiscoverForm = props => {
         {/* //////////////////////////////////Description/////////////////////////////////////////////// */}
 
         <label for="description">Description</label>
-        <textarea name="descriptionPlant" rows="6" cols="20">
-          Add Plant Description...
-        </textarea>
+        <textarea
+          name="descriptionPlant"
+          rows="6"
+          cols="20"
+          onChange={event => handleChangeDescription(event)}
+          placeholder="Add plant Description...."
+        ></textarea>
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section one */}
