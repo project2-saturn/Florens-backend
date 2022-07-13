@@ -26,8 +26,7 @@ const EditProfile=(props)=>{
           
           console.log(err);
         });
-        },[])
-   
+        },[]);
 
 
    useEffect(function loadImage(){

@@ -4,7 +4,7 @@ const app = express();
 require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require("multer");
-const path= require("path");
+const path = require("path");
 const User = require("./models/User");
 const Plant = require("./models/Plant");
 const AWS = require("aws-sdk");
@@ -13,18 +13,18 @@ const seedrandom = require("seedrandom");
 const cors = require("cors");
 const { generateToken, verifyToken } = require("./JWT.js");
 const cookies = require("cookie-parser");
-const fetch  = require("node-fetch");
+const fetch = require("node-fetch");
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY
 });
 
-const corsOptions ={
-  origin:'http://localhost:3000', 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
-}
+const corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200
+};
 app.use(cors(corsOptions));
 
 app.use(cookies());
@@ -39,54 +39,62 @@ connection.once("open", () => {
   });
 });
 
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, __dirname);
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  }
+});
 
-const storage=multer.diskStorage({
-destination:(req,file,cb)=>{
-cb(null,__dirname);
-},
-filename:(req,file,cb)=>{
-
-cb(null,file.originalname)
-}
-})
-
-const uploadImage= multer({storage:storage});
+const uploadImage = multer({ storage: storage });
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
 // API to post image to amazon s3 service
 // replace imageURL with the file path of the desired image to be uploaded
 // the api returns data object with key "Location". It is the url to image.
 
-app.post("/postImage", (req,res)=> {
-  
+// app.post("/postImage", (req,res)=> {
 
-  
-  const imageURL = "http://localhost:3000/images/florens-logo_green.png";
+//   const imageURL = "http://localhost:3000/images/florens-logo_green.png";
 
-  let imageUrlArr = imageURL.split("/");
-  let imageUr = imageUrlArr[imageUrlArr.length-1];
-  // console.log(imageUr);
-  fetch(imageURL)
-    .then(result => result.buffer())
-    .then(async (blob) => {
-     const uploadedImage = await s3.upload({
-        Bucket: "florens",
-        Key: imageUr,
-        Body: blob
-      }).promise();
-      console.log(uploadedImage);
-      res.json({data: uploadedImage});
+//   let imageUrlArr = imageURL.split("/");
+//   let imageUr = imageUrlArr[imageUrlArr.length-1];
+//   // console.log(imageUr);
+//   fetch(imageURL)
+//     .then(result => result.buffer())
+//     .then(async (blob) => {
+//      const uploadedImage = await s3.upload({
+//         Bucket: "florens",
+//         Key: imageUr,
+//         Body: blob
+//       }).promise();
+//       console.log(uploadedImage);
+//       res.json({data: uploadedImage});
+//     })
+//     .catch(error => console.log(error))
+//     .catch(error => console.log(error));
+
+// });
+
+app.post("/postImage", async (req, res) => {
+  const uploadedImage = await s3
+    .upload({
+      Bucket: "florens",
+      Key: req.body.key,
+      Body: Buffer.from(req.body.data, "base64"),
+      ContentType: req.body.contentType
     })
-    .catch(error => console.log(error))
-    .catch(error => console.log(error));
-  
-  
-});
+    .promise();
+  console.log(uploadedImage);
+  res.json({ data: uploadedImage });
 
+  // res.send("Uploaded to S3!");
+});
 
 // cookies.set("email", "vi@gmail.com");
 
@@ -106,23 +114,19 @@ app.post("/postImage", (req,res)=> {
 // });
 // Api for getting username from cookies
 
-app.get("/getUsername",async(req,res)=>{
-
-  var username = req.cookies['name'];
-res.send(username);
-})
-
-
-
+app.get("/getUsername", async (req, res) => {
+  var username = req.cookies["name"];
+  res.send(username);
+});
 
 // Api for login
 
 app.post("/login", async (req, res, next) => {
   if (req.body.email == "" || req.body.password == "") {
-    res.json({message:"Please enter the name and password "});
+    res.json({ message: "Please enter the name and password " });
   } else {
     const user = await User.findOne({ email: req.body.email });
-     console.log(req.body.email);
+    console.log(req.body.email);
 
     if (user) {
       savedPass = await user.password;
@@ -133,46 +137,42 @@ app.post("/login", async (req, res, next) => {
         const token = generateToken(user);
         res.cookie("token", token);
         res.cookie("name", user.name);
-        res.status(200).json({message:"Password Validated"});
+        res.status(200).json({ message: "Password Validated" });
       } else {
-        res.status(400).json({message:"Please enter the correct password"});
+        res.status(400).json({ message: "Please enter the correct password" });
       }
     } else {
-      res.status(400).json({message:"User not found"});
+      res.status(400).json({ message: "User not found" });
     }
   }
 });
 
-
-app.post("/getimage",async (req,res)=>{
+app.post("/getimage", async (req, res) => {
   let user = await User.findOne({ name: req.body.name });
-try{
-  let imageData= await user.image;
-console.log(user);
-const imageDa=`data:${user.data.contentType};base64, ${Buffer.from(user.image.data).toString}('base64')}`
-res.json(imageDa);
-
-}
-
-catch(err)
-{
-  console.log(err);
-}
-
-})
+  try {
+    let imageData = await user.image;
+    console.log(user);
+    const imageDa = `data:${user.data.contentType};base64, ${
+      Buffer.from(user.image.data).toString
+    }('base64')}`;
+    res.json(imageDa);
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 //API for Signup
-app.post("/postUser", uploadImage.single('image'), async (req, res, next) => {
+app.post("/postUser", uploadImage.single("image"), async (req, res, next) => {
   let user = await User.findOne({ email: req.body.email });
   console.log(user);
   if (user) {
-    res.status(400).json({message:"User already exists"});
+    res.status(400).json({ message: "User already exists" });
   } else {
     user = new User({
       name: req.body.name,
-      image:{
-        data:fs.readFileSync(req.file.path),
-        contentType:req.file.mimetype
+      image: {
+        data: fs.readFileSync(req.file.path),
+        contentType: req.file.mimetype
       },
       email: req.body.email,
       password: req.body.password
@@ -424,7 +424,7 @@ app.patch("/deletePlantFromLibrary", verifyToken, (req, res) => {
 // below endpoint fetches the library array of user.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the library array in json format.
-app.post("/getLibrary",(req, res) => {
+app.post("/getLibrary", (req, res) => {
   const useremail = req.body.useremail;
   console.log(useremail);
   User.findOne({ email: useremail }, { library: 1 })
@@ -444,7 +444,7 @@ app.post("/getLibrary",(req, res) => {
 
 //Edit Details API
 
-app.patch("/edit"  , (req, res) => {
+app.patch("/edit", (req, res) => {
   // const ObjectID = req.body.ObjectID;
   const name = req.body.name;
   const email = req.body.email;
@@ -577,8 +577,6 @@ app.post("/searchResults", (req, res) => {
     .catch(error => console.log(error));
 });
 
-
-
 app.get("/searchOption", (req, res, next) => {
   // const optionText  = req.params.option;
   // console.log(optionText);
@@ -620,16 +618,15 @@ app.get("/searchOption", (req, res, next) => {
 
         if (element.type) {
           typeSet.add(element.type);
-           }
+        }
 
         if (element.texture) {
-            textureSet.add(element.texture);
-          
+          textureSet.add(element.texture);
         }
 
         if (element.form) {
-            formSet.add(element.form);
-          }
+          formSet.add(element.form);
+        }
         // console.log(location);
       });
       // console.log(location);
@@ -645,7 +642,6 @@ app.get("/searchOption", (req, res, next) => {
           location.push(x);
         }
       });
-
 
       typeSet.forEach(x => {
         if (x) {
@@ -664,7 +660,13 @@ app.get("/searchOption", (req, res, next) => {
           form.push(x);
         }
       });
-      res.send({ searchColor: color , searchLocation: location, searchTexture:texture, searchForm:form, searchType:type});
+      res.send({
+        searchColor: color,
+        searchLocation: location,
+        searchTexture: texture,
+        searchForm: form,
+        searchType: type
+      });
     })
     .catch(error => console.log(error));
 });
