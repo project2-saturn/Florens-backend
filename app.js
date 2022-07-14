@@ -1,7 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const app = express();
-var ObjectID=require('mongodb').ObjectID;
 require("express").Router({ mergeParams: true });
 require("dotenv").config();
 const multer = require("multer");
@@ -150,22 +149,7 @@ app.post("/login", async (req, res, next) => {
 });
 
 
-app.post("/getimage",async (req,res)=>{
-  let user = await User.findOne({ name: req.body.name });
-try{
-  let imageData= await user.image;
-console.log(user);
-const imageDa=`data:${user.data.contentType};base64, ${Buffer.from(user.image.data).toString}('base64')}`
-res.json(imageDa);
 
-}
-
-catch(err)
-{
-  console.log(err);
-}
-
-})
 
 //API for Signup
 app.post("/postUser", uploadImage.single('image'), async (req, res, next) => {
