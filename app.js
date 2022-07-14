@@ -156,6 +156,7 @@ app.post("/login", async (req, res, next) => {
         const token = generateToken(user);
         res.cookie("token", token);
         res.cookie("name", user.name);
+        res.cookie("useremail",user.email)
         res.cookie("email",user.email);
         res.status(200).json({ message: "Password Validated" });
       } else {
@@ -435,7 +436,7 @@ app.post("/getDiscovery", (req, res) => {
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/addPlantToLibrary", verifyToken, (req, res) => {
+app.patch("/addPlantToLibrary", (req, res) => {
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);

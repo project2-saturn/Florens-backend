@@ -2,7 +2,8 @@ import React from "react";
 import {useEffect,useState} from 'react';
 import axios from 'axios';
 import "../styles/editProfile.css";
-// import Footer from "../src/lib/Footer";
+import Footer from "./Footer";
+import Header from "./NavigationBar";
 // import NavigationBar from "../src/lib/NavigationBar";
 const EditProfile=(props)=>{
     const[email,setEmail]=useState()
@@ -70,9 +71,14 @@ const EditProfile=(props)=>{
     }
 
     return ( 
-        
+      <>
+      <Header  />
      <div class="EditProfileform-container">
-       <img   className="EditProfileImg" src={image} /><br></br>
+    <div className="imageUpload-EditProfile"
+>
+       <img   className="EditProfileImg" src={image}  /><br></br>
+       
+       </div>
            <form className="EditProfileForm" onSubmit={handleSubmit}> 
            <h1 className="EditProfileTitle">Edit Profile</h1>
          
@@ -84,6 +90,8 @@ const EditProfile=(props)=>{
     </form>
     {image}
     </div>
+    <Footer />
+    </>
         );    
 }
 export default EditProfile;
