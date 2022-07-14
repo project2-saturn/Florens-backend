@@ -292,70 +292,45 @@ body{
 } */
 /* /////////////////////////////////////////////////////////////////////////// */
 
-/* ///////////////////////////footer////////////////////////////////////////// */
-footer{
-    background-color: #164C4C;
-    height: 267.11px;
+
+
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+/* Plant name tool tip */
+
+.nameToolTip {
     position: relative;
-}
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .nameToolTip .nameToolTipText {
+    visibility: hidden;
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .nameToolTip:hover .nameToolTipText {
+    visibility: visible;
+    opacity: 1;
+  }
 
-.footerFirstDiv{
-    height: 267.11px;
-}
-.footerLogo{
-    width: 114.39px;
-    height: 108.33px;
-    position: absolute;
-    right:87%;
-    top: 45px;
-}
-.footerUni{
-    color: white;
-    justify-content: center;
-    width: 241px;
-    height: 124px;
-    position: absolute;
-    right:3%;
-    top: 39px;
-}
 
-.footerUni p{
-text-align: center;
-}
+  /* /////////////////////////////////////////////////////////////////////////// */
 
-.footerUniLogo{
-    position: relative;
-    right: -20px;
-}
-/* .footerSecondDiv{
-    position: relative;
-} */
-.footerSecondPone{
-    position: absolute;
-    right:85%;
-    top: 215px;
-    color: white;
 
-}
-.footerSecondPtwo{
-    position: absolute;
-   
-    right:4%;
-    top: 215px;
-    color: white;
-}
-.line{
-    position: absolute;
-    height: 0.5px;
-    width: 100%;
-    background-color: #7D9990;
-    top: 215px;
-}
-.logoCap{
-    position: absolute;
-    width: fit-content;
-    right:56%;
-    top: 170px;
-    color: white;
-}
 /* /////////////////////////////////////////////////////////////////////////// */
