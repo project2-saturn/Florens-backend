@@ -13,6 +13,8 @@ import PlantProfile from './PlantProfile';
 import Profile from './Profile';
 import MyLibrary from './MyLibrary';
 import AddDiscover from "./AddDiscover.js";
+import UserProfile from "./UserProfile.js";
+import About from "./About.js"
 
 
 ReactDOM.render(
@@ -26,7 +28,8 @@ ReactDOM.render(
             <Route path="/plant" element={<PlantProfile />} />
             <Route path="/mylibrary" element={<MyLibrary />} />
             <Route path="/addplant" element={<AddDiscover/>}/>
-            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/userprofile" element={<UserProfile/>} />
+            <Route path="/about" element={<About/>} />
             {/* <Route path="/logout" element={<HomePage />} /> */}
             </Routes>
     </BrowserRouter>,

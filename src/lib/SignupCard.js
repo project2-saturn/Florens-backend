@@ -114,23 +114,25 @@ return(
          <div className="form-div-signup">
          <h1>Create Account</h1>
          <label>Drop your Profile Picture</label><br></br>
-         <img src=""></img>
+         
+         
             <input type="file" id="upload" onChange={event=>handleImageChange(event)} hidden />
             {/* <img className="displayPic"src={image} onError = {() => setImgSrc("https://picsum.photos/200")} alt='Profile Picture'></img> */}
-           { isEmpty ? <img className=" defaultImage"src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="150px" height="150px" margin-left="36%" ></img>: <img src={image} width="150px" height="150px" className="uploadedImage" ></img>}
+           { isEmpty ? <div class="defaultSignUpImg"><img className=" defaultImage"src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="100px" height="100px"  ></img></div>:<div class="defaultSignUpImg"> <img src={image} width="150px" height="150px" className="uploadedImage" ></img></div> }
 
             <div className="fileBorder">
             
-<label for="upload" className="uploadFile" >Choose file</label><br></br></div>
+<label for="upload" className="uploadFile" >Choose file</label></div>
 
-         <label for="name">Name</label>
+ <label for="name" className="required">Name</label>
          <input type="text" className="text-signup" name="name" required onChange={event=>handleChangeName(event)}/>
-         <label for="name">Email</label>
+         <label for="name" className="required">Email</label>
          <input type="email" className="email-signup"  name="email" required onChange={event=>handleChangeEmail(event)}/>
-         <label for="password">Password</label>
+         <label for="password" className="required">Password</label>
          <input type="password" className="password-signup"  name="password" required onChange={event=>handleChangePassword(event)}/>
-         <div><p>{error}</p></div>
-         <input type="submit"  className="submit-signup" value="Signup" />
+         {error ?
+          <div className="signup-error"><p>{error}</p></div>:<></>}
+         <input type="submit"  className="submit-signup" value="CREATE" />
          <p>Already have an account?<a><b> <Link to="/Login">Login</Link></b></a></p>
 
 {/* {image?.map((imageData)=>{

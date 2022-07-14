@@ -7,10 +7,11 @@ import NavigationBar from "./lib/NavigationBar";
 import MyLibrary from "./lib/MyLibrary";
 import SignUpCard from "./lib/SignupCard";
 import Footer from "./lib/Footer";
+import MyLibrary from "./lib/MyLibrary";
 
 
 const SignUp = props => {
-  //     const location = useLocation();
+      // const location = useLocation();
   // const data = location.state;
   // console.log(data);
   // console.log(state);

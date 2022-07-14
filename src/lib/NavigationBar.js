@@ -41,7 +41,7 @@ axios.get("/getUsername").then((result) => {
     alt="logo"
   />
   <a className="aboutNav" href="">
-    About
+  <Link to="/about">About</Link>
   </a>
 
   <a className="loginNav" href="">
@@ -61,6 +61,8 @@ function logout(){
 
   cookies.remove("token");
   cookies.remove("name");
+  cookies.remove("useremail");
+  cookies.remove("email");
   navigator("/");
   
 }
@@ -80,11 +82,11 @@ function logout(){
           alt="logo"
         />
         <ul class="headerUl">
-             <li><a class="aboutLogNav" href="">About</a></li>
-             <li><a class="profileNav" href=""><i class="fa-light fa-user"/>{name}<i class="fas fa-caret-down"></i></a>
+             <li><a class="aboutLogNav" href=""><Link to="/about">About</Link></a></li>
+             <li><a class="profileNav" href=""><img className="userIconImg" src="../images/user.png" alt="plant" />{name}</a>
                 <ul class="profileNavItems">
                     {/* <li> <a href="">Profile</a></li> */}
-                    <li><Link to="/profile">Profile</Link></li>
+                    <li><Link to="/userprofile">Profile</Link></li>
                     <li class="headerUlLine"></li>
                     
                     <li><Link to="/mylibrary">My Library</Link></li>
@@ -102,7 +104,7 @@ function logout(){
     alt="logo"
   />
   <a className="aboutNav" href="">
-    About
+  <Link to="/about">About</Link>
   </a>
 
   <a className="loginNav" href="">
