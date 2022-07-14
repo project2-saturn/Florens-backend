@@ -119,6 +119,25 @@ app.get("/getUsername", async (req, res) => {
   res.send(username);
 });
 
+
+app.get("/getUserEmail", async (req, res) => {
+  var useremail = req.cookies["email"];
+  res.send(useremail);
+});
+
+app.post("/getUserDetails", async(req,res) => {
+  let useremail = req.body.email;
+
+  console.log(req.body.email);
+  User.findOne({email: useremail})
+    .then(results => {
+      console.log(results);
+      res.status(200).json(results);
+    })
+    .catch(error => res.status(500).send(error));
+
+})
+
 // Api for login
 
 app.post("/login", async (req, res, next) => {
@@ -137,6 +156,7 @@ app.post("/login", async (req, res, next) => {
         const token = generateToken(user);
         res.cookie("token", token);
         res.cookie("name", user.name);
+        res.cookie("email",user.email);
         res.status(200).json({ message: "Password Validated" });
       } else {
         res.status(400).json({ message: "Please enter the correct password" });
@@ -368,6 +388,50 @@ app.post("/plantsID", async (req, res, next) => {
     .catch(error => res.status(500).send(error));
 });
 
+
+
+app.patch("/addPlantToDiscovery", async(req, res) => {
+  const plantObjectID = req.body.plantObjectID;
+  const useremail = req.body.useremail;
+  console.log(plantObjectID);
+  console.log(useremail);
+  User.findOne({ email: useremail }, { plantOwner: 1 })
+    .then(result => {
+      User.updateOne(
+        { email: useremail },
+        { plantOwner: [...result.plantOwner, plantObjectID] }
+      )
+        .then(
+          res.status(201).json({ data: [...result.plantOwner, plantObjectID] })
+        )
+
+        .catch(error => console.log(error));
+    })
+    .catch(error => console.log(error));
+});
+
+
+app.post("/getDiscovery", (req, res) => {
+  const useremail = req.body.useremail;
+  console.log(useremail);
+  User.findOne({ email: useremail }, { plantOwner: 1 })
+    .then(result => {
+      console.log(
+        `Current Discovery of ${useremail} are ${result.plantOwner.toString()}`
+      );
+      if (result != null) {
+        res.status(200).json({ data: result.plantOwner });
+      } else {
+        res.send([]);
+      }
+    })
+    .catch(error => console.log(error));
+  // res.send("failure");
+});
+
+
+
+
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
@@ -390,6 +454,8 @@ app.patch("/addPlantToLibrary", verifyToken, (req, res) => {
     })
     .catch(error => console.log(error));
 });
+
+
 
 // below endpoint updates the library array on user database to delete plant from its library.
 // it takes plantObjectID and useremail as request body parameters.
