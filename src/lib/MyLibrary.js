@@ -1,75 +1,75 @@
-import Footer from "./Footer.js";
 import React, { useEffect, useState } from "react";
+import "../styles/profile.css";
+import NavigationBar from "./NavigationBar";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
-import "../styles/myLibrary.css";
-import SearchResultCard from "./SearchResultCard.js";
-import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
+import DiscoveryResultCard from "./DiscoveryResultCard";
 
-const MyLibrary=()=>{
-  const[noOfDiscovery,setNoOfDiscovery]=useState();
-  const[plantList,setPlantList]=useState([]);
-  const [plant,setPlant] = useState({
-    description: "",
+const MyLibrary = props => {
+  let userEmail = "";
+
+  const [results, setResults] = useState([]);
+
+  const [user, setUser] = useState({
+    plantOwner: [],
+    library: [],
     name: "",
-    id: "",
-    photosURL: [],
-    scientificName: "",
-   
+    email: "",
+    password: ""
   });
+  useEffect(function loadUsername() {
+    axios
+      .get("/getUserEmail")
+      .then(result => {
+        console.log(result);
+        console.log(result.data);
+        userEmail = result.data;
+      })
+      .then(() => {
+        axios.post("/getUserDetails", { email: userEmail }).then(result2 => {
+          console.log(result2);
+          setUser({ ...result2.data });
+        });
+      })
 
-let useremail=Cookies.get("useremail");
-let temp ;
-    // const navigator=useNavigate();
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
 
-
-
-    useEffect(function loadLibray()
-    {try{
-      axios.post("/getLibrary", {useremail :useremail}).then(result => {
+  return (
+    <>
       
-        temp = result.data.data;
-        console.log(result.data.data);
-       setNoOfDiscovery(temp.length);
-       console.log(temp.length);
-       setPlantList(result.data.data);
-       console.log(plantList)
-      //  setPlant({...temp});
-   }).catch(error => console.log(error));
-  }
-catch(error){
-  console.log(error)
-}
-   },[]);
-
-
-  
-        
-
-
-
-return(<>
-<h2> My Library</h2>
-    <div class="searchBarSearch">
-        <input
-          type="text"
-          class="inputSearch"
-          placeholder=" &#xf002;      Start typing..."
-        />
-        <div class="btn btn_common">
-          <i class="fas fa-search fa-2x"></i>
+      <main>
+        <div class="container-profile">
+          <div class="cards">
+            <div class="card-item">
+              
+              <div class="card-info">
+                <h2 class="card-title">{user.name}</h2>
+                <p class="card-intro">
+                  {user.library.length} plants on library
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-          {plantList.map(element=>
-          axios.post("/plantsID").then(result => {
-            console.log(result);  
-            <SearchResultCard plant={result} />})
-    .catch(error => console.log(error)))}
-
-
-   
-      {/* {noOfDiscovery ?   result.map(element => <SearchResultCard plant={element} />): <h3>"No plant added to the Library"</h3>} */}
-            {/* <SearchResultCard/> */}
-              </>
-)}
+        
+        <section class="my-discoveries">
+          <h2 class="main-title">My Library</h2>
+          <div class="discovery-cards">
+            {user.library[0] ? (
+              user.library.map(element => (
+                <DiscoveryResultCard plantID={element} />
+              ))
+            ) : (
+              <></>
+            )}
+          </div>
+        </section>
+      </main>
+    
+    </>
+  );
+};
 export default MyLibrary;
