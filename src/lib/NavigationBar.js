@@ -60,6 +60,7 @@ function logout(){
 
   cookies.remove("token");
   cookies.remove("name");
+  cookies.remove("email");
   navigator("/");
   
 }
@@ -83,7 +84,7 @@ function logout(){
              <li><a class="profileNav" href=""><img className="userIconImg" src="../images/user.png" alt="plant" />{name}</a>
                 <ul class="profileNavItems">
                     {/* <li> <a href="">Profile</a></li> */}
-                    <li><Link to="/editProfile">Profile</Link></li>
+                    <li><Link to="/userprofile">Profile</Link></li>
                     <li class="headerUlLine"></li>
                     
                     <li><Link to="/mylibrary">My Library</Link></li>

@@ -119,6 +119,25 @@ app.get("/getUsername", async (req, res) => {
   res.send(username);
 });
 
+
+app.get("/getUserEmail", async (req, res) => {
+  var useremail = req.cookies["email"];
+  res.send(useremail);
+});
+
+app.post("/getUserDetails", async(req,res) => {
+  let useremail = req.body.email;
+
+  console.log(req.body.email);
+  User.findOne({email: useremail})
+    .then(results => {
+      console.log(results);
+      res.status(200).json(results);
+    })
+    .catch(error => res.status(500).send(error));
+
+})
+
 // Api for login
 
 app.post("/login", async (req, res, next) => {
@@ -137,6 +156,7 @@ app.post("/login", async (req, res, next) => {
         const token = generateToken(user);
         res.cookie("token", token);
         res.cookie("name", user.name);
+        res.cookie("email",user.email);
         res.status(200).json({ message: "Password Validated" });
       } else {
         res.status(400).json({ message: "Please enter the correct password" });
