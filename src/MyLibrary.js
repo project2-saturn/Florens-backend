@@ -4,7 +4,7 @@ import "./styles/signup.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import NavigationBar from "./lib/NavigationBar";
-
+import MyLibrary from "./lib/MyLibrary";
 import SignUpCard from "./lib/SignupCard";
 import Footer from "./lib/Footer";
 import MyLibrary from "./lib/MyLibrary";
