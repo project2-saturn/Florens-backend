@@ -388,6 +388,50 @@ app.post("/plantsID", async (req, res, next) => {
     .catch(error => res.status(500).send(error));
 });
 
+
+
+app.patch("/addPlantToDiscovery", async(req, res) => {
+  const plantObjectID = req.body.plantObjectID;
+  const useremail = req.body.useremail;
+  console.log(plantObjectID);
+  console.log(useremail);
+  User.findOne({ email: useremail }, { plantOwner: 1 })
+    .then(result => {
+      User.updateOne(
+        { email: useremail },
+        { plantOwner: [...result.plantOwner, plantObjectID] }
+      )
+        .then(
+          res.status(201).json({ data: [...result.plantOwner, plantObjectID] })
+        )
+
+        .catch(error => console.log(error));
+    })
+    .catch(error => console.log(error));
+});
+
+
+app.post("/getDiscovery", (req, res) => {
+  const useremail = req.body.useremail;
+  console.log(useremail);
+  User.findOne({ email: useremail }, { plantOwner: 1 })
+    .then(result => {
+      console.log(
+        `Current Discovery of ${useremail} are ${result.plantOwner.toString()}`
+      );
+      if (result != null) {
+        res.status(200).json({ data: result.plantOwner });
+      } else {
+        res.send([]);
+      }
+    })
+    .catch(error => console.log(error));
+  // res.send("failure");
+});
+
+
+
+
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
@@ -410,6 +454,8 @@ app.patch("/addPlantToLibrary", verifyToken, (req, res) => {
     })
     .catch(error => console.log(error));
 });
+
+
 
 // below endpoint updates the library array on user database to delete plant from its library.
 // it takes plantObjectID and useremail as request body parameters.

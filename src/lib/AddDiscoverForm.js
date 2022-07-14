@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const AddDiscoverForm = props => {
   const [username, setUserName] = useState();
+  const [userEmail, setUserEmail] = useState();
 
   useEffect(function loadUsername() {
     axios
@@ -16,6 +17,23 @@ const AddDiscoverForm = props => {
         setUserName(result.data);
         if (result.data == "") {
           setUserName("KPU");
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
+
+  useEffect(function loadUserEmail() {
+    axios
+      .get("/getUserEmail")
+      .then(result => {
+        console.log(result);
+
+        setUserEmail(result.data);
+        if (result.data == "") {
+          setUserEmail("KPU");
         }
       })
       .catch(err => {
@@ -218,6 +236,7 @@ const AddDiscoverForm = props => {
         })
         .then(result => {
           console.log(result);
+          axios.patch("addPlantToDiscovery", {plantObjectID: result.data.data.id, useremail:userEmail});
           // setPicture(result.data.image);
           // console.log(image);
           // navigator("/");
