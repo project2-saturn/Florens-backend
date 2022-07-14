@@ -68,6 +68,7 @@ export default function() {
             <Link to="/plant"  state={plant}>
             <button className="secondHomeSectionBtn" type="button">Details</button>
             </Link> </div>
+            <img className="plantDayLeafBtn" src="../images/addBtn.png" alt="plant" />
         </div>
       </section>
     </>
