@@ -31,7 +31,7 @@ axios.get("/getUsername").then((result) => {
           alt="logo"
         />
         <ul class="headerUl">
-             <li><a class="aboutLogNav" href="">About</a></li>
+             <li><a class="aboutLogNav" href=""><Link to="/about">About</Link></a></li>
              <li><a class="profileNav" href=""><img className="userIconImg" src="../images/user.png" alt="plant" />{name}</a>
                 <ul class="profileNavItems">
                     <li> <a href="">Profile</a></li>
