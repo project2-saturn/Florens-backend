@@ -10,7 +10,6 @@ import SignUp from './SignUp';
 import Login from './Login';
 import EditProfile from './lib/EditProfile.js';
 import PlantProfile from './PlantProfile';
-import Profile from './Profile';
 import MyLibrary from './MyLibrary';
 import AddDiscover from "./AddDiscover.js";
 import UserProfile from "./UserProfile.js";
