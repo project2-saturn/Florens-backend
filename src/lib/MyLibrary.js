@@ -25,18 +25,28 @@ let temp ;
 
 
     useEffect(function loadLibray()
-    {
+    {try{
       axios.post("/getLibrary", {useremail :useremail}).then(result => {
+      
         temp = result.data.data;
         console.log(result.data.data);
        setNoOfDiscovery(temp.length);
        console.log(temp.length);
-       setPlant({...temp});
+       setPlantList(result.data.data);
+       console.log(plantList)
+      //  setPlant({...temp});
    }).catch(error => console.log(error));
-
-
+  }
+catch(error){
+  console.log(error)
+}
    },[]);
+
+
+  
         
+
+
 
 return(<>
 <h2> My Library</h2>
@@ -50,8 +60,15 @@ return(<>
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
+          {plantList.map(element=>
+          axios.post("/plantsID").then(result => {
+            console.log(result);  
+            <SearchResultCard plant={result} />})
+    .catch(error => console.log(error)))}
 
-      {noOfDiscovery ?   results.map(element => <SearchResultCard plant={element} />): <h3>"No plant added to the Library"</h3>}
+
+   
+      {/* {noOfDiscovery ?   result.map(element => <SearchResultCard plant={element} />): <h3>"No plant added to the Library"</h3>} */}
             {/* <SearchResultCard/> */}
               </>
 )}
