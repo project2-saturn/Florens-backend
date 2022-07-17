@@ -183,7 +183,7 @@ app.post("/getimage", async (req, res) => {
 });
 
 //API for Signup
-app.post("/postUser", uploadImage.single("image"), async (req, res, next) => {
+app.post("/postUser", async (req, res, next) => {
   let user = await User.findOne({ email: req.body.email });
   console.log(user);
   if (user) {
@@ -191,10 +191,7 @@ app.post("/postUser", uploadImage.single("image"), async (req, res, next) => {
   } else {
     user = new User({
       name: req.body.name,
-      image: {
-        data: fs.readFileSync(req.file.path),
-        contentType: req.file.mimetype
-      },
+      imageURL:req.body.image,
       email: req.body.email,
       password: req.body.password
     });
