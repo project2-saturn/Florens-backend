@@ -57,6 +57,11 @@ export default function(props) {
               </button>
             </Link>
           </div>
+          <div class="btn-group">
+  <button className="edit">Edit</button>
+  <button className="delete">Delete</button>
+
+</div>
           {/* <hr class="long-line" />
           <div class="navigation-button">
             <button class="btn">

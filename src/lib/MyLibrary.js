@@ -57,6 +57,10 @@ const MyLibrary = props => {
         
         <section class="my-discoveries">
           <h2 class="main-title">My Library</h2>
+          <form>
+      <input type="text" placeholder="Search.." name="search" />
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
           <div class="discovery-cards">
             {user.library[0] ? (
               user.library.map(element => (
