@@ -39,7 +39,14 @@
   #searchSubmit:hover {
     cursor: pointer;
   }
-  
+  .LibrarySearchBtn{
+    border: none; */
+    border-top: none;
+    border-right: none;
+    /* animation: none; */
+    border-left: none;
+    background-color: white;
+  }
   
   
   
