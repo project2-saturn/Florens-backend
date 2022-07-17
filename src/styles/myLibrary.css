@@ -41,7 +41,31 @@
   #searchSubmit:hover {
     cursor: pointer;
   }
+  .LibrarySearchBar{
+  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 53%;
+    border-bottom: 2px solid black;
+  }
+  .LibrarySearchBtn{
+
+    border-top: none;
+    border-right: none;
+    /* animation: none; */
+    border-left: none;
+    background-color: white;
+  }
+  .LibraryForm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
   
   
   
- 
+ .fa{
+  font-size: large;
+  margin-bottom: 5px;
+ }

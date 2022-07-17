@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/profile.css";
+import "../styles/myLibrary.css";
 import NavigationBar from "./NavigationBar";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -57,9 +57,9 @@ const MyLibrary = props => {
         
         <section class="my-discoveries">
           <h2 class="main-title">My Library</h2>
-          <form>
-      <input type="text" placeholder="Search.." name="search" />
-      <button type="submit"><i class="fa fa-search"></i></button>
+          <form className="LibraryForm">
+      <input type="text" className="LibrarySearchBar" name="search" />
+      <button type="submit" className="LibrarySearchBtn"><i class="fa fa-search w3-xxxlarge"></i></button>
     </form>
           <div class="discovery-cards">
             {user.library[0] ? (
