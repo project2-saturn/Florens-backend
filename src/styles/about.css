@@ -1,4 +1,325 @@
+.maincontainer {
+    position: relative;
+    margin-top: -110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.aboutAbout{
+    font-family: 'Merriweather';
+    font-weight: lighter;
+    color: #6B6B6B;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    margin-top: 170px;
+}
+/* //////////////////////////// */
+.celeste{
+    
+    width: 370px;
+    height: 470px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    
+}
+
+
+.tainara{
+
+    width: 370px;
+    height: 470px;
+
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.jaspreet{
+
+    width: 370px;
+    height: 470px;
+
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.vipul{
+    width: 370px;
+    height: 470px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+     
+}
+
+.athulya{
+    width: 370px;
+    height: 470px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;  
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.arora{
+    width: 370px;
+    height: 470px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.parth{
+    width: 370px;
+    height: 470px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+}
+/* ///////////////////////// */
+
+.celeste:hover{
+    transform: rotateY(180deg);
+}
+
+.tainara:hover{
+    transform: rotateY(180deg);
+}
+
+.jaspreet:hover{
+    transform: rotateY(180deg);
+}
+
+.vipul:hover{
+    transform: rotateY(180deg);
+}
+
+.athulya:hover{
+    transform: rotateY(180deg);
+}
+
+.arora:hover{
+    transform: rotateY(180deg);
+}
+
+.parth:hover{
+    transform: rotateY(180deg);
+}
+/* /////////////////////// */
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: #333;
+}
+.thefront img{
+    width: 100%;
+    height: 100%;
+    color: linear-gradient(white,black);
+
+}
+/* ///////////////////////////////////////// */
+.celesteName{
+    position: absolute;
+    top: 290px;
+    left: 70px;
+    font-size: 25px;
+    color: white;
+}
+
+.tainaraName{
+    position: absolute;
+    top: 290px;
+    left: 50px;
+    font-size: 25px;
+    color: white;
+}
+
+.jaspreetName{
+    position: absolute;
+    top: 290px;
+    left: 120px;
+    font-size: 25px;
+    color: white;
+}
+
+.vipulName{
+    position: absolute;
+    top: 290px;
+    left: 90px;
+    font-size: 25px;
+    color: white;
+}
+
+.athulyaName{
+    position: absolute;
+    top: 290px;
+    left: 90px;
+    font-size: 25px;
+    color: white;
+}
+
+.aroraName{
+    position: absolute;
+    top: 290px;
+    left: 100px;
+    font-size: 25px;
+    color: white;
+}
+
+.parthName{
+    position: absolute;
+    top: 290px;
+    left: 110px;
+    font-size: 25px;
+    color: white;
+}
+/* ////////////////////////////// */
+.person1Title{
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.person2Title{
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 110px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.person3Title{
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.person4Title{
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 130px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.person5Title{
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 110px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.person6Title{
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 90px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.person7Title{
+    color: white;
+    position: absolute;
+    top: 330px;
+    left: 110px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* //////////////////////////////// */
+.aboutLine{
+    border-bottom: white solid 0.5px;
+    position: absolute;
+    width: 300px;
+    top: 400px;
+    left: 35px;
+}
+/* ///////////////////////////////// */
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: solid 0.5px;
+    color: #333;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.aboutLineBack{
+    border-bottom: black solid 0.5px;
+
+    margin-top: 120px;
+    width: 300px;
+
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////// */
+.personDesc{
+    margin-top: 170px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    text-align: center;
+}
+
+.linkedInLink{
+    color: white;
+    position: absolute;
+    top: 420px;
+    left: 130px;
+    font-family: 'Rubik';
+    font-weight: lighter;
+}
+
+.linkedInLinkBack{
+    font-family: 'Rubik';
+    font-weight: lighter;
+    color: #6B6B6B;
+    margin-top: 20px;
+}
+
+@media(min-width:600px){
 /* ////////////////////////////////Plant detail section//////////////////////// */
 .aboutPageMain{
     width: 100%;
@@ -17,7 +338,7 @@
     display: flex;
     justify-content: center;
     font-size: 32px;
-    margin-top: 100px;
+    margin-top: 170px;
 }
 /* //////////////////////////// */
 .celeste{
@@ -28,7 +349,7 @@
     left: 100px;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
-    
+    margin-top: 20px;
 }
 
 
@@ -320,3 +641,5 @@
     margin-top: 20px;
 }
 /* /////////////////////////////////////////////////////////// */
+}
+

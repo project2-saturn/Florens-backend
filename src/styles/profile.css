@@ -189,78 +189,6 @@ border: 1px solid #7D9990; */
 }
 
   /****footer***********/
-
-  footer{
-    background-color: #164C4C;
-    height: 260px;
-    position: relative;
-   
-    
-}
- /****footer***********/
-.footerFirstDiv{
-    height: 267.11px;
-}
- /****footer***********/
-.footerLogo{
-    width: 114.39px;
-    height: 108.33px;
-    position: absolute;
-    right:87%;
-    top: 45px;
-}
- /****footer***********/
-.footerUni{
-    color: white;
-    justify-content: center;
-    width: 241px;
-    height: 124px;
-    position: absolute;
-    right:3%;
-    top: 39px;
-}
- /****footer***********/
-.footerUni p{
-    text-align: center;
-    }
-     /****footer***********/
-    .footerUniLogo{
-        position: relative;
-        right: -20px;
-    }
-     /****footer***********/
-    .footerSecondPone{
-        position: absolute;
-        right:85%;
-        top: 215px;
-        color: white;
-    
-    }
-     /****footer***********/
-    .footerSecondPtwo{
-        position: absolute;
-       
-        right:4%;
-        top: 215px;
-        color: white;
-    }
-     /****footer***********/
-    .line{
-        position: absolute;
-        height: 0.5px;
-        width: 100%;
-        background-color: #7D9990;
-        top: 215px;
-    }
-     /****footer***********/
-    .logoCap{
-        position: absolute;
-        width: fit-content;
-        right:56%;
-        top: 170px;
-        color: white;
-    }
-   
      /****footerEnds***********/
 
     /*****media query */
@@ -286,7 +214,7 @@ border: 1px solid #7D9990; */
             justify-content: center;
             align-content: center;
     } */
-    ///Media query for mobile
+    /* ///Media query for mobile */
     @media screen and (max-width: 600px)  {
         
         .discovery-cards{
@@ -299,7 +227,7 @@ border: 1px solid #7D9990; */
            
             
         }
-        //discovery button
+        /* //discovery button */
         .discovery-button {
             border: 2px solid #EA5A4E;
             border-radius: 10px;

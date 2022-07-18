@@ -4,7 +4,8 @@ body{
   margin:0px;
 }
 .container-signup{
-  border: 1px solid #C6D3CF;
+  margin-top: 200px;
+  margin-bottom: 100px;
 }
 /*************** file upload section************************************/
   .fileBorder{
@@ -186,6 +187,7 @@ width:100%;
     
   }
   .form-div-signup{
+    border-radius: 15px;
     border: 1px solid #F7C9BB;
     padding: 3%;
   }

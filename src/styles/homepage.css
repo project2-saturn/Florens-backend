@@ -23,7 +23,7 @@ body{
 }
 
 .headerUl{
-    margin-top: 20px;
+    margin-top: 0px;
     font-size: 16px;
     font-family: 'Rubik';
     font-weight: lighter;
@@ -252,7 +252,6 @@ top: 150px;
         opacity: 1;
         border-left: solid #0d3f3f 0.5px ;
         border-right: solid #0d3f3f 0.5px ;
-        border-bottom: solid #0d3f3f 0.5px ;
         position: relative;
         z-index: 100;
         display: block;
@@ -395,9 +394,13 @@ top: 150px;
 }
 .firstSectionFirstCard{
     width: 370px; 
-    margin-right: 90px; 
+    margin-right: 50px; 
+    margin-left: 50px;
     font-family: 'Merriweather';
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .firstSectionFirstCardimg{
     width: 300px;
@@ -406,9 +409,13 @@ top: 150px;
 }
 .firstSectionSecondCard{
     width: 370px;  
-    margin-right: 90px; 
+    margin-right: 50px; 
+    margin-left: 50px;
     font-family: 'Merriweather';
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .firstSectionSecondCardimg{ 
     width: 300px;
@@ -418,8 +425,13 @@ top: 150px;
 }
 .firstSectionThirdCard{
     width: 410px;   
+    margin-left: 50px;
+    margin-right: 80px;
     font-family: 'Merriweather';
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .firstSectionThirdCardimg{
     width: 300px;
@@ -434,6 +446,7 @@ top: 150px;
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
+    text-align: center;
 }
 .firstSectionHeadings{
     font-size: 40px;
@@ -1251,7 +1264,6 @@ margin-top: 15px;
         opacity: 1;
         border-left: solid #0d3f3f 0.5px ;
         border-right: solid #0d3f3f 0.5px ;
-        border-bottom: solid #0d3f3f 0.5px ;
         position: absolute;
         z-index: 100;
         display: block;
