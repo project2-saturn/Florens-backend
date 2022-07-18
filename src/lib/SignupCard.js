@@ -173,13 +173,13 @@ const SignupCard = props => {
             required
             onChange={event => handleChangePassword(event)}
           />
-          {error ? (
+          {/* {error ? (
             <div className="signup-error">
               <p>{error}</p>
             </div>
           ) : (
             <></>
-          )}
+          )} */}
 
 <button
           type="button"
