@@ -57,9 +57,9 @@ export default function(props) {
             </button>
             {/* {console.log("entered")}
           {console.log(cookies)} */}
-            {cookies ? (
-              navigator("/mylibrary")
-            ) : (
+            {cookies ? <></>
+              
+            : (
               <Modal show={show} setShow={setShow} />
             )}
           </div>
