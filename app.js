@@ -88,6 +88,7 @@ app.use(express.json());
 // });
 
 app.post("/postImage", async (req, res) => {
+  // console.log(req)
   const uploadedImage = await s3
     .upload({
       Bucket: "florens",
@@ -96,9 +97,9 @@ app.post("/postImage", async (req, res) => {
       ContentType: req.body.contentType
     })
     .promise();
-  console.log(uploadedImage);
+   console.log(uploadedImage);
   res.json({ data: uploadedImage });
-
+  console.log("done");
   // res.send("Uploaded to S3!");
 });
 
@@ -192,12 +193,16 @@ app.post("/getimage", async (req, res) => {
 app.post("/postUser", async (req, res, next) => {
   let user = await User.findOne({ email: req.body.email });
   console.log(user);
+  console.log(req.body.imageURL);
+  console.log(req.body.name);
+  console.log(req.body.password);
+  console.log(req.body.email);
   if (user) {
     res.status(400).json({ message: "User already exists" });
   } else {
     user = new User({
       name: req.body.name,
-      imageURL:req.body.image,
+      imageURL:req.body.imageURL,
       email: req.body.email,
       password: req.body.password
     });
