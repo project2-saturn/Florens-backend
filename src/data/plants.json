@@ -1,0 +1,1404 @@
+[{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525c3"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tababh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tababl1.jpg"
+  ],
+  "season": [
+    "Summer",
+    "Winter"
+  ],
+  "location": [
+    "Vancouver",
+    "Burnaby"
+  ],
+  "color": [
+    "No flowers",
+    "Brown",
+    "red",
+    "maturing to yellow"
+  ],
+  "name": "Amabilis fir",
+  "scientificName": "Abies amabilis",
+  "description": "Branches tiered; needles flat, dark green, 2 white lines underneath, spreading forward and upward, spirally arranged, most 1-2.5(-4.5) cm x 1-3 mm; female cones erect, ovoid-cylindrical, resinous, purple-grey before turning brown, most 8-10 cm x 4-5 cm with deciduous scales about 2x2 cm, finely pubescent, bracts shorty and usually hidden between the scales. Winter ID: buds small, spherical, brown, with violet wax.",
+  "type": "Conifer",
+  "texture": "Medium-fine",
+  "form": "Pyramidal - narrowly",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525c5"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tachih1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tachil1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tachif1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tachit1.jpg",
+    "https://plantdatabase.kpu.ca/images/bark/tachik.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug"
+  ],
+  "location": [
+    "Burnaby"
+  ],
+  "color": [
+    "Showy",
+    "Red"
+  ],
+  "name": "chenille plant",
+  "scientificName": "Acalypha hispida",
+  "description": "Plant upright; stem is lined with fine hairs; leaves ovate, dark green, margin toothed; tiny florets in fuzzy red \"catkins",
+  "type": "Annual",
+  "texture": "Pinnate venation, Soft flexible",
+  "form": "Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525c4"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tabcvh1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tabcvf1.jpg",
+    "https://plantdatabase.kpu.ca/images/bark/tabcvk.jpg"
+  ],
+  "season": [
+    "Winter"
+  ],
+  "location": [
+    "Castlegar"
+  ],
+  "color": [
+    "Showy",
+    "Orange",
+    "White",
+    "Pink",
+    "Red",
+    "Yellow"
+  ],
+  "name": "Chinese lantern",
+  "scientificName": "Abutilon x hybridum",
+  "description": "Leaves usually lobed like a maple; flowers cup-shaped, about 5 cm wide; fruit rounded, capsule-like.",
+  "type": "Shrub - deciduous",
+  "texture": "Coarse",
+  "form": "Round",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525c6"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacarh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacarl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacarf1.jpg",
+    "https://plantdatabase.kpu.ca/images/other/tacaro.jpg"
+  ],
+  "season": [
+    "Sep",
+    "Oct"
+  ],
+  "location": [
+    "Surrey"
+  ],
+  "color": [
+    "Not showy",
+    "Red",
+    "Pink"
+  ],
+  "name": "Freeman maple, columnar red maple",
+  "scientificName": "Acer x freemanii",
+  "description": "Leaves about 10 cm wide, 3-5 palmate lobes, coarsely toothed, pale underneath",
+  "type": "Annual",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525c8"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/taccih1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/taccil1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/taccif1.jpg"
+  ],
+  "season": [
+    "Mar",
+    "Apr"
+  ],
+  "location": [
+    "King George"
+  ],
+  "color": [
+    "Yellow",
+    "Orange",
+    "Red"
+  ],
+  "name": "vine maple",
+  "scientificName": "Acer circinatum",
+  "description": "Leaves rounded, serrated with shallow lobes and nine major veins palmately arranged. Winter ID: fringe of fine white hairs on base of buds, green bark.",
+  "type": "Aquatic Plant",
+  "texture": "Palmate venation, Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525c7"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacbuh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacbul1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacbuf1.jpg"
+  ],
+  "season": [
+    "Mar",
+    "Apr"
+  ],
+  "location": [
+    "Vancouver",
+    "Langley"
+  ],
+  "color": [
+    "Orange",
+    "Red"
+  ],
+  "name": "trident maple",
+  "scientificName": "Acer buergerianum",
+  "description": "Leaves opposite, usually with three forward pointing lobes; samaras green to red over summer before ripening in the fall.",
+  "type": "Annual",
+  "texture": "Palmate venation, Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525c9"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacglh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacgll1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacglf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tacglt1.jpg",
+    "https://plantdatabase.kpu.ca/images/other/tacglo.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Chilliwack"
+  ],
+  "color": [
+    "Yellow",
+    "Orange",
+    "Red"
+  ],
+  "name": "Douglas maple, Rocky Mountain maple",
+  "scientificName": "Acer glabrum var. douglasii",
+  "description": "Often a shrubby tree with reddish young twigs; leaves 3-5 lobed, coarsely double-toothed; samara wings V-shaped to nearly parallel.",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525cc"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/leaves/tacmal1.jpg",
+    "https://plantdatabase.kpu.ca/images/habit/tacmah1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacmaf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tacmat1.jpg"
+  ],
+  "season": [
+    "Sep",
+    "Oct"
+  ],
+  "location": [
+    "Nanaimo"
+  ],
+  "color": [
+    "Showy",
+    "Yellow"
+  ],
+  "name": "bigleaf maple",
+  "scientificName": "Acer macrophyllum",
+  "description": "Habit is low branching; leaves large (30 cm), mid-green, palmate with 5 lobes (3 major lobes); florets in pendulous racemes. Winter ID: buds large (10 mm), green, opposite; samaras large, covered with hairs.",
+  "type": "Tree - deciduous",
+  "texture": " Palmate venation, Soft flexible",
+  "form": "Oval - horizontal, Round",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525cb"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/flowers/tacjaf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tacjat1.jpg",
+    "https://plantdatabase.kpu.ca/images/habit/tacjah1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacjal1.jpg"
+  ],
+  "season": [
+    "Sep",
+    "Oct"
+  ],
+  "location": [
+    "Maple Ridge"
+  ],
+  "color": [
+    "Red"
+  ],
+  "name": "fernleaf maple, fernleaf full moon maple",
+  "scientificName": "Acer japonicum 'Aconitifolium",
+  "description": "Leaves long, ovate lobes, acuminate, doubly serrate, highly dissected, palmately cut. Winter ID: buds look like a moose hoof with hair around the base",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525ca"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacgrh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacgrl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacgrf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tacgrt1.jpg"
+  ],
+  "season": [
+    "Jun",
+    "Jul"
+  ],
+  "location": [
+    "Kelowna"
+  ],
+  "color": [
+    "Bluish",
+    "Dark-green",
+    "greyish undersides"
+  ],
+  "name": "paperbark maple",
+  "scientificName": "Acer griseum",
+  "description": "Bark cinnamon (orange-red), papery, exfoliating; leaves trifoliate, leaflets lobed, bright red fall colour. Winter ID: exfoliating bark, buds sharply pointed, dark purplish-brown",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Compound",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525ce"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpah1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpal1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tacpat1.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Cranbrook"
+  ],
+  "color": [
+    "Red",
+    "Yellow"
+  ],
+  "name": "Japanese maple",
+  "scientificName": "Acer palmatum",
+  "description": "Leaves red-tipped, palmate (most with 7 broad lobes). Winter ID: buds, ovoid, have light brown hairs on a papery sheath that extends halfway up.",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525cd"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacneh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacnel1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacnef1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tacnet1.jpg"
+  ],
+  "season": [
+    "Apr",
+    "May"
+  ],
+  "location": [
+    "Abbotsford"
+  ],
+  "color": [
+    "Yellow"
+  ],
+  "name": "Manitoba maple , box elder",
+  "scientificName": "Acer negundo",
+  "description": "Leaves opposite, compound, odd-pinnate with 3(-5) toothed leaflets; florets in pendant clusters, dioecious, greenish-yellow, male florets with dark red anthers; samaras persistent.",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Compound",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d0"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/leaves/tacchl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacchf1.jpg",
+    "https://plantdatabase.kpu.ca/images/bark/tacchk.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Fort St. John"
+  ],
+  "color": [
+    "Green",
+    "Red"
+  ],
+  "name": "Chishio Japanese maple",
+  "scientificName": "Acer palmatum 'Shishio'",
+  "description": "Small, upright Japanese maple with 7-lobed serrated leaves turning from red (spring) to green (summer) to red (fall).",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d1"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacsnh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacsnl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacsnf1.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Greenwood"
+  ],
+  "color": [
+    "Red"
+  ],
+  "name": "Shojo Nomura maple",
+  "scientificName": "Lobed, Simple",
+  "description": "Small tree with red, 5 to 7 lobed serrated leaves about 6 cm wide.",
+  "type": "Garden origin",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d3"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpgh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpgl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacpgf1.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Nanaimo"
+  ],
+  "color": [
+    "Orange",
+    "Red"
+  ],
+  "name": "red-leaf Japanese maple",
+  "scientificName": "Acer palmatum Atropurpureum Group",
+  "description": "Leaves simple, palmately 5-7 lobed, simple, red-purple, serrated margin; stems new growth purple. Winter ID: buds, ovoid, have light brown hairs on a papery sheath that extends halfway up.",
+  "type": "Tree - deciduous",
+  "texture": "Palmate venation, Soft flexible",
+  "form": "Round",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d2"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpth1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacptl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacptf1.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Fort St. John"
+  ],
+  "color": [
+    "Not showy",
+    "Yellow",
+    "Red"
+  ],
+  "name": "red nail maple",
+  "scientificName": "Acer palmatum 'Tsuma Beni'",
+  "description": "Leaves red-tipped, palmate (most with 7 broad lobes).",
+  "type": "Tree - deciduous",
+  "texture": "Medium",
+  "form": "Vase",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d4"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpdh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpdl1.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Kamloops"
+  ],
+  "color": [
+    "Purple",
+    "Dark-red"
+  ],
+  "name": "dissected red Japanese maple",
+  "scientificName": "Acer palmatum Dissectum Atropurpureum Group",
+  "description": "Slow-growing shrub, broadly arching; leaves opposite, finely toothed, deeply lobed or palmately compound, deep purple, turning bright red or orange in fall.",
+  "type": "Shrub - deciduous",
+  "texture": "Medium - fine",
+  "form": "Weeping",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d5"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/fruit/tacpet1.jpg",
+    "https://plantdatabase.kpu.ca/images/other/tacpeo.jpg"
+  ],
+  "season": [
+    "Apr",
+    "May"
+  ],
+  "location": [
+    "Maple Ridge"
+  ],
+  "color": [
+    "Yellow"
+  ],
+  "name": "moosewood maple",
+  "scientificName": "Acer pensylvanicum",
+  "description": "Leaves 3 forward-pointing lobes; florets yellow, about 1 cm wide, imperfect; Winter ID: buds opposite, oval, red; bark striped green/black.",
+  "type": "Tree - deciduous",
+  "texture": "Medium - coarse",
+  "form": "Oval - vertical",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d8"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpch1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpcl1.jpg"
+  ],
+  "season": [
+    "Apr",
+    "May"
+  ],
+  "location": [
+    "Terrace"
+  ],
+  "color": [
+    "Showy",
+    "Green-yellow",
+    "Yellow"
+  ],
+  "name": "Crimson Sentry maple",
+  "scientificName": "Acer platanoides 'Crimson Sentry'",
+  "description": "Leaves deep purple (crimsons-oranges in fall), cupped like ladle on long (20 cm) petiole, petiole with milky sap. Winter ID: buds dark red to almost black; upward curled branches (fastigiate).",
+  "type": "Tree - deciduous",
+  "texture": "Medium - coarse",
+  "form": "Columnar, Oval - vertical",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d9"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpnh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpnl1.jpg"
+  ],
+  "season": [
+    "Apr",
+    "May"
+  ],
+  "location": [
+    "Kelowna"
+  ],
+  "color": [
+    "Yellow"
+  ],
+  "name": "Princeton Gold Norway maple",
+  "scientificName": "Acer platanoides 'Princeton Gol",
+  "description": "Leaves palmate with 5 lobes deeply incised, looks like Canadian flag leaf; petiole is long, broken leaf veins or petiole ooze milky sap. Winter ID: buds opposite, large, plump green/burgundy; samaras held at wide angle.",
+  "type": "Tree - deciduous",
+  "texture": "Medium - coarse",
+  "form": "Oval - vertical, Round",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d7"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacckh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacckl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacckf1.jpg"
+  ],
+  "season": [
+    "Apr",
+    "May"
+  ],
+  "location": [
+    "White Rock"
+  ],
+  "color": [
+    "Purple",
+    "Dark-red",
+    "dark purple when mature"
+  ],
+  "name": "Crimson King Norway maple",
+  "scientificName": "Acer platanoides 'Crimson King'",
+  "description": "Leaves palmate with 5 lobes deeply incised, dark red, looks like Canadian flag leaf; petiole is long, broken leaf veins or petiole ooze milky sap. Winter ID: buds opposite, large, plump green/burgundy; samaras held at wide angle.",
+  "type": "Tree - deciduous",
+  "texture": "Purple, Dark-red, dark purple when mature",
+  "form": "Round",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525da"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpsh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpsl1.jpg"
+  ],
+  "season": [
+    "Apr",
+    "May"
+  ],
+  "location": [
+    "Maple Ridge"
+  ],
+  "color": [
+    "Yellow"
+  ],
+  "name": "sycamore maple",
+  "scientificName": "Acer pseudoplatanus",
+  "description": "Leaves palmate with 5 lobes, 10-25 cm long; florets in pendulous panicles.",
+  "type": "Tree - deciduous",
+  "texture": "Palmate venation, Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525cf"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacpkh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpkl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacpkf1.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Kamloops"
+  ],
+  "color": [
+    "Yellow",
+    "Orange",
+    "Red"
+  ],
+  "name": "Koto No Ito maple",
+  "scientificName": "Acer palmatum 'Koto No Ito'",
+  "description": "Leaves deeply dissected, palmate with 3 to 5 narrow, jagged-edged lance-shaped leaflets (reminiscent of cannabis); samaras persistent, red and green.",
+  "type": "Tree - deciduous",
+  "texture": "Medium - fine",
+  "form": "Round",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525dd"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacreh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacrel1.jpg"
+  ],
+  "season": [
+    "Mar",
+    "Apr"
+  ],
+  "location": [
+    "Powell River"
+  ],
+  "color": [
+    "Red",
+    "Dark-red"
+  ],
+  "name": "Red Sunset maple",
+  "scientificName": "Acer rubrum 'Red Sunset'",
+  "description": "Vigorous cultivar with strong wood; leaves with 3 major lobes with soft serrations, fall colour vibrant red; terminal buds multiple; samaras red, narrower angle compared to Norway maple. Winter ID: buds small (3 mm) red opposite; flower buds in large clusters circle twigs, give branches a bumpy look.",
+  "type": "Tree - deciduous",
+  "texture": "Medium - coarse",
+  "form": "Oval - vertical",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525dc"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tarcbh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tarcbl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tarcbf1.jpg"
+  ],
+  "season": [
+    "Mar",
+    "Apr"
+  ],
+  "location": [
+    "Kamloops"
+  ],
+  "color": [
+    "Yellow",
+    "Orange",
+    "Red"
+  ],
+  "name": "Bowhall maple",
+  "scientificName": "Acer rubrum 'Bowhall'",
+  "description": "Form very narrow; leaf three major lobes, mid-green, lighter underside, 10 cm petiole. Winter ID: buds opposite, red on brownish twigs; bark grayish.",
+  "type": "Tree - deciduous",
+  "texture": "Medium - coarse",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525de"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacsah1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacsal1.jpg"
+  ],
+  "season": [
+    "May",
+    "Jun"
+  ],
+  "location": [
+    "Kelowna"
+  ],
+  "color": [
+    "Yellow",
+    "Orange",
+    "Red"
+  ],
+  "name": "silver maple",
+  "scientificName": "Acer saccharinum",
+  "description": "Leaves to 15 cm long with 5 lobes, lower surface silvery.",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525d6"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacplh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacpll1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacplf1.jpg"
+  ],
+  "season": [
+    "Apr"
+  ],
+  "location": [
+    "Cranbrook"
+  ],
+  "color": [
+    "Yellow"
+  ],
+  "name": "Norway maple",
+  "scientificName": "Acer platanoides",
+  "description": "Leaves palmate with 5 lobes deeply incised, looks like Canadian flag leaf; petiole is long, broken leaf veins or petiole ooze milky sap. Winter ID: buds opposite, large, plump green/burgundy; samara wings held at wide angle (widely divergent wings - unlike sycamore maple)",
+  "type": "Invasive plant, Tree - deciduous",
+  "texture": "Medium - coarse",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525df"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacsch1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacscl1.jpg"
+  ],
+  "season": [
+    "Mar"
+  ],
+  "location": [
+    "Parksville"
+  ],
+  "color": [
+    "Yellow",
+    "Orange",
+    "Red"
+  ],
+  "name": "sugar maple",
+  "scientificName": "Acer saccharum",
+  "description": "Leaves like Canadian flag, fine white hairs on base of underside. Winter ID: buds brown, 3 mm, pointed, adpressed, terminal bud.",
+  "type": "Tree - deciduous",
+  "texture": "Medium - coarse",
+  "form": "Oval - vertical, Round",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e1"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tblsph1.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug"
+  ],
+  "location": [
+    "B.C. west of Cascades"
+  ],
+  "color": [
+    "Dark-green"
+  ],
+  "name": "deer fern",
+  "scientificName": "Blechnum spicant",
+  "description": "Fronds are deeply-lobed, rachis dark brown: vegetative fronds are vase-shaped then becoming horizontal and evergreen; reproductive fronds are upright with much narrower pinnae, lower surface with two thick rows of sori.",
+  "type": "Fern",
+  "texture": "Medium",
+  "form": "Mounded, Vase",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e3"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tcogph1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tcogpf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/tcogpt1.jpg"
+  ],
+  "season": [
+    "Aug",
+    "Oct",
+    "Sep",
+    "Jul"
+  ],
+  "location": [
+    "Kelowna"
+  ],
+  "color": [
+    "Showy",
+    "White"
+  ],
+  "name": "spicy hot pepper",
+  "scientificName": "Capsicum spp.",
+  "description": "Berries smaller and more elongated (most species) than for the sweet pepper.",
+  "type": "Greenhouse produce plant",
+  "texture": "Medium",
+  "form": "Creeping",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e2"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tosreh1.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug"
+  ],
+  "location": [
+    "Canada - eastern"
+  ],
+  "color": [
+    "Green"
+  ],
+  "name": "Royal fern",
+  "scientificName": "Osmunda regalis",
+  "description": "Large shade-loving fern; fronds about 1 m tall, mid green, openly odd-pinnate; pinnae about 4 cm long x 13 mm wide, attached to rachis by a <1 mm stalk.",
+  "type": "Fern",
+  "texture": "Medium",
+  "form": "Vase",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e4"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tsopsh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tsopsl1.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug"
+  ],
+  "location": [
+    "Nelson"
+  ],
+  "color": [
+    "Showy",
+    "White"
+  ],
+  "name": "Jerusalem cherry",
+  "scientificName": "Solanum pseudocapsicum",
+  "description": "Usually grown as a winter fruiting decorative indoor plant; leaves glossy, dark green, elliptic with wavy margins, 5-8 cm long; fruit mildly poisonous if mistaken for cherry tomatoes.",
+  "type": "Greenhouse produce plant",
+  "texture": "Medium",
+  "form": "Oval - vertical",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525db"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacruh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacrul1.jpg"
+  ],
+  "season": [
+    "Feb",
+    "Mar"
+  ],
+  "location": [
+    "Nelson"
+  ],
+  "color": [
+    "Red"
+  ],
+  "name": "red maple",
+  "scientificName": "Acer rubrum",
+  "description": "Leaves with 3 major lobes with soft serrations, fall colour vibrant red; terminal buds multiple; samaras red, narrower angle compared to A. platanoides. Winter ID: buds small (3 mm) red opposite; flower buds in large clusters circle twigs, give branches a bumpy look.",
+  "type": "Tree - deciduous",
+  "texture": "Soft flexible",
+  "form": "Lobed, Simple",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e8"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/teucvh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/teucvl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/teucvf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/teucvt1.jpg"
+  ],
+  "season": [
+    "May",
+    "Jun"
+  ],
+  "location": [
+    "Nanaimo"
+  ],
+  "color": [
+    "Not showy",
+    "White"
+  ],
+  "name": "winter creeper",
+  "scientificName": "Euonymus fortunei",
+  "description": "Low shrub or creeper (quick to form adventitious roots); leaves opposite, elliptic to oval, finely toothed, dark green, 2-6 cm long x 1-3 cm wide; fruit spherical, < 6 mm, white capsules with orange arils (seeds; fruit absent in some cvs.).",
+  "type": "Ground Cover",
+  "texture": "Medium - fine",
+  "form": "Mounded, Round",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e6"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tcavuh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tcavul1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tcavuf1.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct"
+  ],
+  "location": [
+    "Terrace"
+  ],
+  "color": [
+    "Showy",
+    "White",
+    "Violet",
+    "Pink"
+  ],
+  "name": "heather",
+  "scientificName": "Calluna vulgaris",
+  "description": "Leaves very small and somewhat scale like, two per node but next pair rotated 90 degrees so that the stems look like an X if viewing a short stem section from the end; flower parts in 4's, blooms late summer to fall.",
+  "type": "Ground Cover",
+  "texture": "Fine",
+  "form": "Mounded",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e7"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tdideh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tdidel1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tdidef1.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug"
+  ],
+  "location": [
+    "White Rock"
+  ],
+  "color": [
+    "White",
+    "Pink",
+    "Red"
+  ],
+  "name": "maiden pink",
+  "scientificName": "Dianthus deltoides",
+  "description": "Plant forming a mat-like evergreen ground cover; leaves linear.",
+  "type": "Ground Cover",
+  "texture": "Fine",
+  "form": "Creeping",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e0"
+  },
+  "photosURL": [],
+  "season": [
+    "July",
+    "Aug"
+  ],
+  "location": [
+    "B.C. east of Cascades"
+  ],
+  "color": [
+    "Yellow",
+    "Brown"
+  ],
+  "name": "Lady Fern",
+  "scientificName": "Athyrium filix-femina",
+  "description": "Fronds deciduous, thrice pinnate, elliptical, grooved rachis, up to 90 cm long, stipe may have long, brown papery scales near the base, arising from a clump (not along a rhizome); sori dot-like on undersides of pinnae, up to 6 per pinnule, indusium light brown, kidney-shaped.",
+  "type": "Fern-Weed",
+  "texture": "Fine",
+  "form": "Compound, Fern-like",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e9"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tacfih1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tacfil1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/tacfif1.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug"
+  ],
+  "location": [
+    "Cranbrook"
+  ],
+  "color": [
+    "Showy",
+    "Yellow"
+  ],
+  "name": "Gold Plate yarrow",
+  "scientificName": "Achillea filipendulina",
+  "description": "Leaves deeply-dissected, 1-2 pinnatifid, hairy, fern-like, aromatic (spicy), up to 25 cm long, divided into as many as 15 pairs of linear-lanceolate toothed segments; florets tiny, long-lasting, bright golden, in small heads that appear in dense, flattened plate-like compound corymbs, 4-10 cm wide.",
+  "type": "Herbaceous perennial",
+  "texture": "Medium - fine",
+  "form": "Mounded, Oval - vertical",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525eb"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/talsdh1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/talsdl1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/talsdf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/talsdt1.jpg"
+  ],
+  "season": [
+    "Jun",
+    "Jul"
+  ],
+  "location": [
+    "Chilliwack"
+  ],
+  "color": [
+    "Showy",
+    "Purple"
+  ],
+  "name": "drumstick allium",
+  "scientificName": "Allium sphaerocephalon",
+  "description": "Flowers in tight umbel (appearing like a drumstick from a distance), gradually change from green to purple.",
+  "type": "Herbaceous perennial",
+  "texture": "Coarse",
+  "form": "Round",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525e5"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/tocbah1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/tocbal1.jpg"
+  ],
+  "season": [
+    "Aug",
+    "Sep"
+  ],
+  "location": [
+    "Greenwood"
+  ],
+  "color": [
+    "White",
+    "Violet",
+    "Pink"
+  ],
+  "name": "sweet basil",
+  "scientificName": "Ocimum basilicum",
+  "description": "Stems leggy, purple; leaves smooth and bright green or purple, opposite, ovate with serrate margins which tend to curve downwards, highly scented.",
+  "type": "Greenhouse produce plant",
+  "texture": "Medium - fine",
+  "form": "Oval - vertical",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf4381fb081f09297525ea"
+  },
+  "photosURL": [
+    "https://plantdatabase.kpu.ca/images/habit/talsah1.jpg",
+    "https://plantdatabase.kpu.ca/images/leaves/talsal1.jpg",
+    "https://plantdatabase.kpu.ca/images/flowers/talsaf1.jpg",
+    "https://plantdatabase.kpu.ca/images/fruit/talsat1.jpg"
+  ],
+  "season": [
+    "Jul",
+    "Aug"
+  ],
+  "location": [
+    "Parksville"
+  ],
+  "color": [
+    "Showy",
+    "White",
+    "Pink"
+  ],
+  "name": "garlic",
+  "scientificName": "Allium sativum",
+  "description": "Garlic bulb; leaves linear, flattened, about 2 cm wide x 30 cm long; florets pinkish-white, in umbel to 45 cm tall in summer.",
+  "type": "Herbaceous perennial",
+  "texture": "Medium",
+  "form": "Vase",
+  "owner": "KPU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cf38d12e41100c9ab321bb"
+  },
+  "photosURL": [
+    "https://florens.s3.amazonaws.com/clock%402x.png",
+    "https://florens.s3.amazonaws.com/clock.png"
+  ],
+  "season": [
+    "Ergw",
+    "Qwdqd"
+  ],
+  "location": [
+    "Awd",
+    "Awda"
+  ],
+  "color": [
+    "erbe,weq"
+  ],
+  "name": "adw",
+  "scientificName": "awdaw",
+  "description": "wedrwv qwdqf qdq",
+  "type": "efw,wefwq",
+  "texture": "",
+  "form": "rwgw,wqd",
+  "owner": "Parth",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cf8ee09b0643303ae29987"
+  },
+  "photosURL": [
+    "https://florens.s3.amazonaws.com/clock%403x.png"
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "xcvd",
+  "scientificName": "sdcs",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "florens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cf926e0bc2ac3378a4eedb"
+  },
+  "photosURL": [
+    "https://florens.s3.amazonaws.com/clock%403x.png",
+    "https://florens.s3.amazonaws.com/clock.png"
+  ],
+  "season": [
+    "21e",
+    "Asddew"
+  ],
+  "location": [
+    "Wed3",
+    "Wde"
+  ],
+  "color": [
+    "2d3e,232f"
+  ],
+  "name": "wedw",
+  "scientificName": "wefew",
+  "description": "adwd ewdf weew",
+  "type": "wdw,qwdf",
+  "texture": "wefvr",
+  "form": "aded",
+  "owner": "florens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e5ed2031ec668088b43e"
+  },
+  "photosURL": [
+    ""
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "we",
+  "scientificName": "werw",
+  "description": "wer",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "florens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e6022031ec668088b442"
+  },
+  "photosURL": [
+    ""
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "we",
+  "scientificName": "werw",
+  "description": "wer",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "florens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e74852e8d770e8674578"
+  },
+  "photosURL": [
+    ""
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "Plant",
+  "scientificName": "Plant",
+  "description": "dsavf",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "flor20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e75252e8d770e867457c"
+  },
+  "photosURL": [
+    ""
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "Plant",
+  "scientificName": "Plant",
+  "description": "dsavf",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "flor20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d45dd078268f2abddb0439"
+  },
+  "photosURL": [
+    ""
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "erf",
+  "scientificName": "wef",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "florens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d45fecd8ede62dc52afc7b"
+  },
+  "photosURL": [
+    "https://florens.s3.amazonaws.com/wassim-chouak-b7oMjcJpUzI-unsplash.jpg"
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "wefw",
+  "scientificName": "wewf",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "florens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d460ee29321a2f378a6ba1"
+  },
+  "photosURL": [
+    "https://florens.s3.amazonaws.com/frida-lannerstrom-UbodM5xQ3Qc-unsplash.jpg"
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "df",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "florens",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d461e6e468563edcecd0a9"
+  },
+  "photosURL": [
+    "https://florens.s3.amazonaws.com/1.jpg"
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "fswef",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "flor20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d46206e468563edcecd0ad"
+  },
+  "photosURL": [
+    "https://florens.s3.amazonaws.com/1.jpg",
+    "https://florens.s3.us-west-2.amazonaws.com/1.jpg"
+  ],
+  "season": [
+    ""
+  ],
+  "location": [
+    ""
+  ],
+  "color": [
+    ""
+  ],
+  "name": "fswef",
+  "type": "",
+  "texture": "",
+  "form": "",
+  "owner": "flor20",
+  "__v": 0
+}]

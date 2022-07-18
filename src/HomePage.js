@@ -5,7 +5,9 @@ import Header from "../src/lib/Header";
 import Features from "../src/lib/Features";
 import PlantOfTheDay from "../src/lib/PlantOfTheDay";
 import SeasonalPlants from "../src/lib/SeasonalPlants";
+
 import Footer from "../src/lib/Footer";
+
 // import Modal from "../src/lib/Modal"
  import "./styles/homepage.css";
 import { Link } from "react-router-dom";
@@ -21,7 +23,7 @@ let data = { firstname: ["parth", "soni"] };
 
 export default function() {
   const [user, setUser] = useState();
-
+ 
   useEffect(() => {
     const url = `/login/user?email=vi%40gmail.com`;
     console.log(url);
@@ -42,6 +44,7 @@ export default function() {
       <main className="homePageMain">
         <Features />
         <PlantOfTheDay />
+      
         <SeasonalPlants />
         {/* <Modal/> */}
       </main>
