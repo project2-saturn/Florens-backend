@@ -3,6 +3,7 @@
     padding:0px;
 }
 
+
 .card-image img{
     width: 256px;
 height: 190px;
@@ -82,7 +83,7 @@ width: 21%;
 
 .main-title{
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
     color: #164C4C;
 }
 .navigation-button{
@@ -110,7 +111,7 @@ display: flex;
     justify-content: center;
     padding:3px;
     align-items: center;
-    height: 100%;
+    
 }
 .discovery-image{
     padding-left: 3%;
@@ -138,14 +139,27 @@ display: flex;
 }
 .discovery-cards{
     display:grid;
-    gap:4%;
-    grid-template-columns:repeat(2,0.2fr);
+    gap:1%;
+    grid-template-columns:repeat(4,0.2fr);
     align-items: center;
     justify-content: center;
     align-content: center;
    
     
 }
+.edit,.delete{
+    background-color: #0b0e0d; /* Black background */
+      border: 1px solid rgb(239, 240, 239); /*  border */
+      color: white; /* White text */
+      padding: 20px 24px 24px 30px; /* Some padding top right bottom left */
+      cursor: pointer; /* Pointer/hand icon */
+      width: 50%; /* Set a width if needed */
+     
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+  }
 .discovery-card{
     border: 1px solid var(--unnamed-color-7d9990);
 background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -183,12 +197,12 @@ border: 1px solid #7D9990;
             justify-content: center;
             align-content: center;
     } */
-    @media screen and (min-width: 601px)  {
+    @media screen and (max-width: 600px)  {
         
         .discovery-cards{
             display:grid;
-            gap:4%;
-            grid-template-columns:repeat(4,0.2fr);
+            gap:1%;
+            grid-template-columns:repeat(1,0.2fr);
             align-items: center;
             justify-content: center;
             align-content: center;

@@ -6,38 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 import AWS from "aws-sdk";
 
 const SignupCard = props => {
-//   useEffect(async () => {
-//     const s3 = new AWS.S3({
-//       accessKeyId: "",
-//       secretAccessKey: ""
-//     });
-//     const imageURL = "../images/florens-logo_green.png";
-
-//     fetch(imageURL)
-//       .then(result => result.blob())
-//       .then(async (blob) => {
-//        const uploadedImage = await s3.upload({
-//           Bucket: "florens",
-//           Key: "florens-logo_green.png",
-//           Body: blob
-//         }).promise();
-//         console.log(uploadedImage);
-//       })
-//       .catch(error => console.log(error))
-//       .catch(error => console.log(error));
-//     // const res = await fetch(imageURL);
-//     // const blob = await res.buffer();
-
-//     // const uploadedImage =
-//     // await s3
-//     //   .upload({
-//     //     Bucket: "florens",
-//     //     Key: req.files[0].originalFilename,
-//     //     Body: blob
-//     //   }).promise();
-
-//     // console.log(uploadedImage.Location);
-//   }, []);
 const navigator=useNavigate();
 const[email,setEmail]=useState();
 const[password,setPassword]=useState();
@@ -47,7 +15,8 @@ const[image,setImage]=useState();
 const[isEmpty,setIsEmpty]=useState(true);
 const[picture,setPicture]=useState(null);
 const [error, setError] = useState();
-
+let imageFile=" ";
+let imageUrl="";
 // Base64  base64String="";
 const handleChangeName=(event)=>{
 
@@ -67,15 +36,91 @@ const handleChangePassword=(event)=>{
 }
 
 
-const handleImageChange=(event)=>{
-    console.log(event.target.files[0]);
-    setPicture(event.target.files[0]);
+// const handleImageChange=(event)=>{
+//     console.log(event.target.files[0]);
+//     setPicture(event.target.files[0]);
     
-    setImage(URL.createObjectURL(event.target.files[0]) )  ;
-    setIsEmpty(false);
+//     setImage(URL.createObjectURL(event.target.files[0]) )  ;
+//     setIsEmpty(false);
    
 
-}
+// }
+const handleImageChange = (event, index) => {
+    console.log(event.target.files[0]);
+
+    setPicture(event.target.files[0]);
+
+    // let tempImageArr = [...image];
+     imageUrl = URL.createObjectURL(event.target.files[0]);
+    setImage(imageUrl);
+    imageFile=event.target.files[0];
+    setIsEmpty(false);
+  };
+
+
+      
+    
+
+//   };
+
+  const handleSubmit = async event => {
+    event.preventDefault();
+    handlePicture();
+    console.log(image);
+    setTimeout(function() {
+      const formData = new FormData();
+      formData.append('name',name);
+formData.append('email',email);
+formData.append('password',password);
+formData.append("image", image);
+    
+
+      axios
+        .post("/postUser", 
+     formData)
+        .then(result => {
+          console.log(result);
+          console.log(image);
+    navigator("/login");
+        })
+        .catch(err => {
+          setError(err.response.data.message);
+        });
+    }, 3000);
+  };
+
+  const handlePicture =() => {
+    const reader = new FileReader();
+    reader.onloadend = onLoadEndEvent => {
+      fetch("/postImage", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          key: picture.name,
+          data: onLoadEndEvent.target.result,
+          contentType: picture.type
+        })
+      })
+        .then(response => response.json())
+        .then(result => {
+          console.log(result);
+          imageURL += `, ${result.data.Location}`;
+
+      
+        })
+        .catch(error => {
+          // setUploading(false);
+          // pong.danger(error.message || error.reason || error);
+          // uploadEvent.target.value = "";
+          console.log(error);
+        });
+    };
+
+    reader.readAsDataURL(picture);
+  };
 
 
 
@@ -85,25 +130,7 @@ const handleImageChange=(event)=>{
 //     },[image])
 
 
-const handleSubmit=(event)=>{
-event.preventDefault();
-const formData=new FormData();
-formData.append('name',name);
-formData.append('email',email);
-formData.append('password',password);
-formData.append('image',picture);
 
-console.log(picture);
-axios.post("/postUser",formData).then((result) => {
-    console.log(result);
-    // setPicture(result.data.image);
-    console.log(image);
-    navigator("/login");
-
-}).catch((err) => {
-    setError(err.response.data.message);
-});
-}
 
 return(
  
@@ -116,8 +143,8 @@ return(
          <label>Drop your Profile Picture</label><br></br>
          
          
-            <input type="file" id="upload" onChange={event=>handleImageChange(event)} hidden />
-            {/* <img className="displayPic"src={image} onError = {() => setImgSrc("https://picsum.photos/200")} alt='Profile Picture'></img> */}
+            <input type="file" id="upload" onChange={event=>handleImageChange(event,0)} hidden />
+    
            { isEmpty ? <div class="defaultSignUpImg"><img className=" defaultImage"src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png" width="100px" height="100px"  ></img></div>:<div class="defaultSignUpImg"> <img src={image} width="150px" height="150px" className="uploadedImage" ></img></div> }
 
             <div className="fileBorder">

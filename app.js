@@ -14,6 +14,12 @@ const cors = require("cors");
 const { generateToken, verifyToken } = require("./JWT.js");
 const cookies = require("cookie-parser");
 const fetch = require("node-fetch");
+const bodyParser = require('body-parser');
+
+
+app.use(bodyParser({limit: '5mb'}));
+
+app.use(bodyParser.json());
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
@@ -183,7 +189,7 @@ app.post("/getimage", async (req, res) => {
 });
 
 //API for Signup
-app.post("/postUser", uploadImage.single("image"), async (req, res, next) => {
+app.post("/postUser", async (req, res, next) => {
   let user = await User.findOne({ email: req.body.email });
   console.log(user);
   if (user) {
@@ -191,10 +197,7 @@ app.post("/postUser", uploadImage.single("image"), async (req, res, next) => {
   } else {
     user = new User({
       name: req.body.name,
-      image: {
-        data: fs.readFileSync(req.file.path),
-        contentType: req.file.mimetype
-      },
+      imageURL:req.body.image,
       email: req.body.email,
       password: req.body.password
     });

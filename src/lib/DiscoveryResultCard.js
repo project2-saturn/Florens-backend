@@ -47,7 +47,7 @@ export default function(props) {
             </h2>
             <hr class="short-line" />
             <p class="card-intro">
-              {result.description != null ? result.description : <></>}
+              {result.description != null ? result.description.toString().substring(0, 60) + `...` : <></>}
             </p>
           </div>
           <div class="buttons">
@@ -57,6 +57,7 @@ export default function(props) {
               </button>
             </Link>
           </div>
+         
           {/* <hr class="long-line" />
           <div class="navigation-button">
             <button class="btn">
