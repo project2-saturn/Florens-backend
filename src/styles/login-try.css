@@ -78,3 +78,21 @@ margin-top:3%;
     color: #164C4C;
     opacity: 1;
 }
+
+.container-login {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.form-login {
+    padding: 2rem;
+}
+
+form.form-login-border {
+    max-width: 700px;
+    max-height: 540px;
+    border: solid 0.5px #7D9990;
+    border-radius: 15px;
+}
