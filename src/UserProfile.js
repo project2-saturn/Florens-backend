@@ -12,6 +12,7 @@ const UserProfile = props => {
 
   const [user, setUser] = useState({
     plantOwner: [],
+    imageURL:"",
     library: [],
     name: "",
     email: "",
@@ -47,7 +48,7 @@ const UserProfile = props => {
           <div class="cards">
             <div class="card-item">
               <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1655825056958-0ba58b57b241?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+                <img src={user.imageURL?user.imageURL:"https://images.unsplash.com/photo-1655825056958-0ba58b57b241?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"} />
               </div>
               <div class="card-info">
                 <h2 class="card-title">{user.name}</h2>
