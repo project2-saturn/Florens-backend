@@ -17,6 +17,7 @@ const[picture,setPicture]=useState(null);
 const [error, setError] = useState();
 let imageFile=" ";
 let imageUrl="";
+let imageURL="";
 // Base64  base64String="";
 const handleChangeName=(event)=>{
 
@@ -34,63 +35,48 @@ const handleChangePassword=(event)=>{
     setPassword(event.target.value);
 
 }
-
-
-// const handleImageChange=(event)=>{
-//     console.log(event.target.files[0]);
-//     setPicture(event.target.files[0]);
-    
-//     setImage(URL.createObjectURL(event.target.files[0]) )  ;
-//     setIsEmpty(false);
-   
-
-// }
 const handleImageChange = (event, index) => {
     console.log(event.target.files[0]);
-
     setPicture(event.target.files[0]);
-
-    // let tempImageArr = [...image];
      imageUrl = URL.createObjectURL(event.target.files[0]);
     setImage(imageUrl);
     imageFile=event.target.files[0];
     setIsEmpty(false);
   };
 
-
-      
-    
-
-//   };
-
   const handleSubmit = async event => {
     event.preventDefault();
-    handlePicture();
+   await handlePicture();
+   setTimeout(function() {
     console.log(image);
-    setTimeout(function() {
       const formData = new FormData();
       formData.append('name',name);
 formData.append('email',email);
 formData.append('password',password);
-formData.append("image", image);
-    
-
+formData.append("imageURL", imageURL);
       axios
         .post("/postUser", 
      formData)
         .then(result => {
           console.log(result);
-          console.log(image);
+          console.log(imageURL);
     navigator("/login");
         })
         .catch(err => {
-          setError(err.response.data.message);
+          setError(err);
         });
-    }, 3000);
+   },3000)    
   };
 
+  
+  
+
   const handlePicture =() => {
+    
     const reader = new FileReader();
+    const imageFile = document.getElementById("upload").files[0];
+    console.log(imageFile.name);
+    
     reader.onloadend = onLoadEndEvent => {
       fetch("/postImage", {
         method: "POST",
@@ -99,38 +85,25 @@ formData.append("image", image);
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          key: picture.name,
-          data: onLoadEndEvent.target.result,
-          contentType: picture.type
+          key: imageFile.name,
+          data: onLoadEndEvent.target.result.split(",")[1],
+          contentType: imageFile.type
         })
       })
-        .then(response => response.json())
+        .then(response => {response.json();console.log(response.json)})
         .then(result => {
           console.log(result);
           imageURL += `, ${result.data.Location}`;
 
-      
+          return;
         })
         .catch(error => {
-          // setUploading(false);
-          // pong.danger(error.message || error.reason || error);
-          // uploadEvent.target.value = "";
           console.log(error);
         });
     };
 
-    reader.readAsDataURL(picture);
+    reader.readAsDataURL(imageFile);
   };
-
-
-
-
-// useEffect(()=>{
-// }
-//     },[image])
-
-
-
 
 return(
  
@@ -162,24 +135,13 @@ return(
          <input type="submit"  className="submit-signup" value="CREATE" />
          <p>Already have an account?<a><b> <Link to="/Login">Login</Link></b></a></p>
 
-{/* {image?.map((imageData)=>{
-   const base64String=btoa(String.fromCharCode(...new Uint8Array((imageData.data))));
-   console.log(base64String);
-})
-
-
-} */}
-
-
  </div>
  </form>
 </div>
- 
-
-
 
 )
 }
+
 
 export default SignupCard;
 
