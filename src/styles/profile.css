@@ -58,13 +58,19 @@ margin-top:4%;
     border: 2px solid #EA5A4E;
     border-radius: 10px;
     margin-top: 0.5rem;
-
+cursor:pointer;
     height: 45px;
     background-color:white;
     color:#EA5A4E;
  width: 194px;
 }
-
+.discovery-image img {
+    width: 235px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 15px;
+    /* text-align: center; */
+    border-radius: 10px;}
 .profile-card{
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
 border: 1px solid var(--unnamed-color-7d9990);
@@ -123,9 +129,9 @@ display: flex;
     
 }
 .discovery-image{
-    padding-left: 3%;
+    /* padding-left: 3%;
     padding-top:9%;
-    padding-right: 3%;
+    padding-right: 3%; */
     text-align: center;
 }
 .discovery-title{
@@ -137,7 +143,7 @@ display: flex;
     text-align: center;
 
 }
-.discovery-image img{
+/* .discovery-image img{
   
     max-width: 83%;
     height: 100%;
@@ -145,7 +151,7 @@ display: flex;
     border-radius: 10px;
    
     
-}
+} */
 .discovery-cards{
     display:grid;
     gap:1%;
@@ -170,7 +176,17 @@ display: flex;
       margin-bottom: 50px;
   }
 .discovery-card{
-    border: 1px solid var(--unnamed-color-7d9990);
+        /* border: 1px solid var(--unnamed-color-7d9990); */
+       
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    /* border: 1px solid #7D9990; */
+    border-radius: 10px;
+    /* align-items: center; */
+    width: 270px;
+    margin-bottom: 2rem;
+    height: 410px;
+    border: 1px solid #7D9990;
+    /* border: 1px solid var(--unnamed-color-7d9990);
 background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 1px solid #7D9990;
 border-radius: 10px;
@@ -178,7 +194,7 @@ align-items: center;
 width:100%;
 margin-bottom:4rem;
 height: 430px;
-border: 1px solid #7D9990;
+border: 1px solid #7D9990; */
 }
 .aboutNav{
     position: absolute;
@@ -208,9 +224,11 @@ border: 1px solid #7D9990;
    
     
 }
+ /****footer***********/
 .footerFirstDiv{
     height: 267.11px;
 }
+ /****footer***********/
 .footerLogo{
     width: 114.39px;
     height: 108.33px;
@@ -218,6 +236,7 @@ border: 1px solid #7D9990;
     right:87%;
     top: 45px;
 }
+ /****footer***********/
 .footerUni{
     color: white;
     justify-content: center;
@@ -227,14 +246,16 @@ border: 1px solid #7D9990;
     right:3%;
     top: 39px;
 }
+ /****footer***********/
 .footerUni p{
     text-align: center;
     }
-    
+     /****footer***********/
     .footerUniLogo{
         position: relative;
         right: -20px;
     }
+     /****footer***********/
     .footerSecondPone{
         position: absolute;
         right:85%;
@@ -242,6 +263,7 @@ border: 1px solid #7D9990;
         color: white;
     
     }
+     /****footer***********/
     .footerSecondPtwo{
         position: absolute;
        
@@ -249,6 +271,7 @@ border: 1px solid #7D9990;
         top: 215px;
         color: white;
     }
+     /****footer***********/
     .line{
         position: absolute;
         height: 0.5px;
@@ -256,6 +279,7 @@ border: 1px solid #7D9990;
         background-color: #7D9990;
         top: 215px;
     }
+     /****footer***********/
     .logoCap{
         position: absolute;
         width: fit-content;
@@ -264,7 +288,7 @@ border: 1px solid #7D9990;
         color: white;
     }
    
-    
+     /****footerEnds***********/
     /*****media query */
     /* @media screen and (max-width: 600px) {
         /* .discovery-cards{
@@ -288,6 +312,7 @@ border: 1px solid #7D9990;
             justify-content: center;
             align-content: center;
     } */
+    ///Media query for mobile
     @media screen and (max-width: 600px)  {
         
         .discovery-cards{
@@ -300,7 +325,7 @@ border: 1px solid #7D9990;
            
             
         }
-        
+        //discovery button
         .discovery-button {
             border: 2px solid #EA5A4E;
             border-radius: 10px;
