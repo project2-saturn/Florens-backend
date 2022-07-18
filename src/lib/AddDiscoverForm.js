@@ -463,6 +463,7 @@ const AddDiscoverForm = props => {
           cols="20"
           onChange={event => handleChangeDescription(event)}
           placeholder="Add plant Description...."
+          required
         ></textarea>
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
@@ -476,6 +477,7 @@ const AddDiscoverForm = props => {
           id="upload0"
           onChange={event => handleImageChange(event, 0)}
           hidden
+          required
         />
         {isEmpty[0] ? (
           <img
