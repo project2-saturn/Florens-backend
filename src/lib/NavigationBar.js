@@ -34,24 +34,13 @@ axios.get("/getUsername").then((result) => {
   if({name}=="Login")
   
   <div className="navBar">
-  <img
-    className="headerLogo"
-    src="../images/florens-logo_green.png"
-    alt="logo"
-  />
-  <a className="aboutNav" href="">
-    About
-  </a>
-
-  <a className="loginNav" href="">
-  {console.log({name})}
- {  <Link to="/login">Login</Link>}
-  
-   
-  
-   </a>
-
-
+  <img className="headerLogo" src="../images/florens-logo_green.png" alt="logo"/>
+  <input type="checkbox" id="menu-bar"/>
+  <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
+  <ul class="headerUl">
+    <li><a className="aboutNav" href=""> <Link to="/about">About</Link></a></li>
+    <li><a className="loginNav" href="">{console.log({name})}{  <Link to="/login">Login</Link>}</a></li>
+  </ul>
  </div>
   
 // else
@@ -70,18 +59,16 @@ function logout(){
 
 
 
-
+ 
   return (
     <>
 
     {islogged?<div class="navBar">
-        <img
-          class="headerLogo"
-          src="../images/florens-logo_green.png"
-          alt="logo"
-        />
+        <img class="headerLogo" src="../images/florens-logo_green.png" alt="logo"/>
+        <input type="checkbox" id="menu-bar"/>
+        <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
         <ul class="headerUl">
-             <li><a class="aboutLogNav" href="">About</a></li>
+             <li><a class="aboutLogNav" href=""><Link to="/about">About</Link></a></li>
              <li><a class="profileNav" href=""><img className="userIconImg" src="../images/user.png" alt="plant" />{name}</a>
                 <ul class="profileNavItems">
                     {/* <li> <a href="">Profile</a></li> */}
@@ -97,24 +84,13 @@ function logout(){
         </ul>
       </div>
       :   <div className="navBar">
-  <img
-    className="headerLogo"
-    src="../images/florens-logo_green.png"
-    alt="logo"
-  />
-  <a className="aboutNav" href="">
-    About
-  </a>
-
-  <a className="loginNav" href="">
-  {console.log({name})}
- {  <Link to="/login">Login</Link>}
-  
-   
-  
-   </a>
-
-
+  <img className="headerLogo" src="../images/florens-logo_green.png" alt="logo"/>
+  <input type="checkbox" id="menu-bar"/>
+  <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
+  <ul class="headerUl">
+    <li><a className="aboutNav" href=""><Link to="/about">About</Link></a></li>
+    <li> <a className="loginNav" href="">{console.log({name})}{  <Link to="/login">Login</Link>}</a></li>
+  </ul>
  </div>
     }
     </>
