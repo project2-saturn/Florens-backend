@@ -1,35 +1,6 @@
 body{
     margin: 0;
 }
-.navBar{
-    position: relative;
-    background-color: #F1ECEB;
-}
-.headerLogo{
-    margin-left: 40px;
-    width: 92px;
-    height: 87px;
-}
-.aboutNav{
-    position: absolute;
-    top: 40%;
-    right: 8%;
-    font-size: 16px;
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
-    text-decoration: none;
-}
-.loginNav a{
-    position: absolute;
-    top: 40%;
-    right: 3%;
-    font-size: 16px;
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
-    text-decoration: none;
-}
 
 /* ////////////////////////////////Plant detail section//////////////////////// */
 
@@ -40,12 +11,13 @@ body{
     display: flex;
     justify-content: center;
 }
-.secondSection{
+.secondSectionPlantProfile{
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
-.secondSecImg img{
+
+.secondSecImgPlantProfile img{
     position: absolute;
     top: 60px;
     left: 60px;
@@ -53,7 +25,6 @@ body{
     height: 434px;
     border-radius: 10px;
 }
-
 .secondSecImge img{
     position: absolute;
     top: 515px;
@@ -91,7 +62,7 @@ body{
     
 }
 
-.secondSectionCard{
+.secondSectionCardPlantProfile{
     margin: auto;
     height: 390px;
     width: 1280px;
@@ -247,3 +218,231 @@ h3{
 
 
 /* ///////////////////////////footer////////////////////////////////////////// */
+
+
+@media(max-width:600px){
+
+    .secondSectionPlantProfile {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        height: 1080px;
+    }
+
+    .secondSectionCardPlantProfile {
+        margin: auto;
+        height: 390px;
+        width: 600px;
+        height: 880px;
+        position: relative;
+        border-radius: none;
+        border: none;
+    }
+
+
+    .secondSecImgPlantProfile img{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 340px;
+        width: 100vw;
+        border-radius: 0;
+    
+    }
+
+    .addImagesDiv{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: -470px;
+        width: 100vw;
+    }
+
+
+
+    .secondSecImge img {
+        position: relative;
+        top: 500px;
+        left: 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+
+    .secondSecImges img {
+        position: relative;
+        top: 500px;
+        left: 90%;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+
+    .secondSecImga img {
+        position: relative;
+        top: 500px;
+        left: 160%;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+    .secondSecImgas img {
+        position: relative;
+        top: 500px;
+        left: 240%;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+
+
+
+    .plantInfoPlant{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .plantInfoPlantHeading{
+        position: relative;
+        top: 80px;
+        left: 40px;
+        color: #164C4C;
+        font-family: 'Alegreya';
+        font-size: 28px;
+        font-weight: 200;
+    }
+    .subTag{
+        position: relative;
+        top: 100px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+        left: 40px;
+    }
+    .plantDescp{
+        position: relative;
+        top: 110px;
+        left: 40px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+        width: 450px;
+    }
+    
+    .plantDescItems1{
+        position: relative;
+        top: 160px;
+        left: 40px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+    }
+    .plantDescItems2{
+        position: relative;
+        top: 110px;
+        left: 250px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+    }
+    .plantDescItems3{
+        position: relative;
+        top: 160px;
+        left: 40px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+    }
+    .plantDescItems4{
+        position: relative;
+        top: 110px;
+        left: 250px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+    }
+    .plantDescItems5{
+        position: relative;
+        top: 160px;
+        left: 40px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+    }
+    .plantDescItems6{
+        position: relative;
+        top: 110px;
+        left: 250px;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+    }
+    
+    .plantDescItemsHeading{
+        margin-bottom: 10px;  
+        font-size: 16px;
+        color: #164C4C;
+        font-weight: bold;
+    }
+    
+    h3{
+        font-size: 28px;
+        margin-top: 0px;
+    }
+    .lineSec{
+        position: relative;
+        top: 200px;
+        height: 1px;
+        width: 100vw;
+        background-color: #6B6B6B;
+        left: 0px;
+    }
+    
+    .contributer{
+        position: relative;
+        height: 20px;
+        width: 20px;
+        left: 180px;
+        top: 230px;
+        border-radius: 45px;
+    
+    }
+    .contribution{
+        position: relative;
+        height: 20px;
+        left: 220px;
+        top: 211px;
+        border-radius: 45px;
+    
+    }
+    .editBtn{
+        position: relative;
+        top: 245px;
+        left: 40px;
+        color: #164C4C;
+        appearance: none;
+        background: none;
+        border: none;
+        width: 223px;
+        height: 45px;
+        font-size: 18px;
+        font-family: 'Rubik';
+    }
+    .deletBtn{
+        position: relative;
+        top: 199px;
+        left: 397px;
+        color: #164C4C;
+        appearance: none;
+        background: none;
+        border: none;
+        width: 100px;
+        height: 45px;
+        font-size: 18px;
+        font-family: 'Rubik';
+    }
+    /* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
