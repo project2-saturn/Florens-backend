@@ -1,6 +1,6 @@
 
 import React from "react";
-import styles from "../styles/Homepage.css"
+import styles from "../styles/homepage.css"
 
 
 const Modal=props=>{

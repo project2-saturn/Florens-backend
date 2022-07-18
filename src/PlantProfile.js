@@ -41,15 +41,16 @@ const PlantProfile = props => {
         <NavigationBar />
       </header>
       <main>
-        <section class="secondSection">
-          <div class="secondSectionCard">
+        <section class="secondSectionPlantProfile">
+          <div class="secondSectionCardPlantProfile">
             {plant.photosURL[0] ? (
-              <div class="secondSecImg">
+              <div class="secondSecImgPlantProfile">
                 <img src={plant.photosURL[0]} alt="plant" />
               </div>
             ) : (
               <></>
             )}
+            <div className="addImagesDiv">
             {plant.photosURL[1] ? (
               <div class="secondSecImge">
                 <img src={plant.photosURL[1]} alt="plant" />
@@ -78,6 +79,7 @@ const PlantProfile = props => {
             ) : (
               <></>
             )}
+            </div>
 
             {/* <div class="secondSecImge">
               <img src="../images/Rectangle_3_et.png" alt="plant" />
@@ -131,11 +133,11 @@ const PlantProfile = props => {
                 alt="plant"
               />
               <p class="contribution">Contribution from John Smith</p>
-              <button class="editBtn" type="button">
-                Edit
+              <button class="editBtn" type="button"><img  src="../images/edit.png" alt="plant" />
+              &nbsp; Edit
               </button>
-              <button class="deletBtn" type="button">
-                Delete
+              <button class="deletBtn" type="button"><img  src="../images/delete.png" alt="plant" />
+              &nbsp; Delete
               </button>
             </div>
           </div>

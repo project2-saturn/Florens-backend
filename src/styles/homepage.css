@@ -11,16 +11,19 @@ body{
 }
 /* ////////////////////////////Navigation Bar/////////////////////////////////////// */
 .navBar{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #F1ECEB;
 }
-.headerLogo{
-    margin-left: 40px;
-    width: 92px;
-    height: 87px;
-}
+
 .headerUl{
     margin-top: 20px;
-    float: right;
     font-size: 16px;
     font-family: 'Rubik';
     font-weight: lighter;
@@ -34,8 +37,6 @@ body{
     list-style: none;
     display: inline-block;
     margin-right: 30px;
-    color: #6B6B6B;
-    
 }
 
 .headerUl li a{
@@ -71,7 +72,8 @@ color: #6B6B6B;
     }
 
 .headerUl li:hover> ul{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .headerUlLine{
     left: -25px;
@@ -93,21 +95,22 @@ color: #6B6B6B;
     transform: rotate(180deg);
 }
 
-
-
-
-.navBar{
-    position: relative;
+#menu-bar{
+    display: none;
 }
+
+.headerCheckboxLabel{
+    cursor: pointer;
+    display:none;
+}
+
 .headerLogo{
     margin-left: 40px;
     width: 92px;
     height: 87px;
 }
 .aboutNav{
-    position: absolute;
-    top: 40%;
-    right: 8%;
+
     font-size: 16px;
     font-family: 'Rubik';
     font-weight: lighter;
@@ -115,9 +118,7 @@ color: #6B6B6B;
     text-decoration: none;
 }
 .loginNav a{
-    position: absolute;
-    top: 40%;
-    right: 3%;
+
     font-size: 16px;
     font-family: 'Rubik';
     font-weight: lighter;
@@ -137,7 +138,7 @@ font-family: 'Merriweather';
 font-weight: 300;
 font-weight: lighter;
 position: relative;
-    top: 50px;
+top: 150px;
 }
 .headerTextPara{
   font-size: 16px;
@@ -145,7 +146,7 @@ position: relative;
   font-weight: lighter;
   color: #6B6B6B;
   position: relative;
-  top: 70px;
+  top: 170px;
 }
 /*/////////////////////////////Search bar//////////////////////////////////////////  */
 .searchBarHome .inputSearch{
@@ -159,6 +160,7 @@ position: relative;
     position: relative;
     width: 1034px;
     height: 70px;
+    margin-top: 40px;
     
 }
 
@@ -457,9 +459,9 @@ position: relative;
 }
 
 .secondSecImg img{
-    /* position: absolute;
-    top: 70px;
-    left: 60px; */
+    position: absolute;
+    top: 60px;
+    left: 60px;
     width: 524px;
     height: 434px;
     border-radius: 10px;
@@ -592,6 +594,10 @@ h3{
 
 .plantDescItemsPara{
     margin-top: 5px;
+}
+
+.cardWavyLineHome{
+    display: none;
 }
 /* /////////////////////////////////////////////////////////////////////////// */
 
@@ -959,4 +965,359 @@ margin-top: 15px;
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
+}
+
+
+
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+
+
+@media(max-width:600px){
+
+/* ///////////////////////////Header/////////////////////////////////// */
+    
+    .navBar{
+        background-color: #F1ECEB;
+        height: 100px;
+    }
+
+    .headerCheckboxLabel{
+        cursor: pointer;
+        display:initial;
+    }
+    .headerUl{
+        position: absolute;
+        top: 100%;
+        background-color: #FFFFFF;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        display: none;
+    }
+
+    .profileNav {
+        margin-right: 0px;
+        color: #6B6B6B;
+        margin-top: 25px;
+    }
+
+    .headerUl ul{
+
+        left: 0px;
+        display: none;
+        width: auto;
+        background-color: white;
+        border: solid 0.1px white;
+        color: #6B6B6B;
+        
+    }
+
+    .headerUl li:hover> ul{
+        display: block;
+        margin-left: -40px;
+    }
+
+    .headerUl ul li {
+        width: 100vw;
+        left: 40px;
+        text-align: center;
+        float: none;
+        display: List-item;
+        position: relative;
+        color: #6B6B6B;
+    }
+
+    .headerUl li {
+        position: relative;
+        list-style: none;
+        display: inline-block;
+        margin-right: 0px;
+    }
+
+
+    .aboutLogNav {
+        color: #6B6B6B;
+        margin-top: 50px;
+    }
+    
+    
+    .headerUlLine {
+        left: -0px;
+        border-bottom: none;
+        opacity: 0.2;
+    }
+
+
+    .userIconImg {
+       display: none;
+    }
+
+    .headerUl li ul{
+        position: relative;   
+    }
+
+    .headerUl li ul li{
+        position: relative;   
+        margin-top: 10px;
+        background-color: #F1ECEB;
+    }
+
+    .headerUl li a {
+        font-family: 'Rubik';
+        font-weight: lighter;
+        display: block;
+        text-decoration: none;
+        Line-height: 40px;
+        font-size: 16px;
+        width: 100vw;
+        text-align: center;
+    }
+
+    #menu-bar:checked ~ .headerUl{
+        display: block;
+    }
+
+    #menu-bar:checked ~ .navBar{
+        background-color: white;
+    }
+
+    /* /////////////////////////////////////////////////////// */
+    /* //////////////////////////////////////////////////////// 
+    /* //////////////////////////Second Section/////////////////////// */
+    .secondSection{
+        background-color: #F1ECEB;
+        height: 640px;
+    }
+
+    .secondSectionHeadings {
+        position: relative;
+        top: 30px;
+    }
+    .secondHomeSectionCard {
+        margin: auto;
+        height: 390px;
+        background-color: #FFFFFF;
+        width: 310px;
+        height: 479px;
+        position: relative;
+        top: 30px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .secondSecImg img {
+        position: relative;
+        top: -40px;
+        left: 0px;
+        width: 270px;
+        height: 230px;
+        border-radius: 10px;
+    }
+
+    .plantInfo h3 {
+        position: relative;
+        top: -20px;
+        left: 0px;
+        text-align: center;
+        color: #164C4C;
+        font-family: 'Merriweather';
+        font-weight: 300;
+    }
+
+    .plantHomeDescriptionMain {
+        position: relative;
+        top: 10px;
+        left: 0px;
+        text-align: center;
+        font-family: 'Rubik';
+        font-weight: lighter;
+        color: #6B6B6B;
+    }
+    .secondHomeSectionBtn {
+        position: relative;
+        top: 45px;
+        left: -24px;
+        color: #EA5A4E;
+        appearance: none;
+        background: none;
+        border: solid #EA5A4E 2px;
+        outline: none;
+        width: 223px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-family: 'Rubik';
+    }
+    .plantDayLeafBtn {
+        position: relative;
+        top: 8px;
+        left: 120px;
+    }
+
+    .plantHomeDescItems1 {
+        display: none;;
+    }
+    .plantHomeDescItems2 {
+        display: none;;
+    }
+    .plantHomeDescItems3 {
+        display: none;;
+    }
+    .plantHomeDescItems4 {
+        display: none;;
+    }
+    .plantHomeDescItems5 {
+        display: none;;
+    }
+    .plantHomeDescItems6 {
+        display: none;;
+    }
+
+    .cardWavyLineHome{
+        display: block;
+        position: relative;
+    top: -10px;
+    left: 60px;
+    }
+    
+
+    /* //////////////////////////////////////////////////////////////////// */
+    /* //////////////////////////////////////////////////////////////////// */
+
+    .searchBarHome {
+        margin: auto;
+        position: relative;
+        width: 350px;
+        height: 70px;
+        margin-top: 40px;
+    }
+    /* ////////////////////////////////////////////////////////////////// */
+    .accordion_buttonHome {
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        width: 350px;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+        background: #FFFFFF;
+        color: #164C4C;
+        text-align: center;
+        transition: background 0.2s;
+        opacity: 0.5;
+        font-family: 'Rubik';
+        font-weight: 500;
+    }
+
+    .accordion_buttonHome::after{
+        content: '\25be';
+        float: right;
+        transform: scale(1.5);
+        }
+        .accordion_buttonHome--active{
+            background:  #FFFFFF;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-left: solid #0d3f3f 0.5px ;
+            border-right: solid #0d3f3f 0.5px ;
+            border-top: solid #0d3f3f 0.5px ;
+        }
+
+        .accordion_buttonHome--active::after{content: '\25b4'}
+
+        .accordion_contentHome{
+        overflow: hidden;
+        height: 100vh;
+        transition: max-height 0.2s ;
+        width: 100vw;
+        margin: auto;
+        background: #FFFFFF; 
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        opacity: 1;
+        border-left: solid #0d3f3f 0.5px ;
+        border-right: solid #0d3f3f 0.5px ;
+        border-bottom: solid #0d3f3f 0.5px ;
+        position: absolute;
+        z-index: 100;
+        display: block;
+
+        
+        }
+
+        /* ////////////////////////////////////Footer///////////////////////////////////// */
+        .footerFirstDiv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            position: relative;
+        }
+
+        footer {
+            background-color: #164C4C;
+            height: 460px;
+            position: relative;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 300;
+        }
+        .footerLogo {
+            width: 114.39px;
+            height: 108.33px;
+            position: relative;
+            right: 3%;
+            top: 45px;
+        }
+        .footerUni {
+            color: white;
+            justify-content: center;
+            width: 241px;
+            height: 124px;
+            position: relative;
+            right: 3%;
+            top: 93px;
+        }
+        .logoCap {
+
+            position: relative;
+            width: 420px;
+            top: 106px;
+            color: white;
+            left: 0%;
+            text-align: center;
+        
+        }
+        .line {
+            position: relative;
+            height: 0.5px;
+            width: 100%;
+            background-color: #7D9990;
+            top: 126px;
+        }
+        .footerSecondPone {
+            position: relative;
+            top: 137px;
+            left: -2%;
+            color: white;
+        }
+        .footerSecondPtwo {
+            position: relative;
+            right: 2%;
+            top: 146px;
+            color: white;
+        }
 }
