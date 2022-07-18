@@ -41,6 +41,7 @@ const SignupCard = props => {
   const handleSubmit = async event => {
     event.preventDefault();
     const r = await handlePicture();
+    console.log(r);
     setTimeout(function() {
       // console.log(image);
 
@@ -48,11 +49,15 @@ const SignupCard = props => {
       formData.append("name", name);
       formData.append("email", email);
       formData.append("password", password);
-      formData.append("imageURL", imageURL);
+      formData.append("imageURL", imageURL.substring(1));
+      console.log(formData);
+      for (var key of formData.entries()) {
+        console.log(key[0] + ", " + key[1]);
+      }
       axios
-        .post("/postUser", formData)
+        .post("/postUser",{"name": name,"email": email,"password": password,"imageURL": imageURL.substring(1)})
         .then(result => {
-          // console.log(result);
+          console.log(formData);
           console.log(imageURL);
           navigator("/login");
         })
