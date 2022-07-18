@@ -39,9 +39,6 @@ export default function() {
             contribute with our libraryby adding your your research
           </p>
         </div>
-        <div><Link to = "/addplant">addNew</Link>
-          
-        </div>
       </section>
     </>
   );
