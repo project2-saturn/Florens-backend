@@ -41,8 +41,10 @@ export default function(props) {
       button.classList.toggle("accordion_button--active");
       if (button.classList.contains("accordion_button--active")) {
         accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        accordionContent.style.borderBottom = "solid #0d3f3f 0.5px";
       } else {
         accordionContent.style.maxHeight = 0;
+        accordionContent.style.borderBottom = "solid #0d3f3f 0px";
       }
     });
   };
