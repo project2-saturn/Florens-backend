@@ -43,11 +43,11 @@ export default function(props) {
           </div>
           <div class="card-info">
             <h2 class="discovery-title">
-              {result.name != null ? result.name : <></>}
+              {result.name != null ? result.name : <>Name is Missing !</>}
             </h2>
             <hr class="short-line" />
             <p class="card-intro">
-              {result.description != null ? result.description.toString().substring(0, 60) + `...` : <></>}
+            {result.description != null ? result.description.toString().substring(0, 60) + `...` : <>There is no description available for this plant</>}
             </p>
           </div>
           <div class="buttons">

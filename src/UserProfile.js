@@ -68,13 +68,13 @@ const UserProfile = props => {
             </div>
           </div>
         </div>
-        <h1>
+        {/* <h1>
           {user.plantOwner.toString() != null ? (
             user.plantOwner.toString()
           ) : (
             <></>
           )}
-        </h1>{" "}
+        </h1>{" "} */}
         <section class="my-discoveries">
           <h2 class="main-title">My discoveries</h2>
           <div class="discovery-cards">
