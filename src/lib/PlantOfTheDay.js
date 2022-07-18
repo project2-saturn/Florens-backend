@@ -39,6 +39,7 @@ export default function() {
             <h3>
               {plant.name}
             </h3>
+            <img className="cardWavyLineHome" src="../images/line-under-plantname.png" alt="plant" />
             <p class="plantHomeDescriptionMain">{plant.scientificName}</p>
 
             <div class="plantHomeDescItems1">

@@ -2,17 +2,8 @@
     margin:0px;
     padding:0px;
 }
-.navBar{
-    position: relative;
-    background-color: #F1ECEB;
-    z-index:1;
-    
-  }
-  .headerLogo{
-    margin-left: 40px;
-    width: 92px;
-    height: 87px;
-}
+
+
 .card-image img{
     width: 256px;
 height: 190px;
@@ -196,26 +187,7 @@ margin-bottom:4rem;
 height: 430px;
 border: 1px solid #7D9990; */
 }
-.aboutNav{
-    position: absolute;
-    top: 40%;
-    right: 8%;
-    font-size: 16px;
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
-    text-decoration: none;
-}
-.loginNav {
-    position: absolute;
-    top: 40%;
-    right: 3%;
-    font-size: 16px;
-    font-family: 'Rubik';
-    font-weight: lighter;
-    color: #6B6B6B;
-    text-decoration: none;
-  }
+
   /****footer***********/
   footer{
     background-color: #164C4C;
@@ -289,6 +261,7 @@ border: 1px solid #7D9990; */
     }
    
      /****footerEnds***********/
+
     /*****media query */
     /* @media screen and (max-width: 600px) {
         /* .discovery-cards{
