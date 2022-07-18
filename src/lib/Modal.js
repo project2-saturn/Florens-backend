@@ -12,14 +12,15 @@ const Modal=props=>{
 
     return (
        <>
-       {console.log(props.show)}
+       {/* {console.log(props.show)} */}
     <div class="bg-modal" style={{display: props.show ? "flex" : "none" }} >
          <div class="modalContent" >
-            {console.log("entered")}
+            {/* {console.log("entered")} */}
           <form class="modalFourm"  >
             <button id="formCloseBtn" class="formCloseBtn" type="button" onClick={handleClose} >+</button>
             
-            {console.log(props.show)}<h1 class="formheading">Have an account at Florens?</h1>
+            {/* {console.log(props.show)} */}
+            <h1 class="formheading">Have an account at Florens?</h1>
             <p class="formParagraph">Sign in to create your library collection!</p>
            
             <label class="formLabelEmail" for="email">Email</label>
