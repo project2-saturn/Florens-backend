@@ -72,8 +72,8 @@ export default function() {
       <main className="homePageMain">
         <Features />
         <PlantOfTheDay />
-        <div>
-          <canvas id="myChart"  width="400" height="400"></canvas>
+        <div className="chartDiv">
+          <canvas id="myChart" className="chartSize"  width="400" height="400"></canvas>
         </div>
 
         <SeasonalPlants />

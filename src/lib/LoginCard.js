@@ -40,7 +40,7 @@ const LoginCard = props => {
         <div class="form-login">
           <h1>Login</h1>
 
-          <label for="name">Email</label>
+          <label className="LoginEmailLabel" for="name">Email</label>
           <input
             type="email"
             className="email-login"
@@ -49,7 +49,7 @@ const LoginCard = props => {
             required
           />
           {/* <div class="space"></div> */}
-          <label for="password">Password</label>
+          <label className="LoginPasswordLabel" for="password">Password</label>
           <input
             type="password"
             name="password"
@@ -57,7 +57,7 @@ const LoginCard = props => {
             onChange={event => handleChangePassword(event)}
             required
           />
-          <p class="forgotPassword">
+          <p className="forgotPassword">
             <a>Forgot Password ?</a>
           </p>
 
