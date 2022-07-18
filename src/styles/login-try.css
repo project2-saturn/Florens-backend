@@ -17,7 +17,7 @@ opacity: 1;
 
 /*************** Footer Ends************************************/
 /*************** form input fields************************************/
-.email-login,.password-login
+.email-login
 {
   
 width: 100%;
@@ -25,16 +25,49 @@ margin-bottom:20px;
 height: 50px;
 padding-left:2px;
 /* UI Properties */
+font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
 border: 1px solid var(--unnamed-color-f8c9bb);
 border: 1px solid #F8C9BB;
 border-radius: 10px;
 opacity: 1;
 }
-
+/********************************************/
+/********************Label form************************/
+.LoginPasswordLabel{
+    color: #6B6B6B;
+    font-family: rubik;
+    font-size: 16px;
+}
+.LoginEmailLabel{
+    color: #6B6B6B;
+    font-family: rubik;
+    font-size: 16px;
+}
+/********************************************/
+/********************Label form Ends************************/
+.password-login{
+    width: 100%;
+    margin-bottom:20px;
+    height: 50px;
+    padding-left:2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    /* UI Properties */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
+    font-family:'Rubik';
+    /* font-size:16px; */
+}
 /*************** Error message for login ************************************/
 .error{
     border: 1px solid;
 			margin: 10px 0px;
+            
 			padding: 15px 10px 15px 50px;
 			background-repeat: no-repeat;
 			background-position: 10px center;
@@ -43,6 +76,8 @@ opacity: 1;
 			background-image: url('https://i.imgur.com/GnyDvKN.png');
 }
 /***************Error message for login ends************************************/
+/*************** **********************************/
+/*************** **********************************/
 /*************** Submit button ************************************/
 .submit-login{
     width: 100%;
@@ -59,18 +94,32 @@ border: 2px solid var(--unnamed-color-ea5a4e);
 border: 2px solid #EA5A4E;
 border-radius: 10px;
 opacity: 1;
+text-transform: uppercase;
+color:#EA5A4E;
 background-color:white;
 margin-top:3%;
 }
+/*************** **********************************/
+/*************** Button hover************************************/
+.submit-login:hover{
+    background-color:#EA5A4E;
+    color:white;
+}
+/*************** End of button***********************************/
 /*************** text for new florens************************************/
 .newFlorens{
     text-align:center;
+    color: #6B6B6B;
+    font-family: rubik;
+    font-size: 16px;
 }
 /*************** form container************************************/
 .form-container{
     margin-left: 22%;
     padding: 4%;
 }
+/*************** **********************************/
+/*************** **********************************/
 .form-login h1{
     text-align: center;
     font: normal normal 300 22px/30px Merriweather;
@@ -78,6 +127,8 @@ margin-top:3%;
     color: #164C4C;
     opacity: 1;
 }
+/*************** **********************************/
+/*************** **********************************/
 
 .container-login {
     margin-top: 200px;
@@ -86,6 +137,8 @@ margin-top:3%;
     align-items: center;
     margin-bottom: 100px;
 }
+/*************** **********************************/
+/*************** Form login**********************************/
 .form-login {
     padding: 2rem;
 }

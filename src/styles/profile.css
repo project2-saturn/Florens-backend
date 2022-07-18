@@ -166,6 +166,11 @@ display: flex;
       text-transform: uppercase;
       margin-bottom: 50px;
   }
+  /************ Button hover*****************/
+  .discovery-button:hover{
+    background-color:#EA5A4E;
+    color:white;
+}
 .discovery-card{
         /* border: 1px solid var(--unnamed-color-7d9990); */
        
