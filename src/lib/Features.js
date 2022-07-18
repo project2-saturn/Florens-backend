@@ -12,8 +12,8 @@ export default function() {
             expert
           </h2>
           <p class="firstSectionParagraph">
-            By exploring or range with more than 100,000 plants, trees and
-            flowers, you will laern about the tree or flower you've found while
+            By exploring or range with more than 100,000 plants,{'\n'} trees and
+            flowers, you will learn about the{'\n'} tree or flower you've found while
             walking on your fovourite park
           </p>
         </div>
@@ -24,8 +24,8 @@ export default function() {
             findings
           </h2>
           <p class="firstSectionParagraph">
-            Keep an eye on all your findings from our collectionby creating a
-            librarywith the plants profile you've found.
+            Keep an eye on all your findings from our{'\n'} collectionby creating a
+            library with the plants{'\n'} profile you've found.
           </p>
         </div>
         <div class="firstSectionThirdCard">
@@ -35,8 +35,8 @@ export default function() {
             plants
           </h2>
           <p class="firstSectionParagraph">
-            Are you an expert, or have some sort of knowledge? you can
-            contribute with our libraryby adding your your research
+            Are you an expert, or have some sort of{'\n'} knowledge? you can
+            contribute to our library{'\n'} by adding your your research
           </p>
         </div>
       </section>

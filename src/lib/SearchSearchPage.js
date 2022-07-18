@@ -27,14 +27,18 @@ axios.get("/searchOption").then(results => {
 
 export default function(props) {
   const handleAccordionButtonToggle = function() {
+
     document.querySelectorAll(".accordion_button").forEach(button => {
       const accordionContent = button.nextElementSibling;
       // button.classList.toggle('header_background');
       button.classList.toggle("accordion_button--active");
       if (button.classList.contains("accordion_button--active")) {
         accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        accordionContent.style.borderBottom = "solid #0d3f3f 0.5px";
+        
       } else {
         accordionContent.style.maxHeight = 0;
+        accordionContent.style.borderBottom = "solid #0d3f3f 0px";
       }
     });
   };
@@ -158,7 +162,7 @@ export default function(props) {
           onChange={handleSearchOptionsTextChange}
         />
         <div
-          class="btn btn_common"
+          class="btn_btn_common_searchpage"
           onClick={() => setSearchOptionsApplied({ ...searchOptions })}
         >
           <i class="fas fa-search fa-2x"></i>
