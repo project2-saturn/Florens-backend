@@ -5,54 +5,49 @@ import "../styles/editProfile.css";
 import Footer from "./Footer";
 import Header from "./NavigationBar";
 // import NavigationBar from "../src/lib/NavigationBar";
+let userEmail = "";
 const EditProfile=(props)=>{
     const[email,setEmail]=useState()
     const[password,setPassword]=useState()
     const[image,setImage]=useState()
     const[name,setName]=useState()
-    useEffect(function loadUsername(){
+    const [user, setUser] = useState({
+        plantOwner: [],
+        imageURL:"",
+        library: [],
+        name: "",
+        email: "",
+        password: ""
+      });
 
-        axios.get("/getUsername").then((result) => {
-          console.log(result);
-          if(result.data=="")
-          {
-            setName("Login")
-            setIsLogged(false);
-          }
-          else{
-          setName(result.data)
-          
-          }
-        }).catch((err) => {
-          
-          console.log(err);
-        });
-        },[]);
-
-
-   useEffect(function loadImage(){
-
-
-    axios.post("/getimage",{name:name}).then((result) => {
-            
-     console.log(result);
-     console.log(result);
-    //  console.log(result.data.contentType);
-        // setImage(`data:${result.data.contentType};base64, ${result.data.toString('base64')}`);
-        // const blob = new Blob([Int8Array.from(result.data.data)], {type: result.data.contentType });
-
-        // console.log(blob);
-        // console.log(blob.toString());
-        // setImage( window.URL.createObjectURL(blob));
-
-    }).catch((err) => {
+        useEffect(function loadUserDetail() {
+            axios
+              .get("/getUserEmail")
+              .then(result => {
+                console.log(result);
+                console.log(result.data);
+                userEmail = result.data;
+              })
+              .then(() => {
+                axios.post("/getUserDetails", { email: userEmail }).then(result2 => {
+                  console.log(result2);
+                  setUser({ ...result2.data });
+                });
+              })
         
-        console.log(err);
-    });
+              .catch(err => {
+                console.log(err);
+              });
+          }, []);
 
 
 
-   },[name])
+
+        
+
+
+
+
    
    
    
@@ -76,8 +71,9 @@ const EditProfile=(props)=>{
      <div class="EditProfileform-container">
     <div className="imageUpload-EditProfile"
 >
-       <img   className="EditProfileImg" src={image}  /><br></br>
-       
+       {/* <img   className="EditProfileImg" src={image}  /><br></br> */}
+       <img className="EditProfileImg" src={user.imageURL?user.imageURL:"https://images.unsplash.com/photo-1655825056958-0ba58b57b241?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"} />
+             
        </div>
            <form className="EditProfileForm" onSubmit={handleSubmit}> 
            <h1 className="EditProfileTitle">Edit Profile</h1>
