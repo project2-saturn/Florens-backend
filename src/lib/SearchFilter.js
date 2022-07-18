@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function(props) {
-  console.log("here");
-  console.log(props.options);
+  // console.log("here");
+  // console.log(props.options);
   console.log(props.selectedOptions);
   return (
     <>
