@@ -1,15 +1,58 @@
 .tags-input-container {
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
-    border-radius: 10px;
-    height: 40px;
-    width: 550px;
-    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
+}
+.description{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
+    display:flex;
+}
+.desDiv{
+    display:flex;
+}
+.submitPlant{
+    width: 100%;
+    margin-bottom:20px;
+    height: 50px;
+        border: 2px solid #EA5A4E;
+        border-radius: 10px;
+        top: 658px;
+    left: 656px;
+    
+    height: 45px;
+    /* UI Properties */
+    border: 2px solid var(--unnamed-color-ea5a4e);
+    border: 2px solid #EA5A4E;
+    border-radius: 10px;
+    opacity: 1;
+    text-transform: uppercase;
+    color:#EA5A4E;
+    background-color:white;
+    margin-top:3%;
+}
+.submitPlant:hover{
+    background-color:#EA5A4E;
+    color:white;
 }
 
 .tag-item {
@@ -43,16 +86,18 @@
 /* //////////////////////plant type////////////////////////// */
 .plantType {
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
-    border-radius: 10px;
-    height: 40px;
-    width: 550px;
-    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
 }
 
 .planttype-item {
@@ -86,16 +131,18 @@
 /* ////////////////////////////////////////////////////////////////// */
 .colorType {
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
-    border-radius: 10px;
-    height: 40px;
-    width: 550px;
-    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
 }
 
 .colortype-item {
@@ -131,16 +178,18 @@
 /* ////////////////////////////////////////////////////////////////// */
 .seasonType {
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
-    border-radius: 10px;
-    height: 40px;
-    width: 550px;
-    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
 }
 
 .seasontype-item {
@@ -174,16 +223,18 @@
 /* ////////////////////////////////////////////////////////////////// */
 .formType {
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
-    border-radius: 10px;
-    height: 40px;
-    width: 550px;
-    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
 }
 
 .formtype-item {
@@ -217,16 +268,18 @@
 /* ////////////////////////////////////////////////////////////////// */
 .textureType {
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
-    border-radius: 10px;
-    height: 40px;
-    width: 550px;
-    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 20px;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
+    border-radius: 10px;
+    opacity: 1;
 }
 
 .texturetype-item {
@@ -259,31 +312,33 @@
 /* ////////////////////////////////////////////////////////////////// */
 .plantNameInput{
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
     border-radius: 10px;
-    height: 40px;
-    width: 1180px;
-    margin-top: 1em;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    opacity: 1;
 
 }
 
 .scientificNameInput{
 
-    border: 1px solid #EA5A4E;
-    padding: .5em;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    border: 1px solid var(--unnamed-color-f8c9bb);
+    border: 1px solid #F8C9BB;
     border-radius: 10px;
-    height: 40px;
-    width: 1180px;
-    margin-top: 1em;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    opacity: 1;
 }
 /* ////////////////////////////////////////////////////////////////// */
 

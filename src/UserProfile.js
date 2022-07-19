@@ -52,9 +52,12 @@ const UserProfile = props => {
               </div>
               <div class="card-info">
                 <h2 class="card-title">{user.name}</h2>
+                <div className="profileHead">
+                <img src="../images/addBtn.png"></img>
                 <p class="card-intro">
                   {user.library.length} plants on library
                 </p>
+                </div>
               </div>
               <div class="buttons">
                 <p class="edit-profile">

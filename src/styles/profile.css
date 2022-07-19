@@ -3,7 +3,12 @@
     padding:0px;
 }
 
-
+.edit-profile a{
+    color: #164C4C;
+    text-transform: uppercase;
+    font-family:'Rubik';
+    font-weight: 500;
+}
 .card-image img{
     width: 256px;
 height: 190px;
@@ -12,11 +17,18 @@ border-radius:10px;
 .card-image{
     text-align:center;
 }
+.profileHead{
+    display:flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+}
+
 .container-profile{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4%;
+    margin-top: 150px;
 }
 .card-title{
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-32)/var(--unnamed-line-spacing-28) var(--unnamed-font-family-merriweather);
@@ -171,7 +183,7 @@ display: flex;
     background-color:#EA5A4E;
     color:white;
 }
-/****library search Bar********/
+/***library search Bar*******/
 .LibrarySearchBar{
 
     border-top: none;
@@ -179,19 +191,19 @@ display: flex;
     border-bottom: 2px solid black;
   }
   /*********library search button******/
-    .LibrarySearchBtn{
+    /* .LibrarySearchBtn{
   
       border-top: none;
       
       border-left: none;
       background-color: white;
-    }
+    } */
     /******library page form**********/
-    .LibraryForm{
+    /* .LibraryForm{
       display: flex;
       justify-content: center;
       margin-bottom: 2%;
-    }
+    } */
     /*******change font size of logo******/
     .fa{
       font-size: large;
@@ -257,6 +269,14 @@ border: 1px solid #7D9990; */
             align-content: center;
            
             
+        }
+        .buttons {
+            display: flex;
+            gap: 2rem;
+            margin-top: 4%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         /* //discovery button */
         .discovery-button {
