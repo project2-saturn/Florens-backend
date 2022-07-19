@@ -59,7 +59,6 @@ export default function() {
       .post("/searchResults", { ...requestOptions })
       .then(result => {
         console.log(result);
-        console.log(result.data);
         setPlants([...result.data]);
         // console.log(plants);
       })
