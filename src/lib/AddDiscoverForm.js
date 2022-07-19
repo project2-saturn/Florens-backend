@@ -239,7 +239,7 @@ const AddDiscoverForm = props => {
           axios.patch("addPlantToDiscovery", {plantObjectID: result.data.data.id, useremail:userEmail});
           // setPicture(result.data.image);
           // console.log(image);
-          // navigator("/userprofile");
+          navigator("/userprofile");
         })
         .catch(err => {
           setError(err.response.data.message);
