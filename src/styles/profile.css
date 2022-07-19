@@ -171,6 +171,32 @@ display: flex;
     background-color:#EA5A4E;
     color:white;
 }
+/****library search Bar********/
+.LibrarySearchBar{
+
+    border-top: none;
+    width: 53%;
+    border-bottom: 2px solid black;
+  }
+  /*********library search button******/
+    .LibrarySearchBtn{
+  
+      border-top: none;
+      
+      border-left: none;
+      background-color: white;
+    }
+    /******library page form**********/
+    .LibraryForm{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2%;
+    }
+    /*******change font size of logo******/
+    .fa{
+      font-size: large;
+      margin-bottom: 5px;
+  }
 .discovery-card{
         /* border: 1px solid var(--unnamed-color-7d9990); */
        
