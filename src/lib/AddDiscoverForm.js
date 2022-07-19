@@ -301,6 +301,7 @@ const AddDiscoverForm = props => {
   ///////////////////////////////////////////////////////////////////////////////////////////
 
   return (
+    <>
     <div>
       <div>
         <p>PlantName: {plantname}</p>
@@ -355,7 +356,7 @@ const AddDiscoverForm = props => {
             onKeyDown={handleKeyDown}
             type="text"
             className="tags-input"
-            placeholder="All"
+            placeholder="Tags"
           />
         </div>
         {/*////////////////////////////////////////// Plant Type/////////////////////////////////////// */}
@@ -375,7 +376,7 @@ const AddDiscoverForm = props => {
             onKeyDown={handleKeyPlant}
             type="text"
             className="planttype-input"
-            placeholder="All"
+            placeholder="Plant Type"
           />
         </div>
         {/* ////////////////////////////////////Color/////////////////////////////////////////////////// */}
@@ -394,7 +395,7 @@ const AddDiscoverForm = props => {
             onKeyDown={handleKeyColor}
             type="text"
             className="colortype-input"
-            placeholder="All"
+            placeholder="Color"
           />
         </div>
         {/* ///////////////////////////////////Season/////////////////////////////////////////////////// */}
@@ -413,7 +414,7 @@ const AddDiscoverForm = props => {
             onKeyDown={handleKeySeason}
             type="text"
             className="seasontype-input"
-            placeholder="All"
+            placeholder="Season"
           />
         </div>
         {/* //////////////////////////////////form////////////////////////////////////////////////////// */}
@@ -432,7 +433,7 @@ const AddDiscoverForm = props => {
             onKeyDown={handleKeyForm}
             type="text"
             className="formtype-input"
-            placeholder="All"
+            placeholder="Form Type"
           />
         </div>
         {/* ///////////////////////////////////texture////////////////////////////////////////////////// */}
@@ -451,20 +452,22 @@ const AddDiscoverForm = props => {
             onKeyDown={handleKeyTexture}
             type="text"
             className="texturetype-input"
-            placeholder="All"
+            placeholder="Texture"
           />
         </div>
         {/* //////////////////////////////////Description/////////////////////////////////////////////// */}
 
         <label for="description">Description</label>
+        <div className="desDiv">
         <textarea
           name="descriptionPlant"
           rows="6"
           cols="20"
+          className="description"
           onChange={event => handleChangeDescription(event)}
           placeholder="Add plant Description...."
           required
-        ></textarea>
+        ></textarea></div>
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section one */}
@@ -617,10 +620,11 @@ const AddDiscoverForm = props => {
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section five */}
-
+          
         <label>Drop your Profile Picture</label>
         <br></br>
-        <img src=""></img>
+        <div className="uploadDiscImg">
+        <img src=""></img></div>
         <input
           type="file"
           id="upload4"
@@ -628,13 +632,13 @@ const AddDiscoverForm = props => {
           hidden
         />
         {isEmpty[4] ? (
-          <img
+          <div className="uploadDiscImg"><img
             className=" defaultImage"
             src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
             width="150px"
             height="150px"
             margin-left="36%"
-          ></img>
+          ></img></div>
         ) : (
           <img
             src={image[4]}
@@ -662,6 +666,7 @@ const AddDiscoverForm = props => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 
