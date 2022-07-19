@@ -22,7 +22,7 @@ const SignUp = props => {
       {/* <Link to="/">Click here to go to homepage</Link> */}
       <header><NavigationBar />
       </header>
-      <main><MyLibrary/>
+      <main className="myLibraryMain"><MyLibrary/>
       {/* <SearchResults /> */}
       </main>
       <Footer />
