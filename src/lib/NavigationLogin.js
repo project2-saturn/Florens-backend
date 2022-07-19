@@ -25,7 +25,7 @@ axios.get("/getUsername").then((result) => {
   return (
     <>
       <div class="navBar">
-        <img class="headerLogo" src="../images/florens-logo_green.png" alt="logo"/>
+      <Link to ="/"><img class="headerLogo" src="../images/florens-logo_green.png" alt="logo"/></Link>
         <input type="checkbox" id="menu-bar"/>
         <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
         <ul class="headerUl">
