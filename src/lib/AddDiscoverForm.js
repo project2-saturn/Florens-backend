@@ -244,7 +244,7 @@ const AddDiscoverForm = props => {
         .catch(err => {
           setError(err.response.data.message);
         });
-    }, 3000);
+    }, 1000);
   };
 
   const handlePicture = async index => {
