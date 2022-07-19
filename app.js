@@ -27,7 +27,7 @@ const s3 = new AWS.S3({
 });
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  // origin: "http://localhost:3000",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200
 };
