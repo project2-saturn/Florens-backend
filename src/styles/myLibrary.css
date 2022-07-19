@@ -63,7 +63,7 @@
   .LibraryForm{
     display: flex;
     justify-content: center;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
   }
   
   
@@ -72,3 +72,40 @@
   font-size: large;
   margin-bottom: 5px;
  }
+ /****library search Bar********/
+.LibrarySearchBar{
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 53%;
+  border-bottom: 2px solid black;
+}
+.LibrarySearchBar:focus{
+  outline: none;
+}
+/*********library search button******/
+  .LibrarySearchBtn{
+
+    border-top: none;
+    border-right:none;
+    border-left: none;
+    background-color: white;
+  }
+  /******library page form**********/
+  .LibraryForm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7%;
+  }
+    /***************************************/
+      /******library page form**********/
+  .LibHead{
+display:flex;
+gap:10px;
+  }
+  /*******change font size of logo******/
+  .fa{
+    font-size: large;
+    margin-bottom: 5px;
+}

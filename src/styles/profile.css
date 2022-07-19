@@ -171,7 +171,7 @@ display: flex;
     background-color:#EA5A4E;
     color:white;
 }
-/****library search Bar********/
+/***library search Bar*******/
 .LibrarySearchBar{
 
     border-top: none;
@@ -179,19 +179,19 @@ display: flex;
     border-bottom: 2px solid black;
   }
   /*********library search button******/
-    .LibrarySearchBtn{
+    /* .LibrarySearchBtn{
   
       border-top: none;
       
       border-left: none;
       background-color: white;
-    }
+    } */
     /******library page form**********/
-    .LibraryForm{
+    /* .LibraryForm{
       display: flex;
       justify-content: center;
       margin-bottom: 2%;
-    }
+    } */
     /*******change font size of logo******/
     .fa{
       font-size: large;
