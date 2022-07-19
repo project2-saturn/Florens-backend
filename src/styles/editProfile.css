@@ -107,9 +107,10 @@ background-color:white;
     border: 1px solid #7D9990;
     width: 520px;
     height: 70vh;
+    margin-top: 150px;
     transform: translate(70%, 0%);
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     grid-template-columns:repeat(2,1fr);
    
     padding: 2%;
@@ -126,3 +127,17 @@ background-color:white;
 
 /****************End of code***********************************/
 /***************************************************/
+@media only screen and (max-width: 600px) {
+    .EditProfileform-container {
+        border: 1px solid #7D9990;
+        width: 400px;
+        height: 69vh;
+        margin-top: 150px;
+        transform: translate(3%, 0%);
+        margin-bottom: 1rem;
+        /* margin-top: 1rem; */
+        grid-template-columns: repeat(2,1fr);
+        padding: 2%;
+        justify-content: center;
+    }
+  }

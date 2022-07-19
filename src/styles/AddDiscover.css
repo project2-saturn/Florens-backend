@@ -78,9 +78,21 @@
 
 .tags-input {
     flex-grow: 1;
-    padding: .5em 0;
+    /* padding: .5em 0; */
     border: none;
     outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    /* border: 1px solid var(--unnamed-color-f8c9bb); */
+    /* border: 1px solid #F8C9BB; */
+    border-radius: 10px;
+    opacity: 1;
+    
 }
 
 /* //////////////////////plant type////////////////////////// */
@@ -123,9 +135,20 @@
 
 .planttype-input {
     flex-grow: 1;
-    padding: .5em 0;
+    /* padding: .5em 0; */
     border: none;
     outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    /* border: 1px solid var(--unnamed-color-f8c9bb); */
+    /* border: 1px solid #F8C9BB; */
+    border-radius: 10px;
+    opacity: 1;
 }
 
 /* ////////////////////////////////////////////////////////////////// */
@@ -168,9 +191,20 @@
 
 .colortype-input {
     flex-grow: 1;
-    padding: .5em 0;
+    /* padding: .5em 0; */
     border: none;
     outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    /* border: 1px solid var(--unnamed-color-f8c9bb); */
+    /* border: 1px solid #F8C9BB; */
+    border-radius: 10px;
+    opacity: 1;
 }
 
 /* ////////////////////////////////////////////////////////////////// */
@@ -215,9 +249,20 @@
 
 .seasontype-input {
     flex-grow: 1;
-    padding: .5em 0;
+    /* padding: .5em 0; */
     border: none;
     outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    /* border: 1px solid var(--unnamed-color-f8c9bb); */
+    /* border: 1px solid #F8C9BB; */
+    border-radius: 10px;
+    opacity: 1;
 }
 
 /* ////////////////////////////////////////////////////////////////// */
@@ -260,9 +305,20 @@
 
 .formtype-input {
     flex-grow: 1;
-    padding: .5em 0;
+    /* padding: .5em 0; */
     border: none;
     outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    /* border: 1px solid var(--unnamed-color-f8c9bb); */
+    /* border: 1px solid #F8C9BB; */
+    border-radius: 10px;
+    opacity: 1;
 }
 
 /* ////////////////////////////////////////////////////////////////// */
@@ -304,11 +360,49 @@
 
 .texturetype-input {
     flex-grow: 1;
-    padding: .5em 0;
+    /* padding: .5em 0; */
     border: none;
     outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 2px;
+    font-family: 'Rubik';
+    /* font-weight: lighter; */
+    /* color: #6B6B6B; */
+    /* border: 1px solid var(--unnamed-color-f8c9bb); */
+    /* border: 1px solid #F8C9BB; */
+    border-radius: 10px;
+    opacity: 1;
 }
-
+.discContent{
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 20px;
+    width: 496px;
+    height: 80px;
+    color: #6B6B6B;
+    /* margin: auto;*/
+}
+.disHeading{
+    margin-top: 150px;
+    text-align: center;
+    color: #164C4C;
+}
+.disContentDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 35%;
+    margin-top: 2rem;
+    width: 500px;
+}
+.centerImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* ////////////////////////////////////////////////////////////////// */
 .plantNameInput{
 

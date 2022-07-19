@@ -303,7 +303,10 @@ const AddDiscoverForm = props => {
   return (
     <>
     <div>
-      <div>
+    <h2 className="disHeading">Add a Discovery</h2>
+    <div className="disContentDiv">
+    <p className="discContent">We encourage you to add any plant discovery you had, however, keep in mind that we require accurate information in order to keep our community a reliable place.</p>
+     </div> {/* <div>
         <p>PlantName: {plantname}</p>
 
         <p>ScientificName: {scientificname}</p>
@@ -317,7 +320,7 @@ const AddDiscoverForm = props => {
         <p>Form: {formtags}</p>
         <p>Owner: {username}</p>
         {/* <p>PlantName: {plantname}</p> */}
-      </div>
+      {/* </div>  */}
       <form
         className="form-signup"
         onSubmit={handleSubmit}
@@ -472,7 +475,7 @@ const AddDiscoverForm = props => {
 
         {/* image section one */}
 
-        <label>Drop your Profile Picture</label>
+        <label>Drop your Plant Picture 1</label>
         <br></br>
         <img src=""></img>
         <input
@@ -483,20 +486,21 @@ const AddDiscoverForm = props => {
           required
         />
         {isEmpty[0] ? (
+          <div className="centerImg">
           <img
             className=" defaultImage"
-            src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
+            src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg"
             width="150px"
             height="150px"
             margin-left="36%"
-          ></img>
+          ></img></div>
         ) : (
-          <img
+          <div className="centerImg"><img
             src={image[0]}
             width="150px"
             height="150px"
             className="uploadedImage"
-          ></img>
+          ></img></div>
         )}
 
         <div className="fileBorder">
@@ -510,7 +514,7 @@ const AddDiscoverForm = props => {
 
         {/* image section two */}
 
-        <label>Drop your Profile Picture</label>
+        <label>Drop your Plant Picture 2</label>
         <br></br>
         <img src=""></img>
         <input
@@ -520,20 +524,20 @@ const AddDiscoverForm = props => {
           hidden
         />
         {isEmpty[1] ? (
-          <img
+          <div className="centerImg"><img
             className=" defaultImage"
-            src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
+            src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg"
             width="150px"
             height="150px"
             margin-left="36%"
-          ></img>
+          ></img></div>
         ) : (
-          <img
+          <div className="centerImg"><img
             src={image[1]}
             width="150px"
             height="150px"
             className="uploadedImage"
-          ></img>
+          ></img></div>
         )}
 
         <div className="fileBorder">
@@ -547,7 +551,7 @@ const AddDiscoverForm = props => {
 
         {/* image section three */}
 
-        <label>Drop your Profile Picture</label>
+        <label>Drop your Plant Picture 3</label>
         <br></br>
         <img src=""></img>
         <input
@@ -557,20 +561,20 @@ const AddDiscoverForm = props => {
           hidden
         />
         {isEmpty[2] ? (
-          <img
+          <div className="centerImg"><img
             className=" defaultImage"
-            src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
+            src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg"
             width="150px"
             height="150px"
             margin-left="36%"
-          ></img>
+          ></img></div>
         ) : (
-          <img
+          <div className="centerImg"><img
             src={image[2]}
             width="150px"
             height="150px"
             className="uploadedImage"
-          ></img>
+          ></img></div>
         )}
 
         <div className="fileBorder">
@@ -584,7 +588,7 @@ const AddDiscoverForm = props => {
 
         {/* image section four */}
 
-        <label>Drop your Profile Picture</label>
+        <label>Drop your Plant Picture 4</label>
         <br></br>
         <img src=""></img>
         <input
@@ -594,20 +598,20 @@ const AddDiscoverForm = props => {
           hidden
         />
         {isEmpty[3] ? (
-          <img
+          <div className="centerImg"><img
             className=" defaultImage"
-            src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
+            src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg"
             width="150px"
             height="150px"
             margin-left="36%"
-          ></img>
+          ></img></div>
         ) : (
-          <img
+          <div className="centerImg"><img
             src={image[3]}
             width="150px"
             height="150px"
             className="uploadedImage"
-          ></img>
+          ></img></div>
         )}
 
         <div className="fileBorder">
@@ -621,7 +625,7 @@ const AddDiscoverForm = props => {
 
         {/* image section five */}
           
-        <label>Drop your Profile Picture</label>
+        <label>Drop your Plant Picture 5</label>
         <br></br>
         <div className="uploadDiscImg">
         <img src=""></img></div>
@@ -632,20 +636,19 @@ const AddDiscoverForm = props => {
           hidden
         />
         {isEmpty[4] ? (
-          <div className="uploadDiscImg"><img
+          <div className="centerImg"><img
             className=" defaultImage"
-            src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image.png"
+            src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg"
             width="150px"
             height="150px"
             margin-left="36%"
           ></img></div>
         ) : (
-          <img
+          <div className="centerImg"><img
             src={image[4]}
             width="150px"
             height="150px"
-            className="uploadedImage"
-          ></img>
+            className="uploadedImage"></img></div>
         )}
 
         <div className="fileBorder">
