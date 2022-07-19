@@ -1,9 +1,14 @@
 import React , {useState, useEffect}from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
-export default function() {
+export default function(props) {
+  const navigator = useNavigate();
+  const [show, setShow] = useState();
+  const [addedtoLib, setAddedToLib] = useState(false);
+  const [userEmail, setUserEmail] = useState();
 
   const [plant,setPlant] = useState({
     color: [],
@@ -20,14 +25,49 @@ export default function() {
     type: ""
   });
 
+  useEffect(function loadUserEmail() {
+    axios
+      .get("/getUserEmail")
+      .then(result => {
+        console.log(result);
+
+        setUserEmail(result.data);
+        if (result.data == "") {
+          setUserEmail("KPU");
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
+
+const addToLibrary =event=>{
+  axios.patch("addPlantToLibrary", {plantObjectID: plant.id, useremail:userEmail}).then((result) => {
+    console.log(result);
+  }).catch((err) => {
+    console.log(error);
+  });
+}
+  // setPicture(result.data.image);
+  // console.log(image);
+  // navigator("/");
+  const handlemodal = () => {
+    setShow(true);
+    setAddedToLib(true)
+    };
+  let cookies = Cookies.get("token");
+
+
   useEffect(function loadPlantOfTheDay() {
     axios.get("/plantOfTheDay").then(result => {
       let temp = result.data.data;
+      console.log(temp);
       setPlant({...temp});
       // console.log(plant);
     }).catch(error => console.log(error));
   },[]);
-  return (
+  return(
     <>
       <section class="secondSection">
         <h2 class="secondSectionHeadings">Plant of the Day</h2>
@@ -41,7 +81,7 @@ export default function() {
             </h3>
             <img className="cardWavyLineHome" src="../images/line-under-plantname.png" alt="plant" />
             <p class="plantHomeDescriptionMain">{plant.scientificName}</p>
-
+          </div>
             <div class="plantHomeDescItems1">
               <h5 class="plantDescItemsHeading">Plant Type</h5>
               <p class="plantDescItemsPara">{plant.type}</p>
@@ -66,11 +106,31 @@ export default function() {
               <h5 class="plantDescItemsHeading">Texture</h5>
               <p class="plantDescItemsPara">{plant.texture}</p>
             </div>
+            <div>
             <Link to="/plant"  state={plant}>
             <button className="secondHomeSectionBtn" type="button">Details</button>
             </Link> </div>
-            <img className="plantDayLeafBtn" src="../images/addBtn.png" alt="plant" />
+            {cookies ?  <button id="libButton" class="plantDayLeafBtn libButton" onClick={handlemodal}>
+            
+            {show ? <img src="../images/added-plant-library.png" />: <img src="../images/addBtn.png"  onClick={addToLibrary}/>}
+            </button>
+            
+            : 
+            <div>
+            <button id="libButton" className="plantDayLeafBtn libButton" onClick={handlemodal}>
+              <img src="../images/addBtn.png" />
+            
+            </button>
+            </div>
+            }
+            {cookies ? <></>
+              
+            : (
+              <Modal show={show} setShow={setShow} />
+            )}
+              
         </div>
+        
       </section>
     </>
   );
