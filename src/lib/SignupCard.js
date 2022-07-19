@@ -64,7 +64,7 @@ const SignupCard = props => {
         .catch(err => {
           setError(err);
         });
-    }, 1000);
+    }, 3000);
   };
 
   const handlePicture = async () => {
