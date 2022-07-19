@@ -444,13 +444,20 @@ app.post("/getDiscovery", (req, res) => {
 // below endpoint updates the library array on user database to add plant to its library.
 // it takes plantObjectID and useremail as request body parameters.
 // it returns the updated library array in json format.
-app.patch("/addPlantToLibrary", (req, res) => {
+app.patch("/addPlantToLibrary", async (req, res) => {
+  let boolean=false;
   const plantObjectID = req.body.plantObjectID;
   const useremail = req.body.useremail;
   console.log(plantObjectID);
   console.log(useremail);
-  User.findOne({ email: useremail }, { library: 1 })
+  let user= await User.findOne({ email: useremail },{library:1})
     .then(result => {
+result.library.map((id)=>{if(id==plantObjectID){
+  boolean=true;
+
+}});
+  if(!boolean){
+     
       User.updateOne(
         { email: useremail },
         { library: [...result.library, plantObjectID] }
@@ -460,6 +467,11 @@ app.patch("/addPlantToLibrary", (req, res) => {
         )
 
         .catch(error => console.log(error));
+  }
+  else{
+    res.json("Plamt already added to library");
+  }
+
     })
     .catch(error => console.log(error));
 });
