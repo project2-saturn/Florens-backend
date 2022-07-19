@@ -93,8 +93,6 @@ const addToLibrary =event=>{
               <img src="../images/addBtn.png" />
             
             </button>
-            {/* {console.log("entered")}
-          {console.log(cookies)} */}
             {cookies ? <></>
               
             : (

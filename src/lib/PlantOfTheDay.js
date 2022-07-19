@@ -1,6 +1,7 @@
 import React , {useState, useEffect}from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import Modal from "../lib/Modal.js";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
