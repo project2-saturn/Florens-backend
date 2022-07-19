@@ -40,8 +40,7 @@ const PlantProfile = props => {
       <header>
         <NavigationBar />
       </header>
-      <main>
-        <section class="secondSectionPlantProfile">
+      <main class="secondSectionPlantProfile">
           <div class="secondSectionCardPlantProfile">
             {plant.photosURL[0] ? (
               <div class="secondSecImgPlantProfile">
@@ -100,7 +99,7 @@ const PlantProfile = props => {
 
               <p class="plantDescp">
                 {plant.description}</p>
-
+              <div className="plantProfileTypesContainer">
               <div class="plantDescItems1">
                 <h5 class="plantDescItemsHeading">Plant Type</h5>
                 <p class="plantDescItemsPara">{plant.type}</p>
@@ -125,6 +124,7 @@ const PlantProfile = props => {
                 <h5 class="plantDescItemsHeading">texture</h5>
                 <p class="plantDescItemsPara">{plant.texture}</p>
               </div>
+              </div>
 
               <div class="lineSec"></div>
               <img
@@ -141,7 +141,6 @@ const PlantProfile = props => {
               </button>
             </div>
           </div>
-        </section>
       </main>
       <Footer />
     </>
