@@ -34,7 +34,7 @@ axios.get("/getUsername").then((result) => {
   if({name}=="Login")
   
   <div className="navBar">
-  <img className="headerLogo" src="../images/florens-logo_green.png" alt="logo"/>
+  <Link to ="/"><img class="headerLogo" src="../images/florens-logo_green.png" alt="logo"/></Link>
   <input type="checkbox" id="menu-bar"/>
   <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
   <ul class="headerUl">
@@ -64,7 +64,7 @@ function logout(){
     <>
 
     {islogged?<div class="navBar">
-        <img class="headerLogo" src="../images/florens-logo_green.png" alt="logo"/>
+    <Link to ="/"><img class="headerLogo" src="../images/florens-logo_green.png" alt="logo"/></Link>
         <input type="checkbox" id="menu-bar"/>
         <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
         <ul class="headerUl">
@@ -84,7 +84,7 @@ function logout(){
         </ul>
       </div>
       :   <div className="navBar">
-  <img className="headerLogo" src="../images/florens-logo_green.png" alt="logo"/>
+      <Link to ="/"><img class="headerLogo" src="../images/florens-logo_green.png" alt="logo"/></Link>
   <input type="checkbox" id="menu-bar"/>
   <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
   <ul class="headerUl">
