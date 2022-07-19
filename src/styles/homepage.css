@@ -483,6 +483,7 @@ top: 150px;
     width: 524px;
     height: 434px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .secondHomeSectionCard{
@@ -672,7 +673,7 @@ h3{
 
 }
 .thirdSectionCardMainImage{
-
+    object-fit: cover;
 
     width: 276px;
     height: 229px;

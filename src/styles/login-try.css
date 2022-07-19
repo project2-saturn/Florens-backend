@@ -150,7 +150,7 @@ form.form-login-border {
     border-radius: 15px;
 }
 @media only screen and (max-width: 600px) {
-    .form.form-login-border{
+    .form-login-border{
     border: none;
     }
 }
