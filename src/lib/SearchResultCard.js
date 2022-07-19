@@ -6,7 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function(props) {
   const navigator = useNavigate();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState();
+  const [addedtoLib, setAddedToLib] = useState(false);
   const [userEmail, setUserEmail] = useState();
 
   useEffect(function loadUserEmail() {
@@ -38,6 +39,7 @@ const addToLibrary =event=>{
   // navigator("/");
   const handlemodal = () => {
     setShow(true);
+    setAddedToLib(true)
   };
   let cookies = Cookies.get("token");
 
