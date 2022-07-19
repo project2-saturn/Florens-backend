@@ -133,12 +133,6 @@ const PlantProfile = props => {
                 alt="plant"
               />
               <p class="contribution">Contribution from John Smith</p>
-              <button class="editBtn" type="button"><img  src="../images/edit.png" alt="plant" />
-              &nbsp; Edit
-              </button>
-              <button class="deletBtn" type="button"><img  src="../images/delete.png" alt="plant" />
-              &nbsp; Delete
-              </button>
             </div>
           </div>
       </main>
