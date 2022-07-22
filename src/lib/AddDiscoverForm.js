@@ -474,7 +474,7 @@ const AddDiscoverForm = props => {
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section one */}
-
+{/* 
         <label>Drop your Plant Picture 1</label>
         <br></br>
         <img src=""></img>
@@ -508,12 +508,12 @@ const AddDiscoverForm = props => {
             Choose file
           </label>
           <br></br>
-        </div>
+        </div> */}
 
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section two */}
-
+{/* 
         <label>Drop your Plant Picture 2</label>
         <br></br>
         <img src=""></img>
@@ -545,13 +545,13 @@ const AddDiscoverForm = props => {
             Choose file
           </label>
           <br></br>
-        </div>
+        </div> */}
 
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section three */}
 
-        <label>Drop your Plant Picture 3</label>
+        {/* <label>Drop your Plant Picture 3</label>
         <br></br>
         <img src=""></img>
         <input
@@ -582,13 +582,13 @@ const AddDiscoverForm = props => {
             Choose file
           </label>
           <br></br>
-        </div>
+        </div> */}
 
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section four */}
 
-        <label>Drop your Plant Picture 4</label>
+        {/* <label>Drop your Plant Picture 4</label>
         <br></br>
         <img src=""></img>
         <input
@@ -612,26 +612,29 @@ const AddDiscoverForm = props => {
             height="150px"
             className="uploadedImage"
           ></img></div>
-        )}
+        )} */}
 
-        <div className="fileBorder">
+        {/* <div className="fileBorder">
           <label for="upload3" className="uploadFile">
             Choose file
           </label>
           <br></br>
-        </div>
+        </div> */}
 
         {/* /////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* image section five */}
           
-        <label>Drop your Plant Picture 5</label>
+        <label>Drop Your Plant Picture </label>
         <br></br>
         <div className="uploadDiscImg">
         <img src=""></img></div>
+        
         <input
           type="file"
           id="upload4"
+          name="files[]"
+          multiple class="form-control"
           onChange={event => handleImageChange(event, 4)}
           hidden
         />
