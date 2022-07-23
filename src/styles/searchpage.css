@@ -403,14 +403,14 @@ body{
         }
 
         .filterDiv {
-            width: 330px;
+            width: 310px;
             position: relative;
             font-family: 'Rubik';
             top: 0;
             left: 0;
             margin-top: 20px;
             /* margin-right: 30px; */
-            margin-left: 20px;
+           
         }
         .filterP {
             margin-left: 26px;

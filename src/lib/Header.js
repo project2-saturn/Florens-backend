@@ -127,6 +127,7 @@ export default function(props) {
       <div>SearchTexture:{searchOptions.searchTexture.toString()}</div> */}
       <header class="homeHeader">
         <NavigationBar />
+        <div className="headerGridDiv">
         <div class="headerText">
           <h1 class="headerTextHeading">
             A Pocket Expert <br />
@@ -271,6 +272,7 @@ export default function(props) {
             </div>
             <div className="blankSpace">         </div>
           </div>
+        </div>
         </div>
       </header>
     </>
