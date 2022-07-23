@@ -5,7 +5,10 @@ export default function() {
     <>
       <footer>
         <div class="footerFirstDiv">
+          <div className="footerLogoDiv">
           <img class="footerLogo" src="../images/Group_641.png" alt="logo" />
+          </div>
+          <div className="footerUniDiv">
           <div class="footerUni">
             <img class="footerUniLogo" src="../images/KPU-Logo.png" alt="KPU" />
             <p>
@@ -13,6 +16,7 @@ export default function() {
               <br />
               https://plantdatabase.kpu.ca
             </p>
+          </div>
           </div>
           <p class="logoCap">
             Foliage background and Leaf illustration vector created by

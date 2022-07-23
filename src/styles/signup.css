@@ -226,4 +226,29 @@ width:100%;
 
   
 
-  
+@media only screen and (max-width: 600px) {
+  .form-div-signup {
+    width: 100%;
+    border:none;
+    padding: 3%;
+}
+.container-signup{
+  margin-top: 101px;
+    margin-bottom: 30px;
+}
+.form-signup {
+  margin-left: 26%;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  max-width: 57%;
+  height: 50%;
+  padding: 15px;
+  margin-left: 26%;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 50%; */
+  height: 50%;
+  padding: 15px;
+}
+}
