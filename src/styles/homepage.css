@@ -926,6 +926,24 @@ margin-top: 15px;
     border: 1px solid dark;
     
 }
+
+
+p.forgotPassword {
+
+    position: absolute;
+    top: 410px;
+    left: 289px;
+
+}
+
+p.newFlorens {
+    position: absolute;
+    top: 530px;
+    left: 220px;
+}
+
+
+
 .formCloseBtn{
     position: absolute;
     top: -10px;
@@ -1579,4 +1597,284 @@ border-bottom: solid 0px #6B6B6B;
                 align-items: center;
                 align-content: center;
             }
+
+
+            .accordion {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+            }
+    
+    
+            .filterSectionOne {
+                position: relative;
+                padding-top: 60px;
+            }
+    
+            .filterFirstFlexContainer {
+                display: flex;
+                left: -50px;
+                position: relative;
+            }
+            .filterUl {
+                position: relative;
+                font-family: 'Rubik';
+                top: 0;
+                left: 0;
+                display: flex;
+                list-style-type: none;
+            }
+    
+            .filterDiv {
+                width: 310px;
+                position: relative;
+                font-family: 'Rubik';
+                top: 0;
+                left: 0;
+                margin-top: 20px;
+                /* margin-right: 30px; */
+                
+            }
+            .filterP {
+                margin-left: 26px;
+                font-family: 'Rubik';
+                font-size: 16px;
+                font-weight: bold;
+                border: 0;
+                color: #0d3f3f;
+                width: 130px;
+            }
+    
+    
+            .filterSectionOne{
+                position: relative;
+                display: flex;
+                padding-top: 60px;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+            .filterSectionTwo{
+                position: relative;
+                display: flex;
+                padding-top: 30px;
+                align-items: center;
+                flex-direction: column;
+               
+            }
+            .filterSectionThree{
+                position: relative;
+                display: flex;
+                padding-top: 30px;
+                align-items: center;
+                flex-direction: column;
+               
+            }
+            .filterSectionFour{
+                position: relative;
+                display: flex;
+                padding-top: 30px;
+                align-items: center;
+                flex-direction: column;
+               
+            }
+            .filterSectionFive{
+                position: relative;
+                display: flex;
+                padding-top: 30px;
+                align-items: center;
+                flex-direction: column;
+            }
+            .filterSectionSix{
+                position: relative;
+                display: flex;
+                padding-top: 30px;
+                align-items: center;
+                flex-direction: column;
+             }
+    
+             .clearApply {
+                position: relative;
+                align-items: center;
+                top: 0;
+                left: 0;
+                margin-top: 30px;
+            }
+    
+            .blankSpace{
+                height: 20px;
+            }
+    
+            .filterBottomMobileLine{
+                border-bottom: solid #164C4C 1.5px;
+                width: 300px;
+                opacity: 0.5;
+                margin-top: 30px;
+                display: block;
+            }
+    
+                a.aboutNav {
+                    margin-top: 50px;
+                }
+                
+                a.loginNav {
+                    margin-top: 20px;
+                }
+    
+                .chartDiv {
+                    width: 94vw;
+                    display: flex;
+                    height: 27%;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                }
+                /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+                /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/ 
+    
+    
+                .bg-modal{
+                    position: fixed;
+                    width: 100%;
+                    height: 100vh;
+                    background-color: rgb(0, 0, 0, 0.7);
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    display: none;
+                    z-index: 1;
+                }
+                .modalContent{
+                    width: 70vw;
+                    height: 70vh;
+                    background-color: white;
+                    border-radius: 15px;
+                }
+                
+                
+                
+                /* ///////////////////////////////////////////////////modal inside///////////////////////////////////////////// */
+                .modalFourm{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 0.1fr 1fr 0.1fr 1fr 1fr 1fr 1fr;
+                    border: 1px solid dark;
+                    width: 70vw;
+                    height: 70vh;
+                    text-align: center;
+                }
+                .formCloseBtn{
+                    font-size: 50px;
+                    transform: rotate(45deg);
+                    color: #164C4C;
+                    margin-left: 80%;
+                    appearance: none;
+                    background: none;
+                    outline: none;
+                    font-size: 60px;
+                    font-family: 'Rubik';
+                    border: none;
+                    position: initial;
+                }
+                .formheading{
+                    font-size: 32px;
+                    color: #164C4C;
+                    font-family: 'Merriweather', serif;
+                    position: initial;
+                }
+                
+                .formParagraph{
+                    font-size: 16px;
+                    font-family: 'Rubik';
+                    font-weight: lighter;
+                    color: #6B6B6B;
+                    position: initial;
+                }
+                
+                .formLabelEmail{
+                    font-size: 16px;
+                    font-family: 'Rubik';
+                    font-weight: lighter;
+                    color: #6B6B6B;
+                    margin-right: 70%;
+                    margin-top: 20px;
+                    position: initial;
+                }
+                
+                .formInputEmail{
+                    height: 50px;
+                    width: 80%;
+                    border-radius:  10px;
+                    border:solid #EA5A4E 0.5px;
+                    margin-left: 10%;
+                    position: initial;
+                
+                }
+                
+                .formLabelPassword{
+                    font-size: 16px;
+                    font-family: 'Rubik';
+                    font-weight: lighter;
+                    color: #6B6B6B;
+                    margin-right: 65%;
+                    margin-top: 20px;
+                    position: initial;
+                }
+                
+                .formInputPassword{
+                    height: 50px;
+                    width: 80%;
+                    border-radius: 10px;
+                    border:solid #EA5A4E 0.5px;
+                    margin-left: 10%;
+                    position: initial;
+                
+                }
+                 
+                
+                .forgotPasswordModal{
+                    font-size: 16px;
+                    font-family: 'Rubik';
+                    font-weight: lighter;
+                    color: #6B6B6B;
+                    width: 60%;
+                    position: initial;
+                }
+                
+                .formSubmit{
+                    text-align: center;
+                    color: #EA5A4E;
+                    appearance: none;
+                    background: none;
+                    border: solid #EA5A4E 2px;
+                    outline: none;
+                    width: 80%;
+                    height: 45px;
+                    border-radius: 10px;
+                    font-size: 13px;
+                    font-family: 'Rubik';
+                    margin-left: 10%;
+                    position: initial;
+                
+                }
+                
+                .newFlorensModal{
+                    font-size: 16px;
+                    font-family: 'Rubik';
+                    font-weight: lighter;
+                    color: #6B6B6B;
+                    position: initial;
+                }
+                
+                p.forgotPassword {
+                    position: initial;
+                
+                }
+                
+                p.newFlorens {
+                
+                    position: initial;
+                }
 }
