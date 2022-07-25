@@ -9,7 +9,9 @@ export default function() {
             <div class="maincontainer">
                 <div class="celeste">
                     <div class="thefront">
+
                         <img src="../images/celesteAbout.JPG" alt="plant"/>
+
                         <p class="celesteName">Li Huei Chen (Celeste)</p>
                         <p class="person1Title">Project Manager & UI/UX Dexigner</p>
                         <div class="aboutLine"></div>
@@ -23,7 +25,9 @@ export default function() {
                 </div>
                 <div class="tainara">
                     <div class="thefront">
+
                         <img src="../images/TDAbout.JPG" alt="plant"/>
+
                         <p class="tainaraName">Tainara de Almeida Dineck</p>
                         <p class="person2Title">Lead UI/UX Dexigner</p>
                         <div class="aboutLine"></div>
@@ -37,7 +41,9 @@ export default function() {
                 </div>
                 <div class="jaspreet">
                     <div class="thefront">
+
                         <img src="../images/jespreetAbout.JPG" alt="plant"/>
+
                         <p class="jaspreetName">Jaspreet Kaur</p>
                         <p class="person3Title">Marketer / UI/UX Designer</p>
                         <div class="aboutLine"></div>
@@ -51,7 +57,9 @@ export default function() {
                 </div>
                 <div class="vipul">
                     <div class="thefront">
+
                         <img src="../images/vipulAbout.JPG" alt="plant"/>
+
                         <p class="vipulName">Vipul Kumar Gupta</p>
                         <p class="person4Title">Lead Developer</p>
                         <div class="aboutLine"></div>
@@ -65,7 +73,9 @@ export default function() {
                 </div>
                 <div class="athulya">
                     <div class="thefront">
+
                         <img src="../images/athulyaAbout.JPG" alt="plant"/>
+
                         <p class="athulyaName">Athulya Dandamudi</p>
                         <p class="person5Title">Frontend Developer</p>
                         <div class="aboutLine"></div>
@@ -79,7 +89,9 @@ export default function() {
                 </div>
                 <div class="arora">
                     <div class="thefront">
+
                         <img src="../images/lakshitaAbout.JPG" alt="plant"/>
+
                         <p class="aroraName">Lakshita Arora</p>
                         <p class="person6Title">Frontend Developer</p>
                         <div class="aboutLine"></div>
@@ -93,7 +105,9 @@ export default function() {
                 </div>
                 <div class="parth">
                     <div class="thefront">
+
                         <img src="../images/parthAbout.JPG" alt="plant"/>
+
                         <p class="parthName">Parthlumar Soni</p>
                         <p class="person7Title">Backend Developer</p>
                         <div class="aboutLine"></div>

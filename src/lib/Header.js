@@ -127,6 +127,7 @@ export default function(props) {
       <div>SearchTexture:{searchOptions.searchTexture.toString()}</div> */}
       <header class="homeHeader">
         <NavigationBar />
+        <div className="headerGridDiv">
         <div class="headerText">
           <h1 class="headerTextHeading">
             A Pocket Expert <br />
@@ -173,7 +174,9 @@ export default function(props) {
                 handleSelectAllOption={handleSelectAllOption}
                 handleClearAllOption={handleClearAllOption}
               />
+              <div className="filterBottomMobileLine"></div>
             </div>
+            
 
             <div class="filterSectionTwo">
               <SearchFilter
@@ -186,6 +189,7 @@ export default function(props) {
                 handleSelectAllOption={handleSelectAllOption}
                 handleClearAllOption={handleClearAllOption}
               />
+              <div className="filterBottomMobileLine"></div>
             </div>
             <div class="filterSectionThree">
               <SearchFilter
@@ -198,6 +202,7 @@ export default function(props) {
                 handleSelectAllOption={handleSelectAllOption}
                 handleClearAllOption={handleClearAllOption}
               />
+              <div className="filterBottomMobileLine"></div>
             </div>
             <div class="filterSectionFour">
               <SearchFilter
@@ -210,6 +215,7 @@ export default function(props) {
                 handleSelectAllOption={handleSelectAllOption}
                 handleClearAllOption={handleClearAllOption}
               />
+              <div className="filterBottomMobileLine"></div>
             </div>
             <div class="filterSectionFive">
               <SearchFilter
@@ -222,6 +228,7 @@ export default function(props) {
                 handleSelectAllOption={handleSelectAllOption}
                 handleClearAllOption={handleClearAllOption}
               />
+              <div className="filterBottomMobileLine"></div>
             </div>
             <div class="filterSectionSix">
               <SearchFilter
@@ -234,7 +241,9 @@ export default function(props) {
                 handleSelectAllOption={handleSelectAllOption}
                 handleClearAllOption={handleClearAllOption}
               />
+              <div className="filterBottomMobileLine"></div>
             </div>
+           
             <div class="clearApply">
               <button
                 class="filterClear"
@@ -261,7 +270,9 @@ export default function(props) {
               </button>
               </Link>
             </div>
+            <div className="blankSpace">         </div>
           </div>
+        </div>
         </div>
       </header>
     </>

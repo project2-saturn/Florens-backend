@@ -188,6 +188,7 @@ export default function(props) {
               handleSelectAllOption={handleSelectAllOption}
               handleClearAllOption={handleClearAllOption}
             />
+            <div className="filterBottomMobileLine"></div>
           </div>
           <div class="filterSectionTwo">
             <SearchFilter
@@ -200,6 +201,7 @@ export default function(props) {
               handleSelectAllOption={handleSelectAllOption}
               handleClearAllOption={handleClearAllOption}
             />
+            <div className="filterBottomMobileLine"></div>
           </div>
           <div class="filterSectionThree">
             <SearchFilter
@@ -212,6 +214,7 @@ export default function(props) {
               handleSelectAllOption={handleSelectAllOption}
               handleClearAllOption={handleClearAllOption}
             />
+            <div className="filterBottomMobileLine"></div>
           </div>
           <div class="filterSectionFour">
             <SearchFilter
@@ -224,6 +227,7 @@ export default function(props) {
               handleSelectAllOption={handleSelectAllOption}
               handleClearAllOption={handleClearAllOption}
             />
+            <div className="filterBottomMobileLine"></div>
           </div>
           <div class="filterSectionFive">
             <SearchFilter
@@ -236,6 +240,7 @@ export default function(props) {
               handleSelectAllOption={handleSelectAllOption}
               handleClearAllOption={handleClearAllOption}
             />
+            <div className="filterBottomMobileLine"></div>
           </div>
           <div class="filterSectionSix">
             <SearchFilter

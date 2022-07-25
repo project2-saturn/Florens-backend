@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import styles from "../styles/homepage.css";
 import axios from "axios";
@@ -40,7 +41,9 @@ const Modal=props=>{
          <div class="modalContent" >
             {/* {console.log("entered")} */}
           <form class="modalFourm" onSubmit={handleSubmit} >
+
             <button id="formCloseBtn" class="formCloseBtn cacc" type="button" onClick={handleClose} >+</button>
+
             
             {/* {console.log(props.show)} */}
             <h1 class="formheading">Have an account at Florens?</h1>
@@ -51,7 +54,9 @@ const Modal=props=>{
            
             <label class="formLabelPassword" for="password">Password</label>
             <input class="formInputPassword" type="password"  name="password" required  onChange={event => handleChangePassword(event)}/>
+
             <p class="forgotPassword"><a class="cacc">Forgot Password ?</a></p>
+
             <input class="formSubmit" type="submit" value="LOGIN" />
             
             <p class="newFlorens" >New on Florens?<a>   <Link to="/signup">
