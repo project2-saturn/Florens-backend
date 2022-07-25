@@ -1179,6 +1179,9 @@ margin-top: 15px;
         font-weight: lighter;
         color: #6B6B6B;
     }
+    .cacc{
+        cursor:pointer;
+    }
     .secondHomeSectionBtn {
         position: relative;
         top: 45px;

@@ -625,7 +625,7 @@ const AddDiscoverForm = props => {
 
         {/* image section five */}
           
-        <label>Drop Your Plant Picture </label>
+        <label>Upload Your Plant Picture </label>
         <br></br>
         <div className="uploadDiscImg">
         <img src=""></img></div>

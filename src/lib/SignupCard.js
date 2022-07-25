@@ -111,7 +111,7 @@ const SignupCard = props => {
       >
         <div className="form-div-signup">
           <h1>Create Account</h1>
-          <label className="required">Drop your Profile Picture</label>
+          <label className="required">Upload your Profile Picture</label>
           <br></br>
 
           <input

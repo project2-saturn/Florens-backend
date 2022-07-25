@@ -6,7 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function(props) {
   const navigator = useNavigate();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState();
+  const [addedtoLib, setAddedToLib] = useState(false);
   const [userEmail, setUserEmail] = useState();
 
   useEffect(function loadUserEmail() {
@@ -38,6 +39,7 @@ const addToLibrary =event=>{
   // navigator("/");
   const handlemodal = () => {
     setShow(true);
+    setAddedToLib(true)
   };
   let cookies = Cookies.get("token");
 
@@ -76,23 +78,21 @@ const addToLibrary =event=>{
           </div>
           <div className="searchResultCardButtons">
             <Link to="/plant" state={props.plant}>
-              <button class="homeThirdSecDetailsButton" type="button">
+              <button class="homeThirdSecDetailsButton cacc" type="button">
                 DETAILS
               </button>
             </Link>
-            {cookies ?  <button id="libButton" class="libButton" onClick={handlemodal}>
+            {cookies ?  <button id="libButton" class="libButton cacc" onClick={handlemodal}>
             
             {show ? <img src="../images/added-plant-library.png" />: <img src="../images/addBtn.png"  onClick={addToLibrary}/>}
             </button>
             
             : 
             <>
-            <button id="libButton" class="libButton" onClick={handlemodal}>
+            <button id="libButton" class="libButton cacc" onClick={handlemodal}>
               <img src="../images/addBtn.png" />
             
             </button>
-            {/* {console.log("entered")}
-          {console.log(cookies)} */}
             {cookies ? <></>
               
             : (
