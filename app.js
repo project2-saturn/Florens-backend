@@ -88,6 +88,9 @@ app.use(express.json());
 
 // });
 
+
+
+
 app.post("/postImage", async (req, res) => {
   // console.log(req)
   const uploadedImage = await s3
@@ -766,3 +769,16 @@ app.get("/searchOption", (req, res, next) => {
     })
     .catch(error => console.log(error));
 });
+
+app.get("/*",function(req,res)
+{
+
+res.sendFile(path.join(__dirname,'public/index.html'),function(err){
+
+  if(err){
+    res.status(500).send(err);
+  }
+})
+
+
+})
