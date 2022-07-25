@@ -101,7 +101,8 @@ width: 21%;
 
 .main-title{
     text-align: center;
-    padding: 2rem;
+    /* padding: 2rem; */
+    padding: 1.5rem;
     color: #164C4C;
 }
 .navigation-button{

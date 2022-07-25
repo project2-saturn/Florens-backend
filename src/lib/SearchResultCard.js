@@ -78,18 +78,18 @@ const addToLibrary =event=>{
           </div>
           <div className="searchResultCardButtons">
             <Link to="/plant" state={props.plant}>
-              <button class="homeThirdSecDetailsButton" type="button">
+              <button class="homeThirdSecDetailsButton cacc" type="button">
                 DETAILS
               </button>
             </Link>
-            {cookies ?  <button id="libButton" class="libButton" onClick={handlemodal}>
+            {cookies ?  <button id="libButton" class="libButton cacc" onClick={handlemodal}>
             
             {show ? <img src="../images/added-plant-library.png" />: <img src="../images/addBtn.png"  onClick={addToLibrary}/>}
             </button>
             
             : 
             <>
-            <button id="libButton" class="libButton" onClick={handlemodal}>
+            <button id="libButton" class="libButton cacc" onClick={handlemodal}>
               <img src="../images/addBtn.png" />
             
             </button>
