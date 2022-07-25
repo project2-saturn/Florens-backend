@@ -494,3 +494,23 @@
     margin-top: 10px;
     color: #6B6B6B;
 }
+@media screen and (max-width: 600px)  {
+
+    .disContentDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-left: 0px;
+        margin-top: opx; 
+         width: 0px;
+}
+.discContent {
+    text-align: center;
+    margin-top: 2rem;
+     margin-left: 0px; 
+    width: 496px;
+    height: 80px;
+    color: #6B6B6B;
+    margin: auto;
+}}
