@@ -110,3 +110,16 @@ gap:10px;
     font-size: large;
     margin-bottom: 5px;
 }
+@media screen and (max-width: 600px){
+.discovery-cards {
+    display: grid;
+    gap: 1%;
+    grid-template-columns: repeat(1,0.2fr);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 150px;}
+  .my-discoveries{
+    margin-top: 55px;
+  }
+  }
