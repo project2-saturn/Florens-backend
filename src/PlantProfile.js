@@ -32,6 +32,17 @@ const PlantProfile = props => {
     // console.log(plant);
   }, []);
 
+
+  function handleBigPhotoChange (index) {
+    let tempPhotos = [...plant.photosURL];
+    const smallURL = plant.photosURL[index];
+    // const smallURL = plant.photosURL[index];
+    // tempPhotos = [smallURL, tempPhotos.slice(1,index), bigURL , tempPhotos.slice(index+1)];
+    tempPhotos[index] = tempPhotos[0];
+    tempPhotos[0] = smallURL;
+    setPlant({...plant, photosURL:tempPhotos});
+  }
+
   return (
     <>
       {/* <h1>HEloo.. this is the search page</h1> */}
@@ -52,28 +63,28 @@ const PlantProfile = props => {
            
             {plant.photosURL[1] ? (
               <div class="secondSecImge">
-                <img src={plant.photosURL[1]} alt="plant" />
+                <img src={plant.photosURL[1]} alt="plant" onClick={() => handleBigPhotoChange(1)}/>
               </div>
             ) : (
               <></>
             )}
             {plant.photosURL[2] ? (
               <div class="secondSecImges">
-                <img src={plant.photosURL[2]} alt="plant" />
+                <img src={plant.photosURL[2]} alt="plant" onClick={() => handleBigPhotoChange(2)}/>
               </div>
             ) : (
               <></>
             )}
             {plant.photosURL[3] ? (
               <div class="secondSecImga">
-                <img src={plant.photosURL[3]} alt="plant" />
+                <img src={plant.photosURL[3]} alt="plant" onClick={() => handleBigPhotoChange(3)}/>
               </div>
             ) : (
               <></>
             )}
             {plant.photosURL[4] ? (
               <div class="secondSecImgas">
-                <img src={plant.photosURL[4]} alt="plant" />
+                <img src={plant.photosURL[4]} alt="plant" onClick={() => handleBigPhotoChange(4)}/>
               </div>
             ) : (
               <></>
