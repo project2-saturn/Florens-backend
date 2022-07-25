@@ -72,9 +72,10 @@ export default function() {
       <main className="homePageMain">
         <Features />
         <PlantOfTheDay />
+        <div className="divCentre">
         <div className="chartDiv">
-          <canvas id="myChart" className="chartSize"  width="400" height="400"></canvas>
-        </div>
+          <canvas id="myChart" className="chartSize" height="200px" width="200px"></canvas>
+        </div></div>
 
         <SeasonalPlants />
         {/* <Modal/> */}
