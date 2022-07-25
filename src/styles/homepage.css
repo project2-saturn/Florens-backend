@@ -738,24 +738,30 @@ h3{
 
 
 }
+.divCentre{
+    display: flex;
+    justify-content: center;
+}
 /*****************************************************/
 /*********************** chart Div********************************/
 .chartDiv{
-    width: 40%;
+   
         display: flex;
-        height: 27%;
+        height: 500px;
+    width: 500px;
+        /* height: 27%; */
         justify-content: center;
         align-items: center;
         align-content: center;}
         /******************************************************************/
         /*********************** chart Size********************************/
-        .chartSize{
+        /* .chartSize{
             display: flex;
         place-content: center;
         height: 284px;
         width: 284px;
         margin-left:35%;
-        }
+        } */
         /*********************** *****************************/
         /****************************************************/
 .homeThirdSecDetailsButton:hover{
@@ -1009,7 +1015,8 @@ p.newFlorens {
     color: #6B6B6B;
 }
 
-.formInputPassword{
+.formInputPassword
+{
     position: absolute;
     top: 340px;
     left:40px;
@@ -1028,6 +1035,13 @@ p.newFlorens {
     font-family: 'Rubik';
     font-weight: lighter;
     color: #6B6B6B;
+}
+
+
+canvas [hieght]{
+
+height: 200px;
+
 }
 
 .formSubmit{
@@ -1238,6 +1252,13 @@ border-bottom: solid 0px #6B6B6B;
     .cacc{
         cursor:pointer;
     }
+    /* .chartSize{
+        display: flex;
+        place-content: center;
+        height: 284px;
+        width: 284px;
+         margin-left: 0px;
+    } */
     .secondHomeSectionBtn {
         position: relative;
         top: 45px;
@@ -1484,12 +1505,15 @@ border-bottom: solid 0px #6B6B6B;
         width: 50%;
         display: flex;
         height: 27%;
-        margin-left: 31%;
+        margin-left: 0px;
         justify-content: center;
         align-items: center;
         align-content: center;
     }
-=======
+    .chartSize{
+        margin-left: 0px;
+    }
+
 
 
         .filterSectionOne {
@@ -1607,14 +1631,14 @@ border-bottom: solid 0px #6B6B6B;
                 margin-top: 20px;
             }
 
-            .chartDiv {
+            /* .chartDiv {
                 width: 94vw;
                 display: flex;
                 height: 27%;
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-            }
+            } */
 
 
             .accordion {
@@ -1739,14 +1763,14 @@ border-bottom: solid 0px #6B6B6B;
                     margin-top: 20px;
                 }
     
-                .chartDiv {
+                /* .chartDiv {
                     width: 94vw;
                     display: flex;
                     height: 27%;
                     justify-content: center;
                     align-items: center;
                     align-content: center;
-                }
+                } */
                 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
                 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/ 
     
