@@ -41,7 +41,7 @@
   #searchSubmit:hover {
     cursor: pointer;
   }
-  //library search Bar
+  /* //library search Bar */
   .LibrarySearchBar{
   
     border-top: none;
@@ -50,7 +50,7 @@
     width: 53%;
     border-bottom: 2px solid black;
   }
-  //library search button
+  /* //library search button */
   .LibrarySearchBtn{
 
     border-top: none;
@@ -59,7 +59,7 @@
     border-left: none;
     background-color: white;
   }
-  //library page form
+  /* //library page form */
   .LibraryForm{
     display: flex;
     justify-content: center;
@@ -67,7 +67,7 @@
   }
   
   
-  //change the size of icon logo
+  /* //change the size of icon logo */
  .fa{
   font-size: large;
   margin-bottom: 5px;
