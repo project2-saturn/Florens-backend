@@ -322,10 +322,11 @@ const AddDiscoverForm = props => {
         {/* <p>PlantName: {plantname}</p> */}
       {/* </div>  */}
       <form
-        className="form-signup"
+        className="formAddDiscovery"
         onSubmit={handleSubmit}
         enctype="multipart/form-data"
       >
+      <div className="libraryDiv">
         <label for="name">Name</label>
         <input
           type="text"
@@ -670,6 +671,7 @@ const AddDiscoverForm = props => {
         >
           Submit
         </button>
+        </div>
       </form>
     </div>
     </>

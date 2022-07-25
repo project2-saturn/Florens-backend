@@ -437,7 +437,7 @@
 /* ////////////////////////////////////////////////////////////////// */
 
 .formAddDiscovery{
-    border: solid 0.3px #164C4C ;
+
     width: 1280px;
     margin-top: 30px;
     margin-bottom: 100px;
@@ -462,6 +462,23 @@
     margin-right: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.formAddDiscovery{
+    /* margin-left: 26%; */
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    max-width: 57%;
+    height: 50%;
+    padding: 15px;
+    margin: 0px;
+    margin-left: 21%;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 50%; */
+    height: 50%;
+    padding: 15px;
 }
 
 .addDiscoveryFormItems1{
@@ -497,14 +514,17 @@
 @media screen and (max-width: 600px)  {
 
     .disContentDiv {
+      
         display: flex;
         justify-content: center;
         align-items: center;
         align-content: center;
-        margin-left: 0px;
-        margin-top: opx; 
-         width: 0px;
-}
+        text-align: center;
+        width: 300px;
+        margin-left: 26%;
+        margin-top: 10px;
+    }
+
 .discContent {
     text-align: center;
     margin-top: 2rem;
@@ -513,4 +533,23 @@
     height: 80px;
     color: #6B6B6B;
     margin: auto;
-}}
+}
+
+.formAddDiscovery{
+        /* margin-left: 26%; */
+        align-items: center;
+        justify-content: center;
+        /* width: 100%; */
+        max-width: 57%;
+        height: 50%;
+        padding: 15px;
+        margin: 0px;
+        margin-left: 26%;
+        align-items: center;
+        justify-content: center;
+        /* max-width: 50%; */
+        height: 50%;
+        padding: 15px;
+}
+}
+

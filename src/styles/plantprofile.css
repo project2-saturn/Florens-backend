@@ -60,21 +60,19 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    height: 340px;
+    height: 50vh;
     width: 100vw;
     border-radius: 0;
+    object-fit: cover;
 
 }
-
-
-
-
 
 .secondSecImge img {
   
     width: 80px;
     height: 80px;
     border-radius: 10px;
+    object-fit: cover;
  
 }
 
@@ -270,7 +268,7 @@ h3{
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-@media(min-width:600px){
+@media screen and (min-width:600px){
 /* ////////////////////////////////Plant detail section//////////////////////// */
 
 .secondSection{
@@ -291,12 +289,14 @@ h3{
     top: 60px;
     left: 60px;
     width: 490px;
+    object-fit: cover;
     height: 434px;
     border-radius: 10px;
 }
 .secondSecImge img{
     position: absolute;
     top: 510px;
+    object-fit: cover;
     left: 50px;
     width: 101px;
     height: 99px;
