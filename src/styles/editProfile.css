@@ -30,7 +30,7 @@ opacity: 1;
     /*************** Edit Profile Form starts************************************/
 .EditProfileForm{
    
-    width: 500px;
+    /* width: 500px; */
    
     border: 1px solid var(--unnamed-color-7d9990);
     /* border: 1px solid #7D9990; */
@@ -129,15 +129,31 @@ background-color:white;
 /***************************************************/
 @media only screen and (max-width: 600px) {
     .EditProfileform-container {
-        border: 1px solid #7D9990;
-        width: 400px;
-        height: 69vh;
-        margin-top: 150px;
-        transform: translate(3%, 0%);
-        margin-bottom: 1rem;
-        /* margin-top: 1rem; */
-        grid-template-columns: repeat(2,1fr);
-        padding: 2%;
-        justify-content: center;
+     border:none;
+    width: 400px;
+    height: 69vh;
+    margin-top: 150px;
+    /* margin-bottom: 150px; */
+    transform: translate(3%, 0%);
+    margin-bottom: 3rem;
+    /* margin-top: 1rem; */
+    grid-template-columns: repeat(2,1fr);
+    padding: 2%;
+    justify-content: center;
+    }
+    .imageUpload-EditProfile{
+        display: flex;
+    justify-content: center;
+    }
+    .EditProfileImg {
+        width: 43%;
+        height: 190px;
+        object-fit: contain;
+        border-radius: 10px;
+        text-align: center;
+        /* margin-left: 24%; */
+        /* margin-top: 2%; */
+        margin-bottom: 4%;
+        margin:0px;
     }
   }

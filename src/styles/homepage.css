@@ -1234,6 +1234,9 @@ border-bottom: solid 0px #6B6B6B;
         font-weight: lighter;
         color: #6B6B6B;
     }
+    .cacc{
+        cursor:pointer;
+    }
     .secondHomeSectionBtn {
         position: relative;
         top: 45px;
@@ -1472,6 +1475,20 @@ border-bottom: solid 0px #6B6B6B;
             flex-direction: column;
             align-content: center;
         }
+
+}
+@media screen and (max-width: 600px)  {
+        
+    .chartDiv {
+        width: 50%;
+        display: flex;
+        height: 27%;
+        margin-left: 31%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+=======
 
 
         .filterSectionOne {
@@ -1877,4 +1894,5 @@ border-bottom: solid 0px #6B6B6B;
                 
                     position: initial;
                 }
+
 }
