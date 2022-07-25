@@ -73,12 +73,16 @@ export default function(props) {
     searchSeason: [],
     searchTexture: []
   });
-
   const location = useLocation();
-  const data = location.state;
-  console.log(data);
+  let data ;
+  if (location.state != null) {
+    data = location.state;
+  }
 
   useEffect(function loadSearchOptions() {
+
+ 
+  // console.log(data);
     if (data) {
       setSearchOptions({ ...data });
       setSearchOptionsApplied({ ...data });

@@ -69,7 +69,7 @@ function logout(){
         <label className="headerCheckboxLabel" for="menu-bar">Menu</label>
         <ul class="headerUl">
              <li><a class="aboutLogNav" href=""><Link to="/about">About</Link></a></li>
-             <li><a class="profileNav" href=""><img className="userIconImg" src="../images/user.png" alt="plant" />{name}</a>
+             <li><a class="profileNav"><img className="userIconImg" src="../images/user.png" alt="plant" />{name}</a>
                 <ul class="profileNavItems">
                     {/* <li> <a href="">Profile</a></li> */}
                     <li><Link to="/userprofile">Profile</Link></li>

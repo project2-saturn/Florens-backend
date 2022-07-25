@@ -232,23 +232,26 @@ width:100%;
     border:none;
     padding: 3%;
 }
-.container-signup{
+.container-signup {
   margin-top: 101px;
-    margin-bottom: 30px;
-}
-.form-signup {
-  margin-left: 26%;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  /* width: 100%; */
-  max-width: 57%;
-  height: 50%;
-  padding: 15px;
-  margin-left: 26%;
-  align-items: center;
-  justify-content: center;
-  /* max-width: 50%; */
-  height: 50%;
-  padding: 15px;
-}
+  justify-content: center;}
+  .form-signup {
+    /* margin-left: 26%; */
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    max-width: 57%;
+    height: 50%;
+    padding: 15px;
+    margin: 0px;
+    /* margin-left: 26%; */
+    align-items: center;
+    justify-content: center;
+    /* max-width: 50%; */
+    height: 50%;
+    padding: 15px;}
 }
