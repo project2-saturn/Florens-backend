@@ -1,36 +1,28 @@
 import React from "react";
 
-export default function(props) {
+export default function (props) {
   // console.log("here");
   // console.log(props.options);
   console.log(props.selectedOptions);
   return (
     <>
+    <div  class="filterFirstFlexContainer">
       <p class="filterP">{props.title}</p>
       <ul class="filterUl">
-        <li
-          class="filterLi"
-          onClick={event => props.handleSelectAllOption(event, props.name)}
-        >
-          All
-        </li>
+        <li class="filterLi"  onClick={(event) => props.handleSelectAllOption(event, props.name)}>All</li>
         <li class="filterLi">|</li>
-        <li
-          class="filterLi"
-          onClick={event => props.handleClearAllOption(event, props.name)}
-        >
-          Clear
-        </li>
+        <li class="filterLi" onClick={(event) => props.handleClearAllOption(event, props.name)}>Clear</li>
       </ul>
+    </div>  
       <div class="filterDiv">
         {props.options ? (
-          props.options.map(option =>
+          props.options.map((option) =>
             props.selectedOptions.includes(option) ? (
               <button
                 class="filterBtns filterBtnsSelected"
                 value={option}
                 key={option}
-                onClick={event =>
+                onClick={(event) =>
                   props.handleSearchOptionsChange(event, props.name)
                 }
               >
@@ -41,7 +33,7 @@ export default function(props) {
                 class="filterBtns"
                 value={option}
                 key={option}
-                onClick={event =>
+                onClick={(event) =>
                   props.handleSearchOptionsChange(event, props.name)
                 }
               >
@@ -53,6 +45,7 @@ export default function(props) {
           <></>
         )}
       </div>
+      
     </>
   );
 }

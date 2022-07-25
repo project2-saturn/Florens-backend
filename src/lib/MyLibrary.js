@@ -47,12 +47,9 @@ const MyLibrary = props => {
               
               <div class="card-info">
                 <h2 class="card-title">{user.name}</h2>
-                <div className="LibHead">
-                <img src="../images/addBtn.png"></img>
                 <p class="card-intro">
                   {user.library.length} plants on library
                 </p>
-                </div>
               </div>
             </div>
           </div>
@@ -60,10 +57,10 @@ const MyLibrary = props => {
         
         <section class="my-discoveries">
           <h2 class="main-title">My Library</h2>
-          <form className="LibraryForm">
+          {/* <form className="LibraryForm">
       <input type="text" className="LibrarySearchBar" name="search" />
       <button type="submit" className="LibrarySearchBtn"><i class="fa fa-search w3-xxxlarge"></i></button>
-    </form>
+    </form> */}
           <div class="discovery-cards">
             {user.library[0] ? (
               user.library.map(element => (

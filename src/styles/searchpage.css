@@ -85,6 +85,7 @@ body{
         }
         .accordion_button--active{
             background:  #FFFFFF;
+            opacity: 1;
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
             border-left: solid #0d3f3f 0.5px ;
@@ -302,7 +303,192 @@ body{
   }
 
 
-  /* /////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media(max-width:600px){
+
+    .searchBarSearch {
+        margin: auto;
+        position: relative;
+        width: 350px;
+        height: 70px;
+        margin-top: 160px;
+    }
+    /* ////////////////////////////////////////////////////////////////// */
+    .accordion_button{
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        width: 350px;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+        background: #FFFFFF;
+        color: #164C4C;
+        text-align: center;
+        transition: background 0.2s;
+        opacity: 0.5;
+        font-family: 'Rubik';
+        font-weight: 500;
+    }
+
+    .accordion_button::after{
+        content: '\25be';
+        float: right;
+        transform: scale(1.5);
+        }
+        .accordion_button--active{
+            background:  #FFFFFF;
+            opacity: 1;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-left: solid #0d3f3f 0.5px ;
+            border-right: solid #0d3f3f 0.5px ;
+            border-top: solid #0d3f3f 0.5px ;
+        }
+
+        .accordion_button--active::after{content: '\25b4'}
+
+        .accordion_content{
+            overflow: hidden;
+            /* height: 100%; */
+            transition: max-height 0.2s;
+            width: 348px;
+            margin: auto;
+            background: #FFFFFF;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            opacity: 1;
+            border-left: solid #0d3f3f 0.5px;
+            border-right: solid #0d3f3f 0.5px;
+            /* position: absolute; */
+            /* z-index: 100; */
+            display: block;
+            align-content: center;
+
+        
+        }
 
 
-/* /////////////////////////////////////////////////////////////////////////// */
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+
+
+        .filterSectionOne {
+            position: relative;
+            padding-top: 60px;
+        }
+
+        .filterFirstFlexContainer {
+            display: flex;
+            left: -50px;
+            position: relative;
+        }
+        .filterUl {
+            position: relative;
+            font-family: 'Rubik';
+            top: 0;
+            left: 0;
+            display: flex;
+            list-style-type: none;
+        }
+
+        .filterDiv {
+            width: 310px;
+            position: relative;
+            font-family: 'Rubik';
+            top: 0;
+            left: 0;
+            margin-top: 20px;
+            /* margin-right: 30px; */
+           
+        }
+        .filterP {
+            margin-left: 26px;
+            font-family: 'Rubik';
+            font-size: 16px;
+            font-weight: bold;
+            border: 0;
+            color: #0d3f3f;
+            width: 130px;
+        }
+
+
+        .filterSectionOne{
+            position: relative;
+            display: flex;
+            padding-top: 60px;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .filterSectionTwo{
+            position: relative;
+            display: flex;
+            padding-top: 30px;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+        .filterSectionThree{
+            position: relative;
+            display: flex;
+            padding-top: 30px;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+        .filterSectionFour{
+            position: relative;
+            display: flex;
+            padding-top: 30px;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+        .filterSectionFive{
+            position: relative;
+            display: flex;
+            padding-top: 30px;
+            align-items: center;
+            flex-direction: column;
+        }
+        .filterSectionSix{
+            position: relative;
+            display: flex;
+            padding-top: 30px;
+            align-items: center;
+            flex-direction: column;
+         }
+
+         .clearApply {
+            position: relative;
+            align-items: center;
+            top: 0;
+            left: 0;
+            margin-top: 30px;
+        }
+
+        .blankSpace{
+            height: 20px;
+        }
+
+        .filterBottomMobileLine{
+            border-bottom: solid #164C4C 1.5px;
+            width: 300px;
+            opacity: 0.5;
+            margin-top: 30px;
+            display: block;
+        }
+
+
+}

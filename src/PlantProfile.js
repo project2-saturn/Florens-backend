@@ -40,8 +40,7 @@ const PlantProfile = props => {
       <header>
         <NavigationBar />
       </header>
-      <main>
-        <section class="secondSectionPlantProfile">
+      <main class="secondSectionPlantProfile">
           <div class="secondSectionCardPlantProfile">
             {plant.photosURL[0] ? (
               <div class="secondSecImgPlantProfile">
@@ -50,7 +49,7 @@ const PlantProfile = props => {
             ) : (
               <></>
             )}
-            <div className="addImagesDiv">
+           
             {plant.photosURL[1] ? (
               <div class="secondSecImge">
                 <img src={plant.photosURL[1]} alt="plant" />
@@ -79,7 +78,7 @@ const PlantProfile = props => {
             ) : (
               <></>
             )}
-            </div>
+          
 
             {/* <div class="secondSecImge">
               <img src="../images/Rectangle_3_et.png" alt="plant" />
@@ -93,14 +92,13 @@ const PlantProfile = props => {
             <div class="secondSecImgas">
               <img src="../images/Rectangle_3_et.png" alt="plant" />
             </div> */}
-            <div class="plantInfoPlant">
+            
               <h3 className="plantInfoPlantHeading" >
                 {plant.name}</h3>
               <p class="subTag">{plant.scientificName}</p>
 
               <p class="plantDescp">
                 {plant.description}</p>
-
               <div class="plantDescItems1">
                 <h5 class="plantDescItemsHeading">Plant Type</h5>
                 <p class="plantDescItemsPara">{plant.type}</p>
@@ -124,24 +122,8 @@ const PlantProfile = props => {
               <div class="plantDescItems6">
                 <h5 class="plantDescItemsHeading">texture</h5>
                 <p class="plantDescItemsPara">{plant.texture}</p>
-              </div>
-
-              <div class="lineSec"></div>
-              <img
-                class="contributer"
-                src="../images/Rectangle_3_et.png"
-                alt="plant"
-              />
-              <p class="contribution">Contribution from John Smith</p>
-              <button class="editBtn" type="button"><img  src="../images/edit.png" alt="plant" />
-              &nbsp; Edit
-              </button>
-              <button class="deletBtn" type="button"><img  src="../images/delete.png" alt="plant" />
-              &nbsp; Delete
-              </button>
-            </div>
+              </div>          
           </div>
-        </section>
       </main>
       <Footer />
     </>
